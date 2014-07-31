@@ -1,0 +1,14 @@
+<template name="session">
+  {{#each sessions}}
+  <div class="span5 hero-unit">
+    <div class="span2">{{date}}</div>
+    <div class="span2">{{place}}</div>
+    <ul class="span2">
+      {{#each attendees}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+   {{> book}}
+  </div>
+  {{/each}}
+</template>

@@ -6,6 +6,8 @@
 standard-app-packages
 autopublish
 insecure
-bootstrap
 accounts-base
 accounts-password
+less
+less-bootstrap-3
+font-awesome-4-less

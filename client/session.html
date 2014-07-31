@@ -1,14 +1,16 @@
 <template name="session">
   {{#each sessions}}
-  <div class="col-xs-5 well">
-    <div class="col-xs-2">{{date}}</div>
-    <div class="col-xs-2">{{place}}</div>
-    <ul class="col-xs-2">
+  <div class="col-xs-5 col-xs-offset-1 well">
+    <section class="header">
+      <div class="col-xs-6">{{date}}</div>
+      <div class="col-xs-6">{{place}}</div>
+    </section>
+    <ul class="col-xs-6">
       {{#each attendees}}
       <li>{{this}}</li>
       {{/each}}
     </ul>
-   {{> book}}
+    {{> book}}
   </div>
   {{/each}}
 </template>

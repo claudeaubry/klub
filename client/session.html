@@ -1,11 +1,11 @@
 <template name="session">
   {{#each sessions}}
-  <div class="sessions col-xs-5 col-xs-offset-1 well">
+  <div class="sessions col-xs-12 col-md-offset-1 col-md-5 well">
     <section class="header">
       <div class="col-xs-6">{{date}}</div>
       <div class="col-xs-6">{{place}}</div>
     </section>
-    <ul class="col-xs-6">
+    <ul class="col-xs-4">
       {{#each attendees}}
       <li>{{this}}</li>
       {{/each}}

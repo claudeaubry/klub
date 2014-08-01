@@ -28,12 +28,12 @@ booksFixtures = [
 
 
 sessionsFixtures = [
-  {
+/*  {
     date: "9 septembre 2014",
     place: "Maison des Associations",
     book_id: "L6BSZfgTHqGxAbfns",
     attendees: ["clodio", "stef"]
-  },
+  },*/
   {
     date: "21 mars 2013",
     place: "Maison des Associations",

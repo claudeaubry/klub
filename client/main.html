@@ -4,5 +4,23 @@
 
 <body>
   <h2 class="well">Klub de lecture Agile Toulouse</h2>
+  {{> nextSession}}
   {{> session}}
 </body>
+
+<template name="nextSession">
+  <h3 class="well">Prochaine session du Klub</h3>
+  <div class="sessions col-xs-12 col-md-offset-3 col-md-6 well">
+    <section class="header">
+      <div class="col-xs-6">9 septembre 2014</div>
+      <div class="col-xs-6">Maison des associations</div>
+    </section>
+
+    <article class="col-xs-8">
+      <div class="book-title">Story Mapping</div>
+      <div>Jeff Patton</div>
+      <img src="usm.png" class="thumbnail">
+    </article>
+  </div>
+
+</template>

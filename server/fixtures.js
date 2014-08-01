@@ -28,29 +28,36 @@ booksFixtures = [
 
 
 sessionsFixtures = [
-/*  {
+  {
     date: "9 septembre 2014",
     place: "Maison des Associations",
     book_id: "L6BSZfgTHqGxAbfns",
-    attendees: ["clodio", "stef"]
-  },*/
+    author: "Jeef Patton",
+    title: "Story Mapping",
+    img: "usm.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vero iste non voluptatem commodi molestiae eligendi, voluptatibus blanditiis rerum, quia esse nostrum soluta magni sit eveniet magnam dolores aperiam modi.",
+    statut: "next"
+  },
   {
     date: "21 mars 2013",
     place: "Maison des Associations",
     book_id: "qKbPu7fwzQSkkrmog",
-    attendees: ["clodio"]
+    attendees: ["clodio"],
+    statut: "past"
   },
   {
     date: "30 janvier 2013",
     place: "Maison des Associations",
     book_id: "aFLPmnWhveM9H5pot",
-    attendees: ["clodio", "jeff", "stef"]
+    attendees: ["clodio", "jeff", "stef"],
+    statut: "past"
   },
   {
     date: "5 décembre 2012",
     place: "La chunga",
     book_id: "L6BSZXeTHqGxAbfns",
-    attendees: ["clodio", "jeff"]
+    attendees: ["clodio", "jeff"],
+    statut: "past"
   },
 ];
 

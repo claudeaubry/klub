@@ -13,15 +13,15 @@
   <session class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>9 septembre 2014 - Maison des associations</span>
+        <span>{{session.date}} - {{session.place}}</span>
       </div>
       <div class="panel-body">
       <article class="col-xs-6">
-        <div class="book-title">Story Mapping</div>
-        <div>Jeff Patton</div>
-        <img src="usm.png" class="thumbnail">
+        <div class="book-title">{{session.title}}</div>
+        <div>{{session.author}}</div>
+        <img src="{{session.img}}" class="thumbnail">
       </article>
-      <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vero iste non voluptatem commodi molestiae eligendi, voluptatibus blanditiis rerum, quia esse nostrum soluta magni sit eveniet magnam dolores aperiam modi.</div>
+      <div class="col-xs-6">{{session.text}}</div>
       </div>
     </div>
   </session>

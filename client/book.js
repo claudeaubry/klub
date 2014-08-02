@@ -1,3 +1,3 @@
 Template.book.oneBook = function(){
-  return Books.findOne(this.book_id);
+  return Books.findOne(this.id);
 }

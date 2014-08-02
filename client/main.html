@@ -17,12 +17,8 @@
         <span>{{session.date}} - {{session.place}} - 18h</span>
       </div>
       <div class="panel-body">
-      <article class="col-xs-6">
-        <div class="book-title">{{session.title}}</div>
-        <div>{{session.author}}</div>
-        <img src="{{session.img}}" class="thumbnail">
-      </article>
-      <div class="col-xs-6">{{session.text}}</div>
+        {{> book id=session.book_id}}
+        <div class="col-xs-6">{{session.text}}</div>
       </div>
     </div>
   </session>

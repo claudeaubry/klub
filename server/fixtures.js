@@ -38,9 +38,6 @@ sessionsFixtures = [
     date: "9 septembre 2014",
     place: "Maison des Associations",
     book_id: "L6BSZfgTHqGxAbfns",
-    author: "Jeff Patton",
-    title: "Story Mapping",
-    img: "usm.png",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vero iste non voluptatem commodi molestiae eligendi, voluptatibus blanditiis rerum, quia esse nostrum soluta magni sit eveniet magnam dolores aperiam modi.",
     statut: "next"
   },

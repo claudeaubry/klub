@@ -12,6 +12,12 @@ booksFixtures = [
     img: "impact.png",
   },
   {
+    _id: "qS4YRw5hQNaAGnCgW",
+    title: "Running Lean",
+    author: "Ash Maurya",
+    img: "impact.png",
+  },
+  {
     _id: "L6BSZfgTHqGxAbfns",
     title: "Story Mapping",
     author: "Jeff Patton",
@@ -32,12 +38,20 @@ sessionsFixtures = [
     date: "9 septembre 2014",
     place: "Maison des Associations",
     book_id: "L6BSZfgTHqGxAbfns",
-    author: "Jeef Patton",
+    author: "Jeff Patton",
     title: "Story Mapping",
     img: "usm.png",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vero iste non voluptatem commodi molestiae eligendi, voluptatibus blanditiis rerum, quia esse nostrum soluta magni sit eveniet magnam dolores aperiam modi.",
     statut: "next"
   },
+  {
+    date: "21 septembre 2013",
+    place: "Maison des Associations",
+    book_id: "qS4YRw5hQNaAGnCgW",
+    attendees: ["clodio", "jean-pascal"],
+    statut: "past"
+  },
+
   {
     date: "21 mars 2013",
     place: "Maison des Associations",
@@ -49,7 +63,7 @@ sessionsFixtures = [
     date: "30 janvier 2013",
     place: "Maison des Associations",
     book_id: "aFLPmnWhveM9H5pot",
-    attendees: ["clodio", "jeff", "stef"],
+    attendees: ["clodio", "jeff", "jean-pascal"],
     statut: "past"
   },
   {

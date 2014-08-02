@@ -6,14 +6,15 @@
   <h2 class="well">Klub de lecture Agile Toulouse</h2>
   {{> nextSession}}
   {{> session}}
+  <h3 class="well col-xs-12">Proposer un livre pour le prochain Klub</h3>
 </body>
 
 <template name="nextSession">
-  <h3 class="well col-xs-12">Prochaine session du Klub</h3>
+  <h3 class="well col-xs-12">Prochaine lecture au Klub</h3>
   <session class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>{{session.date}} - {{session.place}}</span>
+        <span>{{session.date}} - {{session.place}} - 18h</span>
       </div>
       <div class="panel-body">
       <article class="col-xs-6">

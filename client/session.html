@@ -3,10 +3,9 @@
   {{#each sessions}}
   <div class="sessions col-xs-12 col-md-offset-1 col-md-5 well">
     <section class="header">
-      <div class="col-xs-6">{{date}}</div>
-      <div class="col-xs-6">{{place}}</div>
+      <div class="col-xs-6">C'était le {{date}}</div>
     </section>
-    <ul class="col-xs-4">
+    <ul class="col-xs-4">Etaient présents ce jour-là :
       {{#each attendees}}
       <li>{{this}}</li>
       {{/each}}

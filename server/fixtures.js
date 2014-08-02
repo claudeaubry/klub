@@ -31,12 +31,41 @@ booksFixtures = [
     img: "procras.png",
     site : "http://www.structuredprocrastination.com/",
   },
+  {
+    _id: "veM9H5potaFLPmnW",
+    title: "Specification by example",
+    author: "Gojko Adzic",
+    img: "",
+    site : "",
+  },
+  {
+    _id: "HqGxAbfnstaFLPmnW",
+    title: "Agile Transition",
+    author: "Andrea Tomasini & Martin Kearns",
+    img: "",
+    site : "",
+  },
+  {
+    _id: "QSkkrmogAbfnsta",
+    title: "Coching Agile",
+    author: "Davies & Sedley, traduit par Aimetti",
+    img: "",
+    site : "",
+  },
+  {
+    _id: "QNaAGnCgWHqGxAgfdg",
+    title: "Petit traité de manipulation",
+    author: "Beauvois & Joule",
+    img: "",
+    site : "",
+  },
 
 ];
 
 
 sessionsFixtures = [
   {
+    i: "9",
     date: "9 septembre 2014",
     place: "Maison des Associations",
     book_id: "L6BSZfgTHqGxAbfns",
@@ -44,36 +73,71 @@ sessionsFixtures = [
     statut: "next"
   },
   {
-    date: "21 septembre 2013",
+    i: "8",
+    date: "3 juillet 2014",
+    place: "Maison des Associations",
+    book_id: "QNaAGnCgWHqGxAgfdg",
+    attendees: ["jean-pascal", "philippe"],
+    statut: "past"
+  },
+  {
+    i: "7",
+    date: "2 juin 2014",
+    place: "Maison des Associations",
+    book_id: "QSkkrmogAbfnsta",
+    attendees: ["jean-pascal", "anthony", "clodio", "ludo", "ryadh"],
+    statut: "past"
+  },
+  {
+    i: "6",
+    date: "24 mars 2014",
+    place: "Maison des Associations",
+    book_id: "HqGxAbfnstaFLPmnW",
+    attendees: ["jean-pascal", "jeff", "clodio", "nico", "ryadh"],
+    statut: "past"
+  },
+  {
+    i: "5",
+    date: "27 janvier 2014",
+    place: "Maison des Associations",
+    book_id: "veM9H5potaFLPmnW",
+    attendees: ["jean-pascal", "anthony", "jeff", "jean"],
+    statut: "past"
+  },
+  {
+    i: "4",
+    date: "2 décembre 2013",
     place: "Maison des Associations",
     book_id: "qS4YRw5hQNaAGnCgW",
-    attendees: ["clodio", "jean-pascal"],
+    attendees: ["clodio", "jean-pascal", "anthony", "jeff", "elvire", "jean"],
     statut: "past"
   },
 
   {
+    i: "3",
     date: "21 mars 2013",
     place: "Maison des Associations",
     book_id: "qKbPu7fwzQSkkrmog",
-    attendees: ["clodio"],
+    attendees: ["clodio", "riadh", "mariejo", "anthony", "jean", "david", "marianne"],
     statut: "past"
   },
   {
+    i: "2",
     date: "30 janvier 2013",
     place: "Maison des Associations",
     book_id: "aFLPmnWhveM9H5pot",
-    attendees: ["clodio", "jeff", "jean-pascal"],
+    attendees: ["clodio", "jeff", "pedro","antoine", "nath", "anthony"],
     statut: "past"
   },
   {
-    date: "5 décembre 2012",
-    place: "La chunga",
+    i: "1",
+    date: "23 novembre 2012",
+    place: "Maison des Associations",
     book_id: "L6BSZXeTHqGxAbfns",
-    attendees: ["clodio", "jeff"],
+    attendees: ["clodio", "jeff", "jean", "mariejo", "anthony", "pedro", "lolo", "bernard"],
     statut: "past"
   },
 ];
-
 
 usersFixtures = [
   {

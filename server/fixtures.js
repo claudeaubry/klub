@@ -10,12 +10,13 @@ booksFixtures = [
     title: "Impact Mapping",
     author: "Gojko Adzic",
     img: "impact.png",
+    site : "http://www.impactmapping.com/",
   },
   {
     _id: "qS4YRw5hQNaAGnCgW",
     title: "Running Lean",
     author: "Ash Maurya",
-    img: "impact.png",
+    site :"http://practicetrumpstheory.com/"
   },
   {
     _id: "L6BSZfgTHqGxAbfns",
@@ -28,6 +29,7 @@ booksFixtures = [
     title: "La procrastination",
     author: "John Perry",
     img: "procras.png",
+    site : "http://www.structuredprocrastination.com/",
   },
 
 ];

@@ -4,6 +4,7 @@ booksFixtures = [
     title: "Kanban pour l'IT",
     author: "Laurent Morisseau",
     img: "kit.png",
+    site: "http://www.morisseauconsulting.com/2014/02/28/kanban-pour-lit-bientot-la-seconde-edition/",
   },
   {
     _id: "L6BSZXeTHqGxAbfns",
@@ -16,7 +17,8 @@ booksFixtures = [
     _id: "qS4YRw5hQNaAGnCgW",
     title: "Running Lean",
     author: "Ash Maurya",
-    site :"http://practicetrumpstheory.com/"
+    img: "rl.jpg",
+    site : "http://practicetrumpstheory.com/"
   },
   {
     _id: "L6BSZfgTHqGxAbfns",
@@ -35,29 +37,29 @@ booksFixtures = [
     _id: "veM9H5potaFLPmnW",
     title: "Specification by example",
     author: "Gojko Adzic",
-    img: "",
-    site : "",
+    img: "sbe.jpg",
+    site : "http://specificationbyexample.com/",
   },
   {
     _id: "HqGxAbfnstaFLPmnW",
     title: "Agile Transition",
     author: "Andrea Tomasini & Martin Kearns",
-    img: "",
-    site : "",
+    img: "agiletransition.jpg",
+    site : "http://www.infoq.com/minibooks/Agile-Transition",
   },
   {
     _id: "QSkkrmogAbfnsta",
-    title: "Coching Agile",
-    author: "Davies & Sedley, traduit par Aimetti",
-    img: "",
-    site : "",
+    title: "Coaching Agile",
+    author: "Rachel Davies & Liz Sedley, traduit par Fabrice Aimetti",
+    img: "coachingagile.jpg",
+    site : "http://www.fabrice-aimetti.fr/2014/03/11/coaching-agile-la-traduction/",
   },
   {
     _id: "QNaAGnCgWHqGxAgfdg",
     title: "Petit traité de manipulation",
     author: "Beauvois & Joule",
-    img: "",
-    site : "",
+    img: "manip.jpg",
+    site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
   },
 
 ];

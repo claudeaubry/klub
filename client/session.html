@@ -1,18 +1,20 @@
 <template name="session">
   <h3 class="well col-xs-12">Les Klub passés</h3>
   {{#each sessions}}
-  <div class="sessions col-xs-12 col-md-offset-1 col-md-5 well">
+  <sessions class=" col-xs-12 col-md-offset-1 col-md-5">
     <div class="panel panel-primary">
       <div class="panel-heading">
       <span>Klub numéro {{i}}</span>
       </div>
+      <div class="panel-body">
       <ul class="col-xs-4"><br/>C'était le {{date}}. <br/>Ce Klub avait eu comme participants :
         {{#each attendees}}
         <li>{{this}}</li>
         {{/each}}
       </ul>
       {{> book id=book_id}}
+      </div>
     </div>
-  </div>
+  </sessions>
   {{/each}}
 </template>

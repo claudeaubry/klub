@@ -61,6 +61,18 @@ booksFixtures = [
     img: "manip.jpg",
     site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
   },
+  {
+    _id: "XjGkzdWJzF6mwXB8L",
+    title: "Rupture douce 2",
+    author: "Collectif des grenouilles agiles",
+    statut: "proposed",
+  },
+  {
+    _id: "6xJhA6Bj3tZ3N8BLL",
+    title: "Coacher une équipe",
+    author: "Véronique Messager",
+    statut: "proposed",
+  },
 
 ];
 
@@ -71,7 +83,7 @@ sessionsFixtures = [
     date: "9 septembre 2014",
     place: "Maison des Associations",
     book_id: "L6BSZfgTHqGxAbfns",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vero iste non voluptatem commodi molestiae eligendi, voluptatibus blanditiis rerum, quia esse nostrum soluta magni sit eveniet magnam dolores aperiam modi.",
+    text: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
     statut: "next"
   },
   {

@@ -1,0 +1,8 @@
+<template name="proposal">
+  <h3 class="well col-xs-12">Livres proposés pour un prochain Klub</h3>
+  {{#each titles}}
+      <ul class="col-xs-4 col-md-offset-1">
+        <li>{{this.title}} par {{this.author}}</li>
+      </ul>
+  {{/each}}
+</template>

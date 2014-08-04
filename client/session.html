@@ -1,17 +1,21 @@
 <template name="session">
   <h3 class="well col-xs-12">Les Klub passés</h3>
   {{#each sessions}}
-  <sessions class=" col-xs-12 col-md-offset-1 col-md-5">
+  <sessions class="sessions col-xs-12 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <span>Klub numéro {{i}}</span>
       </div>
       <div class="panel-body">
-        <ul class="col-xs-4"><br/>C'était le {{date}}. Ce Klub avait eu comme participants :
-          {{#each attendees}}
-          <li>{{this}}</li>
-          {{/each}}
-        </ul>
+        <article class="col-xs-4">
+          <p>C'était le {{date}}.</p>
+          <ul class="list-group">
+            <li class="list-group-item disabled">Participants :</li>
+            {{#each attendees}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+          </ul>
+        </article>
         {{#if this.voteer}}
         <a target="_blank" href="{{this.voteer}}">La sélection pour ce Klub</a>
         {{/if}}

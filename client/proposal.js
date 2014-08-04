@@ -1,3 +1,3 @@
 Template.proposal.titles = function(){
-  return Books.find({statut : "proposed" });
+  return Books.find({statut : "proposed"});
 };

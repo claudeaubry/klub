@@ -4,15 +4,18 @@
   <sessions class=" col-xs-12 col-md-offset-1 col-md-5">
     <div class="panel panel-primary">
       <div class="panel-heading">
-      <span>Klub numéro {{i}}</span>
+        <span>Klub numéro {{i}}</span>
       </div>
       <div class="panel-body">
-      <ul class="col-xs-4"><br/>C'était le {{date}}. Ce Klub avait eu comme participants :
-        {{#each attendees}}
-        <li>{{this}}</li>
-        {{/each}}
-      </ul>
-      {{> book id=book_id}}
+        <ul class="col-xs-4"><br/>C'était le {{date}}. Ce Klub avait eu comme participants :
+          {{#each attendees}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        {{#if this.voteer}}
+        <a target="_blank" href="{{this.voteer}}">La sélection pour ce Klub</a>
+        {{/if}}
+        {{> book id=book_id}}
       </div>
     </div>
   </sessions>

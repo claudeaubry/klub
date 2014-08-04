@@ -82,6 +82,7 @@ sessionsFixtures = [
     i: "9",
     date: "9 septembre 2014",
     place: "Maison des Associations",
+    mao: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
     book_id: "L6BSZfgTHqGxAbfns",
     text: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
     statut: "next"
@@ -100,6 +101,7 @@ sessionsFixtures = [
     place: "Maison des Associations",
     book_id: "QSkkrmogAbfnsta",
     attendees: ["jean-pascal", "anthony", "clodio", "ludo", "ryadh"],
+    voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
   },
   {
@@ -108,14 +110,15 @@ sessionsFixtures = [
     place: "Maison des Associations",
     book_id: "HqGxAbfnstaFLPmnW",
     attendees: ["jean-pascal", "jeff", "clodio", "nico", "ryadh"],
-    statut: "past"
+    voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
+    statut: "past",
   },
   {
     i: "5",
     date: "27 janvier 2014",
     place: "Maison des Associations",
     book_id: "veM9H5potaFLPmnW",
-    attendees: ["jean-pascal", "anthony", "jeff", "jean"],
+    attendees: ["jean-pascal", "jeff", "jean"],
     statut: "past"
   },
   {

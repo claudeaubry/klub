@@ -2,7 +2,6 @@ Meteor.startup(function () {
   Sessions.remove({});
   Books.remove({});
 
-
   sessionsFixtures.forEach(function(session) {
     Sessions.insert(session);
   });
@@ -16,5 +15,4 @@ Meteor.startup(function () {
       Accounts.createUser(user);
     }
   });
-
 });

@@ -1,12 +1,14 @@
- <template name="book">
-  <div class="col-xs-4">
-    <img src="{{oneBook.img}}" class="thumbnail">
-  </div>
-  <div class="book-title">{{oneBook.title}}</div>
-  <div>{{oneBook.author}}</div>
-  <div>
-  {{#if oneBook.site}}
-    <a target="_blank" href="{{oneBook.site}}">Pour en savoir plus sur ce livre</a>
-  {{/if}}
-  </div>
+<template name="book">
+  <article class="book">
+    <img src="{{oneBook.img}}" class="thumbnail col-xs-4">
+    <aside class="col-xs-4">
+      <h1 class="book-title">{{oneBook.title}}</h1>
+      <h2>{{oneBook.author}}</h2>
+      {{#if oneBook.site}}
+      <a target="_blank" href="{{oneBook.site}}">
+        Pour en savoir plus sur ce livre
+      </a>
+      {{/if}}
+    </aside>
+  </article>
 </template>

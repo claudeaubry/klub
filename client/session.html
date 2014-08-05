@@ -1,7 +1,7 @@
 <template name="session">
-  <h3 id="klubs" class="well col-xs-12">Les Klub passés</h3>
+  <h3 class="well">Les Klub passés</h3>
   {{#each sessions}}
-  <sessions class="sessions col-xs-12 col-md-6">
+  <article class="sessions col-xs-12 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <span>Klub numéro {{i}}</span>
@@ -22,6 +22,6 @@
         {{> book id=book_id}}
       </div>
     </div>
-  </sessions>
+  </article>
   {{/each}}
 </template>

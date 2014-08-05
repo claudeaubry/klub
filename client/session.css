@@ -1,7 +1,11 @@
-.sessions .list-group-item {
+.sessions {
+  padding: 2em;
+}
+
+.list-group-item {
   padding: .2em;
 }
 
-.sessions .panel {
-  min-height: 400px;
+.panel {
+  min-height: 370px;
 }

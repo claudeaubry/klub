@@ -72,6 +72,7 @@ booksFixtures = [
     title: "Coacher une équipe",
     author: "Véronique Messager",
     statut: "proposed",
+    teaser: "trucs pour les caochs agiles"
   },
 
 ];
@@ -82,7 +83,7 @@ sessionsFixtures = [
     i: "9",
     date: "9 septembre 2014",
     place: "Maison des Associations",
-    mao: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
+    map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
     book_id: "L6BSZfgTHqGxAbfns",
     text: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
     statut: "next"

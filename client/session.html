@@ -9,16 +9,19 @@
       <div class="panel-body">
         <article class="col-xs-4">
           <p>C'était le {{date}}.</p>
+          {{#if this.voteer}}
+          <a target="_blank" href="{{this.voteer}}">La sélection sur Voteer</a>
+          {{/if}}
           <ul class="list-group">
             <li class="list-group-item disabled">Participants :</li>
             {{#each attendees}}
             <li class="list-group-item">{{this}}</li>
             {{/each}}
           </ul>
+          {{#if this.presence_author}}
+          <p>Plus la participation exceptionnelle de l'auteur</p>
+          {{/if}}
         </article>
-        {{#if this.voteer}}
-        <a target="_blank" href="{{this.voteer}}">La sélection pour ce Klub</a>
-        {{/if}}
         {{> book id=book_id}}
       </div>
     </div>

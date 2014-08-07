@@ -72,7 +72,7 @@ booksFixtures = [
     title: "Coacher une équipe",
     author: "Véronique Messager",
     statut: "proposed",
-    teaser: "trucs pour les caochs agiles"
+    teaser: "des trucs intéressants pour les coachs agiles"
   },
 
 ];
@@ -137,7 +137,8 @@ sessionsFixtures = [
     place: "Maison des Associations",
     book_id: "qKbPu7fwzQSkkrmog",
     attendees: ["clodio", "riadh", "mariejo", "anthony", "jean", "david", "marianne"],
-    statut: "past"
+    presence_author : true,
+    statut: "past",
   },
   {
     i: "2",

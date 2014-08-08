@@ -3,7 +3,7 @@
   <article class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>{{session.date}} - {{session.place}} - 18h30</span>
+        <span>{{session.date}} - {{session.place}} <a target="_blank" href="{{session.map}}">(c'est où ?)</a> - 18h30</span>
       </div>
       <div class="panel-body">
         {{> book id=session.book_id}}

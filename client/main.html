@@ -1,18 +1,21 @@
 <head>
-  <title>Klub de lecture Agile Toulouse</title>
+  <title>Le Klub de lecture d'Agile Toulouse</title>
 </head>
 
 <body>
   <div data-spy="scroll" data-target=".navbar-default">
     {{> nav}}
-    <section id="proch" class="col-xs-12">
+    <section id="next" class="col-xs-12">
       {{> nextSession}}
     </section>
-    <section id="klubs" class="col-xs-12">
+    <section id="past" class="col-xs-12">
       {{> session}}
     </section>
     <section id="prop" class="col-xs-12">
       {{> proposal}}
+    </section>
+    <section id="klub" class="col-xs-12">
+      {{> klub}}
     </section>
   </div>
 </body>

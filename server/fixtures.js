@@ -58,7 +58,7 @@ booksFixtures = [
   {
     _id: "QNaAGnCgWHqGxAgfdg",
     title: "Petit traité de manipulation",
-    author: "Beauvois & Joule",
+    author: "Robert-Vincent Joule & Jean-Léon Beauvois",
     img: "manip.jpg",
     site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
   },
@@ -170,4 +170,15 @@ usersFixtures = [
     email : "claude.agtrg@gmail.com", password : "azert", username : "jeff"
   },
 
-]
+];
+
+klubsFixtures = [
+  {
+    region : "Toulouse",
+    title : "Klub de lecture Agile Toulouse",
+    principle : "Les participants lisent un livre défini à l'avance et viennent en discuter ensemble.",
+    objective : "Ils mettent en commun leurs impressions, leurs opinions, leurs connaissances et leurs expériences sur le sujet du livre.",
+    rule : "Avoir lu le livre au préalable",
+    theme : "Des livres en rapport, directement ou indirectement, avec l'Agilité.",
+  },
+];

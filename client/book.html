@@ -1,13 +1,12 @@
 <template name="book">
   <article class="book">
-    <img src="{{oneBook.img}}" class="thumbnail col-xs-4">
-    <aside class="col-xs-4">
+    <img src="{{oneBook.img}}" class="thumbnail col-xs-3">
+    <aside class="col-xs-5">
       <h1 class="book-title">{{oneBook.title}}</h1>
       <h2>{{oneBook.author}}</h2>
+      {{oneBook.text}}
       {{#if oneBook.site}}
-      <a target="_blank" href="{{oneBook.site}}">
-        Compléments en ligne
-      </a>
+        <a target="_blank" href="{{oneBook.site}}">Compléments en ligne</a>
       {{/if}}
     </aside>
   </article>

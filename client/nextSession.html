@@ -3,11 +3,23 @@
   <article class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>{{session.date}} - {{session.place}} <a target="_blank" href="{{session.map}}">(c'est où ?)</a> - 18h30</span>
+        <span>Klub numéro {{session.i}} - {{session.date}}</span>
       </div>
       <div class="panel-body">
+        <article class="col-xs-4">
+            <ul class="list-group">
+              <li class="list-group-item disabled">Infos pratiques</li>
+              <li class="list-group-item">Lieu : {{session.place}} <a target="_blank" href="{{session.map}}">(c'est où ?)</a></li>
+              <li class="list-group-item">Heure : 18h30</li>
+              <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
+            </ul>
+          {{#if session.voteer}}
+            <span>Sélection :
+            <a target="_blank" href="{{session.voteer}}">le choix sur Voteer</a>
+            </span>
+          {{/if}}
+        </article>
         {{> book id=session.book_id}}
-        <div class="col-xs-8">{{session.text}}</div>
       </div>
     </div>
   </article>

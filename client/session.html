@@ -4,11 +4,10 @@
   <article class="sessions col-xs-12 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>Klub numéro {{i}}</span>
+        <span>Klub numéro {{i}} - {{date}}</span>
       </div>
       <div class="panel-body">
         <article class="col-xs-4">
-          <p>C'était le {{date}}.</p>
           {{#if this.voteer}}
           <a target="_blank" href="{{this.voteer}}">La sélection sur Voteer</a>
           {{/if}}
@@ -22,7 +21,9 @@
           <p>Plus la participation exceptionnelle de l'auteur</p>
           {{/if}}
         </article>
+
         {{> book id=book_id}}
+
       </div>
     </div>
   </article>

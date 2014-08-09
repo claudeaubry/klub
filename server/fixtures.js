@@ -25,6 +25,7 @@ booksFixtures = [
     title: "Story Mapping",
     author: "Jeff Patton",
     img: "usm.png",
+    text: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
   },
   {
     _id: "aFLPmnWhveM9H5pot",
@@ -85,7 +86,7 @@ sessionsFixtures = [
     place: "Maison des Associations",
     map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
     book_id: "L6BSZfgTHqGxAbfns",
-    text: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
+    meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
     statut: "next"
   },
   {

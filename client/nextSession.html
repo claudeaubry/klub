@@ -9,8 +9,8 @@
         <article class="col-xs-4">
             <ul class="list-group">
               <li class="list-group-item disabled">Infos pratiques</li>
-              <li class="list-group-item">Lieu : {{session.place}} <a target="_blank" href="{{session.map}}">(c'est où ?)</a></li>
-              <li class="list-group-item">Heure : 18h30-20h</li>
+              <li class="list-group-item">
+                {{> loc id=session.klub_id}}</li>
               <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
             </ul>
           {{#if session.voteer}}
@@ -23,4 +23,11 @@
       </div>
     </div>
   </article>
+</template>
+
+<template name="loc">
+  <div class="loc">
+    <p>Lieu : {{loc.place}} <a target="_blank" href="{{loc.map}}">(c'est où ?)</a></p>
+    <p>Heure : {{loc.hour}}</p>
+  </div>
 </template>

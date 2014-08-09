@@ -1,6 +1,7 @@
 Meteor.startup(function () {
   Sessions.remove({});
   Books.remove({});
+  Klubs.remove({});
 
   sessionsFixtures.forEach(function(session) {
     Sessions.insert(session);

@@ -25,7 +25,7 @@ booksFixtures = [
     title: "Story Mapping",
     author: "Jeff Patton",
     img: "usm.png",
-    text: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
+    teaser: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
   },
   {
     _id: "aFLPmnWhveM9H5pot",
@@ -61,7 +61,7 @@ booksFixtures = [
     author: "Robert-Vincent Joule & Jean-Léon Beauvois",
     img: "manip.jpg",
     site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
-    text :"L'Agilité est-elle un nouveau moyen de manipulation ? Peut on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
+    teaser :"L'Agilité est-elle un nouveau moyen de manipulation ? Peut on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
   },
   {
     _id: "XjGkzdWJzF6mwXB8L",
@@ -81,6 +81,7 @@ booksFixtures = [
 
 
 sessionsFixtures = [
+
   {
     i: "9",
     date: "9 septembre 2014",

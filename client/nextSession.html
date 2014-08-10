@@ -9,17 +9,18 @@
         <article class="col-xs-4">
             <ul class="list-group">
               <li class="list-group-item disabled">Infos pratiques</li>
-              <li class="list-group-item">
-                {{> loc}}</li>
+              <li class="list-group-item">{{> loc}}</li>
               <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
             </ul>
           {{#if session.voteer}}
-            <span>Sélection :
-            <a target="_blank" href="{{session.voteer}}">Le choix sur Voteer</a>
-            </span>
+            <span>Sélection : <a target="_blank" href="{{session.voteer}}">Le choix sur Voteer</a></span>
           {{/if}}
         </article>
-        {{> book id=session.book_id}}
+        {{#if session.book_id}}
+          {{> book id=session.book_id}}
+        {{else}}
+          <span>Le livre pour ce Klub n'est pas encore choisi. Voir les <a href="#prop">livres proposés.</a></span>
+        {{/if}}
       </div>
     </div>
   </article>

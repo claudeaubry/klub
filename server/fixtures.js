@@ -61,6 +61,7 @@ booksFixtures = [
     author: "Robert-Vincent Joule & Jean-Léon Beauvois",
     img: "manip.jpg",
     site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
+    text :"L'Agilité est-elle un nouveau moyen de manipulation ? Peut on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
   },
   {
     _id: "XjGkzdWJzF6mwXB8L",
@@ -176,4 +177,11 @@ klubsFixtures = [
     map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
     hour : "18h30-20h"
   },
+  {
+    _id : "houbam6sg7Ezn9BpJ",
+    region : "Bordeaux",
+    title : "Klub wine",
+
+  },
+
 ];

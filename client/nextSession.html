@@ -10,12 +10,12 @@
             <ul class="list-group">
               <li class="list-group-item disabled">Infos pratiques</li>
               <li class="list-group-item">
-                {{> loc id=session.klub_id}}</li>
+                {{> loc}}</li>
               <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
             </ul>
           {{#if session.voteer}}
             <span>Sélection :
-            <a target="_blank" href="{{session.voteer}}">le choix sur Voteer</a>
+            <a target="_blank" href="{{session.voteer}}">Le choix sur Voteer</a>
             </span>
           {{/if}}
         </article>

@@ -1,5 +1,5 @@
 <template name="nextSession">
-  <h3 class="well">Prochaine lecture au Klub</h3>
+  <h3 class="well">Prochain Klub de lecture</h3>
   <article class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -12,14 +12,16 @@
               <li class="list-group-item">{{> loc}}</li>
               <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
             </ul>
-          {{#if session.voteer}}
-            <span>Sélection : <a target="_blank" href="{{session.voteer}}">Le choix sur Voteer</a></span>
-          {{/if}}
         </article>
         {{#if session.book_id}}
           {{> book id=session.book_id}}
         {{else}}
-          <span>Le livre pour ce Klub n'est pas encore choisi. Voir les <a href="#prop">livres proposés.</a></span>
+          <span>Le livre pour ce Klub n'est pas encore choisi.</span>
+          {{#if session.voteer}}
+            <span><a target="_blank" href="{{session.voteer}}">Voir la sélection en cours sur Voteer.</a></span>
+          {{else}}
+            <span>Voir les <a href="#prop">livres proposés.</a></span>
+          {{/if}}
         {{/if}}
       </div>
     </div>

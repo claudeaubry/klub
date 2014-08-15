@@ -5,6 +5,7 @@ booksFixtures = [
     author: "Laurent Morisseau",
     img: "kit.png",
     site: "http://www.morisseauconsulting.com/2014/02/28/kanban-pour-lit-bientot-la-seconde-edition/",
+    teaser: "Le livre de référence sur Kanban",
   },
   {
     _id: "L6BSZXeTHqGxAbfns",
@@ -33,6 +34,7 @@ booksFixtures = [
     author: "John Perry",
     img: "procras.png",
     site : "http://www.structuredprocrastination.com/",
+    teaser: "Attendez demain pour le lire"
   },
   {
     _id: "veM9H5potaFLPmnW",
@@ -68,6 +70,7 @@ booksFixtures = [
     title: "Rupture douce 2",
     author: "Collectif des grenouilles agiles",
     statut: "proposed",
+    teaser: "des histoires de transformation agile d'organisations"
   },
   {
     _id: "6xJhA6Bj3tZ3N8BLL",

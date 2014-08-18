@@ -4,4 +4,4 @@ Template.proposal.titles = function(){
 
 Template.proposal.events = {
   'click .deleteBook': function(){ return Books.remove(this._id)}
-}
+};

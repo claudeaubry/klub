@@ -5,7 +5,8 @@
   <ul class="col-xs-10 col-xs-offset-1 list-group">
     {{#each titles}}
     <li class="list-group-item">
-      <strong>{{this.title}}</strong> par {{this.author}} - {{this.teaser}}
+      <strong>{{this.title}}</strong> par {{this.author}} - {{this.teaser}} -
+      <div align=right id= "{{_id}}" class="deleteBook">Supprimer</div>
     </li>
     {{/each}}
   </ul>

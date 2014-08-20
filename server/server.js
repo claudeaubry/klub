@@ -1,36 +1,36 @@
-function insertData(collection, datas) {
-  datas.forEach(function(data) {
-    collection.insert(data);
-  });
-}
-
 Meteor.startup(function () {
+  // Describe the link between Collections and JSON files
+  schema = [
+    {collection: Books, jsonKey: 'books'},
+    {collection: Sessions, jsonKey: 'sessions'},
+    {collection: Klubs, jsonKey: 'klubs'}
+  ];
   
-  if (process.env.NODE_ENV !== 'production') {
+  // Reset Database only in environment dev
+  if (process.env.NODE_ENV === 'development') {
     Sessions.remove({});
     Books.remove({});
     Klubs.remove({});
+    datas = Fixtures; // Specific datas for dev environment
+  }
+  else if (process.env.NODE_ENV === 'production') {
+    datas = Datas; // Specific datas for prod environment
   }
 
-  if (true) {
-    _.keys(Fixtures, function (key) {
-     console.log(key)      
-    })
-    
-    Fixtures.sessions.forEach(function(session) {
-      Sessions.insert(session);
+  // Insert all datas describes in schema
+  schema.forEach(function (table) {
+    // Insert datas only when database is empty
+    if (! table.collection.find().count()) {
+      datas[table.jsonKey].forEach(function(record) {
+        table.collection.insert(record);
     });
+    }
+  });
 
-    insertData(Books, Fixtures.books);
-
-    Fixtures.klubs.forEach(function(klub) {
-      Klubs.insert(klub);
-    });
-
-    Fixtures.users.forEach(function(user) {
-      if ( ! Meteor.users.findOne({username: user.username})) {
-        Accounts.createUser(user);
-      }
-    });
-  }
+  // Specific insert for users
+  datas.users.forEach(function(user) {
+    if (! Meteor.users.findOne({username: user.username})) {
+      Accounts.createUser(user);
+    }
+  });
 });

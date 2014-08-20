@@ -85,11 +85,17 @@ Fixtures = {
   sessions: [
 
     {
+      i: "10",
+      date: "9 octobre 2014",
+      meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
+      statut: "next"
+    },
+    {
       i: "9",
       date: "9 septembre 2014",
       book_id: "L6BSZfgTHqGxAbfns",
       meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
-      statut: "next"
+      statut: "past"
     },
     {
       i: "8",

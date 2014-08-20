@@ -12,25 +12,19 @@
               <li class="list-group-item">{{> loc}}</li>
               <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
             </ul>
+            {{#if session.voteer}}
+              Livre choisi sur <a target="_blank" href="{{session.voteer}}">Voteer</a>.
+            {{else}}
+              Livre choisi par consensus.
+            {{/if}}
         </article>
         {{#if session.book_id}}
           {{> book id=session.book_id}}
         {{else}}
           <span>Le livre pour ce Klub n'est pas encore choisi.</span>
-          {{#if session.voteer}}
-            <span><a target="_blank" href="{{session.voteer}}">Voir la sélection en cours sur Voteer.</a></span>
-          {{else}}
-            <span>Voir les <a href="#prop">livres proposés.</a></span>
-          {{/if}}
+          <span>Voir les <a href="#prop">livres proposés.</a></span>
         {{/if}}
       </div>
     </div>
   </article>
-</template>
-
-<template name="loc">
-  <div class="loc">
-    <p>Lieu : {{loc.place}} <a target="_blank" href="{{loc.map}}">(c'est où ?)</a></p>
-    <p>Heure : {{loc.hour}}</p>
-  </div>
 </template>

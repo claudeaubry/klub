@@ -9,7 +9,9 @@
       <div class="panel-body">
         <article class="col-xs-4">
           {{#if this.voteer}}
-          <a target="_blank" href="{{this.voteer}}">La sélection sur Voteer</a>
+          Le livre avait été choisi sur <a target="_blank" href="{{this.voteer}}">Voteer</a>.
+          {{else}}
+          Le livre avait été choisi par consensus.
           {{/if}}
           <ul class="list-group">
             <li class="list-group-item disabled">Participants :</li>

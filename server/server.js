@@ -5,7 +5,7 @@ Meteor.startup(function () {
     {collection: Sessions, jsonKey: 'sessions'},
     {collection: Klubs, jsonKey: 'klubs'}
   ];
-  
+
   // Reset Database only in environment dev
   if (process.env.NODE_ENV === 'development') {
     Sessions.remove({});

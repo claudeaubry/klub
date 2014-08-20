@@ -83,11 +83,11 @@ Fixtures = {
   ],
 
   sessions: [
+
     {
       i: "9",
       date: "9 septembre 2014",
       book_id: "L6BSZfgTHqGxAbfns",
-      klub_id: "TDjqHm6sg7Ezn9BpJ",
       meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
       statut: "next"
     },
@@ -178,11 +178,6 @@ Fixtures = {
       place: "Maison des Associations",
       map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
       hour : "18h30-20h"
-    },
-    {
-      _id : "houbam6sg7Ezn9BpJ",
-      region : "Bordeaux",
-      title : "Klub wine",
     },
   ]
 };

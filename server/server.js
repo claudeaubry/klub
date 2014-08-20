@@ -1,23 +1,36 @@
+function insertData(collection, datas) {
+  datas.forEach(function(data) {
+    collection.insert(data);
+  });
+}
+
 Meteor.startup(function () {
-  Sessions.remove({});
-  Books.remove({});
-  Klubs.remove({});
+  
+  if (process.env.NODE_ENV !== 'production') {
+    Sessions.remove({});
+    Books.remove({});
+    Klubs.remove({});
+  }
 
-  sessionsFixtures.forEach(function(session) {
-    Sessions.insert(session);
-  });
+  if (true) {
+    _.keys(Fixtures, function (key) {
+     console.log(key)      
+    })
+    
+    Fixtures.sessions.forEach(function(session) {
+      Sessions.insert(session);
+    });
 
-  booksFixtures.forEach(function(book) {
-    Books.insert(book);
-  });
+    insertData(Books, Fixtures.books);
 
-  klubsFixtures.forEach(function(klub) {
-    Klubs.insert(klub);
-  });
+    Fixtures.klubs.forEach(function(klub) {
+      Klubs.insert(klub);
+    });
 
-  usersFixtures.forEach(function(user) {
-    if ( ! Meteor.users.findOne({username: user.username})) {
-      Accounts.createUser(user);
-    }
-  });
+    Fixtures.users.forEach(function(user) {
+      if ( ! Meteor.users.findOne({username: user.username})) {
+        Accounts.createUser(user);
+      }
+    });
+  }
 });

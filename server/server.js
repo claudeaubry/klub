@@ -3,14 +3,12 @@ Meteor.startup(function () {
   schema = [
     {collection: Books, jsonKey: 'books'},
     {collection: Sessions, jsonKey: 'sessions'},
-    {collection: Klubs, jsonKey: 'klubs'}
   ];
   
   // Reset Database only in environment dev
   if (process.env.NODE_ENV === 'development') {
     Sessions.remove({});
     Books.remove({});
-    Klubs.remove({});
     datas = Fixtures; // Specific datas for dev environment
   }
   else if (process.env.NODE_ENV === 'production') {

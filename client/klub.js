@@ -1,7 +1,7 @@
 Template.klub.club = function(){
-  return Klubs.findOne();
+  return klubDatas;
 };
 
 Template.loc.loc = function(){
-  return Klubs.findOne();
+  return klubDatas;
 };

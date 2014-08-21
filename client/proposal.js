@@ -10,6 +10,7 @@ Template.proposal.events = {
     $("#bookSubmit").val(targetBook.title);
     $("#authorSubmit").val(targetBook.author);
     $("#teaserSubmit").val(targetBook.teaser);
-    $("button[type=submit]").html("Modifier")
+    $("button[type=submit]").html("Modifier");
+    $(".modal-title").html("Modifiez le livre")
   },
 };

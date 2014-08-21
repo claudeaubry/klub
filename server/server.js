@@ -24,7 +24,7 @@ Meteor.startup(function () {
       else {
         table.collection.insert(record);
       }
-        
+
     });
   });
 

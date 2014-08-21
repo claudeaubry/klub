@@ -14,7 +14,7 @@ Template.formBook.events({
     {
       throw alert("Il manque un auteur !");
     };
-    
+
     // Check to create a new book or update an old
     if (_id) {
       Books.update(_id, {

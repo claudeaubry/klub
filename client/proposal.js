@@ -8,6 +8,8 @@ Template.proposal.events = {
     var targetBook = Books.findOne(this._id);
     $("#_idSubmit").val(targetBook._id);
     $("#bookSubmit").val(targetBook.title);
+    $("#authorSubmit").val(targetBook.author);
+    $("#teaserSubmit").val(targetBook.teaser);
     $("button[type=submit]").html("Modifier")
   },
 };

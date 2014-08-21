@@ -10,7 +10,7 @@ Fixtures.sessions = [
     meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
     statut: "next"
   },
-  
+
   {
     i: "8",
     date: "3 juillet 2014",
@@ -18,7 +18,7 @@ Fixtures.sessions = [
     attendees: ["jean-pascal", "philippe"],
     statut: "past"
   },
-  
+
   {
     i: "7",
     date: "2 juin 2014",
@@ -27,7 +27,7 @@ Fixtures.sessions = [
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
   },
-  
+
   {
     i: "6",
     date: "24 mars 2014",
@@ -36,7 +36,7 @@ Fixtures.sessions = [
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
     statut: "past",
   },
-  
+
   {
     i: "5",
     date: "27 janvier 2014",
@@ -44,7 +44,7 @@ Fixtures.sessions = [
     attendees: ["jean-pascal", "jeff", "jean"],
     statut: "past"
   },
-  
+
   {
     i: "4",
     date: "2 décembre 2013",
@@ -61,7 +61,7 @@ Fixtures.sessions = [
     presence_author : true,
     statut: "past",
   },
-  
+
   {
     i: "2",
     date: "30 janvier 2013",
@@ -69,7 +69,7 @@ Fixtures.sessions = [
     attendees: ["clodio", "jeff", "pedro","antoine", "nath", "anthony"],
     statut: "past"
   },
-  
+
   {
     i: "1",
     date: "23 novembre 2012",

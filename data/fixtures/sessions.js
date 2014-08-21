@@ -50,7 +50,7 @@ Fixtures.sessions = [
   },
 
   {
-    _id: "",
+    _id: "jpThsYkqeg9QtDL6t",
     i: "4",
     date: "2 décembre 2013",
     book_id: "qS4YRw5hQNaAGnCgW",

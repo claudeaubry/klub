@@ -1,7 +1,7 @@
-if (typeof Fixtures === 'undefined')
-  Fixtures = {};
+if (typeof Datas === 'undefined')
+  Datas = {};
 
-Fixtures.sessions = [
+Datas.sessions = [
   {
     _id: "G98cNjCm5nK8YCufJ",
     i: "9",
@@ -16,7 +16,7 @@ Fixtures.sessions = [
     i: "8",
     date: "3 juillet 2014",
     book_id: "QNaAGnCgWHqGxAgfdg",
-    attendees: ["jean-pascal", "philippe"],
+    attendees: ["jean-pascal", "philippe", "jj"],
     statut: "past"
   },
 
@@ -50,7 +50,7 @@ Fixtures.sessions = [
   },
 
   {
-    _id: "",
+    _id: "jpThsYkqeg9QtDL6t",
     i: "4",
     date: "2 décembre 2013",
     book_id: "qS4YRw5hQNaAGnCgW",

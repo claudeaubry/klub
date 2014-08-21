@@ -18,7 +18,7 @@ Meteor.startup(function () {
   // Insert all datas describes in schema
   schema.forEach(function (table) {
     datas[table.jsonKey].forEach(function(record) {
-      if (datas.collection.findOne(record._id)) {
+      if (table.collection.findOne(record._id)) {
         table.collection.update(record._id, record);
       }
       else {

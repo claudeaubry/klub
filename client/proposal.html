@@ -10,13 +10,13 @@
       {{#if this.teaser}}
         - {{this.teaser}}
       {{/if}}
-      <button id= "{{_id}}" class="deleteBook btn btn-default">Supprimer</button>
+      <button id= "{{_id}}" class="deleteBook btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
       <button id= "{{_id}}" class="modifyBook btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></button>
     </li>
     {{/each}}
   </ul>
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Proposer un nouveau livre
-  </button>
+      Proposer un nouveau livre
+    </button>
   {{> modal}}
 </template>

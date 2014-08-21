@@ -1,3 +1,10 @@
+Template.formBook.helpers({
+  buttonLabel: function () {
+    Session.setDefault('formBookAuction', 'Proposer');
+    return Session.get('formBookAuction');
+  }
+});
+
 Template.formBook.events({
   'submit form': function (event) {
     var _id = $("#_idSubmit").val();
@@ -23,6 +30,7 @@ Template.formBook.events({
         teaser: teaser,
         statut: "proposed"
       });
+      Session.set('formBookAuction', 'Modifier');
     }
     else {
       Books.insert({
@@ -37,5 +45,6 @@ Template.formBook.events({
     $("input#bookSubmit").val('');
     $("input#authorSubmit").val('');
     $("input#teaserSubmit").val('');
+    Session.set('formBookAuction', '');
   }
 });

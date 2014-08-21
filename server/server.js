@@ -17,12 +17,15 @@ Meteor.startup(function () {
 
   // Insert all datas describes in schema
   schema.forEach(function (table) {
-    // Insert datas only when database is empty
-    if (! table.collection.find().count()) {
-      datas[table.jsonKey].forEach(function(record) {
+    datas[table.jsonKey].forEach(function(record) {
+      if (datas.collection.findOne(record._id)) {
+        table.collection.update(record._id, record);
+      }
+      else {
         table.collection.insert(record);
+      }
+        
     });
-    }
   });
 
   // Specific insert for users

@@ -3,15 +3,16 @@ if (typeof Fixtures === 'undefined')
 
 Fixtures.sessions = [
   {
+    _id: "G98cNjCm5nK8YCufJ",
     i: "9",
     date: "9 septembre 2014",
     book_id: "L6BSZfgTHqGxAbfns",
-    klub_id: "TDjqHm6sg7Ezn9BpJ",
     meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
     statut: "next"
   },
 
   {
+    _id: "dwfvQjjZ3gXZ2Ekjm",
     i: "8",
     date: "3 juillet 2014",
     book_id: "QNaAGnCgWHqGxAgfdg",
@@ -20,6 +21,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "gBhuknXrird9fqk63",
     i: "7",
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
@@ -29,6 +31,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "uj44KSGwWLXq8uiQ5",
     i: "6",
     date: "24 mars 2014",
     book_id: "HqGxAbfnstaFLPmnW",
@@ -38,6 +41,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "QJf2fznnCNkRFaa2c",
     i: "5",
     date: "27 janvier 2014",
     book_id: "veM9H5potaFLPmnW",
@@ -46,6 +50,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "",
     i: "4",
     date: "2 décembre 2013",
     book_id: "qS4YRw5hQNaAGnCgW",
@@ -54,6 +59,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "ZZNu5swenspGZMmJz",
     i: "3",
     date: "21 mars 2013",
     book_id: "qKbPu7fwzQSkkrmog",
@@ -63,6 +69,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "t3Rvyi3bCX6PM3uxg",
     i: "2",
     date: "30 janvier 2013",
     book_id: "aFLPmnWhveM9H5pot",
@@ -71,6 +78,7 @@ Fixtures.sessions = [
   },
 
   {
+    _id: "aHB9kvCrRp7kv2E3T",
     i: "1",
     date: "23 novembre 2012",
     book_id: "L6BSZXeTHqGxAbfns",

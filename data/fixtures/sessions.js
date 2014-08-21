@@ -6,7 +6,7 @@ Fixtures.sessions = [
     _id: "G98cNjCm5nK8YCufJ",
     i: "9",
     date: "9 septembre 2014",
-    book_id: "L6BSZfgTHqGxAbfns",
+    book_id: "",
     meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
     statut: "next"
   },

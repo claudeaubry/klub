@@ -16,7 +16,7 @@ Datas.sessions = [
     i: "8",
     date: "3 juillet 2014",
     book_id: "QNaAGnCgWHqGxAgfdg",
-    attendees: ["jean-pascal", "philippe", "jj"],
+    attendees: ["jean-pascal", "philippe"],
     statut: "past"
   },
 
@@ -25,7 +25,7 @@ Datas.sessions = [
     i: "7",
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
-    attendees: ["jean-pascal", "anthony", "clodio", "ludo", "ryadh"],
+    attendees: ["jean-pascal", "anthony", "claude", "ludo", "ryadh"],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
   },
@@ -35,7 +35,7 @@ Datas.sessions = [
     i: "6",
     date: "24 mars 2014",
     book_id: "HqGxAbfnstaFLPmnW",
-    attendees: ["jean-pascal", "jeff", "clodio", "nico", "ryadh"],
+    attendees: ["jean-pascal", "anthony", "jeff", "clodio", "nico", "ryadh"],
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
     statut: "past",
   },

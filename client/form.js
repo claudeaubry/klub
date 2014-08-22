@@ -37,7 +37,7 @@ Template.formBook.events({
         teaser: teaser,
         statut: "proposed"
       });
-      $('#myModal').modal('hide');
     }
+    $('#myModal').modal('hide');
   }
 });

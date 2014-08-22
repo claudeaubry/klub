@@ -1,6 +1,5 @@
 Template.formBook.helpers({
   buttonLabel: function () {
-    Session.setDefault('formBookAuction', 'Proposer');
     return Session.get('formBookAuction');
   }
 });
@@ -30,7 +29,6 @@ Template.formBook.events({
         teaser: teaser,
         statut: "proposed"
       });
-      Session.set('formBookAuction', 'Modifier');
     }
     else {
       Books.insert({
@@ -39,12 +37,7 @@ Template.formBook.events({
         teaser: teaser,
         statut: "proposed"
       });
+      $('#myModal').modal('hide');
     }
-    $('#myModal').modal('hide');
-    $("#_idSubmit").val('');
-    $("input#bookSubmit").val('');
-    $("input#authorSubmit").val('');
-    $("input#teaserSubmit").val('');
-    Session.set('formBookAuction', '');
   }
 });

@@ -3,13 +3,14 @@
   <article class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>Klub numéro {{session.i}} - {{session.date}}</span>
+        <span>Klub numéro {{session.i}}</span><div style="float: right">{{session.date}}</div>
       </div>
       <div class="panel-body">
         <article class="col-xs-4">
             <ul class="list-group">
               <li class="list-group-item disabled">Infos pratiques</li>
-              <li class="list-group-item">Lieu : {{club.place}} <a target="_blank" href="{{club.map}}">(mais c'est où ?)</a></li>
+              <li class="list-group-item">Région : {{club.region}}</li>
+              <li class="list-group-item">Lieu : {{club.place}} <a target="_blank" href="{{club.map}}">(c'est où ?)</a></li>
               <li class="list-group-item">Heure : {{club.hour}}</li>
               <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
             </ul>

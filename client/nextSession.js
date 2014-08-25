@@ -3,5 +3,5 @@ Template.nextSession.session = function(){
 };
 
 Template.nextSession.club = function(){
-  return {place: klubDatas.place, hour: klubDatas.hour, map: klubDatas.map };
+  return klubLocalDatas;
 };

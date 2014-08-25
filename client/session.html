@@ -4,7 +4,7 @@
   <article class="sessions col-xs-12 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span>Klub numéro {{i}} - {{date}}</span>
+        <span>Klub numéro {{this.i}}</span><div style="float: right">{{this.date}}</div>
       </div>
       <div class="panel-body">
         <article class="col-xs-4">
@@ -18,10 +18,10 @@
             {{#each attendees}}
             <li class="list-group-item">{{this}}</li>
             {{/each}}
+            {{#if this.presence_author}}
+            <li class="list-group-item">et l'auteur du livre</li>
+            {{/if}}
           </ul>
-          {{#if this.presence_author}}
-          <p>Plus la participation exceptionnelle de l'auteur</p>
-          {{/if}}
         </article>
         {{> book id=book_id}}
       </div>

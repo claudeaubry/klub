@@ -2,6 +2,10 @@
   padding: 2em;
 }
 
+.list-group {
+  padding: .6em;
+}
+
 .list-group-item {
   padding: .2em;
 }

@@ -25,7 +25,7 @@ Datas.sessions = [
     i: "7",
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
-    attendees: ["jean-pascal", "anthony", "claude", "ludo", "ryadh"],
+    attendees: ["jean-pascal", "anthony", "clodio", "ludo", "ryadh"],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
   },

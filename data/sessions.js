@@ -16,7 +16,8 @@ Datas.sessions = [
     i: "8",
     date: "3 juillet 2014",
     book_id: "QNaAGnCgWHqGxAgfdg",
-    attendees: ["jean-pascal", "philippe"],
+    attendees:
+    ["jean-pascal","philippe" ],
     statut: "past"
   },
 

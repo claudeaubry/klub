@@ -16,7 +16,11 @@ Fixtures.sessions = [
     i: "8",
     date: "3 juillet 2014",
     book_id: "QNaAGnCgWHqGxAgfdg",
-    attendees: ["jean-pascal", "philippe"],
+    attendees:
+    [
+      {att: "jean-pascal", url: "http://www.aubryconseil.com/post/Meteor-Klub"},
+      {att: "philippe"}
+    ],
     statut: "past"
   },
 
@@ -25,7 +29,10 @@ Fixtures.sessions = [
     i: "7",
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
-    attendees: ["jean-pascal", "anthony", "clodio", "ludo", "ryadh"],
+    attendees: [
+      {att: "jean-pascal"},
+      {att: "clodio", url: "http://www.aubryconseil.com/post/Meteor-Klub"}
+    ],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
   },

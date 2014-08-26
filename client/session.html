@@ -10,14 +10,21 @@
       <div class="panel-body">
         <article class="col-xs-4">
           {{#if this.voteer}}
-          Le livre avait été choisi sur <a target="_blank" href="{{this.voteer}}">Voteer</a>.
+          Le livre choisi sur <a target="_blank" href="{{this.voteer}}">Voteer</a>.
           {{else}}
-          Le livre avait été choisi par consensus.
+          Livre choisi par consensus.
           {{/if}}
           <ul class="list-group">
             <li class="list-group-item disabled">Participants :</li>
             {{#each attendees}}
-            <li class="list-group-item">{{this}}</li>
+              <li class="list-group-item">
+              {{#if this.url}}
+                <a target="_blank" href="{{this.url}}">{{this.att}}</a>
+              {{else}}
+                {{this.att}}
+              {{/if}}
+              <span class="pull-right glyphicon glyphicon-pencil"></span>
+              </li>
             {{/each}}
             {{#if this.presence_author}}
             <li class="list-group-item">et l'auteur du livre</li>

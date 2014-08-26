@@ -2,7 +2,7 @@
   <h3 id="prop" class="well">Livres proposés pour un prochain Klub</h3>
   <div>Il est possible de proposer des livres pour la prochaine sélection. En général, la liste des livres proposés est close lors du Klub et la sélection du livre pour le prochain est ouverte. La sélection peut être faite en séance ou bien réalisée avec l'application Voteer.</div>
   <h5 class="well col-xs-12">Liste des livres déjà proposés</h5>
-  <ul class="col-xs-10 col-xs-offset-1 list-group">
+  <ul class="proposedBook col-xs-10 col-xs-offset-1 list-group">
     {{#each titles}}
     <li class="list-group-item">
       <strong>{{this.title}}</strong>
@@ -11,7 +11,7 @@
         - {{this.teaser}}
       {{/if}}
       <button id= "{{_id}}" class="deleteBook pull-right btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
-      <button id= "{{_id}}" class="modifyBook btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></button>
+      <button id= "{{_id}}" class="modifyBook pull-right btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></button>
     </li>
     {{/each}}
   </ul>

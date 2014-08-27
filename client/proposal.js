@@ -12,7 +12,7 @@ Template.proposal.events = {
     $("input#bookSubmit").val('');
     $("input#authorSubmit").val('');
     $("input#teaserSubmit").val('');
-    $(".modal-title").html("Proposez un livre");
+    Session.set('formTitle', 'Proposez un livre');
     Session.set('formBookAuction', 'Proposer');
   },
   'click .modifyBook': function () {
@@ -21,7 +21,7 @@ Template.proposal.events = {
     $("#bookSubmit").val(targetBook.title);
     $("#authorSubmit").val(targetBook.author);
     $("#teaserSubmit").val(targetBook.teaser);
-    $(".modal-title").html("Modifiez ce livre");
+    Session.set('formTitle', 'Modifiez ce livre');
     Session.set('formBookAuction', 'Modifier');
   },
 

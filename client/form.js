@@ -1,6 +1,9 @@
 Template.formBook.helpers({
   buttonLabel: function () {
     return Session.get('formBookAuction');
+  },
+  titleLabel: function () {
+    return Session.get('formTitle');
   }
 });
 

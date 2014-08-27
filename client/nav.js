@@ -1,3 +1,3 @@
-Template.nav.clubLocal = function(){
-  return klubLocalDatas;
+Template.nav.titleClub = function(){
+  return klubLocalDatas.title;
 };

@@ -13,7 +13,7 @@ klubLocalDatas = {
   hour : "18h30-20h"
 };
 klubAppDatas = {
-    uvp: "Prolonger le Karma des séances.",
+    uvp: "Préparer et prolonger le karma des séances.",
     license : "MIT",
     framework : "Meteor",
     contact : "claude.aubry@gmail.com",

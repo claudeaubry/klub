@@ -1,5 +1,6 @@
 Template.formAtt.events({
   'submit formAtt': function (event) {
+    var _id = $("#_idSubmit").val();
     var link = $("input#linkSubmit").val();
 
 

@@ -38,6 +38,6 @@ Template.formBook.events({
         statut: "proposed"
       });
     }
-    $('#myModal').modal('hide');
+    $('#myPropModal').modal('hide');
   }
 });

@@ -14,7 +14,7 @@
           {{else}}
           Livre choisi par consensus.
           {{/if}}
-          <ul class="list-group">
+          <ul class="list-group attendees">
             <li class="list-group-item disabled">Participants :</li>
             {{#each attendees}}
               <li class="list-group-item">
@@ -23,7 +23,8 @@
               {{else}}
                 {{this.att}}
               {{/if}}
-              <span class="pull-right glyphicon glyphicon-pencil"></span>
+              <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#myAttModal"><span class="glyphicon glyphicon-pencil"></span></button>
+
               </li>
             {{/each}}
             {{#if this.presence_author}}
@@ -36,4 +37,5 @@
     </div>
   </article>
   {{/each}}
+  {{> modalAtt}}
 </template>

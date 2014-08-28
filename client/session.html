@@ -17,15 +17,14 @@
           <ul class="list-group attendees">
             <li class="list-group-item disabled">Participants :</li>
             {{#each attendees}}
-              <li class="list-group-item">
+            <li class="list-group-item">
               {{#if this.url}}
-                <a target="_blank" href="{{this.url}}">{{this.att}}</a>
+              <a target="_blank" href="{{this.url}}">{{this.att}}</a>
               {{else}}
-                {{this.att}}
+              {{this.att}}
               {{/if}}
-              <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#myAttModal"><span class="glyphicon glyphicon-pencil"></span></button>
-
-              </li>
+              <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalAttendeeLink"><span class="glyphicon glyphicon-pencil"></span></button>
+            </li>
             {{/each}}
             {{#if this.presence_author}}
             <li class="list-group-item">et l'auteur du livre</li>
@@ -37,5 +36,5 @@
     </div>
   </article>
   {{/each}}
-  {{> modalAtt}}
+  {{> formAtt}}
 </template>

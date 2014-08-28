@@ -11,12 +11,12 @@
         - {{this.teaser}}
       {{/if}}
       <button id= "{{_id}}" class="deleteBook pull-right btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
-      <button id= "{{_id}}" class="modifyBook pull-right btn btn-default" data-toggle="modal" data-target="#myPropModal"><span class="glyphicon glyphicon-pencil"></span></button>
+      <button id= "{{_id}}" class="modifyBook pull-right btn btn-default" data-toggle="modal" data-target="#modalBook"><span class="glyphicon glyphicon-pencil"></span></button>
     </li>
     {{/each}}
   </ul>
-    <button class="createBook btn btn-primary btn-lg" data-toggle="modal" data-target="#myPropModal">
+    <button class="createBook btn btn-primary btn-lg" data-toggle="modal" data-target="#modalBook">
       Proposer un nouveau livre
     </button>
-  {{> modalProp}}
+  {{> formBook}}
 </template>

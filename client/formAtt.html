@@ -1,14 +1,25 @@
 <template name="formAtt">
-  <form role="form">
-    <div class="modal-body">
-      <div class="form-group">
-        <label for="title">Lien</label>
-        <input type="text" class="form-control" id="linkSubmit" placeholder="Votre lien">
-      </div>
-
-    </div>
-    <div class="modal-footer">
-      <button type="submit" class="btn btn btn-primary">Confirmez</button>
-    </div>
-  </form>
+  <div class="modal fade" id="modalAttendeeLink"  role="dialog">
+    <div class="modal-content modal-dialog">
+      <form role="form" >
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span><span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Liez votre article ou tweet à la session</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="hidden" id="username" value="{{username}}">
+            <input type="hidden" id="_idSession" value="{{_idSession}}">
+            <label for="title">Lien</label>
+            <input type="text" class="form-control" id="linkSubmit" placeholder="Votre lien">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn btn-primary">Confirmez</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
 </template>

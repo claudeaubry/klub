@@ -8,6 +8,5 @@ autopublish
 insecure
 accounts-base
 accounts-password
+mrt:bootstrap-3
 less
-less-bootstrap-3
-font-awesome-4-less

@@ -18,8 +18,15 @@ Fixtures.sessions = [
     book_id: "QNaAGnCgWHqGxAgfdg",
     attendees:
     [
-      {att: "jean-pascal", url: "http://www.aubryconseil.com/post/Meteor-Klub"},
-      {att: "philippe"}
+      {
+        _idSession: "dwfvQjjZ3gXZ2Ekjm",
+        username: "jean-pascal",
+        url: "http://www.aubryconseil.com/post/Meteor-Klub"
+      },
+      {
+        _idSession: "dwfvQjjZ3gXZ2Ekjm",
+        username: "philippe"
+      }
     ],
     statut: "past"
   },
@@ -30,8 +37,15 @@ Fixtures.sessions = [
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
     attendees: [
-      {att: "jean-pascal"},
-      {att: "clodio", url: "http://www.aubryconseil.com/post/Meteor-Klub"}
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "jean-pascal"
+      },
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "clodio",
+        url: "http://www.aubryconseil.com/post/Meteor-Klub"
+      }
     ],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
@@ -43,15 +57,29 @@ Fixtures.sessions = [
     date: "24 mars 2014",
     book_id: "HqGxAbfnstaFLPmnW",
     attendees: [
-    {att: "jean-pascal"},
-    {att: "clodio", url: "http://www.aubryconseil.com/post/Meteor-Klub"},
-    {att: "jeff"},
-    {att: "nico"},
-    {att: "ryadh"}
+      {
+        _idSession: "uj44KSGwWLXq8uiQ5",
+        username: "jean-pascal"
+      },
+      {
+        _idSession: "uj44KSGwWLXq8uiQ5",
+        username: "clodio",
+        url: "http://www.aubryconseil.com/post/Meteor-Klub"
+      },
+      {
+        _idSession: "uj44KSGwWLXq8uiQ5",
+        username: "jeff"
+      },
+      {
+        _idSession: "uj44KSGwWLXq8uiQ5",
+        username: "nico"
+      },
+      {
+        _idSession: "uj44KSGwWLXq8uiQ5",
+        username: "ryadh"
+      }
     ],
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
     statut: "past",
   },
-
-
 ];

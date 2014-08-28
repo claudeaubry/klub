@@ -6,7 +6,6 @@ Template.proposal.events = {
   'click .deleteBook': function () {
     return Books.remove(this._id)
   },
-
   'click .createBook': function () {
     $("#_idSubmit").val('');
     $("input#bookSubmit").val('');

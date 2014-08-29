@@ -1,5 +1,5 @@
 Template.session.sessions = function(){
-  return Sessions.find({statut: "past"});
+  return Sessions.find({statut: "past"}, {sort: {i: -1}});
 };
 Template.session.events = {
 

@@ -13,6 +13,7 @@ Template.formBook.events({
     var book = $("input#bookSubmit").val();
     var author = $("input#authorSubmit").val();
     var teaser = $("input#teaserSubmit").val();
+    var origin = $("input#originSubmit").val();
 
     event.preventDefault();
     if (! book)
@@ -30,6 +31,7 @@ Template.formBook.events({
         title: book,
         author: author,
         teaser: teaser,
+        origin: origin,
         statut: "proposed"
       });
     }
@@ -38,6 +40,7 @@ Template.formBook.events({
         title: book,
         author: author,
         teaser: teaser,
+        origin: origin,
         statut: "proposed"
       });
     }

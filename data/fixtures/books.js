@@ -82,7 +82,8 @@ Fixtures.books = [
     title: "Rupture douce 2",
     author: "Collectif des grenouilles agiles",
     statut: "proposed",
-    teaser: "des histoires de transformation agile d'organisations"
+    teaser: "des histoires de transformation agile d'organisations",
+    origin: "clodio"
   },
 
   {

@@ -10,7 +10,8 @@ Template.proposal.events = {
     $("#_idSubmit").val('');
     $("input#bookSubmit").val('');
     $("input#authorSubmit").val('');
-    $("input#teaserSubmit").val('');
+    $("input#teaserSubmit").val('')
+    $("input#originSubmit").val('');
     Session.set('formTitle', 'Proposez un livre');
     Session.set('formBookAuction', 'Proposer');
   },
@@ -20,6 +21,7 @@ Template.proposal.events = {
     $("#bookSubmit").val(targetBook.title);
     $("#authorSubmit").val(targetBook.author);
     $("#teaserSubmit").val(targetBook.teaser);
+    $("#originSubmit").val(targetBook.origin);
     Session.set('formTitle', 'Modifiez ce livre');
     Session.set('formBookAuction', 'Modifier');
   },

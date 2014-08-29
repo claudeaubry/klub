@@ -45,7 +45,28 @@ Fixtures.sessions = [
         _idSession: "gBhuknXrird9fqk63",
         username: "clodio",
         url: "http://www.aubryconseil.com/post/Meteor-Klub"
-      }
+      },
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "jean-phi"
+      },
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "klod",
+        url: "http://www.aubryconseil.com/post/Meteor-Klub"
+      },
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "jeff"
+      },
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "jo"
+      },
+      {
+        _idSession: "gBhuknXrird9fqk63",
+        username: "niko"
+      },
     ],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"

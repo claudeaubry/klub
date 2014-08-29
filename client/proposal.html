@@ -14,6 +14,9 @@
       {{#if this.teaser}}
         - {{this.teaser}}
       {{/if}}
+      {{#if this.origin}}
+        proposé par {{this.origin}}
+      {{/if}}
       <button id= "{{_id}}" class="deleteBook pull-right btn btn-default"><span class="glyphicon glyphicon-trash" alt="Supprimer"></span></button>
       <button id= "{{_id}}" class="modifyBook pull-right btn btn-default" data-toggle="modal" data-target="#modalBook"><span class="glyphicon glyphicon-pencil" alt="Modifier"></span></button>
     </li>

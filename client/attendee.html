@@ -1,9 +1,9 @@
 <template name="attendee">
 <li class="list-group-item">
   {{#if url}}
-  <a target="_blank" href="{{url}}">{{username}}</a>
+    <a target="_blank" href="{{url}}">{{username}}</a>
   {{else}}
-  {{username}}
+    {{username}}
   {{/if}}
   <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalAttendeeLink">
     <span class="glyphicon glyphicon-pencil" alt="Ajouter un lien"></span>

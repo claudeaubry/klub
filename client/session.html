@@ -17,14 +17,7 @@
           <ul class="list-group attendees">
             <li class="list-group-item disabled">Participants :</li>
             {{#each attendees}}
-            <li class="list-group-item">
-              {{#if url}}
-              <a target="_blank" href="{{url}}">{{username}}</a>
-              {{else}}
-              {{username}}
-              {{/if}}
-              <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalAttendeeLink"><span class="glyphicon glyphicon-pencil" alt="Ajouter un lien"></span></button>
-            </li>
+            {{> attendee}}
             {{/each}}
             {{#if this.presence_author}}
             <li class="list-group-item">et l'auteur du livre</li>

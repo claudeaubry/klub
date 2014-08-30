@@ -1,19 +1,19 @@
 <template name="klub">
   <h3 id="klub" class="well"><i class="glyphicon glyphicon-book"></i>C'est quoi ce Klub ?</h3>
-  <h5 class="well col-xs-12">Les séances</h5>
+  <h5 class="well col-xs-12">Klub Manifesto</h5>
     <dl class="col-xs-12  dl-horizontal">
       <dt>Proposition de valeur</dt><dd>{{club.slogan}}</dd>
       <dt>Principe</dt><dd>{{club.principle}}</dd>
-      <dt>Objectif</dt><dd>{{club.objective}}</dd>
+      <dt>En pratique</dt><dd>{{club.objective}}</dd>
       <dt>Règle</dt><dd>{{club.rule}}</dd>
       <dt>Thème des lectures</dt><dd>{{club.theme}}</dd>
     </dl>
-  <h5 class="well col-xs-12">L'application</h5>
+  <h5 class="well col-xs-12">Vision de l'application Klub</h5>
     <dl class="col-xs-12  dl-horizontal">
       <dt>Proposition de valeur</dt><dd>{{app.uvp}}</dd>
+      <dt>Acteurs et features</dt><dd>{{app.actors}}</dd>
       <dt>Propulsé par </dt> <dd>{{app.framework}}</dd>
-      <dt>Licence</dt> <dd>{{app.license}}</dd>
-      <dt>Feedback</dt><dd><a target="_blank" href={{app.feedback}}>Pull request et issue sur GitHub</a></dd>
-      <dt>Message</dt><dd><a href="mailto:{{app.contact}}?subject=Klub">Envoi par mail</a></dd>
+      <dt>Licence</dt> <dd>{{app.license}} : <a target="_blank" href={{app.github}}>pull request et issue sur GitHub</a></dd>
+      <dt>Feedback</dt><dd>{{app.feedback}} : <a href="mailto:{{app.mail}}?subject=Klub">envoi par mail</a></dd>
     </dl>
 </template>

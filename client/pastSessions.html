@@ -11,7 +11,7 @@
         <article class="col-xs-4">Livre choisi
           {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus.{{/if}}
           <ul class="list-group attendees">
-            <li class="list-group-item disabled">Participants :</li>
+            <li class="list-group-item active">Participants :</li>
             {{> klubMaster}}
             {{#each attendees}}<li class="list-group-item">{{this}}</li>{{/each}}
             {{#if this.presence_author}}<li class="list-group-item">et l'auteur du livre</li>{{/if}}
@@ -31,7 +31,7 @@
 </template>
 
 <template name="klubMaster">
-  <li class="list-group-item">kM {{this.klubMaster}}
+  <li class="list-group-item">{{this.klubMaster}}
   <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalAttendeeLink">
     <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
   </button>

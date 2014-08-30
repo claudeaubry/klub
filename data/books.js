@@ -74,7 +74,6 @@ Datas.books = [
     author: "Robert-Vincent Joule & Jean-Léon Beauvois",
     img: "manip.jpg",
     site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
-    teaser :"L'Agilité est-elle un nouveau moyen de manipulation ? Peut-on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
   },
 
   {
@@ -82,7 +81,7 @@ Datas.books = [
     title: "Rupture douce 2",
     author: "Collectif des grenouilles agiles",
     statut: "proposed",
-    teaser: "des histoires de transformation agile d'organisations"
+    teaser: "des histoires de transformation agile d'organisations",
   },
 
   {

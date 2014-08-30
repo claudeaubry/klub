@@ -7,13 +7,16 @@ Template.formAtt.helpers({
 Template.formAtt.events({
   'submit form': function (event) {
     var link = $("input#linkSubmit").val();
-    var username = Session.get('formLinkUsername');
     var idSession = Session.get('formLinkIdSession');
-    var sessionTarget = Sessions.findOne(idSession);
+    var sessionTarget = KSessions.findOne(idSession);
 
     event.preventDefault();
-    _.findWhere(sessionTarget.attendees, {username: username}).url = link;
-    Sessions.update(sessionTarget._id, sessionTarget);
+    sessionTarget.url = link;
+//    _.findWhere(sessionTarget.attendees, {username: username}).url = link;
+    KSessions.update(sessionTarget._id, sessionTarget);
+
+//    KSessions.update(idSession, (url: link);
+
     $('#modalAttendeeLink').modal('hide');
   }
 });

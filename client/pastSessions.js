@@ -4,9 +4,9 @@ Template.pastSessions.sessions = function(){
 Template.pastSessions.events = {
 
   'click .modifyLink': function () {
-    Session.set('formLinkIdSession', this._idSession);
-    Session.set('formLinkUsername', this.username);
-    $("#linkSubmit").val("");
+    var targetKlub = KSessions.findOne(this._id);
+    Session.set('formLinkIdSession', this._id);
+    $("#linkSubmit").val(targetKlub.url);
   },
 
 };

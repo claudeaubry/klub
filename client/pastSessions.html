@@ -10,12 +10,13 @@
       <div class="panel-body">
         <article class="col-xs-4">
           {{#if this.voteer}}
-            Livre choisi sur <a target="_blank" href="{{this.voteer}}">Voteer</a>.
+            Livre choisi sur <a target="_blank" href="{{this.voteer}}">Voteer</a>
           {{else}}
             Livre choisi par consensus.
           {{/if}}
           <ul class="list-group attendees">
             <li class="list-group-item disabled">Participants :</li>
+            {{> klubMaster}}
             {{#each attendees}}
               {{> attendee}}
             {{/each}}
@@ -25,9 +26,22 @@
           </ul>
         </article>
         {{> book id=book_id}}
+        Résumé <a target="_blank" href="{{this.url}}">Lien</a>
       </div>
     </div>
   </article>
   {{/each}}
   {{> formAtt}}
+</template>
+
+<template name="klubMaster">
+  <li class="list-group-item">kM {{this.klubMaster}}
+  <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalAttendeeLink">
+    <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
+  </button>
+  </li>
+</template>
+
+<template name="attendee">
+  <li class="list-group-item">{{this}}</li>
 </template>

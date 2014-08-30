@@ -8,30 +8,26 @@
         <span class="heading-date pull-right"> {{this.date}}</span>
       </div>
       <div class="panel-body">
-        <article class="col-xs-4">
-          {{#if this.voteer}}
-            Livre choisi sur <a target="_blank" href="{{this.voteer}}">Voteer</a>
-          {{else}}
-            Livre choisi par consensus.
-          {{/if}}
+        <article class="col-xs-4">Livre choisi
+          {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus.{{/if}}
           <ul class="list-group attendees">
             <li class="list-group-item disabled">Participants :</li>
             {{> klubMaster}}
-            {{#each attendees}}
-              {{> attendee}}
-            {{/each}}
-            {{#if this.presence_author}}
-            <li class="list-group-item">et l'auteur du livre</li>
-            {{/if}}
+            {{#each attendees}}<li class="list-group-item">{{this}}</li>{{/each}}
+            {{#if this.presence_author}}<li class="list-group-item">et l'auteur du livre</li>{{/if}}
           </ul>
         </article>
         {{> book id=book_id}}
-        Résumé <a target="_blank" href="{{this.url}}">Lien</a>
+        <article class="klubage col-xs-5">
+          L'avis du Klub : {{this.summary}}<br/>
+          <a target="_blank" href="{{this.url}}">Infos supplémentaires sur ce Klub</a>
+        </article>
       </div>
     </div>
   </article>
+
   {{/each}}
-  {{> formAtt}}
+
 </template>
 
 <template name="klubMaster">
@@ -40,8 +36,5 @@
     <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
   </button>
   </li>
-</template>
-
-<template name="attendee">
-  <li class="list-group-item">{{this}}</li>
+  {{> formKM}}
 </template>

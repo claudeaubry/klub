@@ -1,21 +1,19 @@
-Template.formAtt.helpers({
-  attName: function () {
-    return Session.get('formLinkUsername');
+Template.formKM.helpers({
+  idS: function () {
+    return Session.get('formLinkIdSession');
   }
 });
 
-Template.formAtt.events({
+Template.formKM.events({
   'submit form': function (event) {
-    var link = $("input#linkSubmit").val();
     var idSession = Session.get('formLinkIdSession');
     var sessionTarget = KSessions.findOne(idSession);
 
     event.preventDefault();
-    sessionTarget.url = link;
+    sessionTarget.url = $("input#linkSubmit").val();
+    sessionTarget.summary = $("input#summarySubmit").val();
 //    _.findWhere(sessionTarget.attendees, {username: username}).url = link;
     KSessions.update(sessionTarget._id, sessionTarget);
-
-//    KSessions.update(idSession, (url: link);
 
     $('#modalAttendeeLink').modal('hide');
   }

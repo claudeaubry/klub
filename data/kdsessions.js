@@ -15,11 +15,10 @@ Datas.ksessions = [
     i: "8",
     date: "3 juillet 2014",
     book_id: "QNaAGnCgWHqGxAgfdg",
+    klubMaster: "jean-pascal",
     attendees:
-      [
-      {att: "jean-pascal"},
-      {att: "philippe"}
-      ],
+      ["philippe" ],
+    summary :"L'Agilité serait-elle un nouveau moyen de manipulation ? Peut-on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
     statut: "past"
   },
 
@@ -28,10 +27,9 @@ Datas.ksessions = [
     i: "7",
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
+    klubMaster: "clodio",
     attendees:
-      [
-      {att: "jean-pascal"}, {att: "anthony"}, {att: "clodio", url: "http://www.aubryconseil.com/post/Apprendre-par-la-lecture"}, {att: "ludo"}, {att: "ryadh"}
-      ],
+      ["jean-pascal", "anthony", "ludo", "ryadh" ],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
   },
@@ -41,10 +39,9 @@ Datas.ksessions = [
     i: "6",
     date: "24 mars 2014",
     book_id: "HqGxAbfnstaFLPmnW",
+    klubMaster: "clodio",
     attendees:
-      [
-      {att: "jean-pascal"}, {att: "anthony"}, {att: "jeff"}, {att: "clodio"}, {att: "nico"}, {att: "ryadh"}
-      ],
+      ["jean-pascal","anthony","jeff","nico","ryadh"],
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
     statut: "past",
   },
@@ -54,7 +51,8 @@ Datas.ksessions = [
     i: "5",
     date: "27 janvier 2014",
     book_id: "veM9H5potaFLPmnW",
-    attendees: [{att: "jean-pascal"}, {att: "jeff"}, {att: "jean"}],
+    klubMaster: "jean",
+    attendees: ["jean-pascal", "jeff"],
     statut: "past"
   },
 
@@ -63,7 +61,8 @@ Datas.ksessions = [
     i: "4",
     date: "2 décembre 2013",
     book_id: "qS4YRw5hQNaAGnCgW",
-    attendees: [{att: "clodio"}, {att: "jean-pascal"}, {att: "anthony"}, {att: "jeff"}, {att: "elvire"}, {att: "jean"}],
+    klubMaster: "clodio",
+    attendees: ["jean-pascal", "anthony", "jeff", "elvire", "jean"],
     statut: "past"
   },
 
@@ -72,7 +71,8 @@ Datas.ksessions = [
     i: "3",
     date: "21 mars 2013",
     book_id: "qKbPu7fwzQSkkrmog",
-    attendees: [{att: "clodio"}, {att: "riadh"}, {att: "mariejo"}, {att: "anthony"}, {att: "jean"}, {att: "david"}, {att: "marianne"}],
+    klubMaster: "clodio",
+    attendees: ["riadh", "mariejo", "anthony","jean","david","marianne"],
     presence_author : true,
     statut: "past",
   },
@@ -82,7 +82,9 @@ Datas.ksessions = [
     i: "2",
     date: "30 janvier 2013",
     book_id: "aFLPmnWhveM9H5pot",
-    attendees: [{att: "clodio"}, {att: "jeff"}, {att: "pedro"},{att: "antoine"}, {att: "nath"}, {att: "anthony"}],
+    klubMaster: "clodio",
+    attendees: ["jeff", "pedro","antoine", "nath","anthony"],
+    summary: "Attendez demain pour le lire",
     statut: "past"
   },
 
@@ -91,10 +93,10 @@ Datas.ksessions = [
     i: "1",
     date: "23 novembre 2012",
     book_id: "L6BSZXeTHqGxAbfns",
+    klubMaster: "clodio",
+    url: "http://www.aubryconseil.com/post/Lecture-d-Impact-Mapping-au-Club",
     attendees:
-      [
-      {att: "clodio"}, {att: "jeff"}, {att: "jean"}, {att: "mariejo"}, {att: "anthony"}, {att: "pedro"}, {att: "lolo"}, {att: "bernard"}
-      ],
+      ["jeff","jean","mariejo","anthony","pedro","lolo","bernard"],
     statut: "past"
   },
 ];

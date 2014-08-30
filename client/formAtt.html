@@ -1,4 +1,4 @@
-<template name="formAtt">
+<template name="formKM">
   <div class="modal fade" id="modalAttendeeLink"  role="dialog">
     <div class="modal-content modal-dialog">
       <form role="form" >
@@ -7,12 +7,16 @@
             <span>&times;</span>
             <span class="sr-only">Close</span>
           </button>
-          <h4 class="modal-title">KlubMaster, faites un rapport de ce Klub</h4>
+          <h4 class="modal-title">KlubMaster, faites le rapport de ce Klub</h4>
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label for="title">Lien (url)</label>
+            <label for="link">Lien (url)</label>
             <input type="text" class="form-control" id="linkSubmit" placeholder="Votre lien (ou rien pour le supprimer)">
+          </div>
+          <div class="form-group">
+            <label for="summary">Compte-rendu</label>
+            <input type="text" class="form-control" id="summarySubmit" placeholder="Votre résumé">
           </div>
         </div>
         <div class="modal-footer">

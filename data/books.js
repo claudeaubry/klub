@@ -41,7 +41,7 @@ Datas.books = [
     author: "John Perry",
     img: "procras.png",
     site : "http://www.structuredprocrastination.com/",
-    teaser: "Attendez demain pour le lire"
+    teaser: ""
   },
 
   {

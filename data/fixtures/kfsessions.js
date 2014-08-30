@@ -20,6 +20,7 @@ Fixtures.ksessions = [
     url: "http://www.aubryconseil.com/post/Apprendre-par-la-lecture",
     attendees:
     ["jean-pascal", "philippe" ],
+    summary :"L'Agilité serait-elle un nouveau moyen de manipulation ? Peut-on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
     statut: "past"
   },
 
@@ -29,6 +30,7 @@ Fixtures.ksessions = [
     date: "2 juin 2014",
     book_id: "QSkkrmogAbfnsta",
     klubMaster: "jb",
+    url: "http://google.fr",
     attendees: [ "clodio", "jeff", "anthony"],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
     statut: "past"
@@ -40,6 +42,8 @@ Fixtures.ksessions = [
     date: "24 mars 2014",
     book_id: "HqGxAbfnstaFLPmnW",
     klubMaster: "jean",
+    url: "http://meteor.com",
+    summary: "bonne ambiance",
     attendees: ["ryadh", "niko","jeff","clodio"],
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
     statut: "past",

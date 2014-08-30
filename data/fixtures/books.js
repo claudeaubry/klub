@@ -74,7 +74,6 @@ Fixtures.books = [
     author: "Robert-Vincent Joule & Jean-Léon Beauvois",
     img: "manip.jpg",
     site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
-    teaser :"L'Agilité serait-elle un nouveau moyen de manipulation ? Peut-on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
   },
 
   {

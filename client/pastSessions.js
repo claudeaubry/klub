@@ -7,6 +7,7 @@ Template.pastSessions.events = {
     var targetKlub = KSessions.findOne(this._id);
     Session.set('formLinkIdSession', this._id);
     $("#linkSubmit").val(targetKlub.url);
+    $("#summarySubmit").val(targetKlub.summary);
   },
 
 };

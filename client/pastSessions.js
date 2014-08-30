@@ -1,7 +1,7 @@
-Template.session.sessions = function(){
-  return Sessions.find({statut: "past"}, {sort: {i: -1}});
+Template.pastSessions.sessions = function(){
+  return KSessions.find({statut: "past"}, {sort: {i: -1}});
 };
-Template.session.events = {
+Template.pastSessions.events = {
 
   'click .modifyLink': function () {
     Session.set('formLinkIdSession', this._idSession);

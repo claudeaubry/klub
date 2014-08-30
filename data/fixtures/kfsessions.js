@@ -1,7 +1,7 @@
 if (typeof Fixtures === 'undefined')
   Fixtures = {};
 
-Fixtures.sessions = [
+Fixtures.ksessions = [
   {
     _id: "G98cNjCm5nK8YCufJ",
     i: "9",

@@ -1,7 +1,7 @@
-Template.nextSession.session = function(){
-  return Sessions.findOne({statut: "next"});
+Template.nextSession.next = function(){
+  return KSessions.findOne({statut: "next"});
 };
 
-Template.nextSession.club = function(){
+Template.nextSession.local = function(){
   return klubLocalDatas;
 };

@@ -1,28 +1,28 @@
 <template name="nextSession">
-  <h3 class="well"><i class="glyphicon glyphicon-calendar"></i> Prochain Klub de lecture</h3>
+  <h3 class="well"><i class="glyphicon glyphicon-calendar"></i> Prochain Klub</h3>
   <article class="col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span class="heading-title">Klub numéro {{session.i}}</span>
-        <span class="heading-date pull-right"> {{session.date}}</span>
+        <span class="heading-title">Klub numéro {{next.i}}</span>
+        <span class="heading-date pull-right"> {{next.date}}</span>
       </div>
       <div class="panel-body">
         <article class="col-xs-4">
             <ul class="list-group">
               <li class="list-group-item disabled">Infos pratiques</li>
-              <li class="list-group-item">Région : {{club.region}}</li>
-              <li class="list-group-item">Lieu : {{club.place}} <a target="_blank" href="{{club.map}}">(c'est où ?)</a></li>
-              <li class="list-group-item">Heure : {{club.hour}}</li>
-              <li class="list-group-item">Inscription : <a target="_blank" href="{{session.meetup}}">Meetup</a></li>
+              <li class="list-group-item">Région : {{local.region}}</li>
+              <li class="list-group-item">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(c'est où ?)</a></li>
+              <li class="list-group-item">Heure : {{local.hour}}</li>
+              <li class="list-group-item">Inscription : <a target="_blank" href="{{next.meetup}}">Meetup</a></li>
             </ul>
-            {{#if session.voteer}}
-              Livre choisi sur <a target="_blank" href="{{session.voteer}}">Voteer</a>.
+            {{#if next.voteer}}
+              Livre choisi sur <a target="_blank" href="{{next.voteer}}">Voteer</a>.
             {{else}}
               Livre choisi par consensus.
             {{/if}}
         </article>
-        {{#if session.book_id}}
-          {{> book id=session.book_id}}
+        {{#if next.book_id}}
+          {{> book id=next.book_id}}
         {{else}}
           <span>Le livre pour ce Klub n'est pas encore choisi.</span>
           <span>Voir les <a href="#prop">livres proposés.</a></span>

@@ -2,12 +2,12 @@ Meteor.startup(function () {
   // Describe the link between Collections and JSON files
   schema = [
     {collection: Books, jsonKey: 'books'},
-    {collection: Sessions, jsonKey: 'sessions'},
+    {collection: KSessions, jsonKey: 'ksessions'},
   ];
 
   // Reset Database only in environment dev
   if (process.env.NODE_ENV === 'development') {
-    Sessions.remove({});
+    KSessions.remove({});
     Books.remove({});
     datas = Fixtures; // Specific datas for dev environment
   }

@@ -8,7 +8,7 @@ Datas.books = [
     author: "Laurent Morisseau",
     img: "kit.png",
     site: "http://www.morisseauconsulting.com/2014/02/28/kanban-pour-lit-bientot-la-seconde-edition/",
-    teaser: "Le livre de référence sur Kanban",
+    teaser: "Le livre de référence sur Kanban en français",
   },
 
   {
@@ -17,6 +17,8 @@ Datas.books = [
     author: "Gojko Adzic",
     img: "impact.png",
     site : "http://www.impactmapping.com/",
+    teaser: "La nouvelle technique de planification stratégique et d'alignement sur la vision",
+
   },
 
   {
@@ -24,7 +26,8 @@ Datas.books = [
     title: "Running Lean",
     author: "Ash Maurya",
     img: "rl.jpg",
-    site : "http://practicetrumpstheory.com/"
+    site : "http://practicetrumpstheory.com/",
+    teaser: "Un mise en oeuvre très concrète du Lean Startup"
   },
 
   {
@@ -41,7 +44,7 @@ Datas.books = [
     author: "John Perry",
     img: "procras.png",
     site : "http://www.structuredprocrastination.com/",
-    teaser: ""
+    teaser: "Attendez demain pour le lire"
   },
 
   {
@@ -49,7 +52,8 @@ Datas.books = [
     title: "Specification by example",
     author: "Gojko Adzic",
     img: "sbe.jpg",
-    site : "http://specificationbyexample.com/",
+    site: "http://specificationbyexample.com/",
+    teaser: "Spécifier par l'exemple."
   },
 
   {
@@ -58,6 +62,7 @@ Datas.books = [
     author: "Andrea Tomasini & Martin Kearns",
     img: "agiletransition.jpg",
     site : "http://www.infoq.com/minibooks/Agile-Transition",
+    teaser: "Un mini-livre d'InfoQ"
   },
 
   {
@@ -65,7 +70,8 @@ Datas.books = [
     title: "Coaching Agile",
     author: "Rachel Davies & Liz Sedley, traduit par Fabrice Aimetti",
     img: "coachingagile.jpg",
-    site : "http://www.fabrice-aimetti.fr/2014/03/11/coaching-agile-la-traduction/",
+    site: "http://www.fabrice-aimetti.fr/2014/03/11/coaching-agile-la-traduction/",
+    teaser: "La version française d'une référence sur le coaching agile"
   },
 
   {
@@ -73,7 +79,8 @@ Datas.books = [
     title: "Petit traité de manipulation",
     author: "Robert-Vincent Joule & Jean-Léon Beauvois",
     img: "manip.jpg",
-    site : "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
+    site: "http://fr.wikipedia.org/wiki/Petit_trait%C3%A9_de_manipulation_%C3%A0_l%27usage_des_honn%C3%AAtes_gens",
+    teaser: "Best-seller de psychologie sociale"
   },
 
   {

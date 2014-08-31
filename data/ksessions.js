@@ -18,7 +18,7 @@ Datas.ksessions = [
     klubMaster: "jean-pascal",
     attendees:
       ["philippe" ],
-    summary :"L'Agilité serait-elle un nouveau moyen de manipulation ? Peut-on être à la fois agile et manipulateur ? Comment se prémunir de manipulations malhonnêtes, sans tomber dans le côté obscur ?",
+    summary: "L'Agilité serait-elle un nouveau moyen de manipulation ? Peut-on être à la fois agile et manipulateur ? mmmh…",
     statut: "past"
   },
 
@@ -31,6 +31,7 @@ Datas.ksessions = [
     attendees:
       ["jean-pascal", "anthony", "ludo", "ryadh" ],
     voteer: "http://www.voteer.com/polls/a03750d1-5828-44ca-8206-c8f220d3c8ce/result",
+    summary: "De bons conseils pour les coachs ; parmi eux : lire un livre par mois et consacrer une soirée pour participer à un groupe. Klub !",
     statut: "past"
   },
 
@@ -43,6 +44,8 @@ Datas.ksessions = [
     attendees:
       ["jean-pascal","anthony","jeff","nico","ryadh"],
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
+    summary: "Livre qui n'apprend pas grand chose, plutôt destiné à des newbies en agilité",
+    url: "http://www.aubryconseil.com/post/Transition-evaluation-et-innovation",
     statut: "past",
   },
 
@@ -63,6 +66,7 @@ Datas.ksessions = [
     book_id: "qS4YRw5hQNaAGnCgW",
     klubMaster: "clodio",
     attendees: ["jean-pascal", "anthony", "jeff", "elvire", "jean"],
+    summary: "On a fait du canevas, c'était sympa",
     statut: "past"
   },
 
@@ -74,6 +78,7 @@ Datas.ksessions = [
     klubMaster: "clodio",
     attendees: ["riadh", "mariejo", "anthony","jean","david","marianne"],
     presence_author : true,
+    summary: "Le Klub, c'est encore mieux quand l'auteur est là",
     statut: "past",
   },
 
@@ -97,6 +102,7 @@ Datas.ksessions = [
     url: "http://www.aubryconseil.com/post/Lecture-d-Impact-Mapping-au-Club",
     attendees:
       ["jeff","jean","mariejo","anthony","pedro","lolo","bernard"],
+    summary: "Sujet innovant, livre court et agréable",
     statut: "past"
   },
 ];

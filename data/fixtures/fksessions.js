@@ -8,6 +8,7 @@ Fixtures.ksessions = [
     date: "9 septembre 2014",
     book_id: "L6BSZfgTHqGxAbfns",
     meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
+    klubMaster: "polo",
     statut: "next"
   },
 

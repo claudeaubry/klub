@@ -18,3 +18,9 @@ ul.attendees li.list-group-item-info { line-height: 2.2em;}
 ul.attendees li.disabled { line-height: 2.2em;}
 
 ul.attendees li { padding: .5em;}
+
+.avis {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: .5em 0;
+}

@@ -19,7 +19,8 @@
         </article>
         {{> book id=book_id}}
         <article class="klubage col-xs-5">
-          L'avis des participants au Klub :<br/> {{this.summary}}<br/>
+          <div class="avis">L'avis des participants au Klub</div>         
+          <div>{{this.summary}}</div>
           {{#if this.url}}<a target="_blank" href="{{this.url}}">En savoir plus sur ce Klub</a>{{/if}}
         </article>
       </div>

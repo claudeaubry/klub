@@ -1,6 +1,6 @@
 <template name="pastSessions">
   <h3 class="well"><i class="glyphicon glyphicon-time"></i> L'historique de Klub</h3>
-  {{#each sessions}}
+  {{#each ksessions}}
   <article class="sessions col-xs-12 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -19,7 +19,7 @@
         </article>
         {{> book id=book_id}}
         <article class="klubage col-xs-5">
-          <div class="avis">L'avis des participants au Klub</div>         
+          <div class="avis">L'avis des participants au Klub</div>
           <div>{{this.summary}}</div>
           {{#if this.url}}<a target="_blank" href="{{this.url}}">En savoir plus sur ce Klub</a>{{/if}}
         </article>

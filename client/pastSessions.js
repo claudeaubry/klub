@@ -1,4 +1,4 @@
-Template.pastSessions.sessions = function(){
+Template.pastSessions.ksessions = function(){
   return KSessions.find({statut: "past"}, {sort: {i: -1}});
 };
 Template.pastSessions.events = {

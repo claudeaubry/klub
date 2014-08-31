@@ -1,28 +1,22 @@
- klub
-====
-Mode d'emploi Klub v1
-
-L'administration des sessions se fait, dans cette version, avec les datas et les fixtures.
-
-On peut proposer des livres en ligne. Quand un livre est choisi, l'admin l'associe à une session.
-
-Licence MIT
-
-Pour contribuer
+Utilisation de Meteor
 ====
 
 Installer meteor:
 
-`$> curl https://install.meteor.com/ | sh`
+`$> curl https://install.meteor.com/ | /bin/sh`
 
-Puis dans le répertoire du projet, installer les dépendances du projet :
+Créer une application :
 
-`$> npm install -g meteorite`
+`$ meteor create monapp`
 
-`$> mrt add less`
+Le lancer en local :
 
-`$> mrt add bootstrap3-less`
+`$ cd monapp`
 
-Ensuite, il suffit de lancer meteor :
+`$ meteor`
 
-`$> meteor`
+=> Meteor server running on: http://localhost:3000/
+
+Pour déployer :
+
+`$> meteor deploy monapp.meteor.com`

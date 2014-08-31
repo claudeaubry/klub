@@ -1,9 +1,9 @@
 .sessions {
-  padding: 2em;
+  padding: 1.5em;
 }
 
 .list-group {
-  padding: .6em;
+  padding: .8em .0em;
 }
 
 .list-group-item {
@@ -13,4 +13,8 @@
 .panel {
   min-height: 420px;
 }
-ul.attendees li { line-height: 2.3em;}
+ul.attendees li.list-group-item-info { line-height: 2.2em;}
+
+ul.attendees li.disabled { line-height: 2.2em;}
+
+ul.attendees li { padding: .5em;}

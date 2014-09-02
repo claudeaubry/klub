@@ -14,10 +14,6 @@ Meteor.startup(function () {
       }
     });
 
-    Meteor.publish("all_books", function() {
-      return Books.find();
-    });
-
     // Specific insert for KSessions
     Fixtures.ksessions.forEach(function(rec) {
       if (KSessions.findOne(rec._id)) {
@@ -28,10 +24,6 @@ Meteor.startup(function () {
       }
     });
 
-    Meteor.publish("all_ksessions", function() {
-      return KSessions.find();
-    });
-
     // Specific insert for users
     Fixtures.users.forEach(function(user) {
       if (! Meteor.users.findOne({username: user.username})) {
@@ -40,4 +32,12 @@ Meteor.startup(function () {
 
     });
   }
+  
+  Meteor.publish("all_books", function() {
+    return Books.find();
+  });
+  
+  Meteor.publish("all_ksessions", function() {
+    return KSessions.find();
+  });
 });

@@ -44,7 +44,7 @@ Datas.books = [
     author: "John Perry",
     img: "procras.png",
     site : "http://www.structuredprocrastination.com/",
-    teaser: "Attendez demain pour le lire"
+    teaser: "L'art de reporter au lendemain. Un véritable plaidoyer en faveur de la procrastination structurée !"
   },
 
   {

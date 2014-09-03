@@ -45,7 +45,7 @@ Fixtures.ksessions = [
     klubMaster: "jean",
     url: "http://meteor.com",
     summary: "bonne ambiance",
-    attendees: ["ryadh", "niko","jeff","clodio"],
+    attendees: ["riadh", "niko","jeff","clodio"],
     voteer: "http://www.voteer.com/polls/cd51fb07-0c58-4236-b9ef-c2d3f13b337b/result",
     statut: "past",
   },

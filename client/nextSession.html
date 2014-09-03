@@ -4,12 +4,12 @@
     <div class="panel panel-primary">
       <div class="panel-heading">
         <span class="heading-title">Klub numéro {{next.i}}</span>
-        <span class="heading-date pull-right"> {{next.date}}</span>
+        <span class="heading-date pull-right">{{next.date}}</span>
       </div>
       <div class="panel-body">
         <article class="col-xs-4">
             <ul class="list-group">
-              <li class="list-group-item list-group-item-info">Infos pratiques</li>
+              <li class="list-group-item disabled">Infos pratiques</li>
               <li class="list-group-item">Ville : {{local.region}}</li>
               <li class="list-group-item">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
               <li class="list-group-item list-group-item-warning">Jour : {{next.date}}</li>
@@ -17,7 +17,7 @@
               <li class="list-group-item">Inscription : <a target="_blank" href="{{next.meetup}}">Meetup</a></li>
               <li class="list-group-item">Livre choisi {{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.
                 {{else}}par consensus{{/if}}</li>
-              {{#if next.klubMaster}}<li class="list-group-item"> klubMaster : {{next.klubMaster}}</li>{{/if}}
+              {{#if next.klubMaster}}<li class="list-group-item">KlubMaster : {{next.klubMaster}}</li>{{/if}}
             </ul>
         </article>
         {{#if next.book_id}}

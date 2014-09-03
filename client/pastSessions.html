@@ -5,16 +5,17 @@
     <div class="panel panel-primary">
       <div class="panel-heading">
         <span class="heading-title">Klub numéro {{this.i}}</span>
-        <span class="heading-date pull-right"> {{this.date}}</span>
+        <span class="heading-date pull-right">{{this.date}}</span>
       </div>
       <div class="panel-body">
-        <article class="col-xs-4">Livre choisi
-          {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus.{{/if}}
+        <article class="col-xs-4">
+
           <ul class="list-group attendees">
             <li class="list-group-item disabled">Participants :</li>
             {{> klubMaster}}
             {{#each attendees}}<li class="list-group-item">{{this}}</li>{{/each}}
             {{#if this.presence_author}}<li class="list-group-item list-group-item-success">et l'auteur du livre</li>{{/if}}
+            <li class="list-group-item list-group-item-warning">Livre choisi {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus.{{/if}}</li>
           </ul>
         </article>
         {{> book id=book_id}}
@@ -30,7 +31,7 @@
 </template>
 
 <template name="klubMaster">
-  <li class="list-group-item list-group-item-info">{{this.klubMaster}}
+  <li class="list-group-item list-group-item-info km glyphicon glyphicon-star-empty"> {{this.klubMaster}}
   <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
     <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
   </button>

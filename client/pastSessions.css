@@ -3,21 +3,19 @@
 }
 
 .list-group {
-  padding: .8em .0em;
+  padding: .  6em .0em;
 }
 
 .list-group-item {
-  padding: .2em;
+  padding: .1em;
 }
 
 .panel {
   min-height: 420px;
 }
-ul.attendees li.list-group-item-info { line-height: 2.2em;}
+ul.attendees li.km { line-height: 2.1em;}
 
-ul.attendees li.disabled { line-height: 2.2em;}
-
-ul.attendees li { padding: .5em;}
+ul.attendees li { padding: .4em;}
 
 .avis {
   font-size: 1.1em;

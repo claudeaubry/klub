@@ -8,6 +8,6 @@ Template.pastSessions.events = {
     Session.set('formLinkIdSession', this._id);
     $("#linkSubmit").val(targetKlub.url);
     $("#summarySubmit").val(targetKlub.summary);
+    $("#attendeesSubmit").val(targetKlub.attendees);
   },
-
 };

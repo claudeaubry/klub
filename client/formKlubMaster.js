@@ -1,3 +1,8 @@
+Template.formKM.helpers({
+  attendees: function () { return "Jean, Robert, Pascal, Eric"; }
+
+});
+
 Template.formKM.events({
   'submit form': function (event) {
     var idSession = Session.get('formLinkIdSession');

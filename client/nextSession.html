@@ -14,8 +14,9 @@
               <li class="list-group-item">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
               <li class="list-group-item list-group-item-warning">Jour : {{next.date}}</li>
               <li class="list-group-item">Heure : {{local.hour}}</li>
-              <li class="list-group-item">Inscription : <a target="_blank" href="{{next.meetup}}">Meetup</a></li>
-              <li class="list-group-item">Livre choisi {{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.
+              <li class="list-group-item">Inscription : {{#if next.meetup}} <a target="_blank" href="{{next.meetup}}">Meetup</a>
+                {{else}}pas encore ouverte{{/if}}</li>
+              <li class="list-group-item">Livre choisi {{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">sur Voteer</a>
                 {{else}}par consensus{{/if}}</li>
               {{#if next.klubMaster}}<li class="list-group-item">KlubMaster : {{next.klubMaster}}</li>{{/if}}
             </ul>

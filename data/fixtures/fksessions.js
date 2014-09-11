@@ -2,14 +2,22 @@ if (typeof Fixtures === 'undefined')
   Fixtures = {};
 
 Fixtures.ksessions = [
+{
+  _id: "G98cNjfdsfdsfsd8YCufJ",
+  i: "10",
+  date: "27 octobre 2014",
+
+  statut: "next"
+},
+
   {
     _id: "G98cNjCm5nK8YCufJ",
     i: "9",
     date: "9 septembre 2014",
     book_id: "L6BSZfgTHqGxAbfns",
     meetup: "http://www.meetup.com/Agile-Toulouse/events/193870462/",
-    klubMaster: "polo",
-    statut: "next"
+    klubMaster: "tony",
+    statut: "past"
   },
 
   {

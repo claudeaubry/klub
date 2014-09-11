@@ -32,7 +32,7 @@ Fixtures.books = [
     title: "Story Mapping",
     author: "Jeff Patton",
     img: "usm.png",
-    teaser: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Il a enfin écrit son livre sur le sujet, qui va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble. Le livre n'est pas encore publié, mais on peut se procurer une early release au format pdf.",
+    teaser: "Jeff Patton est à l'origine de la pratique Story Mapping, qu'il a popularisée il y a déjà quelques années, en écrivant un article. Le livre va bien au-delà de la Story Map. Il aborde la définition de produits dans son ensemble.",
   },
 
   {

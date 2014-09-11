@@ -13,7 +13,7 @@ klubLocalDatas = {
   hour : "18h30-20h"
 };
 klubAppDatas = {
-    uvp: "Une application pour préparer et prolonger le karma des séances de partage sur un livre.",
+    uvp: "Une application qui s'adresse aux participants de Klub, pour préparer et prolonger le karma des séances de partage sur un livre.",
     actors: "Le klubOwner prépare un Klub en s'occupant de la sélection du livre, le klubMaster est chargé du compte-rendu, et tout le monde peut proposer des livres.",
     license : "Klub est un logiciel libre, sous licence MIT. Les contributeurs sont les bienvenus",
     framework : "Meteor, un framework open-source de développement web en Javascript basé sur Node.js",

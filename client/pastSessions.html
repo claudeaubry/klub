@@ -15,7 +15,7 @@
             {{> klubMaster}}
             {{#each attendees}}<li class="list-group-item">{{this}}</li>{{/each}}
             {{#if this.presence_author}}<li class="list-group-item list-group-item-success">et l'auteur du livre</li>{{/if}}
-            <li class="list-group-item list-group-item-warning">Livre choisi {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus.{{/if}}</li>
+            <li class="list-group-item list-group-item-warning">Livre choisi {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
           </ul>
         </article>
         {{> book id=book_id}}

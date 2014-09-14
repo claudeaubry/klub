@@ -16,8 +16,6 @@
               <li class="list-group-item">Heure : {{local.hour}}</li>
               <li class="list-group-item">Inscription : {{#if next.meetup}} <a target="_blank" href="{{next.meetup}}">Meetup</a>
                 {{else}}pas encore ouverte{{/if}}</li>
-              <li class="list-group-item">Livre choisi {{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">sur Voteer</a>
-                {{else}}par consensus{{/if}}</li>
               {{#if next.klubMaster}}<li class="list-group-item">KlubMaster : {{next.klubMaster}}</li>{{/if}}
             </ul>
         </article>
@@ -25,7 +23,10 @@
           {{> book id=next.book_id}}
         {{else}}
           <span>Le livre pour ce Klub n'est pas encore choisi.</span>
-          <span>Vous pouvez consulter les <a href="#prop">livres proposés</a> (et pourquoi pas en proposer vous-même, ou participer à la sélection).</span>
+          {{#if next.voteer}}
+            La sélection est en cours <a target="_blank" href="{{next.voteer}}">sur Voteer</a>, vous pouvez y participer.
+            {{else}}Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.
+          {{/if}}
         {{/if}}
       </div>
     </div>

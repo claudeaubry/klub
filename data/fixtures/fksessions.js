@@ -6,7 +6,7 @@ Fixtures.ksessions = [
   _id: "G98cNjfdsfdsfsd8YCufJ",
   i: "10",
   date: "27 octobre 2014",
-
+  voteer: "http://www.voteer.com/polls/cc309a4b-c711-48ef-9543-c194d9d56c5d",
   statut: "next"
 },
 

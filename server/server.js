@@ -1,7 +1,7 @@
 Meteor.startup(function () {
   // Reset Database only in environment dev
   if (process.env.NODE_ENV === 'development') {
-//    KSessions.remove({});
+    KSessions.remove({});
 //    Books.remove({});
 
     // Specific insert for Books
@@ -15,14 +15,14 @@ Meteor.startup(function () {
 //    });
 
     // Specific insert for KSessions
-//    Fixtures.ksessions.forEach(function(rec) {
-//      if (KSessions.findOne(rec._id)) {
-//        KSessions.update(rec._id, rec);
-//      }
-//      else {
-//        KSessions.insert(rec);
-//      }
-//    });
+      Fixtures.ksessions.forEach(function(rec) {
+        if (KSessions.findOne(rec._id)) {
+          KSessions.update(rec._id, rec);
+        }
+        else {
+          KSessions.insert(rec);
+        }
+      });
 
     // Specific insert for users
 //    Fixtures.users.forEach(function(user) {

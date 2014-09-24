@@ -1,26 +1,33 @@
 <template name="kSession">
-  <article class="sessions col-xs-12 col-md-6">
+  <article class="k-session col-xs-12 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span class="heading-title">Klub numéro {{this.i}}</span>
-        <span class="heading-date pull-right">{{this.date}}</span>
+        <span class="heading-title">Klub numéro {{ks.i}}</span>
+        <span class="heading-date pull-right">{{ks.date}}</span>
       </div>
       <div class="panel-body">
-        <article class="col-xs-4">
-          <ul class="list-group attendees">
-            <li class="list-group-item disabled">Participants :</li>
-            {{> klubMaster}}
-            {{#each attendees}}<li class="list-group-item">{{this}}</li>{{/each}}
-            {{#if this.presence_author}}<li class="list-group-item list-group-item-success">et l'auteur du livre</li>{{/if}}
-            <li class="list-group-item list-group-item-warning">Livre choisi {{#if this.voteer}}sur <a target="_blank" href="{{this.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
-          </ul>
-        </article>
+        <ul class="list-group attendees col-xs-4">
+          <li class="list-group-item disabled">Participants :</li>
+          <li class="list-group-item list-group-item-info km">{{this.klubMaster}}
+          <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
+            <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
+          </button>
+          </li>
+          {{> formKM}}
+          {{#each ks.attendees}}
+            <li class="list-group-item">{{this}}</li>
+          {{/each}}
+          {{#if ks.presence_author}}
+            <li class="list-group-item list-group-item-success">et l'auteur du livre</li>
+          {{/if}}
+          <li class="list-group-item list-group-item-warning">Livre choisi {{#if ks.voteer}}sur <a target="_blank" href="{{ks.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
+        </ul>
         {{> book id=book_id}}
-        <article class="klubage col-xs-5">
+        <aside class="klubage col-xs-5">
           <div class="avis">L'avis des participants au Klub</div>
-          <div>{{this.summary}}</div>
-          {{#if this.url}}<a target="_blank" href="{{this.url}}">En savoir plus sur ce Klub</a>{{/if}}
-        </article>
+          <div>{{ks.summary}}</div>
+          {{#if ks.url}}<a target="_blank" href="{{ks.url}}">En savoir plus sur ce Klub</a>{{/if}}
+        </aside>
       </div>
     </div>
   </article>

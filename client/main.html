@@ -1,20 +1,19 @@
 <head>
+  <title>Klub</title>
 </head>
 
 <body>
-  <div data-spy="scroll" data-target=".navbar-default">
-    {{> nav}}
-    <section id="klub" class="col-xs-12">
-      {{> klub}}
-    </section>
-    <section id="next" class="col-xs-12">
-      {{> nextSession}}
-    </section>
-    <section id="past" class="col-xs-12">
-      {{> pastSessions}}
-    </section>
-    <section id="prop" class="col-xs-12">
-      {{> proposal}}
-    </section>
-  </div>
+  {{> nav}}
+  <section id="klub" class="col-xs-12">
+    {{> klub}}
+  </section>
+  <section id="next" class="col-xs-12">
+    {{> nextSession}}
+  </section>
+  <section id="past" class="col-xs-12">
+    {{> pastSessions}}
+  </section>
+  <section id="prop" class="col-xs-12">
+    {{> proposal}}
+  </section>
 </body>

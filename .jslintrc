@@ -9,6 +9,7 @@
     "alert",
     "Template",
     "Meteor",
+    "Blaze",
     "Session",
     "Package",
     "$",

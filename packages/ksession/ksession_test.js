@@ -1,11 +1,11 @@
-Tinytest.add("A session exist", function (test) {
-  test.equal(true, true);
-});
+Tinytest.add("Create a ksession", function (test) {
+  var ks = {},
+    html = "";
 
-Tinytest.add("C session exist", function (test) {
-  test.equal(true, true);
-});
+  ks.i = 5;
+  ks.date = "Dimanche 5 février 2014";
+  ks.attendees = ["Tonio"];
+  html = Blaze.toHTMLWithData(Template.ksession, ks);
 
-Tinytest.add("B session exist", function (test) {
-  test.equal(true, false);
+  test.notEqual(html.search("Tonio</li>"), -1);
 });

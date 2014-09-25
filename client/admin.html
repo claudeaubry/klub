@@ -1,14 +1,17 @@
 <template name="admin">
-  <table class="ksessions table table-condensed">
-    <tr>
-      <th>numéro</th>
-      <th>titre</th>
-    </tr>
-    {{#each ks}}
-    <tr>
-      <td>{{i}}</td>
-      <td>{{book}}</td>
-    </tr>
-    {{/each}}
-  </table>
+  <section class="col-xs-6 col-xs-offset-3">
+    <table class="ksessions table table-stripped">
+      <tr>
+        <th>numéro</th>
+        <th>titre</th>
+      </tr>
+      {{#each ks}}
+      <tr>
+        <td>{{i}}</td>
+        <td>{{book}}</td>
+        <td><span class="glyphicon glyphicon-pencil"></span></td>
+      </tr>
+      {{/each}}
+    </table>
+  </section>
 </template>

@@ -6,6 +6,7 @@ Package.on_use(function (api, where) {
   api.use(['templating'], 'client');
   api.add_files([
     'lib/client/kSession.html',
+    'lib/client/kSession.css',
     'lib/client/kSession.js',
     'lib/client/formKM.html',
     'lib/client/formKM.js'

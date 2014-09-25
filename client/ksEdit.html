@@ -8,7 +8,12 @@
     <label for="i">KlubMaster</label>
     <input type="text" class="form-control klubMaster small" value={{ks.klubMaster}}>
     <label for="i">Book</label>
-    <input type="text" class="form-control book_id small" value={{ks.book_id}}>
+    <p>{{ks.book}}</p>
+    <select>
+      {{#each ks.books}}
+      <option value="{{id}}">{{title}}</option>
+      {{/each}}
+    </select>
     <button type="submit" class="btn btn-default">Sauvegarder</button>
   </form>
 </template>

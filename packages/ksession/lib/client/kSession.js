@@ -1,10 +1,10 @@
-Template.kSession.helpers({
+Template.ksession.helpers({
   ks: function () {
     return this;
   }
 });
 
-Template.kSession.events = {
+Template.ksession.events = {
   'click .modifyLink': function () {
     var targetKlub = KSessions.findOne(this._id);
 

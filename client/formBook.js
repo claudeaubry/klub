@@ -9,21 +9,19 @@ Template.formBook.helpers({
 
 Template.formBook.events({
   'submit form': function (event) {
-    var _id = $("#_idSubmit").val();
-    var book = $("input#bookSubmit").val();
-    var author = $("input#authorSubmit").val();
-    var teaser = $("input#teaserSubmit").val();
-    var origin = $("input#originSubmit").val();
+    var _id = $("#_idSubmit").val(),
+      book = $("input#bookSubmit").val(),
+      author = $("input#authorSubmit").val(),
+      teaser = $("input#teaserSubmit").val(),
+      origin = $("input#originSubmit").val();
 
     event.preventDefault();
-    if (! book)
-    {
+    if (!book) {
       throw alert("Il manque un titre !");
-    };
-    if (! author)
-    {
+    }
+    if (!author) {
       throw alert("Il manque un auteur !");
-    };
+    }
 
     // Check to create a new book or update an old
     if (_id) {
@@ -34,8 +32,7 @@ Template.formBook.events({
         origin: origin,
         statut: "proposed"
       });
-    }
-    else {
+    } else {
       Books.insert({
         title: book,
         author: author,

@@ -1,4 +1,4 @@
-Template.admin.helpers({
+Template.ksList.helpers({
   ks: function () {
     var ksessions = [];
     var ksCollection = KSessions.find({}, {fields: {i: 1, book_id: 1}, sort: {i: -1}});

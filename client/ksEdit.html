@@ -1,0 +1,14 @@
+<template name="ksEdit">
+  <form class="ks col-xs-6">
+    <input type="hidden" class="form-control id small" value={{ks._id}}>
+    <label for="i">Numéros</label>
+    <input type="text" class="form-control i small" value={{ks.i}}>
+    <label for="i">Date</label>
+    <input type="text" class="form-control date small" value={{ks.date}}>
+    <label for="i">KlubMaster</label>
+    <input type="text" class="form-control klubMaster small" value={{ks.klubMaster}}>
+    <label for="i">Book</label>
+    <input type="text" class="form-control book_id small" value={{ks.book_id}}>
+    <button type="submit" class="btn btn-default">Sauvegarder</button>
+  </form>
+</template>

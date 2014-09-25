@@ -1,3 +1,14 @@
 <template name="admin">
-  
+  <table class="ksessions table table-condensed">
+    <tr>
+      <th>numéro</th>
+      <th>titre</th>
+    </tr>
+    {{#each ks}}
+    <tr>
+      <td>{{i}}</td>
+      <td>{{book}}</td>
+    </tr>
+    {{/each}}
+  </table>
 </template>

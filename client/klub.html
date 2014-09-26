@@ -1,6 +1,7 @@
 <template name="klub">
-  <h3 id="klub" class="well"><i class="glyphicon glyphicon-book"></i>C'est quoi Klub ?</h3>
-  <h5 class="well col-xs-12">Klub Manifesto</h5>
+  <section id="klub" class="col-xs-12">
+    <h3 id="klub" class="well"><i class="glyphicon glyphicon-book"></i>C'est quoi Klub ?</h3>
+    <h5 class="well col-xs-12">Klub Manifesto</h5>
     <dl class="col-xs-12  dl-horizontal">
       <dt>Proposition de valeur</dt><dd>{{club.slogan}}</dd>
       <dt>Principe</dt><dd>{{club.principle}}</dd>
@@ -8,7 +9,7 @@
       <dt>Règle</dt><dd>{{club.rule}}</dd>
       <dt>Thème des lectures</dt><dd>{{club.theme}}</dd>
     </dl>
-  <h5 class="well col-xs-12">Vision de l'application Klub</h5>
+    <h5 class="well col-xs-12">Vision de l'application Klub</h5>
     <dl class="col-xs-12  dl-horizontal">
       <dt>Objectif</dt><dd>{{app.uvp}}</dd>
       <dt>Acteurs et features</dt><dd>{{app.actors}}</dd>
@@ -16,4 +17,5 @@
       <dt>Licence</dt> <dd>{{app.license}} : <a target="_blank" href={{app.github}}>pull request et issue sur GitHub</a></dd>
       <dt>Feedback</dt><dd>{{app.feedback}} : <a href="mailto:{{app.mail}}?subject=Klub">envoi par mail</a></dd>
     </dl>
+  </section>
 </template>

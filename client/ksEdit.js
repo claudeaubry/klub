@@ -3,7 +3,7 @@ Template.ksEdit.helpers({
     var ks = this;
     ks.books = Books.find();
     ks.book = Books.findOne(ks.book_id) ? Books.findOne(ks.book_id).title : "";
-    
+
     return ks;
   }
 });

@@ -1,32 +1,34 @@
 <template name="nextSession">
-  <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Le prochain Klub</h3>
-  <article class="next-session col-xs-12 col-md-offset-3 col-md-6">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <span class="heading-title">Klub numéro {{next.i}}</span>
-        <span class="heading-date pull-right">{{next.date}}</span>
-      </div>
-      <div class="panel-body">
-        <ul class="list-group col-xs-4">
-          <li class="list-group-item disabled">Infos pratiques</li>
-          <li class="list-group-item">Ville : {{local.region}}</li>
-          <li class="list-group-item">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-warning">Jour : {{next.date}}</li>
-          <li class="list-group-item">Heure : {{local.hour}}</li>
-          <li class="list-group-item">Inscription : {{#if next.meetup}} <a target="_blank" href="{{next.meetup}}">Meetup</a>
-            {{else}}pas encore ouverte{{/if}}</li>
-          {{#if next.klubMaster}}<li class="list-group-item">KlubMaster : {{next.klubMaster}}</li>{{/if}}
-        </ul>
-        {{#if next.book_id}}
+  <section id="next" class="col-xs-12">
+    <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Le prochain Klub</h3>
+    <article class="next-session col-xs-12 col-md-offset-3 col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <span class="heading-title">Klub numéro {{next.i}}</span>
+          <span class="heading-date pull-right">{{next.date}}</span>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group col-xs-4">
+            <li class="list-group-item disabled">Infos pratiques</li>
+            <li class="list-group-item">Ville : {{local.region}}</li>
+            <li class="list-group-item">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
+            <li class="list-group-item list-group-item-warning">Jour : {{next.date}}</li>
+            <li class="list-group-item">Heure : {{local.hour}}</li>
+            <li class="list-group-item">Inscription : {{#if next.meetup}} <a target="_blank" href="{{next.meetup}}">Meetup</a>
+              {{else}}pas encore ouverte{{/if}}</li>
+            {{#if next.klubMaster}}<li class="list-group-item">KlubMaster : {{next.klubMaster}}</li>{{/if}}
+          </ul>
+          {{#if next.book_id}}
           {{> book id=next.book_id}}
-        {{else}}
+          {{else}}
           <span>Le livre pour ce Klub n'est pas encore choisi.</span>
           {{#if next.voteer}}
-            La sélection est en cours <a target="_blank" href="{{next.voteer}}">sur Voteer</a>, vous pouvez y participer.
-            {{else}}Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.
+          La sélection est en cours <a target="_blank" href="{{next.voteer}}">sur Voteer</a>, vous pouvez y participer.
+          {{else}}Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.
           {{/if}}
-        {{/if}}
+          {{/if}}
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </section>
 </template>

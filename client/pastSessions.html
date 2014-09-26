@@ -1,6 +1,8 @@
 <template name="pastSessions">
-  <h3 class="well"><i class="glyphicon glyphicon-time"></i>L'historique de Klub</h3>
-  {{#each kSessions}}
+  <section id="past" class="col-xs-12">
+    <h3 class="well"><i class="glyphicon glyphicon-time"></i>L'historique de Klub</h3>
+    {{#each kSessions}}
     {{> ksession}}
-  {{/each}}
+    {{/each}}
+  </section>
 </template>

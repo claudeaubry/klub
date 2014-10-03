@@ -17,7 +17,7 @@ Template.ksEdit.events({
     ks.klubMaster = $("input.klubMaster").val();
     ks.voteer = $("input.vote").val();
     ks.meetup = $("input.meetup").val();
-    ks.book_id = $("input.id").val();
+    ks.book_id = $("book").val();
 
     _id ? KSessions.update(_id, ks) : KSessions.insert(ks);
   }

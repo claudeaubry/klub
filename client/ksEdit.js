@@ -3,7 +3,6 @@ Template.ksEdit.helpers({
     var ks = this;
     ks.books = Books.find();
     ks.book = Books.findOne(ks.book_id) ? Books.findOne(ks.book_id).title : "";
-    
     return ks;
   }
 });
@@ -16,6 +15,9 @@ Template.ksEdit.events({
     elt.preventDefault();
     ks.i = +$("input.i").val();
     ks.klubMaster = $("input.klubMaster").val();
+    ks.voteer = $("input.vote").val();
+    ks.meetup = $("input.meetup").val();
+    ks.book_id = $("input.id").val();
 
     _id ? KSessions.update(_id, ks) : KSessions.insert(ks);
   }

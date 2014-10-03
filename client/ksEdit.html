@@ -1,13 +1,17 @@
 <template name="ksEdit">
   <form class="ks col-xs-6">
     <input type="hidden" class="form-control id small" value={{ks._id}}>
-    <label for="i">Numéros</label>
+    <label for="i">Numéro</label>
     <input type="text" class="form-control i small" value={{ks.i}}>
-    <label for="i">Date</label>
+    <label for="date">Date</label>
     <input type="text" class="form-control date small" value={{ks.date}}>
-    <label for="i">KlubMaster</label>
+    <label for="vote">Voteer</label>
+    <input type="text" class="form-control vote small" value={{ks.voteer}}>
+    <label for="meetup">Meetup</label>
+    <input type="text" class="form-control meetup small" value={{ks.meetup}}>
+    <label for="klubMaster">KlubMaster</label>
     <input type="text" class="form-control klubMaster small" value={{ks.klubMaster}}>
-    <label for="i">Book</label>
+    <label for="book">Livre</label>
     <p>{{ks.book}}</p>
     <select>
       {{#each ks.books}}

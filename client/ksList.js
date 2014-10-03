@@ -1,7 +1,8 @@
 Template.ksList.helpers({
   ks: function () {
-    var ksessions = [];
-    var ksCollection = KSessions.find({}, {fields: {i: 1, book_id: 1}, sort: {i: -1}});
+    var ksessions = [],
+      ksCollection = KSessions.find({},
+        {fields: {i: 1, book_id: 1}, sort: {i: -1}});
 
     ksCollection.forEach(function (elt) {
       var book = Books.findOne(elt.book_id);

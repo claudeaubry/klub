@@ -13,7 +13,7 @@
     <input type="text" class="form-control klubMaster small" value={{ks.klubMaster}}>
     <label for="book">Livre</label>
     <p>{{ks.book}}</p>
-    <select>
+    <select name="selBook" class="selectpicker">
       {{#each ks.books}}
       <option value="{{id}}">{{title}}</option>
       {{/each}}

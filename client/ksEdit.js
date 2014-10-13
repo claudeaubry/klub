@@ -1,8 +1,10 @@
 Template.ksEdit.helpers({
   ks: function () {
     var ks = this;
+
     ks.books = Books.find();
     ks.book = Books.findOne(ks.book_id) ? Books.findOne(ks.book_id).title : "";
+
     return ks;
   }
 });
@@ -17,8 +19,8 @@ Template.ksEdit.events({
     ks.klubMaster = $("input.klubMaster").val();
     ks.voteer = $("input.vote").val();
     ks.meetup = $("input.meetup").val();
-    var titleSelected = $("select[name=selBook]").val();
-    ks.book_id = Books.findOne({title: titleSelected})._id;
+    ks.book_id = $("select[name=selBook]").val();
+    // Update an existent record or create it
     _id ? KSessions.update(_id, ks) : KSessions.insert(ks);
   }
 });

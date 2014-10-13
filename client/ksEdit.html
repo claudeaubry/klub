@@ -16,7 +16,7 @@
     <p>Changer le livre ou en associer un : </p>
     <select name="selBook" class="selectpicker">
       {{#each ks.books}}
-      <option value="{{id}}">{{title}}</option>
+      <option value="{{_id}}">{{title}}</option>
       {{/each}}
     </select>
     <button type="submit" class="btn btn-default">Sauvegarder</button>

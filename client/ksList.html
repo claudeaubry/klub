@@ -1,9 +1,10 @@
 <template name="ksList">
-  <section class="col-xs-6 col-xs-offset-3">
+  <section id="admin" class="col-xs-6 col-xs-offset-3">
+    <h3 class="well">Liste des Klubs avec les livres choisis</h3>
     <table class="ksessions table table-stripped">
       <tr>
-        <th>numéro</th>
-        <th>titre</th>
+        <th>Numéro</th>
+        <th>Titre du livre</th>
       </tr>
       {{#each ks}}
       <tr>

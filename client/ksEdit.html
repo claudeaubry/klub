@@ -12,7 +12,8 @@
     <label for="klubMaster">KlubMaster</label>
     <input type="text" class="form-control klubMaster small" value={{ks.klubMaster}}>
     <label for="book">Livre</label>
-    <p>{{ks.book}}</p>
+    <p>Livre déjà choisi pour ce Klub : {{ks.book}}</p>
+    <p>Changer le livre ou en associer un : </p>
     <select name="selBook" class="selectpicker">
       {{#each ks.books}}
       <option value="{{id}}">{{title}}</option>

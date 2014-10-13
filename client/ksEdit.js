@@ -3,10 +3,9 @@ Template.ksEdit.helpers({
     var ks = this;
 
     ks.books = Books.find();
-    ks.book = Books.findOne(ks.book_id) ? Books.findOne(ks.book_id).title : "";
 
     return ks;
-  }
+  },
 });
 
 Template.ksEdit.events({
@@ -24,3 +23,8 @@ Template.ksEdit.events({
     _id ? KSessions.update(_id, ks) : KSessions.insert(ks);
   }
 });
+
+Template.ksEdit.rendered = function () {
+  // Add this method because it works on refresh but won't by clicking on previous list page.
+  this.$("select[name='selBook']").val(this.$('input.book-id').val());
+};

@@ -1,3 +1,5 @@
-Template.pastSessions.kSessions = function () {
-  return KSessions.find({statut: "past"}, {sort: {i: -1}});
-};
+Template.pastSessions.helpers({
+  kSessions: function () {
+    return KSessions.find({statut: "past"}, {sort: {i: -1}});
+  }
+});

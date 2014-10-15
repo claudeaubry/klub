@@ -1,6 +1,8 @@
-Template.proposal.titles = function () {
-  return Books.find({statut : "proposed"});
-};
+Template.proposal.helpers({
+  titles: function () {
+    return Books.find({statut : "proposed"});
+  }
+});
 
 Template.proposal.events = {
   'click .deleteBook': function () {

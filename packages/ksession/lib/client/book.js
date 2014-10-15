@@ -1,3 +1,5 @@
-Template.book.oneBook = function () {
-  return Books.findOne(this.id);
-};
+Template.book.helpers({
+  oneBook: function () {
+    return Books.findOne(this.id);
+  }
+});

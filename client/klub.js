@@ -1,7 +1,8 @@
-Template.klub.club = function () {
-  return klubDatas;
-};
-
-Template.klub.app = function () {
+Template.klub.helpers({
+  club: function () {
+    return klubDatas;
+  },
+  app: function () {
    return klubAppDatas;
-};
+  }
+});

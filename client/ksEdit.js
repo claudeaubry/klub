@@ -19,11 +19,18 @@ Template.ksEdit.events({
     ks.meetup = $("input.meetup").val();
     ks.book_id = $("select[name=selBook]").val();
     // Update an existent record or create it
-    _id ? KSessions.update(_id, ks) : KSessions.insert(ks);
+    if (_id) {
+      KSessions.update(_id, ks);
+    } else {
+      KSessions.insert(ks);
+    }
   }
 });
 
 Template.ksEdit.rendered = function () {
-  // Add this method because it works on refresh but won't by clicking on previous list page.
+  /*
+  Add this method because it works on refresh
+  but won't by clicking on previous list page.
+ */
   this.$("select[name='selBook']").val(this.$('input.book-id').val());
 };

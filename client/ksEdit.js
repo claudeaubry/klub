@@ -1,11 +1,9 @@
 Template.ksEdit.helpers({
   ks: function () {
     var ks = this;
-
     ks.books = Books.find();
-
     return ks;
-  },
+  }
 });
 
 Template.ksEdit.events({
@@ -16,6 +14,7 @@ Template.ksEdit.events({
     elt.preventDefault();
     ks.i = +$("input.i").val();
     ks.klubMaster = $("input.klubMaster").val();
+    ks.date = $("input.date").val();
     ks.voteer = $("input.vote").val();
     ks.meetup = $("input.meetup").val();
     ks.book_id = $("select[name=selBook]").val();

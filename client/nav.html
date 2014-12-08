@@ -1,11 +1,5 @@
 <template name="nav">
   <nav class="navbar navbar-default navbar-fixed-top">
     <a class="navbar-brand" href="{{pathFor 'home'}}">{{titleClub}}</a>
-    <ul class="nav navbar-nav">
-      <li>{{> loginButtons}}</li>
-      {{#if isUser}}
-        <li><a href="{{pathFor 'admin'}}">admin</a></li>
-      {{/if}}
-    </ul>
   </nav>
 </template>

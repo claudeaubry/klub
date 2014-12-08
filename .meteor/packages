@@ -5,11 +5,7 @@
 
 standard-app-packages
 insecure
-accounts-base
 less
 ian:bootstrap-3
 ksession
 iron:router
-accounts-github
-accounts-ui
-

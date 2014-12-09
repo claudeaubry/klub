@@ -1,6 +1,6 @@
 Template.bookCreate.helpers({
   buttonLabel: function () {
-    return Session.get('formBookAuction');
+    return Session.get('formBookAuction') || "Créer";
   },
   titleLabel: function () {
     return Session.get('formTitle');
@@ -8,6 +8,16 @@ Template.bookCreate.helpers({
 });
 
 Template.bookCreate.events({
+  'click .createBook': function () {
+    $("#_idSubmit").val('');
+    $("input#bookSubmit").val('');
+    $("input#authorSubmit").val('');
+    $("input#teaserSubmit").val('');
+    $("input#originSubmit").val('');
+    Session.set('formTitle', 'Proposez un livre');
+    console.log("proposez")
+    Session.set('formBookAuction', 'Proposer');
+  },
   'submit form': function (event) {
     var _id = $("#_idSubmit").val(),
     book = $("input#bookSubmit").val(),

@@ -16,13 +16,23 @@ Template.nextKlub.events({
     ns.voteer = $("input.vote").val();
     ns.meetup = $("input.meetup").val();
     ns.book_id = $("select[name=selBook]").val();
-    console.log("ns",ns)
+
     NextKlub.update(ns._id, ns);
-    console.log("ns",NextKlub.findOne())
   },
 
   'click .archive': function (elt) {
+    var ns = NextKlub.findOne(),
+      ks = {};
 
+    elt.preventDefault();
+    ks.date = ns.date;
+    ks.voteer = ns.voteer;
+    ks.meetup = ns.meetup;
+    ks.book_id = ns.book_id;
+    ks.i = KSessions.find().count() + 1;
+    
+    KSessions.insert(ks);
+    NextKlub.update(ns._id, {});
   }
 });
 

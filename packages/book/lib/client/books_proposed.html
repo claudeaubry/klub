@@ -1,0 +1,22 @@
+<template name="books_proposed">
+  <ul class="proposedBook col-xs-10 col-md-offset-1 list-group">
+    {{#each titles}}
+    <li class="list-group-item text-center">
+      <strong>{{this.title}}</strong>
+      de {{this.author}}
+      {{#if this.teaser}}
+      - {{this.teaser}}
+      {{/if}}
+      {{#if this.origin}}
+      proposé par {{this.origin}}
+      {{/if}}
+      <button id= "{{_id}}" class="deleteBook pull-right btn btn-default">
+        <span class="glyphicon glyphicon-trash" alt="Supprimer"></span>
+      </button>
+      <button id= "{{_id}}" class="modifyBook pull-right btn btn-default" data-toggle="modal" data-target="#modalBook">
+        <span class="glyphicon glyphicon-pencil" alt="Modifier"></span>
+      </button>
+    </li>
+    {{/each}}
+  </ul>
+</template>

@@ -5,11 +5,16 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use(['templating'], 'client');
   api.add_files([
-    'lib/client/book.html',
+    'lib/client/books_proposed.html',
     'lib/client/book.css',
-    'lib/client/book.js'
+    'lib/client/books_proposed.js'
   ],
     'client');
+  api.add_files(['lib/collections/books.js'], ['client', 'server']);
+
+  if (api.export) {
+    api.export(['Books']);
+  }
 });
 
 Package.on_test(function (api) {

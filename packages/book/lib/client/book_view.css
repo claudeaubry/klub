@@ -20,5 +20,5 @@ article.book .book-site {
 }
 
 article.book .book-cover {
-min-height: 50px;
+  min-height: 50px;
 }

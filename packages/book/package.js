@@ -6,8 +6,10 @@ Package.on_use(function (api, where) {
   api.use(['templating'], 'client');
   api.add_files([
     'lib/client/books_proposed.html',
-    'lib/client/book.css',
-    'lib/client/books_proposed.js'
+    'lib/client/books_proposed.js',
+    'lib/client/book_view.html',
+    'lib/client/book_view.css',
+    'lib/client/book_view.js'
   ],
     'client');
   api.add_files(['lib/collections/books.js'], ['client', 'server']);

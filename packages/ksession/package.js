@@ -5,9 +5,6 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use(['templating'], 'client');
   api.add_files([
-    'lib/client/book.html',
-    'lib/client/book.css',
-    'lib/client/book.js',
     'lib/client/kSession.html',
     'lib/client/kSession.css',
     'lib/client/kSession.js',

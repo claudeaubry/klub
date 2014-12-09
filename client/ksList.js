@@ -16,3 +16,10 @@ Template.ksList.helpers({
     return ksessions;
   }
 });
+
+Template.ksList.events({
+  'click .nextKlub': function (elt) {
+    console.log('bip')
+    Router.go('adminNextKlub')
+  }
+});

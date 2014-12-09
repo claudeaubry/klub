@@ -22,7 +22,7 @@
           {{/if}}
           <li class="list-group-item list-group-item-warning">Livre choisi {{#if ks.voteer}}sur <a target="_blank" href="{{ks.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
         </ul>
-        {{> book_view id=ks.book_id}}
+        {{> bookView id=ks.book_id}}
         <aside class="klubage col-xs-5">
           <div class="avis">L'avis des participants au Klub</div>
           <div>{{ks.summary}}</div>

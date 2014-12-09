@@ -5,6 +5,8 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use(['templating'], 'client');
   api.add_files([
+    'lib/client/book_create.html',
+    'lib/client/book_create.js',
     'lib/client/books_proposed.html',
     'lib/client/books_proposed.js',
     'lib/client/book_view.html',

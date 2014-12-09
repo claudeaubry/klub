@@ -1,16 +1,31 @@
 Template.nextKlub.helpers({
   ns: function () {
     var ns = this;
-    console.log(ns)
+
     ns.books = Books.find();
     return ns;
   }
 });
-/*
-Template.ksEdit.events({
+
+Template.nextKlub.events({
   'submit form': function (elt) {
-    var _id = $('input.id').val(),
-    ks = _id ? KSessions.findOne(_id) : {};
+    var ns = NextKlub.findOne();
+
+    elt.preventDefault();
+    ns.date = $("input.date").val();
+    ns.voteer = $("input.vote").val();
+    ns.meetup = $("input.meetup").val();
+    console.log("ns",ns)
+    NextKlub.update(ns._id, ns);
+    console.log("ns",NextKlub.findOne())
+  },
+
+  'click .archive': function (elt) {
+
+  }
+});
+
+/*
 
     elt.preventDefault();
     ks.i = +$("input.i").val();

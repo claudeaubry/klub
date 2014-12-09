@@ -19,7 +19,9 @@ Template.ksList.helpers({
 
 Template.ksList.events({
   'click .nextKlub': function (elt) {
-    console.log('bip')
     Router.go('adminNextKlub')
+  },
+  'click .createSession': function (elt) {
+    Router.go('adminCreate')
   }
 });

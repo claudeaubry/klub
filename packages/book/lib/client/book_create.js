@@ -1,4 +1,4 @@
-Template.formBook.helpers({
+Template.bookCreate.helpers({
   buttonLabel: function () {
     return Session.get('formBookAuction');
   },
@@ -7,13 +7,13 @@ Template.formBook.helpers({
   }
 });
 
-Template.formBook.events({
+Template.bookCreate.events({
   'submit form': function (event) {
     var _id = $("#_idSubmit").val(),
-      book = $("input#bookSubmit").val(),
-      author = $("input#authorSubmit").val(),
-      teaser = $("input#teaserSubmit").val(),
-      origin = $("input#originSubmit").val();
+    book = $("input#bookSubmit").val(),
+    author = $("input#authorSubmit").val(),
+    teaser = $("input#teaserSubmit").val(),
+    origin = $("input#originSubmit").val();
 
     event.preventDefault();
     if (!book) {

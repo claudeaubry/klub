@@ -1,4 +1,4 @@
-Template.books_proposed.helpers({
+Template.booksProposed.helpers({
   titles: function () {
     return Books.find({statut : "proposed"});
   }

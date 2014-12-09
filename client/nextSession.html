@@ -18,7 +18,7 @@
           {{#if next.klubMaster}}<li class="list-group-item">KlubMaster : {{next.klubMaster}}</li>{{/if}}
         </ul>
         {{#if next.book_id}}
-          {{> book id=next.book_id}}
+          {{> bookView id=next.book_id}}
         {{else}}
           <span>Le livre pour ce Klub n'est pas encore choisi.</span>
           {{#if next.voteer}}

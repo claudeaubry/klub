@@ -15,6 +15,7 @@ Template.nextKlub.events({
     ns.date = $("input.date").val();
     ns.voteer = $("input.vote").val();
     ns.meetup = $("input.meetup").val();
+    ns.book_id = $("select[name=selBook]").val();
     console.log("ns",ns)
     NextKlub.update(ns._id, ns);
     console.log("ns",NextKlub.findOne())
@@ -25,32 +26,10 @@ Template.nextKlub.events({
   }
 });
 
-/*
-
-    elt.preventDefault();
-    ks.i = +$("input.i").val();
-    ks.klubMaster = $("input.klubMaster").val();
-    ks.date = $("input.date").val();
-    ks.voteer = $("input.vote").val();
-    ks.meetup = $("input.meetup").val();
-    ks.book_id = $("select[name=selBook]").val();
-    // Update an existent record or create it
-    if (_id) {
-      KSessions.update(_id, ks);
-    } else {
-      KSessions.insert(ks);
-    }
-  },
-  'click .archive': function (elt) {
-  }
-});
-
-Template.ksEdit.rendered = function () {
+Template.nextKlub.rendered = function () {
   /*
   Add this method because it works on refresh
   but won't by clicking on previous list page.
   */
-/*
   this.$("select[name='selBook']").val(this.$('input.book-id').val());
 };
-*/

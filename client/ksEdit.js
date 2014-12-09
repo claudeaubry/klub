@@ -24,6 +24,13 @@ Template.ksEdit.events({
     } else {
       KSessions.insert(ks);
     }
+  },
+  'click .delete': function (elt) {
+    var _id = $('input.id').val();
+
+    elt.preventDefault();
+    KSessions.remove(this._id);
+    Router.go('admin');
   }
 });
 

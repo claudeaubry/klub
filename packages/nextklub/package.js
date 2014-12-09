@@ -12,7 +12,7 @@ Package.on_use(function (api, where) {
     api.add_files(['lib/collections/next_klub.js'], ['client', 'server']);
 
     if (api.export) {
-      api.export(['NextKlub']);
+      //api.export(['NextKlub']);
     }
   });
 

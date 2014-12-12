@@ -4,11 +4,17 @@ Package.describe({
 
 Package.on_use(function (api, where) {
   api.use(['templating'], 'client');
+
+  api.add_files(['lib/collections/ksessions.js'], ['client', 'server']);
+  api.add_files(['lib/server/server.js'], ['server']);
+
   api.add_files([
     'lib/client/main.js',
     'lib/client/kSession.html',
     'lib/client/kSession.css',
     'lib/client/kSession.js',
+    'lib/client/past_sessions_display.html',
+    'lib/client/past_sessions_display.js',
     'lib/client/formKM.html',
     'lib/client/formKM.js'
   ],

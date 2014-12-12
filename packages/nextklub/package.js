@@ -4,14 +4,18 @@ Package.describe({
 
 Package.on_use(function (api) {
   api.use(['templating'], 'client');
+
+  api.add_files(['lib/collections/next_klub.js'], ['client', 'server']);
+  api.add_files(['lib/server/server.js'], ['server']);
+
   api.add_files([
     'lib/client/main.js',
     'lib/client/next_klub_edit.html',
-    'lib/client/next_klub_edit.js'
+    'lib/client/next_klub_edit.js',
+    'lib/client/next_klub_view.html',
+    'lib/client/next_klub_view.js'
   ],
     'client');
-  api.add_files(['lib/server/server.js'], ['server']);
-  api.add_files(['lib/collections/next_klub.js'], ['client', 'server']);
 
   if (api.export) {
     api.export(['NextKlub']);

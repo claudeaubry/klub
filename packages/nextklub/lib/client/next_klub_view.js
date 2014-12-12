@@ -1,6 +1,6 @@
-Template.nextSession.helpers({
+Template.nextKlubView.helpers({
   next: function () {
-    return KSessions.findOne({statut: "next"});
+    return NextKlub.findOne();
   },
   local: function () {
     return klubLocalDatas;

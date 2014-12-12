@@ -13,7 +13,7 @@ Template.ksEdit.events({
 
     elt.preventDefault();
     ks.i = +$("input.i").val();
-    ks.klubMaster = $("input.klubMaster").val();
+    ks.klubMaster = $("input.klubMaster").val() || "anonymous";
     ks.date = $("input.date").val();
     ks.voteer = $("input.vote").val();
     ks.meetup = $("input.meetup").val();

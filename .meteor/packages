@@ -5,10 +5,8 @@
 
 standard-app-packages
 insecure
-less
 ian:bootstrap-3
 ksession
 iron:router
 book
 nextklub
-

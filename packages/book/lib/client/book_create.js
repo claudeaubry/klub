@@ -15,7 +15,6 @@ Template.bookCreate.events({
     $("input#teaserSubmit").val('');
     $("input#originSubmit").val('');
     Session.set('formTitle', 'Proposez un livre');
-    console.log("proposez")
     Session.set('formBookAuction', 'Proposer');
   },
   'submit form': function (event) {

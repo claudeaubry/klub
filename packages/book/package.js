@@ -19,11 +19,11 @@ Package.on_use(function (api, where) {
   api.add_files(['lib/collections/books.js'], ['client', 'server']);
 
   if (api.export) {
-    api.export(['Books']);
+    api.export(['getAllBooks', 'getBookTitleById']);
   }
 });
 
 Package.on_test(function (api) {
-  api.use(['book', 'tinytest', 'test-helpers'], 'client');
+  api.use(['tinytest', 'test-helpers'], 'client');
   api.add_files('book_test.js', 'client');
 });

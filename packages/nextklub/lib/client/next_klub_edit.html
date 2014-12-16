@@ -1,16 +1,16 @@
-<template name="nextKlub">
-  <form class="ks col-xs-6">
-    <input type="hidden" class="form-control book-id small" value={{ns.book_id}}>
+<template name="nextKlubEdit">
+  <form class="nextKlubEdit col-xs-6">
+    <input type="hidden" class="form-control book-id small" value={{nextKlub.book_id}}>
     <label for="date">Date</label>
-    <input type="text" class="form-control date small" value={{ns.date}}>
+    <input type="text" class="form-control date small" value={{nextKlub.date}}>
     <label for="vote">Voteer</label>
-    <input type="text" class="form-control vote small" value={{ns.voteer}}>
+    <input type="text" class="form-control vote small" value={{nextKlub.voteer}}>
     <label for="meetup">Meetup</label>
-    <input type="text" class="form-control meetup small" value={{ns.meetup}}>
+    <input type="text" class="form-control meetup small" value={{nextKlub.meetup}}>
     <label for="book">Livre</label>
     <p>Changer le livre ou en associer un : </p>
     <select name="selBook" class="selectpicker">
-      {{#each ns.books}}
+      {{#each books}}
       <option value="{{_id}}">{{title}}</option>
       {{/each}}
     </select>

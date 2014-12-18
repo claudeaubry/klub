@@ -4,6 +4,7 @@ getAllBooks = function () {
 
 getBookTitleById = function (id) {
   var book = Books.findOne(id);
+
   return (book) ? book.title : "Pas de livre";
 };
 

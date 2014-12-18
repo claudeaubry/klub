@@ -1,4 +1,5 @@
 <template name="nextKlubEdit">
+  <h3 class="well">Prochain Klub</h3>
   <form class="nextKlubEdit col-xs-6">
     <input type="hidden" class="form-control book-id small" value={{nextKlub.book_id}}>
     <label for="date">Date</label>
@@ -14,6 +15,7 @@
       <option value="{{_id}}">{{title}}</option>
       {{/each}}
     </select>
+    <hr>
     <button type="submit" class="btn btn-default">Sauvegarder</button>
     <button class="archive btn btn-default">Archiver</button>
   </form>

@@ -12,7 +12,11 @@ Package.on_use(function (api, where) {
     'lib/client/books_proposed.js',
     'lib/client/book_view.html',
     'lib/client/book_view.css',
-    'lib/client/book_view.js'
+    'lib/client/book_view.js',
+    'lib/client/book_list.html',
+    'lib/client/book_list.js',
+    'lib/client/book_edit.html',
+    'lib/client/book_edit.js'
   ],
     'client');
   api.add_files(['lib/server/server.js'], ['server']);

@@ -1,12 +1,3 @@
-Template.bookCreate.helpers({
-  buttonLabel: function () {
-    return Session.get('formBookAuction') || "Créer";
-  },
-  titleLabel: function () {
-    return Session.get('formTitle');
-  }
-});
-
 Template.bookCreate.events({
   'click .createBook': function () {
     $("#_idSubmit").val('');
@@ -14,9 +5,8 @@ Template.bookCreate.events({
     $("input#authorSubmit").val('');
     $("input#teaserSubmit").val('');
     $("input#originSubmit").val('');
-    Session.set('formTitle', 'Proposez un livre');
-    Session.set('formBookAuction', 'Proposer');
   },
+
   'submit form': function (event) {
     var _id = $("#_idSubmit").val(),
     book = $("input#bookSubmit").val(),
@@ -32,24 +22,14 @@ Template.bookCreate.events({
       throw alert("Il manque un auteur !");
     }
 
-    // Check to create a new book or update an old
-    if (_id) {
-      Books.update(_id, {
-        title: book,
-        author: author,
-        teaser: teaser,
-        origin: origin,
-        statut: "proposed"
-      });
-    } else {
-      Books.insert({
-        title: book,
-        author: author,
-        teaser: teaser,
-        origin: origin,
-        statut: "proposed"
-      });
-    }
+    Books.insert({
+      title: book,
+      author: author,
+      teaser: teaser,
+      origin: origin,
+      statut: "proposed"
+    });
+
     $('#modalBook').modal('hide');
   }
 });

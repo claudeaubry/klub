@@ -1,0 +1,23 @@
+<template name="bookEdit">
+  <h3 class="well">Modification d'un Livre</h3>
+  <form class="pastKlubEdit col-xs-6">
+    <input type="hidden" class="form-control id small" value={{book._id}}>
+    <label for="index">Index</label>
+    <input type="text" class="form-control index small" value={{book.index}}>
+    <label for="author">Auteur</label>
+    <input type="text" class="form-control author small" value={{book.author}}>
+    <label for="title">Titre</label>
+    <input type="text" class="form-control title small" value={{book.title}}>
+    <label for="img">Image</label>
+    <input type="text" class="form-control img small" value={{book.img}}>
+    <label for="site">Site</label>
+    <input type="text" class="form-control site small" value={{book.site}}>
+    <label for="origin">Conseillé par </label>
+    <input type="text" class="form-control origin small" value={{book.origin}}>
+    <label for="teaser">Teaser</label>
+    <input type="text" class="form-control teaser small" value={{book.teaser}}>
+    <hr>
+    <button type="submit" class="btn btn-default">Sauvegarder</button>
+    <button class="delete btn btn-default">Supprimer</button>
+  </form>
+</template>

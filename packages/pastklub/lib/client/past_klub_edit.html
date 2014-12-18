@@ -1,4 +1,5 @@
 <template name="pastKlubEdit">
+  <h3 class="well">Modification d'un Klub</h3>
   <form class="pastKlubEdit col-xs-6">
     <input type="hidden" class="form-control id small" value={{pastKlub._id}}>
     <input type="hidden" class="form-control book-id small" value={{pastKlub.book_id}}>
@@ -19,6 +20,7 @@
         <option value="{{_id}}">{{title}}</option>
       {{/each}}
     </select>
+    <hr>
     <button type="submit" class="btn btn-default">Sauvegarder</button>
     <button class="delete btn btn-default">Supprimer</button>
   </form>

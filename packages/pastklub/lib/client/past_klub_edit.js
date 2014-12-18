@@ -1,5 +1,5 @@
 Template.pastKlubEdit.helpers({
-  pastKlub: function (i) {
+  pastKlub: function () {
     // this provides from url parameter
     return PastKlub.findOne({i: +this});
   },
@@ -31,7 +31,7 @@ Template.pastKlubEdit.events({
     var _id = $('input.id').val();
 
     elt.preventDefault();
-    PastKlub.remove(this._id);
+    PastKlub.remove(_id);
     Router.go('admin');
   }
 });

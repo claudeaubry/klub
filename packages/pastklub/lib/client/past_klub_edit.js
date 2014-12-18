@@ -11,28 +11,24 @@ Template.pastKlubEdit.helpers({
 Template.pastKlubEdit.events({
   'submit form': function (elt) {
     var _id = $('input.id').val(),
-      ks = _id ? PastKlub.findOne(_id) : {};
+      klub = PastKlub.findOne(_id);
 
     elt.preventDefault();
-    ks.i = +$("input.i").val();
-    ks.klubMaster = $("input.klubMaster").val() || "anonymous";
-    ks.date = $("input.date").val();
-    ks.voteer = $("input.vote").val();
-    ks.meetup = $("input.meetup").val();
-    ks.book_id = $("select[name=selBook]").val();
-    // Update an existent record or create it
-    if (_id) {
-      PastKlub.update(_id, ks);
-    } else {
-      PastKlub.insert(ks);
-    }
+    klub.i = +$("input.i").val();
+    klub.klubMaster = $("input.klubMaster").val() || "anonymous";
+    klub.date = $("input.date").val();
+    klub.voteer = $("input.vote").val();
+    klub.meetup = $("input.meetup").val();
+    klub.book_id = $("select[name=selBook]").val();
+
+    PastKlub.update(_id, klub);
   },
   'click .delete': function (elt) {
     var _id = $('input.id').val();
 
     elt.preventDefault();
     PastKlub.remove(_id);
-    Router.go('admin');
+    Router.go('adminPastKlubList');
   }
 });
 

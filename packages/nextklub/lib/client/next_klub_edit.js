@@ -32,8 +32,9 @@ Template.nextKlubEdit.events({
     pastKlub.book_id = nextKlub.book_id;
     pastKlub.i = PastKlub.find().count() + 1;
 
-    PastKlub.insert(ks);
+    PastKlub.insert(pastKlub);
     NextKlub.update(nextKlub._id, {});
+    Router.go('adminPastKlubList');
   }
 });
 

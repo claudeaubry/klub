@@ -11,7 +11,6 @@ Template.bookEdit.events({
       book = _id ? Books.findOne(_id) : {};
 
     elt.preventDefault();
-    book.index = $("input.index").val();
     book.author = $("input.author").val() || "anonymous";
     book.title = $("input.title").val();
     book.img = $("input.img").val();

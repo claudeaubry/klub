@@ -8,7 +8,7 @@
       <div class="panel-body">
         <ul class="list-group attendees col-xs-4">
           <li class="list-group-item disabled">Participants :</li>
-          <li class="list-group-item list-group-item-info km">{{klub.klubMaster}}
+          <li class="list-group-item list-group-item-info km">KM : {{klub.klubMaster}}
           <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
             <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
           </button>
@@ -17,16 +17,16 @@
           {{#each klub.attendees}}
             <li class="list-group-item">{{this}}</li>
           {{/each}}
-          {{#if ks.presence_author}}
+          {{#if klub.presence_author}}
             <li class="list-group-item list-group-item-success">et l'auteur du livre</li>
           {{/if}}
-          <li class="list-group-item list-group-item-warning">Livre choisi {{#if klub.voteer}}sur <a target="_blank" href="{{ks.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
+          <li class="list-group-item list-group-item-warning">Livre choisi {{#if klub.voteer}}sur <a target="_blank" href="{{klub.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
         </ul>
         {{> bookView id=klub.book_id}}
         <aside class="klubage col-xs-5">
           <div class="avis">L'avis des participants au Klub</div>
           <div>{{klub.summary}}</div>
-          {{#if klub.url}}<a target="_blank" href="{{ks.url}}">En savoir plus sur ce Klub</a>{{/if}}
+          {{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}
         </aside>
       </div>
     </div>

@@ -12,5 +12,6 @@ Template.pastKlub.events = {
     $("#linkSubmit").val(targetKlub.url);
     $("#summarySubmit").val(targetKlub.summary);
     $("#attendeesSubmit").val(targetKlub.attendees);
-  },
+//    $("#presence").val(targetKlub.presence_author);
+  }
 };

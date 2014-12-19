@@ -14,7 +14,6 @@
           <li class="list-group-item list-group-item-info">Heure : {{local.hour}}</li>
           <li class="list-group-item list-group-item-success">Inscription : {{#if next.meetup}} <a target="_blank" href="{{next.meetup}}">Meetup</a>
             {{else}}pas encore ouverte{{/if}}</li>
-          {{#if next.klubMaster}}<li class="list-group-item list-group-item-info">KlubMaster : {{next.klubMaster}}</li>{{/if}}
         </ul>
         {{#if next.book_id}}
           {{> bookView id=next.book_id}}

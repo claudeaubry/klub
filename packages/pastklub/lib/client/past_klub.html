@@ -17,13 +17,13 @@
           {{#each klub.attendees}}
             <li class="list-group-item">{{this}}</li>
           {{/each}}
-          <li class="list-group-item list-group-item-warning">Livre choisi {{#if klub.voteer}}sur <a target="_blank" href="{{klub.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
         </ul>
         {{> bookView id=klub.book_id}}
         <aside class="klubage col-xs-5">
           <div class="avis">L'avis des participants</div>
           <div>{{klub.summary}}</div>
           {{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}
+          {{#if klub.voteer}}<a target="_blank" href="{{klub.voteer}}">Autres livres candidats</a>{{/if}}
         </aside>
       </div>
     </div>

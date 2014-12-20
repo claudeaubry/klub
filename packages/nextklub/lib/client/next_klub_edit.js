@@ -1,6 +1,6 @@
 Template.nextKlubEdit.helpers({
   nextKlub: function () {
-   return getNextKlub();
+    return getNextKlub();
   },
   books: function () {
     return getAllBooks();

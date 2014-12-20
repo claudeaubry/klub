@@ -1,6 +1,6 @@
 <template name="nextKlubView">
   <article class="next-session col-xs-12 col-md-offset-3 col-md-6">
-    <div class="panel panel-info">
+    <div class="panel panel-primary">
       <div class="panel-heading">
         <span class="heading-title">Prochain Klub</span>
         <span class="heading-date pull-right">{{next.date}}</span>
@@ -18,7 +18,7 @@
         {{#if next.book_id}}
           {{> bookView id=next.book_id}}
         {{else}}
-          <span>Le livre pour ce Klub n'est pas encore choisi.</span>
+          <span>Le livre n'est pas encore choisi.</span>
           {{#if next.voteer}}
             La sélection est en cours <a target="_blank" href="{{next.voteer}}">sur Voteer</a>, vous pouvez y participer.
             {{else}}Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.

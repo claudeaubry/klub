@@ -1,5 +1,5 @@
 getAllBooks = function () {
-  return Books.find();
+  return Books.find({}, {sort: {statut : 1}});
 };
 
 getBookTitleById = function (id) {

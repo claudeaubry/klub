@@ -26,6 +26,22 @@ Template.bookEdit.events({
     }
     Router.go('adminBookList');
   },
+  'click .freeze': function (elt) {
+    var _id = $('input.id').val(),
+      book = _id ? Books.findOne(_id) : {};
+
+    elt.preventDefault();
+    book.author = $("input.author").val();
+    book.title = $("input.title").val();
+    book.statut = "frozen";
+    // Update an existent record or create it
+    if (_id) {
+      Books.update(_id, book);
+    } else {
+      Books.insert(book);
+    }
+    Router.go('adminBookList');
+  },
   'click .delete': function (elt) {
     var _id = $('input.id').val();
 

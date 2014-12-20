@@ -6,12 +6,6 @@ Template.pastKlub.helpers({
 
 Template.pastKlub.events = {
   'click .modifyLink': function () {
-    var targetKlub = PastKlub.findOne(this._id);
-
-    Session.set('formLinkIdSession', this._id);
-    $("#linkSubmit").val(targetKlub.url);
-    $("#summarySubmit").val(targetKlub.summary);
-    $("#attendeesSubmit").val(targetKlub.attendees);
-//    $("#presence").val(targetKlub.presence_author);
+    Session.set('formLinkIdKlub', this._id);
   }
 };

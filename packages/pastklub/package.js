@@ -21,8 +21,8 @@ Package.on_use(function (api, where) {
     'lib/client/past_klub_edit.js',
     'lib/client/past_klub_display.html',
     'lib/client/past_klub_display.js',
-    'lib/client/formKM.html',
-    'lib/client/formKM.js'
+    'lib/client/past_klub_modal.html',
+    'lib/client/past_klub_modal.js'
   ],
     'client');
 

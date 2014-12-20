@@ -17,9 +17,6 @@
           {{#each klub.attendees}}
             <li class="list-group-item">{{this}}</li>
           {{/each}}
-          {{#if klub.presence_author}}
-            <li class="list-group-item list-group-item-success">et l'auteur du livre</li>
-          {{/if}}
           <li class="list-group-item list-group-item-warning">Livre choisi {{#if klub.voteer}}sur <a target="_blank" href="{{klub.voteer}}">Voteer</a>{{else}}par consensus{{/if}}</li>
         </ul>
         {{> bookView id=klub.book_id}}

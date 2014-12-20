@@ -17,6 +17,7 @@ Template.bookEdit.events({
     book.site = $("input.site").val();
     book.origin = $("input.origin").val();
     book.teaser = $("input.teaser").val();
+    book.statut = $("input.statut").val();
     // Update an existent record or create it
     if (_id) {
       Books.update(_id, book);

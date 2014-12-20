@@ -24,6 +24,7 @@ Template.bookEdit.events({
     } else {
       Books.insert(book);
     }
+    Router.go('adminBookList');
   },
   'click .delete': function (elt) {
     var _id = $('input.id').val();

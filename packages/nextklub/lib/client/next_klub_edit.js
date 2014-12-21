@@ -2,7 +2,7 @@ Template.nextKlubEdit.helpers({
   nextKlub: function () {
     return getNextKlub();
   },
-  books: function () {
+  proposedBooks: function () {
     return getProposedBooks();
   }
 });
@@ -19,6 +19,7 @@ Template.nextKlubEdit.events({
     nextKlub.book_id = $("select[name=selBook]").val();
 
     NextKlub.update(nextKlub._id, nextKlub);
+    Router.go('adminBookList');
   },
 
   'click .archive': function (elt) {

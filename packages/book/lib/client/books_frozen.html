@@ -1,0 +1,10 @@
+<template name="booksFrozen">
+  <ul class="frozenBook col-xs-10 col-md-offset-1 list-group">
+    {{#each titles}}
+    <li class="list-group-item text-center">
+      <strong>{{this.title}}</strong>
+      de {{this.author}}
+    </li>
+    {{/each}}
+  </ul>
+</template>

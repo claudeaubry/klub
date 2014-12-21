@@ -4,22 +4,32 @@
     {{> klub}}
   </section>
   <section id="next" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Le prochain Klub</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Prochain Klub</h3>
     {{> nextKlubView}}
+  <section id="prop" class="col-xs-12">
+    <h3 class="well"><i class="glyphicon glyphicon-heart"></i>Prochain livre</h3>
+    <ul>
+      <li>Tout le monde peut proposer un livre.</li>
+      <li>La sélection est réalisée avec l'application Voteer, selon un vote Condorcet.</li>
+      <li>Les livres non sélectionnés sont archivés, vous pouvez consulter la liste et en re-proposer un.</li>
+    </ul>
+    <h5 class="well col-xs-12">Liste des livres proposés pour la prochaine sélection</h5>
+      {{> booksProposed}}
+      {{> bookCreate}}
+  </section>
   </section>
   <section id="past" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-time"></i>L'historique de Klub</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-time"></i>Historique des Klubs</h3>
     {{> pastKlubDisplay}}
   </section>
-  <section id="prop" class="col-xs-12">
-    <h3 id="prop" class="well"><i class="glyphicon glyphicon-heart"></i>Livres proposés pour un prochain Klub</h3>
+  <section id="arch" class="col-xs-12">
+    <h3 class="well"><i class="glyphicon glyphicon-filter"></i>Historique des livres</h3>
     <ul>
-      <li>Il est possible de proposer des livres pour la prochaine sélection.</li>
-      <li>En général, la liste des livres proposés est close lors du Klub et la sélection du livre pour le prochain est ouverte.</li>
-      <li>La sélection peut être faite en séance ou bien réalisée avec l'application Voteer.</li>
+      <li>A chaque Klub, nous discutons d'un seul livre.</li>
+      <li>Les livres proposés et non sélectionnés sont listés ci-dessous.</li>
+      <li>Il est possible de les re-proposer pour une prochaine sélection.</li>
     </ul>
-    <h5 class="well col-xs-12">Liste des livres déjà proposés</h5>
-    {{> booksProposed}}
-    {{> bookCreate}}
+    <h5 class="well col-xs-12">Liste des livres anciennement proposés et non retenus pour un Klub</h5>
+    {{> booksFrozen}}
   </section>
 </template>

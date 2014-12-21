@@ -10,6 +10,8 @@ Package.on_use(function (api, where) {
     'lib/client/book_create.js',
     'lib/client/books_proposed.html',
     'lib/client/books_proposed.js',
+    'lib/client/books_frozen.html',
+    'lib/client/books_frozen.js',
     'lib/client/book_view.html',
     'lib/client/book_view.css',
     'lib/client/book_view.js',

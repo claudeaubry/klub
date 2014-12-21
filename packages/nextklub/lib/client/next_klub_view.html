@@ -17,6 +17,9 @@
         </ul>
         {{#if next.book_id}}
           {{> bookView id=next.book_id}}
+          <aside class="col-xs-5">
+          {{#if next.voteer}}La sélection s'est faite avec Voteer : <a target="_blank" href="{{klub.voteer}}">résultat du vote</a>{{/if}}
+          </aside>
         {{else}}
           <span>Le livre n'est pas encore choisi.</span>
           {{#if next.voteer}}

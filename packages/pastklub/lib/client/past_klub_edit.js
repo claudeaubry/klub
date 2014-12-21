@@ -20,7 +20,6 @@ Template.pastKlubEdit.events({
     klub.voteer = $("input.vote").val();
     klub.meetup = $("input.meetup").val();
     klub.book_id = $("select[name=selBook]").val();
-    klub.presence_author = $("input#presence:checked").val();
 
     PastKlub.update(_id, klub);
   },

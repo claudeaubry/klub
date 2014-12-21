@@ -3,7 +3,7 @@ Template.nextKlubEdit.helpers({
     return getNextKlub();
   },
   books: function () {
-    return getAllBooks();
+    return getProposedBooks();
   }
 });
 

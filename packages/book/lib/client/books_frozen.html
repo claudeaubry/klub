@@ -4,6 +4,9 @@
     <li class="list-group-item text-center">
       <strong>{{this.title}}</strong>
       de {{this.author}}
+      {{#if this.teaser}}
+      - {{this.teaser}}
+      {{/if}}
     </li>
     {{/each}}
   </ul>

@@ -2,6 +2,10 @@ getAllBooks = function () {
   return Books.find({}, {sort: {statut : -1}});
 };
 
+getProposedBooks = function () {
+  return Books.find({statut : "proposed"});
+};
+
 getBookTitleById = function (id) {
   var book = Books.findOne(id);
 

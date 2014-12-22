@@ -25,10 +25,6 @@ Package.on_use(function (api, where) {
     'lib/client/past_klub_modal.js'
   ],
     'client');
-
-  if (api.export) {
-    api.export(['PastKlub']);
-  }
 });
 
 Package.on_test(function(api) {

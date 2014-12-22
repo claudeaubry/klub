@@ -17,10 +17,6 @@ Package.on_use(function (api) {
     'lib/client/next_klub_view.js'
   ],
     'client');
-
-  if (api.export) {
-    api.export(['NextKlub']);
-  }
 });
 
 Package.on_test(function (api) {

@@ -7,6 +7,7 @@
   "sloppy": true,
   "predef": [
     "alert",
+    "elt",
     "Template",
     "Meteor",
     "Blaze",

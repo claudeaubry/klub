@@ -1,6 +1,7 @@
 <template name="home">
   {{> nav}}
   <section id="klub" class="col-xs-12">
+    <h3 id="klub" class="well"><i class="glyphicon glyphicon-book"></i>C'est quoi Klub ?</h3>
     {{> klub}}
   </section>
   <section id="next" class="col-xs-12">
@@ -8,13 +9,6 @@
     {{> nextKlubView}}
   <section id="prop" class="col-xs-12">
     <h3 class="well"><i class="glyphicon glyphicon-heart"></i>Prochain livre</h3>
-    <ul>
-      <li>Tout le monde peut proposer un livre.</li>
-      <li>La sélection est réalisée avec l'application Voteer, selon <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet_avec_rangement_des_paires_par_ordre_d%C3%A9croissant" target="_blank">le vote Condorcet avec rangement des paires par ordre décroissant.</a>
-      </li>
-      <li>Les livres non sélectionnés sont archivés, vous pouvez consulter la liste et en re-proposer un.</li>
-    </ul>
-    <h5 class="well col-xs-12">Liste des livres proposés pour la prochaine sélection</h5>
       {{> booksProposed}}
       {{> bookCreate}}
   </section>
@@ -26,7 +20,7 @@
   <section id="arch" class="col-xs-12">
     <h3 class="well"><i class="glyphicon glyphicon-filter"></i>Historique des livres</h3>
     <ul>
-      <li>A chaque Klub, nous discutons d'un seul livre.</li>
+      <li>A chaque Klub, nous discutons d'un seul livre, choisi préalablement.</li>
       <li>Les livres proposés et non sélectionnés sont listés ci-dessous.</li>
       <li>Il est possible de les re-proposer pour une prochaine sélection.</li>
     </ul>

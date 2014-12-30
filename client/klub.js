@@ -3,6 +3,6 @@ Template.klub.helpers({
     return klubDatas;
   },
   app: function () {
-   return klubAppDatas;
+    return klubAppDatas;
   }
 });

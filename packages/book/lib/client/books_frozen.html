@@ -1,4 +1,12 @@
 <template name="booksFrozen">
+  <ul>
+    <li>A chaque Klub, nous discutons d'un seul livre, choisi préalablement.</li>
+    <li>Les livres proposés et non sélectionnés sont listés ci-dessous.</li>
+    <li>Il est possible de les re-proposer pour une prochaine sélection, en cliquant sur
+      <span class="glyphicon glyphicon-repeat" ></span>
+    </li>
+  </ul>
+  <h5 class="well col-xs-12">Liste des livres anciennement proposés et non retenus pour un Klub</h5>
   <ul class="frozenBook col-xs-10 col-md-offset-1 list-group">
     {{#each titles}}
     <li class="list-group-item text-center">

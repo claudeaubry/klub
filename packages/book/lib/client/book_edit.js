@@ -1,6 +1,6 @@
 Template.bookEdit.helpers({
   book: function () {
-    // this provides from url parameter
+    // this provided from url parameter
     return Books.findOne(this.toString());
   }
 });
@@ -11,19 +11,14 @@ Template.bookEdit.events({
       book = _id ? Books.findOne(_id) : {};
 
     elt.preventDefault();
-    book.author = $("input.author").val() || "anonymous";
+    book.author = $("input.author").val();
     book.title = $("input.title").val();
     book.img = $("input.img").val();
     book.site = $("input.site").val();
     book.origin = $("input.origin").val();
     book.teaser = $("input.teaser").val();
     book.statut = $("input.statut").val();
-    // Update an existent record or create it
-    if (_id) {
-      Books.update(_id, book);
-    } else {
-      Books.insert(book);
-    }
+    Books.update(_id, book);
     Router.go('adminBookList');
   },
   'click .freeze': function (elt) {
@@ -34,12 +29,7 @@ Template.bookEdit.events({
     book.author = $("input.author").val();
     book.title = $("input.title").val();
     book.statut = "frozen";
-    // Update an existent record or create it
-    if (_id) {
-      Books.update(_id, book);
-    } else {
-      Books.insert(book);
-    }
+    Books.update(_id, book);
     Router.go('adminBookList');
   },
   'click .delete': function (elt) {

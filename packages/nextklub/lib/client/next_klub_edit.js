@@ -19,7 +19,7 @@ Template.nextKlubEdit.events({
     nextKlub.book_id = $("select[name=selBook]").val();
 
     NextKlub.update(nextKlub._id, nextKlub);
-    Router.go('adminBookList');
+    Router.go('adminPastKlubList');
   },
 
   'click .archive': function (elt) {

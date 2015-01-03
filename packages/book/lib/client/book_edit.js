@@ -8,7 +8,7 @@ Template.bookEdit.helpers({
 Template.bookEdit.events({
   'submit form': function (elt) {
     var _id = $('input.id').val(),
-      book = _id ? Books.findOne(_id) : {};
+      book = Books.findOne(_id);
 
     elt.preventDefault();
     book.author = $("input.author").val();
@@ -23,11 +23,9 @@ Template.bookEdit.events({
   },
   'click .freeze': function (elt) {
     var _id = $('input.id').val(),
-      book = _id ? Books.findOne(_id) : {};
+      book = Books.findOne(_id);
 
     elt.preventDefault();
-    book.author = $("input.author").val();
-    book.title = $("input.title").val();
     book.statut = "frozen";
     Books.update(_id, book);
     Router.go('adminBookList');

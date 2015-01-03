@@ -22,6 +22,7 @@ Template.pastKlubEdit.events({
     klub.book_id = $("select[name=selBook]").val();
 
     PastKlub.update(_id, klub);
+    Router.go('adminPastKlubList');
   },
   'click .delete': function (elt) {
     var _id = $('input.id').val();

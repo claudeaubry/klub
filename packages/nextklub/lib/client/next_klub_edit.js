@@ -31,9 +31,8 @@ Template.nextKlubEdit.events({
     pastKlub.voteer = nextKlub.voteer;
     pastKlub.meetup = nextKlub.meetup;
     pastKlub.book_id = nextKlub.book_id;
-    pastKlub.i = PastKlub.find().count() + 1;
 
-    PastKlub.insert(pastKlub);
+    createPastKlub(pastKlub);
     NextKlub.update(nextKlub._id, {});
     Router.go('adminPastKlubList');
   }

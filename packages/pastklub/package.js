@@ -32,5 +32,8 @@ Package.on_use(function (api, where) {
 
 Package.on_test(function(api) {
   api.use(['pastklub', 'tinytest', 'test-helpers'], 'client');
+  // api.use("templating", "client");
+  api.add_files('lib/client/main.js', 'client');
+
   api.add_files('past_klub_test.js', 'client');
 });

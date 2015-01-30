@@ -1,11 +1,33 @@
-Tinytest.add("Create a past Klub", function (test) {
-  var ks = {},
-    html = "";
+PastKlub = new Meteor.Collection('test-pastklub');
 
-  ks.i = 5;
-  ks.date = "Dimanche 5 février 2014";
-  ks.attendees = ["Tonio"];
-  html = Blaze.toHTMLWithData(Template.ksession, ks);
+removeAll = function () {
+  PastKlub.find().fetch().map(function (klub) {
+    PastKlub.remove(klub._id);
+  })
+}
 
-  test.notEqual(html.search("Tonio</li>"), -1);
+/*
+ Test futureI
+*/
+
+Tinytest.add("futureI with no klub", function (test) {
+  test.equal(futureI(), 1);
+
+  removeAll();
 });
+
+Tinytest.add("futureI with klubs an max i equal to 13", function (test) {
+  var i = 5;
+
+  PastKlub.insert({i: 1});
+  PastKlub.insert({i: 5});
+  PastKlub.insert({i: 13});
+
+  console.log("before", PastKlub.find().count())
+
+  test.equal(futureI(),14);
+
+  removeAll();
+});
+
+

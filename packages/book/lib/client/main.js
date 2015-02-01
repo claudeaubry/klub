@@ -2,7 +2,7 @@ getAllBooks = function () {
   return Books.find({}, {sort: {statut : -1}});
 };
 
-getProposedBooks = function () {
+getBooksForNextKlubChoice = function () {
   return Books.find({statut : {$in: ["proposed", "selected"]}});
 };
 

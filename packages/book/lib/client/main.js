@@ -17,7 +17,14 @@ associateBookToNextKlub = function (id) {
 
   book.statut = "selected";
   Books.update(id, book);
-}
+};
+
+discussedBookWhenPastKlub = function (id) {
+  var book = Books.findOne(id);
+
+  book.statut = "discussed";
+  Books.update(id, book);
+};
 
 Meteor.startup(function () {
   Meteor.subscribe("all_books");

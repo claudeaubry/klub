@@ -35,7 +35,7 @@ Template.nextKlubEdit.events({
     pastKlub.meetup = nextKlub.meetup;
     pastKlub.book_id = nextKlub.book_id;
 // passer le livre en discussed
-
+    discussedBookWhenPastKlub(pastKlub.book_id);
     createPastKlub(pastKlub);
     NextKlub.update(nextKlub._id, {});
     Router.go('adminPastKlubList');

@@ -3,7 +3,7 @@ getAllBooks = function () {
 };
 
 getProposedBooks = function () {
-  return Books.find({statut : "proposed"});
+  return Books.find({statut : {$in: ["proposed", "selected"]}});
 };
 
 getBookTitleById = function (id) {

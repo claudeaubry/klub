@@ -17,6 +17,8 @@ Template.nextKlubEdit.events({
     nextKlub.voteer = $("input.vote").val();
     nextKlub.meetup = $("input.meetup").val();
     nextKlub.book_id = $("select[name=selBook]").val();
+// Si livre nouveau : freeze les autres proposés et select le choisi
+// Si livre changé : freeze le selected et select le choisi
 
     NextKlub.update(nextKlub._id, nextKlub);
     Router.go('adminPastKlubList');
@@ -31,6 +33,7 @@ Template.nextKlubEdit.events({
     pastKlub.voteer = nextKlub.voteer;
     pastKlub.meetup = nextKlub.meetup;
     pastKlub.book_id = nextKlub.book_id;
+// passer le livre en discussed
 
     createPastKlub(pastKlub);
     NextKlub.update(nextKlub._id, {});

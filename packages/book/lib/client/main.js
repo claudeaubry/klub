@@ -14,7 +14,12 @@ getBookTitleById = function (id) {
 
 associateBookToNextKlub = function (id) {
   var book = Books.findOne(id);
+  var previousBook = Books.findOne({statut : "selected"});
 
+  if (previousBook) {
+    previousBook.statut = "proposed";
+    Books.update(previousBook._id, previousBook)
+  };
   book.statut = "selected";
   Books.update(id, book);
 };

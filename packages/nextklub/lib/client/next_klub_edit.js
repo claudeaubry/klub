@@ -19,6 +19,7 @@ Template.nextKlubEdit.events({
     nextKlub.book_id = $("select[name=selBook]").val();
 // Si livre nouveau : freeze les autres proposés et select le choisi
 // Si livre changé : freeze le selected et select le choisi
+    associateBookToNextKlub(nextKlub.book_id);
 
     NextKlub.update(nextKlub._id, nextKlub);
     Router.go('adminPastKlubList');

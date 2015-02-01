@@ -12,6 +12,13 @@ getBookTitleById = function (id) {
   return (book) ? book.title : "Pas de livre";
 };
 
+associateBookToNextKlub = function (id) {
+  var book = Books.findOne(id);
+
+  book.statut = "selected";
+  Books.update(id, book);
+}
+
 Meteor.startup(function () {
   Meteor.subscribe("all_books");
 });

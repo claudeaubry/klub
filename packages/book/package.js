@@ -26,7 +26,7 @@ Package.on_use(function (api, where) {
   api.add_files(['lib/collections/books.js'], ['client', 'server']);
 
   if (api.export) {
-    api.export(['getAllBooks', 'getProposedBooks', 'getBookTitleById']);
+    api.export(['getAllBooks', 'getBooksForNextKlubChoice', 'getBookTitleById', 'associateBookToNextKlub', 'discussedBookWhenPastKlub']);
   }
 });
 

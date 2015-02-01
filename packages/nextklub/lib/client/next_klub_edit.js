@@ -3,7 +3,7 @@ Template.nextKlubEdit.helpers({
     return getNextKlub();
   },
   proposedBooks: function () {
-    return getProposedBooks();
+    return getBooksForNextKlubChoice();
   }
 });
 
@@ -17,7 +17,7 @@ Template.nextKlubEdit.events({
     nextKlub.voteer = $("input.vote").val();
     nextKlub.meetup = $("input.meetup").val();
     nextKlub.book_id = $("select[name=selBook]").val();
-
+    associateBookToNextKlub(nextKlub.book_id);
     NextKlub.update(nextKlub._id, nextKlub);
     Router.go('adminPastKlubList');
   },
@@ -31,9 +31,8 @@ Template.nextKlubEdit.events({
     pastKlub.voteer = nextKlub.voteer;
     pastKlub.meetup = nextKlub.meetup;
     pastKlub.book_id = nextKlub.book_id;
-    pastKlub.i = PastKlub.find().count() + 1;
-
-    PastKlub.insert(pastKlub);
+    discussedBookWhenPastKlub(pastKlub.book_id);
+    createPastKlub(pastKlub);
     NextKlub.update(nextKlub._id, {});
     Router.go('adminPastKlubList');
   }

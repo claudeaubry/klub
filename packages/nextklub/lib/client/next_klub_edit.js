@@ -17,7 +17,7 @@ Template.nextKlubEdit.events({
     nextKlub.voteer = $("input.vote").val();
     nextKlub.meetup = $("input.meetup").val();
     nextKlub.book_id = $("select[name=selBook]").val();
-    associateBookToNextKlub(nextKlub.book_id);
+    if (nextKlub.book_id) {associateBookToNextKlub(nextKlub.book_id);};
     NextKlub.update(nextKlub._id, nextKlub);
     Router.go('adminPastKlubList');
   },

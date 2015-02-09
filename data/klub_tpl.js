@@ -1,7 +1,7 @@
 klubDatas = {
   principle : "Les participants lisent un livre défini à l'avance et viennent en discuter ensemble lors d'un Klub.",
   objective : "Ils mettent en commun leurs impressions, leurs opinions, leurs connaissances et leurs expériences sur le sujet du livre. Un klubMaster, qui peut changer à chaque fois parmi les participants, facilite le déroulement du Klub.",
-  rule : "Pour participer à un Klub, il faut voir lu le livre au préalable.",
+  rule : "Pour participer à un Klub, il faut avoir lu le livre au préalable.",
   theme : "Des livres en rapport, directement ou indirectement, avec l'Agilité.",
   slogan: "Klub, le bon karma de la lecture partagée.",
 };

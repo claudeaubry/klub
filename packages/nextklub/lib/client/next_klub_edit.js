@@ -7,17 +7,18 @@ Template.nextKlubEdit.helpers({
   }
 });
 
-
 Template.nextKlubEdit.events({
   'submit form': function (elt) {
     var nextKlub = NextKlub.findOne();
 
     elt.preventDefault();
     nextKlub.date = $("input.date").val();
+    nextKlub.dateprop = $("input.dateprop").val();
     nextKlub.voteer = $("input.vote").val();
+    nextKlub.datevote = $("input.datevote").val();
     nextKlub.meetup = $("input.meetup").val();
     nextKlub.book_id = $("select[name=selBook]").val();
-    if (nextKlub.book_id) {associateBookToNextKlub(nextKlub.book_id);};
+    if (nextKlub.book_id) {associateBookToNextKlub(nextKlub.book_id); }
     NextKlub.update(nextKlub._id, nextKlub);
     Router.go('adminPastKlubList');
   },
@@ -31,6 +32,7 @@ Template.nextKlubEdit.events({
     pastKlub.voteer = nextKlub.voteer;
     pastKlub.meetup = nextKlub.meetup;
     pastKlub.book_id = nextKlub.book_id;
+    pastKlub.klubMaster = "anonymous";
     discussedBookWhenPastKlub(pastKlub.book_id);
     createPastKlub(pastKlub);
     NextKlub.update(nextKlub._id, {});

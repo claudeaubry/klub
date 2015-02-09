@@ -8,7 +8,7 @@
       <div class="panel-body">
         <ul class="list-group attendees col-xs-4">
           <li class="list-group-item disabled">Participants :</li>
-          <li class="list-group-item list-group-item-info km">KM : {{klub.klubMaster}}
+          <li class="list-group-item list-group-item-info km">{{klub.klubMaster}}
           <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
             <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
           </button>
@@ -18,13 +18,13 @@
           {{/each}}
         </ul>
         {{> bookView id=klub.book_id}}
-        <aside class="klubage col-xs-5">
+        <article class="klubage col-xs-5">
           <div class="avis">L'avis des participants</div>
           <div>{{klub.summary}}</div>
           {{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}
           <br/>
           {{#if klub.voteer}}<a target="_blank" href="{{klub.voteer}}">Le vote pour ce Klub</a>{{/if}}
-        </aside>
+        </article>
       </div>
     </div>
   </article>

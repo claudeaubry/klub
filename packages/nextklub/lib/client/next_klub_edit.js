@@ -32,6 +32,7 @@ Template.nextKlubEdit.events({
     pastKlub.voteer = nextKlub.voteer;
     pastKlub.meetup = nextKlub.meetup;
     pastKlub.book_id = nextKlub.book_id;
+    pastKlub.klubMaster = "anonymous";
     discussedBookWhenPastKlub(pastKlub.book_id);
     createPastKlub(pastKlub);
     NextKlub.update(nextKlub._id, {});

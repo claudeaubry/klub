@@ -15,7 +15,7 @@ Template.pastKlubEdit.events({
 
     elt.preventDefault();
     klub.i = +$("input.i").val();
-    klub.klubMaster = $("input.klubMaster").val() || "anonymous";
+    klub.klubMaster = $("input.klubMaster").val();
     klub.date = $("input.date").val();
     klub.voteer = $("input.vote").val();
     klub.meetup = $("input.meetup").val();

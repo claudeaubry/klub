@@ -24,9 +24,9 @@
           <span>Le livre n'est pas encore choisi.</span>
           {{#if next.voteer}}
             La sélection est en cours <a target="_blank" href="{{next.voteer}}">sur Voteer</a>, vous pouvez y participer.
-            Vous avez jusqu'au {{next.datevote}} pour voter.
+              {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.{{/if}}
             {{else}}Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.
-            Vous avez jusqu'au {{next.dateprop}} pour le faire.
+              {{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}
           {{/if}}
         {{/if}}
       </div>

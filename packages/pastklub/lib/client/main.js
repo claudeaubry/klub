@@ -11,7 +11,7 @@ createPastKlub = function (klub) {
 futureI = function () {
   var result = 0;
 
-  PastKlub.find().fetch().map(function (klub) {
+  PastKlub.find().fetch().map( (klub) => {
     if (klub.i > result) {
       result = klub.i;
     }

@@ -1,3 +1,3 @@
-Meteor.startup(function () {
+Meteor.startup( () => {
   document.title = klubLocalDatas.title;
 });

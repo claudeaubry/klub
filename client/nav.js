@@ -1,5 +1,5 @@
 Template.nav.helpers({
-  titleClub: function () {
+  titleClub: () =>  {
     return klubLocalDatas.title;
   }
 });

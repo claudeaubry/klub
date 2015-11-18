@@ -1,5 +1,5 @@
 Template.booksFrozen.helpers({
-  titles: function () {
+  titles: () => {
     return Books.find({statut : "frozen"});
   }
 });

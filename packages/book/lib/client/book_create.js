@@ -1,12 +1,12 @@
 Template.bookCreate.events({
-  'click .createBook': function () {
+  'click .createBook': () => {
     $("input#bookSubmit").val('');
     $("input#authorSubmit").val('');
     $("input#teaserSubmit").val('');
     $("input#originSubmit").val('');
   },
 
-  'submit form': function (event) {
+  'submit form': (event) => {
     book = $("input#bookSubmit").val();
     author = $("input#authorSubmit").val();
     teaser = $("input#teaserSubmit").val();

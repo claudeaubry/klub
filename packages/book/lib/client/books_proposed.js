@@ -1,5 +1,5 @@
 Template.booksProposed.helpers({
-  titles: function () {
+  titles: () => {
     return Books.find({statut : "proposed"});
   }
 });

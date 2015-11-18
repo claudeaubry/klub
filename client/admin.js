@@ -1,8 +1,8 @@
 Template.admin.events({
-  'click .nextKlub': function (elt) {
+  'click .nextKlub': (elt) => {
     Router.go('adminNextKlub');
   },
-  'click .createPastKlub': function (elt) {
+  'click .createPastKlub': (elt) => {
     Router.go('adminCreate');
   }
 });

@@ -1,8 +1,8 @@
 Template.klub.helpers({
-  club: function () {
+  club: () => {
     return klubDatas;
   },
-  app: function () {
+  app: () => {
     return klubAppDatas;
   }
 });

@@ -6,7 +6,7 @@ Template.bookEdit.helpers({
 });
 
 Template.bookEdit.events({
-  'submit form': function (elt) {
+  'submit form': elt => {
     var _id = $('input.id').val(),
       book = Books.findOne(_id);
 
@@ -21,7 +21,7 @@ Template.bookEdit.events({
     Books.update(_id, book);
     Router.go('adminBookList');
   },
-  'click .freeze': function (elt) {
+  'click .freeze': elt => {
     var _id = $('input.id').val(),
       book = Books.findOne(_id);
 
@@ -30,9 +30,8 @@ Template.bookEdit.events({
     Books.update(_id, book);
     Router.go('adminBookList');
   },
-  'click .delete': function (elt) {
+  'click .delete': elt => {
     var _id = $('input.id').val();
-
     elt.preventDefault();
     Books.remove(_id);
     Router.go('adminBookList');

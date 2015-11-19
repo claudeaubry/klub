@@ -1,18 +1,16 @@
-getAllBooks = function () {
-  return Books.find({}, {sort: {statut : -1}});
-};
+getAllBooks = () =>
+  Books.find({}, {sort: {statut : -1}});
 
-getBooksForNextKlubChoice = function () {
-  return Books.find({statut : {$in: ["proposed", "selected"]}});
-};
+getBooksForNextKlubChoice = () =>
+  Books.find({statut : {$in: ["proposed", "selected"]}});
 
-getBookTitleById = function (id) {
+getBookTitleById = id => {
   var book = Books.findOne(id);
 
   return (book) ? book.title : "Pas de livre";
 };
 
-associateBookToNextKlub = function (id) {
+associateBookToNextKlub = id => {
   var book = Books.findOne(id);
   var previousBook = Books.findOne({statut : "selected"});
 
@@ -24,7 +22,7 @@ associateBookToNextKlub = function (id) {
   Books.update(id, book);
 };
 
-discussedBookWhenPastKlub = function (id) {
+discussedBookWhenPastKlub = id => {
   var book = Books.findOne(id);
 
   book.statut = "discussed";

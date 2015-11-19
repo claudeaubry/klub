@@ -3,12 +3,12 @@ Meteor.startup(function () {
   PastKlub.find().fetch();
 });
 
-createPastKlub = function (klub) {
+createPastKlub = klub => {
   klub.i = futureI();
   PastKlub.insert(klub);
 }
 
-futureI = function () {
+futureI = () => {
   var result = 0;
 
   PastKlub.find().fetch().map( (klub) => {

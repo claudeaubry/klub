@@ -1,5 +1,5 @@
 Template.pastKlubList.helpers({
-  klubAll: function () {
+  klubAll: () => {
     var pastKlubList = [],
       pastKlubCollection = PastKlub.find({},
         {fields: {i: 1, book_id: 1}, sort: {i: -1}});

@@ -24,7 +24,8 @@ Package.on_use(function (api, where) {
     'lib/client/past_klub_display.js',
     'lib/client/past_klub_modal.html',
     'lib/client/past_klub_modal.js',
-    'lib/client/past_klub_pic.html'
+    'lib/client/past_klub_pic.html',
+    'lib/client/past_klub_pic.js'
   ],
     'client');
   if (api.export) {

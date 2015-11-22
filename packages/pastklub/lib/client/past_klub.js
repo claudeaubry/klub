@@ -7,5 +7,8 @@ Template.pastKlub.helpers({
 Template.pastKlub.events = {
   'click .modifyLink': function () {
     Session.set('formLinkIdKlub', this._id);
+  },
+  'click .picLink': function () {
+    Session.set('formLinkIdKlub', this._id);
   }
 };

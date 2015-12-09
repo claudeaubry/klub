@@ -3,6 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+  api.use(['ecmascript'], 'client');
   api.use(['ecmascript'], 'server');
   api.use(['templating'], 'client');
 

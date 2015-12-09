@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.use(['ecmascript'], 'server');
+  api.use('ecmascript');
   api.use(['templating'], 'client');
 
   api.add_files(['lib/collections/past_klub_collections.js'], ['client', 'server']);

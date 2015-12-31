@@ -1,5 +1,5 @@
 Template.pastKlubDisplay.helpers({
-  pastKlubAll: function () {
+  pastKlubAll: () => {
     return PastKlub.find({}, {sort: {i: -1}});
   }
 });

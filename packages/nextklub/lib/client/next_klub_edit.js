@@ -1,14 +1,10 @@
 Template.nextKlubEdit.helpers({
-  nextKlub: function () {
-    return getNextKlub();
-  },
-  proposedBooks: function () {
-    return getBooksForNextKlubChoice();
-  }
+  nextKlub: () => getNextKlub(),
+  proposedBooks: () => getBooksForNextKlubChoice()
 });
 
 Template.nextKlubEdit.events({
-  'submit form': function (elt) {
+  'submit form': elt => {
     var nextKlub = NextKlub.findOne();
 
     elt.preventDefault();
@@ -23,7 +19,7 @@ Template.nextKlubEdit.events({
     Router.go('adminPastKlubList');
   },
 
-  'click .archive': function (elt) {
+  'click .archive': elt => {
     var nextKlub = NextKlub.findOne(),
       pastKlub = {};
 

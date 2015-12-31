@@ -3,6 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+  api.use('ecmascript');
   api.use(['templating'], 'client');
 
   api.add_files(['lib/collections/next_klub_collections.js'], ['client', 'server']);

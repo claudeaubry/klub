@@ -3,6 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
+  api.use('ecmascript');
   api.use(['templating'], 'client');
 
   api.add_files(['lib/collections/past_klub_collections.js'], ['client', 'server']);
@@ -22,7 +23,9 @@ Package.on_use(function (api, where) {
     'lib/client/past_klub_display.html',
     'lib/client/past_klub_display.js',
     'lib/client/past_klub_modal.html',
-    'lib/client/past_klub_modal.js'
+    'lib/client/past_klub_modal.js',
+    'lib/client/past_klub_pic.html',
+    'lib/client/past_klub_pic.js'
   ],
     'client');
   if (api.export) {

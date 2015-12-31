@@ -1,9 +1,6 @@
-Meteor.startup(function () {
-  if  (! NextKlub.find().count()) {
-    NextKlub.insert({});
-  }
+Meteor.startup( () => {
+  (! NextKlub.find().count())
+    && NextKlub.insert();
 
-  Meteor.publish("next_klub", function() {
-    return NextKlub.find();
-  });
+  Meteor.publish("next_klub", () => NextKlub.find());
 });

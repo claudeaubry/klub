@@ -3,13 +3,11 @@ Template.pastKlubEdit.helpers({
     // this provides from url parameter
     return PastKlub.findOne({i: +this});
   },
-  books: function () {
-    return getAllBooks();
-  }
+  books: () => getAllBooks()
 });
 
 Template.pastKlubEdit.events({
-  'submit form': function (elt) {
+  'submit form': elt => {
     var _id = $('input.id').val(),
       klub = PastKlub.findOne(_id);
 
@@ -24,7 +22,7 @@ Template.pastKlubEdit.events({
     PastKlub.update(_id, klub);
     Router.go('adminPastKlubList');
   },
-  'click .delete': function (elt) {
+  'click .delete': elt => {
     var _id = $('input.id').val();
 
     elt.preventDefault();

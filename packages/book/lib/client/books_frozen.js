@@ -1,7 +1,5 @@
 Template.booksFrozen.helpers({
-  titles: function () {
-    return Books.find({statut : "frozen"});
-  }
+  titles: () => Books.find({statut : "frozen"})
 });
 
 Template.booksFrozen.events({

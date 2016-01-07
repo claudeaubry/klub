@@ -3,6 +3,10 @@ Template.bookCreate.events({
     $("input#bookSubmit").val('');
     $("input#authorSubmit").val('');
     $("input#teaserSubmit").val('');
+<<<<<<< HEAD
+=======
+    $("input#siteSubmit").val('');
+>>>>>>> dev
     $("input#originSubmit").val('');
   },
 
@@ -10,6 +14,10 @@ Template.bookCreate.events({
     book = $("input#bookSubmit").val();
     author = $("input#authorSubmit").val();
     teaser = $("input#teaserSubmit").val();
+<<<<<<< HEAD
+=======
+    site = $("input#siteSubmit").val();
+>>>>>>> dev
     origin = $("input#originSubmit").val();
 
     event.preventDefault();
@@ -24,6 +32,10 @@ Template.bookCreate.events({
       title: book,
       author: author,
       teaser: teaser,
+<<<<<<< HEAD
+=======
+      site: site,
+>>>>>>> dev
       origin: origin,
       statut: "proposed"
     });

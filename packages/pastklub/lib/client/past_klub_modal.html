@@ -1,0 +1,36 @@
+<template name="formKM">
+  <div class="modal fade" id="modalKlubMaster"  role="dialog">
+    <div class="modal-content modal-dialog">
+      <form role="form" id="{{klub._id}}">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">En tant que KlubMaster, racontez ce Klub</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="list">Qui était présent ?</label>
+            <input type="text" class="form-control" id="attendeesSubmit" placeholder="Noms des participants séparés par une virgule" value="{{klub.attendees}}">
+          </div>
+          <div class="form-group">
+            <label for="summary">Que faut-il retenir ?</label>
+            <textarea rows="5" class="form-control" id="summarySubmit" placeholder="Quelques mots qui résument l'avis des participants">{{klub.summary}}</textarea>
+          </div>
+          <div class="form-group">
+            <label for="link">Lien vers un compte-rendu</label>
+            <input type="text" class="form-control" id="linkSubmit" placeholder="Un article de blog par exemple" value="{{klub.url}}">
+          </div>
+          <div class="form-group">
+            <label for="pic">Lien vers une photo</label>
+            <input type="text" class="form-control" id="picSubmit" placeholder="Une photo, un dessin…" value="{{klub.pic}}">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

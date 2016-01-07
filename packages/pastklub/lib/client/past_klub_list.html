@@ -1,0 +1,16 @@
+<template name="pastKlubList">
+  <h3 class="well">Liste des Klubs avec les livres choisis</h3>
+  <table class="pastKlubList table table-stripped">
+    <tr>
+      <th>Numéro</th>
+      <th>Titre du livre</th>
+    </tr>
+    {{#each klubAll}}
+    <tr>
+      <td>{{i}}</td>
+      <td>{{book}}</td>
+      <td><a href="{{pathFor 'adminKlubPastEdit' klubId=i}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+    </tr>
+    {{/each}}
+  </table>
+</template>

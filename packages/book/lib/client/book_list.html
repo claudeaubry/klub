@@ -1,0 +1,19 @@
+<template name="bookList">
+  <h3 class="well">Liste des livres</h3>
+  <table class="bookList table table-stripped">
+    <tr>
+      <th>Auteur</th>
+      <th>Titre du livre</th>
+      <th>Statut</th>
+    </tr>
+    {{#each bookAll}}
+    <tr>
+      <td>{{author}}</td>
+      <td>{{title}}</td>
+      <td>{{statut}}</td>
+      <td>
+        <a href="{{pathFor 'adminBookEdit' bookId=_id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+    </tr>
+    {{/each}}
+  </table>
+</template>

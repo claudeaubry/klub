@@ -1,0 +1,24 @@
+{
+  "indent": 2,
+  "node": true,
+  "nomen": true,
+  "maxlen": 80,
+  "es5": true,
+  "sloppy": true,
+  "predef": [
+    "alert",
+    "elt",
+    "Template",
+    "Meteor",
+    "Blaze",
+    "Session",
+    "Package",
+    "$",
+    "_",
+    "Tinytest",
+    "Router",
+    "KSessions",
+    "Books",
+    "klubLocalDatas"
+  ]
+}

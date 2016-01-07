@@ -1,0 +1,10 @@
+<template name="adminNav">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <a class="navbar-brand" href="{{pathFor 'home'}}">{{titleClub}}</a>
+    <ul class="nav nav-pills">
+      <li><a href="{{pathFor 'adminBookList'}}">Livres</a></li>
+      <li><a href="{{pathFor 'adminPastKlubList'}}">Historique</a></li>
+      <li><a href="{{pathFor 'adminNextKlub'}}">Prochain Klub</a></li>
+    </ul>
+  </nav>
+</template>

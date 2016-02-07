@@ -16,10 +16,10 @@ Template.bookCreate.events({
 
     event.preventDefault();
     if (!book) {
-      throw alert("Il manque un titre !");
+      throw alert("Il faut un titre !");
     }
     if (!author) {
-      throw alert("Il manque un auteur !");
+      throw alert("Il faut un auteur !");
     }
 
     Books.insert({

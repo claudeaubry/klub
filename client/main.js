@@ -1,3 +1,3 @@
 Meteor.startup( () => {
-  document.title = klubLocalDatas.title;
-});
+  document.title = klubLocalDatas.title
+})

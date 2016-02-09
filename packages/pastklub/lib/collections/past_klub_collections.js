@@ -1,1 +1,1 @@
-PastKlub = new Meteor.Collection("ksessions");
+PastKlub = new Meteor.Collection('ksessions')

@@ -23,13 +23,18 @@ Package.on_use(function (api, where) {
     'lib/client/book_edit.js'
   ],
     'client');
-  api.add_files(['lib/server/server.js'], ['server']);
-  api.add_files(['lib/collections/books.js'], ['client', 'server']);
+  api.add_files('lib/server/server.js', 'server')
+  api.add_files('lib/collections/books.js', ['client', 'server'])
 
-  if (api.export) {
-    api.export(['getAllBooks', 'getBooksForNextKlubChoice', 'getBookTitleById', 'associateBookToNextKlub', 'discussedBookWhenPastKlub']);
-  }
-});
+  api.export([
+    'getAllBooks',
+    'getBooksForNextKlubChoice',
+    'getBookTitleById',
+    'associateBookToNextKlub',
+    'discussedBookWhenPastKlub'
+  ], 'client')
+  api.export('Books', 'server')
+})
 
 Package.on_test(function (api) {
   api.use(['tinytest', 'test-helpers'], 'client');

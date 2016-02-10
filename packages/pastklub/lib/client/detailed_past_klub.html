@@ -1,4 +1,5 @@
 <template name="detailedPastKlub">
+  {{> nav}}
   <article class="pastKlub col-xs-18 col-md-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -18,7 +19,7 @@
           {{/each}}
         </ul>
         {{> bookView id=klub.book_id}}
-        <article class="klubage col-xs-5">
+        <article class="klubage col-xs-6 col-md-2">
           <div class="avis">L'avis des participants</div>
           <div>{{klub.summary}}</div>
           {{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}

@@ -12,6 +12,8 @@ Package.on_use(function(api) {
   api.add_files(['lib/server/server.js'], ['server'])
 
   api.add_files([
+    'lib/client/detailed_past_klub.html',
+    'lib/client/detailed_past_klub.js',
     'lib/client/main.js',
     'lib/client/past_klub.html',
     'lib/client/past_klub.css',

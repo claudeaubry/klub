@@ -1,3 +1,3 @@
 Template.bookList.helpers({
-  bookAll: () => new Library().books
+  books: () => new Library().books
 })

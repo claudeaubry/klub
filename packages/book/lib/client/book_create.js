@@ -1,6 +1,6 @@
 Template.bookCreate.events({
   'click .createBook': () => {
-    $('input#bookSubmit').val('')
+    $('input#titleSubmit').val('')
     $('input#authorSubmit').val('')
     $('input#teaserSubmit').val('')
     $('input#siteSubmit').val('')
@@ -8,24 +8,25 @@ Template.bookCreate.events({
   },
 
   'submit form': (event) => {
-    book = $('input#bookSubmit').val()
+    title = $('input#titleSubmit').val()
     author = $('input#authorSubmit').val()
     teaser = $('input#teaserSubmit').val()
     site = $('input#siteSubmit').val()
     origin = $('input#originSubmit').val()
 
     event.preventDefault()
-    if (!book)
+    if (!title)
       throw alert('Il faut un titre !')
     if (!author)
       throw alert('Il faut un auteur !')
 
     Books.insert({
-      title: book,
+      title: title,
       author: author,
       teaser: teaser,
       site: site,
       origin: origin,
+      type: 'book',
       statut: 'proposed'
     })
 

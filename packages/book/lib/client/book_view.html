@@ -5,15 +5,19 @@
       <h1 class="book-title">{{oneBook.title}}</h1>
       <h2>{{oneBook.author}}</h2>
       <div>La proposition de valeur : {{oneBook.teaser}}</div>
-      <div class="book-site">
-        {{#if oneBook.site}}
-        <a target="_blank" href="{{oneBook.site}}">Plus d'info sur le livre</a>
-        {{/if}}
-      </div>
     </aside>
   </article>
 </template>
 
 <template name="bookTitle">
   {{title}}
+</template>
+
+<template name="bookDetails">
+    {{>bookView}}
+      <div class="book-site">
+        {{#if oneBook.site}}
+        <a target="_blank" href="{{oneBook.site}}">Plus d'info sur le livre</a>
+        {{/if}}
+      </div>
 </template>

@@ -1,24 +1,24 @@
 <template name="home">
   {{> nav}}
   <section id="klub" class="col-xs-12">
-    <h3 id="klub" class="well"><i class="glyphicon glyphicon-book"></i>C'est quoi Klub ?</h3>
+    <h3 id="klub" class="well"><i class="glyphicon glyphicon-book"></i>C'est quoi un klub ?</h3>
     {{> klub}}
   </section>
   <section id="next" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Prochain Klub de lecture</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Prochain klub</h3>
     {{> nextKlubView}}
   <section id="prop" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-heart"></i>Proposer des livres</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-heart"></i>Proposer des sujets</h3>
       {{> booksProposed}}
       {{> bookCreate}}
   </section>
   </section>
   <section id="past" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-time"></i>Historique des Klubs</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-time"></i>Historique des klubs</h3>
     {{> pastKlubDisplay}}
   </section>
   <section id="arch" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-filter"></i>Historique des livres non retenus</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-filter"></i>Historique des sujets non retenus</h3>
     {{> booksFrozen}}
   </section>
 </template>

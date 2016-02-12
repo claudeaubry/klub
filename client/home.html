@@ -7,18 +7,19 @@
   <section id="next" class="col-xs-12">
     <h3 class="well"><i class="glyphicon glyphicon-calendar"></i>Prochain klub</h3>
     {{> nextKlubView}}
-  <section id="prop" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-heart"></i>Proposer des sujets</h3>
-      {{> booksProposed}}
-      {{> bookCreate}}
-  </section>
+
   </section>
   <section id="past" class="col-xs-12">
     <h3 class="well"><i class="glyphicon glyphicon-time"></i>Historique des klubs</h3>
     {{> pastKlubDisplay}}
   </section>
+  <section id="prop" class="col-xs-12">
+    <h3 class="well"><i class="glyphicon glyphicon-heart"></i>Proposer</h3>
+      {{> booksProposed}}
+      {{> bookCreate}}
+  </section>
   <section id="arch" class="col-xs-12">
-    <h3 class="well"><i class="glyphicon glyphicon-filter"></i>Historique des sujets non retenus</h3>
+    <h3 class="well"><i class="glyphicon glyphicon-filter"></i>Proposés mais pas retenus</h3>
     {{> booksFrozen}}
   </section>
   <section id="appli" class="col-xs-12">

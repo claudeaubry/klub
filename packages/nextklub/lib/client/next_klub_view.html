@@ -10,24 +10,22 @@
           <li class="list-group-item list-group-item-danger">Infos pratiques</li>
           <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-warning">Jour : {{next.date}}</li>
-          <li class="list-group-item list-group-item-info">Heure : {{local.hour}}</li>
+          <li class="list-group-item list-group-item-warning">Heure : {{local.hour}}</li>
           <li class="list-group-item list-group-item-success">Inscription : {{#if next.meetup}} <a target="_blank" href="{{next.meetup}}">sur Meetup</a>
             {{else}}pas encore ouverte{{/if}}</li>
+          <li class="list-group-item list-group-item-info">{{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">Résultat du vote</a>{{/if}}</li>
         </ul>
         {{#if next.book_id}}
           {{> bookDetails id=next.book_id}}
-          <aside class="col-xs-10">
-          {{#if next.voteer}}-> Inscriptions en cours.
-            <p>La sélection s'est faite avec Voteer : <a target="_blank" href="{{next.voteer}}">résultat du vote</a></p>{{/if}}
-          </aside>
         {{else}}
-          <span>Le livre n'est pas encore choisi.</span>
+          <h1>- > Vote en cours</h1>
           {{#if next.voteer}}
-            - > Sélection en cours.
             <p>Vous pouvez participer au vote <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.</p>
-              {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.{{/if}}
-            {{else}}-> Propositions en cours
+              {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.
+                <p>Vous pouvez consulter les <a href="#prop">livres soumis au vote</a></p>
+              {{/if}}
+            {{else}}
+            <h1>-> Propositions</h1>
             <p>Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.</p>
               {{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}
           {{/if}}

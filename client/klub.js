@@ -1,4 +1,6 @@
 Template.klub.helpers({
-  club: () => klubDatas,
+  club: () => klubDatas
+})
+Template.appliKlub.helpers({
   app: () =>  klubAppDatas
 })

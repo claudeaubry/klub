@@ -1,9 +1,9 @@
 <template name="detailedPastKlub">
   {{> nav}}
-  <article class="pastKlub col-xs-18 col-md-12">
+  <article class="pastKlub col-xs-12 col-md-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span class="heading-title">Klub numéro {{klub.i}}</span>
+        <span class="heading-title">Klub de lecture numéro {{klub.i}}</span>
         <span class="heading-date pull-right">{{klub.date}}</span>
       </div>
       <div class="panel-body">
@@ -19,22 +19,20 @@
           {{/each}}
         </ul>
         {{> bookDetails id=klub.book_id}}
-        <article class="klubage col-xs-6 col-md-2">
+        <article class="klubage col-xs-6 col-md-5">
+          {{#if klub.voteer}}<a target="_blank" href="{{klub.voteer}}">Le vote pour ce Klub</a>{{/if}}
           <div class="avis">L'avis des participants</div>
           <div>{{klub.summary}}</div>
           {{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}
-          <br/>
-          {{#if klub.voteer}}<a target="_blank" href="{{klub.voteer}}">Le vote pour ce Klub</a>{{/if}}
         </article>
       </div>
       <div class="row">
-        <div class="col-sm-offset-4 col-sm-3">
+        <div class="pull-right col-md-2">
         {{#if klub.pic}}<a class="thumbnail" href="{{klub.pic}}" data-lightbox="image1">
-          <img src="{{klub.pic}}" />
+          <img src="{{klub.pic}}"/>
         </a>{{/if}}
         </div>
       </div>
-
     </div>
   </article>
 </template>

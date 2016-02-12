@@ -2,7 +2,7 @@
   <article class="next-session col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span class="heading-title">Prochain Klub</span>
+        <span class="heading-title">Prochain Klub de lecture</span>
         <span class="heading-date pull-right">{{next.date}}</span>
       </div>
       <div class="panel-body">
@@ -17,15 +17,18 @@
         </ul>
         {{#if next.book_id}}
           {{> bookDetails id=next.book_id}}
-          <aside class="col-xs-5">
-          {{#if next.voteer}}La sélection s'est faite avec Voteer : <a target="_blank" href="{{next.voteer}}">résultat du vote</a>{{/if}}
+          <aside class="col-xs-10">
+          {{#if next.voteer}}-> Inscriptions en cours.
+            <p>La sélection s'est faite avec Voteer : <a target="_blank" href="{{next.voteer}}">résultat du vote</a></p>{{/if}}
           </aside>
         {{else}}
           <span>Le livre n'est pas encore choisi.</span>
           {{#if next.voteer}}
-            La sélection est en cours <a target="_blank" href="{{next.voteer}}">sur Voteer</a>, vous pouvez y participer.
+            - > Sélection en cours.
+            <p>Vous pouvez participer au vote <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.</p>
               {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.{{/if}}
-            {{else}}Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.
+            {{else}}-> Propositions en cours
+            <p>Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.</p>
               {{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}
           {{/if}}
         {{/if}}

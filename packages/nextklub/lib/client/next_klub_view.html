@@ -16,18 +16,18 @@
           <li class="list-group-item list-group-item-info">{{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">Résultat du vote</a>{{/if}}</li>
         </ul>
         {{#if next.book_id}}
+          <h3>Etape 3 - Sujet choisi</h3>
           {{> bookDetails id=next.book_id}}
         {{else}}
-          <h1>- > Vote en cours</h1>
           {{#if next.voteer}}
+            <h3>Etape 2 - Vote en cours</h3>
             <p>Vous pouvez participer au vote <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.</p>
-              {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.
-                <p>Vous pouvez consulter les <a href="#prop">livres soumis au vote</a></p>
-              {{/if}}
-            {{else}}
-            <h1>-> Propositions</h1>
+            <p>Consultez les <a href="#prop">livres soumis au vote</a></p>
+            {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.{{/if}}
+          {{else}}
+            <h3>Etape 1 - Propositions</h3>
             <p>Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.</p>
-              {{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}
+            {{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}
           {{/if}}
         {{/if}}
       </div>

@@ -1,6 +1,6 @@
 Library = class Library {
   constructor() {
-    this.books = Books.find()
+    this.books = Books.find({}, {sort: {statut: -1}})
   }
   nominees() {
     return Books.find({statut: 'proposed'})

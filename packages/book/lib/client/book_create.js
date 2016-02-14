@@ -27,6 +27,7 @@ Template.bookCreate.events({
       site: site,
       origin: origin,
       type: 'book',
+      // createdAt: new Date(),
       statut: 'proposed'
     })
 

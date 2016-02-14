@@ -5,6 +5,7 @@ $ cd <dbtools>
 - **When** on lance :
 $ meteor mongo <urlàsauvegarder> --url | ./backup.sh
 - **Then** la sauvegarde sera effectuée dans un dossier ./dump avec les points de <urlàsauvegarder> remplacés par des _ (exemple klub.aubryconseil.com -> klub_aubryconseil_com)
+
 ### Restore en distant
 Comment injecter dans <urlàinjecter> les données sauvegardées par un backup ?
 - **Given**  
@@ -13,9 +14,10 @@ Comment injecter dans <urlàinjecter> les données sauvegardées par un backup ?
 $ cd <dbtools>
 - **When** on lance :
 $ meteor mongo <urlàinjecter> --url | ./restore.sh dump/<urlsauvegardéeavecdestirets>
-- **Then** 
+- **Then**
 1. les données présentes sur <urlàinjecter> seront détruites
 2. le contenu du dossier /dump sera injecté dans <urlàinjecter>
-### Restore en local 
+
+### Restore en local
 Comment injecter dans <local> les données sauvegardées par un backup ?
 mongorestore -h localhost:3001 -d meteor dump/<urlsauvegardéeavecdestirets> --objcheck --drop

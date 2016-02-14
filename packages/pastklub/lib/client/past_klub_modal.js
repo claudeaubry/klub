@@ -14,6 +14,7 @@ Template.formKM.events({
     klubTarget.url = $('input#linkSubmit').val()
     klubTarget.pic = $('input#picSubmit').val()
     klubTarget.summary = $('textarea#summarySubmit').val()
+    klubTarget.klubMaster = $('input#klubMasterSubmit').val()
     klubTarget.attendees = $('input#attendeesSubmit').val().split(',')
     PastKlub.update(klubTarget._id, klubTarget)
     $('#modalKlubMaster').modal('hide')

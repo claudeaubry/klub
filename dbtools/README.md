@@ -20,4 +20,5 @@ $ meteor mongo <urlàinjecter> --url | ./restore.sh dump/<urlsauvegardéeavecdes
 
 ### Restore en local
 Comment injecter dans <local> les données sauvegardées par un backup ?
-mongorestore -h localhost:3001 -d meteor dump/<urlsauvegardéeavecdestirets> --objcheck --drop
+Meteor doit fonctionner.
+$ mongorestore -h localhost:3001 -d meteor dump/<urlsauvegardéeavecdestirets> --objcheck --drop

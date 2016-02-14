@@ -1,11 +1,14 @@
 Template.formKM.helpers({
-  klub: () => PastKlub.findOne(Session.get('formLinkIdKlub'))
+  klub: function () {
+    // this provides from url parameter
+    return PastKlub.findOne({i: +this})
+  }
 })
 
 Template.formKM.events({
   'submit form': event => {
-    const idKlub = Session.get('formLinkIdKlub')
-    const klubTarget = PastKlub.findOne(idKlub)
+    const _id = $('input.id').val()
+    const klubTarget = PastKlub.findOne(_id)
 
     event.preventDefault()
     klubTarget.url = $('input#linkSubmit').val()
@@ -14,9 +17,5 @@ Template.formKM.events({
     klubTarget.attendees = $('input#attendeesSubmit').val().split(',')
     PastKlub.update(klubTarget._id, klubTarget)
     $('#modalKlubMaster').modal('hide')
-    Session.set('formLinkIdKlub', '')
-  },
-  'click .modifyLink': () => {
-    Session.set('formLinkIdKlub', this._id)
   }
 })

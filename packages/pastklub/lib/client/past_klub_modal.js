@@ -15,5 +15,8 @@ Template.formKM.events({
     PastKlub.update(klubTarget._id, klubTarget)
     $('#modalKlubMaster').modal('hide')
     Session.set('formLinkIdKlub', '')
+  },
+  'click .modifyLink': () => {
+    Session.set('formLinkIdKlub', this._id)
   }
 })

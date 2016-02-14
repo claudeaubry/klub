@@ -13,6 +13,7 @@
           <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
             <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
           </button>
+          {{> formKM}}
           </li>
           {{#each klub.attendees}}
             <li class="list-group-item">{{this}}</li>

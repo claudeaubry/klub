@@ -5,3 +5,13 @@ section {
 article.pastKlub {
   padding-top: 4em;
 }
+
+.pastKlub ul.attendees li { padding: .4em;}
+
+.pastKlub ul.attendees li.km { line-height: 2.1em;}
+
+.pastKlub .avis {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: .5em 0;
+}

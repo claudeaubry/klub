@@ -1,5 +1,5 @@
 Template.bookCreate.events({
-  'click .createBook': () => {
+  'click .suggestItem': () => {
     $('input#titleSubmit').val('')
     $('input#authorSubmit').val('')
     $('textarea#teaserSubmit').val('')

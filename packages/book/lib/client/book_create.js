@@ -2,7 +2,7 @@ Template.bookCreate.events({
   'click .createBook': () => {
     $('input#titleSubmit').val('')
     $('input#authorSubmit').val('')
-    $('input#teaserSubmit').val('')
+    $('textarea#teaserSubmit').val('')
     $('input#siteSubmit').val('')
     $('input#originSubmit').val('')
   },
@@ -10,7 +10,7 @@ Template.bookCreate.events({
   'submit form': (event) => {
     title = $('input#titleSubmit').val()
     author = $('input#authorSubmit').val()
-    teaser = $('input#teaserSubmit').val()
+    teaser = $('textarea#teaserSubmit').val()
     site = $('input#siteSubmit').val()
     origin = $('input#originSubmit').val()
 

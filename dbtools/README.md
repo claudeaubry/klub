@@ -18,5 +18,5 @@ les données présentes sur urlàinjecter seront détruites et le contenu du dos
 
 ### Restore en local
 Comment injecter dans local les données sauvegardées par un backup ?
-- Meteor doit fonctionner. On lance dans un terminal la commande : 
+- Meteor doit fonctionner. On lance dans un terminal la commande :
 $ mongorestore -h localhost:3001 -d meteor dump/urlsauvegardéeavecdestirets --objcheck --drop

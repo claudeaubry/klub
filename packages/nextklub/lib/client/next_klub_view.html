@@ -6,7 +6,22 @@
         <span class="heading-date pull-right">{{next.date}}</span>
       </div>
       <div class="panel-body">
-        <ul class="list-group col-xs-4">
+        {{#if next.book_id}}
+          <h4>Etape 3 - Livre choisi</h4>
+          <p>Vous avez jusqu'au {{next.date}} pour le lire.</p>
+        {{else}}
+          {{#if next.voteer}}
+            <h4>Etape 2 - Vote en cours</h4>
+            <p>Vous pouvez participer au vote <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.</p>
+            <p>Consultez les <a href="#prop">livres soumis au vote</a>.
+            {{#if next.datevote}} Vous avez jusqu'au {{next.datevote}} pour voter.{{/if}}</p>
+          {{else}}
+            <h4>Etape 1 - Propositions</h4>
+            <p>Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.</p>
+            <p>{{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}</p>
+          {{/if}}
+        {{/if}}
+        <ul class="list-group col-md-4">
           <li class="list-group-item list-group-item-danger">Infos pratiques</li>
           <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
@@ -15,21 +30,9 @@
             {{else}}pas encore ouverte{{/if}}</li>
           <li class="list-group-item list-group-item-info">{{#if next.voteer}} <a target="_blank" href="{{next.voteer}}">Résultat du vote</a>{{/if}}</li>
         </ul>
-        {{#if next.book_id}}
-          <h3>Etape 3 - Sujet choisi</h3>
+        <div class="col-md-8">
           {{> bookDetails id=next.book_id}}
-        {{else}}
-          {{#if next.voteer}}
-            <h3>Etape 2 - Vote en cours</h3>
-            <p>Vous pouvez participer au vote <a target="_blank" href="{{next.voteer}}">sur Voteer</a>.</p>
-            <p>Consultez les <a href="#prop">livres soumis au vote</a></p>
-            {{#if next.datevote}}Vous avez jusqu'au {{next.datevote}} pour voter.{{/if}}
-          {{else}}
-            <h3>Etape 1 - Propositions</h3>
-            <p>Vous pouvez consulter les <a href="#prop">livres proposés</a> et pourquoi pas en proposer vous-même.</p>
-            {{#if next.dateprop}}Vous avez jusqu'au {{next.dateprop}} pour le faire.{{/if}}
-          {{/if}}
-        {{/if}}
+        </div>
       </div>
     </div>
   </article>

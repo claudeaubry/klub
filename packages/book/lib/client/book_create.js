@@ -26,8 +26,8 @@ Template.bookCreate.events({
       teaser: teaser,
       site: site,
       origin: origin,
-      type: 'book',
-      // createdAt: new Date(),
+      // type: 'book',
+      proposedAt: new Date(),
       statut: 'proposed'
     })
 

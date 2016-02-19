@@ -13,9 +13,10 @@
     <label for="meetup">Meetup</label>
     <input type="text" class="form-control meetup small" value={{nextKlub.meetup}}>
     <label for="book">Livre</label>
+    <p>{{> bookTitle id=nextKlub.book_id}}</p>
     <p>Associer un livre : </p>
     <select name="selBook" class="selectpicker">
-      {{#each proposedBooks}}
+      {{#each nomineesBooks}}
       <option value="{{_id}}">{{title}}</option>
       {{/each}}
     </select>

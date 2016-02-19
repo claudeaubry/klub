@@ -1,34 +1,33 @@
 <template name="bookCreate">
-  <button class="createBook btn btn-primary btn-lg col-md-offset-5 " data-toggle="modal" data-target="#modalBook">
-    Proposer un nouveau livre
-  </button>
-  <div class="modal fade" id="modalBook"  role="dialog">
+  <div class="modal fade" id="modalBook" role="dialog">
     <div class="modal-content modal-dialog">
-      <form role="form" >
+      <form role="form" class="well">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">
             <span>&times;</span>
             <span class="sr-only">Close</span>
           </button>
-          <h4 class="modal-title">Proposer un nouveau livre</h4>
+          <h2 class="modal-title">Faites votre proposition</h2>
         </div>
         <div class="modal-body">
           <div class="form-group">
             <input type="hidden" id="_idSubmit">
-            <label for="title">Livre</label>
-            <input type="text" class="form-control" id="bookSubmit" placeholder="Titre du livre">
+            <label for="title">Titre</label>
+            <input type="text" class="form-control" id="titleSubmit" placeholder="Le titre (obligatoire)">
           </div>
           <div class="form-group">
             <label for="author">Auteur</label>
-            <input type="text" class="form-control" id="authorSubmit" placeholder="Auteur du livre">
+            <input type="text" class="form-control" id="authorSubmit" placeholder="L'auteur (obligatoire)">
           </div>
           <div class="form-group">
-            <label for="teaser">Pourquoi ce livre ?</label>
-            <input type="text" class="form-control" id="teaserSubmit" placeholder="Dites pourquoi ce serait bien de discuter de ce livre (optionnel)">
+            <label for="teaser">Pourquoi c'est bien ?</label>
+            <textarea class="form-control" id="teaserSubmit" placeholder="Dites pourquoi ce serait bien de choisir votre proposition (optionnel)"></textarea>
           </div>
           <div class="form-group">
-            <label for="site">Plus sur ce livre </label>
-            <input type="text" class="form-control" id="siteSubmit" placeholder="Donnez un lien qui permet d'en savoir plus sur ce livre (optionnel)">
+            <label for="site">Lien vers un site</label>
+            <input type="url" class="form-control" id="siteSubmit" placeholder="Donnez un lien qui permet d'en savoir plus (optionnel)">
+            <label for="site">Lien vers la couverture</label>
+            <input type="url" class="form-control" id="siteSubmit" placeholder="Donnez un lien vers la 1e de couverture (optionnel)">
           </div>
           <div class="form-group">
             <label for="origin">Qui êtes-vous ?</label>
@@ -36,7 +35,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn btn-primary">Créer</button>
+          <button type="submit" class="btn btn btn-primary">Proposer</button>
         </div>
       </form>
     </div><!-- /.modal-content -->

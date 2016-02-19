@@ -1,1 +1,1 @@
-NextKlub = new Meteor.Collection("nextklub");
+NextKlub = new Meteor.Collection('nextklub')

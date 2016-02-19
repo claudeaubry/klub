@@ -1,40 +1,15 @@
 <template name="pastKlub">
-  <article class="pastKlub col-xs-12 col-md-6">
+  <article class="pastKlub col-xs-12 col-md-4">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <span class="heading-title">Klub numéro {{klub.i}}</span>
-        <span class="heading-date pull-right">{{klub.date}}</span>
+        <span class="heading-title">Klub de lecture numéro {{klub.i}} du {{klub.date}}</span>
       </div>
       <div class="panel-body">
-        <ul class="list-group attendees col-xs-4">
-          <li class="list-group-item disabled">Participants :</li>
-          <li class="list-group-item list-group-item-info km">{{klub.klubMaster}}
-          <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
-            <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
-          </button>
-          </li>
-          {{#each klub.attendees}}
-            <li class="list-group-item">{{this}}</li>
-          {{/each}}
-        </ul>
         {{> bookView id=klub.book_id}}
-        <article class="klubage col-xs-5">
-          <div class="avis">L'avis des participants</div>
-          <div>{{klub.summary}}</div>
-          {{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}
-          <br/>
-          {{#if klub.voteer}}<a target="_blank" href="{{klub.voteer}}">Le vote pour ce Klub</a>{{/if}}
-        </article>
       </div>
-
-      <div class="row">
-        <div class="col-sm-offset-4 col-sm-3">
-        {{#if klub.pic}}<a class="thumbnail" href="{{klub.pic}}" data-lightbox="image1">
-          <img src="{{klub.pic}}" />
-        </a>{{/if}}
-        </div>
-      </div>
-
+      <a href="{{pathFor 'detailedPastKlub' klubId=i}}">
+        <button class="btn col-xs-offset-2 col-md-offset-3">Tout savoir sur ce klub</button>
+      </a>
     </div>
   </article>
 </template>

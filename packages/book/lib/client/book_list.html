@@ -1,15 +1,15 @@
 <template name="bookList">
-  <h3 class="well">Liste des livres</h3>
-  <table class="bookList table table-stripped">
+  <h3 class="well">Liste de tous les livres</h3>
+  <table class="bookList table table-striped table-bordered">
     <tr>
+      <th>Titre</th>
       <th>Auteur</th>
-      <th>Titre du livre</th>
       <th>Statut</th>
     </tr>
-    {{#each bookAll}}
+    {{#each books}}
     <tr>
-      <td>{{author}}</td>
       <td>{{title}}</td>
+      <td>{{author}}</td>
       <td>{{statut}}</td>
       <td>
         <a href="{{pathFor 'adminBookEdit' bookId=_id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>

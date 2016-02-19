@@ -1,15 +1,28 @@
 <template name="bookView">
   <article class="book">
-    <img src="{{#if oneBook.img}}{{oneBook.img}}{{else}}_book.jpg{{/if}}" alt="Première de couverture" class="img-thumbnail col-xs-3">
-    <aside class="col-xs-5">
+    <img src="{{#if oneBook.img}}{{oneBook.img}}{{else}}_book.jpg{{/if}}" alt="Première de couverture" class="img-thumbnail col-md-4">
+    <aside class="col-md-8">
       <h1 class="book-title">{{oneBook.title}}</h1>
       <h2>{{oneBook.author}}</h2>
       <div>{{oneBook.teaser}}</div>
-      <div class="book-site">
-        {{#if oneBook.site}}
-        <a target="_blank" href="{{oneBook.site}}">Plus d'info sur le livre</a>
-        {{/if}}
-      </div>
+    </aside>
+  </article>
+</template>
+
+<template name="bookTitle">
+  {{title}}
+</template>
+
+<template name="bookDetails">
+  <article class="book">
+    <img src="{{#if oneBook.img}}{{oneBook.img}}{{else}}_book.jpg{{/if}}" alt="Première de couverture" class="img-thumbnail col-md-4">
+    <aside class="col-md-8">
+      <h1 class="book-title">{{oneBook.title}}</h1>
+      <h2>{{oneBook.author}}</h2>
+      <div>{{#if oneBook.teaser}}Le teaser : {{oneBook.teaser}}{{/if}}</div>
+      <div>{{#if oneBook.origin}}Ce livre avait été proposé par : {{oneBook.origin}}{{/if}}</div>
+      <div>{{#if oneBook.proposedAt}}La première proposition date de {{oneBook.proposedAt}}{{/if}}</div>
+      <div class="book-site">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Plus d'informations sur ce livre</a>{{/if}}</div>
     </aside>
   </article>
 </template>

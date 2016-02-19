@@ -1,1 +1,1 @@
-Books = new Meteor.Collection("books");
+Books = new Meteor.Collection('books')

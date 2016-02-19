@@ -1,0 +1,42 @@
+<template name="detailedPastKlub">
+  {{> nav}}
+  <article class="pastKlub col-xs-12 col-md-offset-1 col-md-10">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <span class="heading-title">Klub de lecture numéro {{klub.i}}</span>
+        <span class="heading-date pull-right">{{klub.date}}</span>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-4">
+          <article class="klubage">
+            <div class="avis">L'avis des participants</div>
+            <div class="textarea">{{klub.summary}}</div>
+            <p>{{#if klub.url}}<a target="_blank" href="{{klub.url}}">En savoir plus sur ce Klub</a>{{/if}}</p>
+          </article>
+          <div class="avis">La liste des participants</div>
+          <ul class="list-group attendees">
+            <li class="list-group-item disabled">Participants :</li>
+            <li class="list-group-item list-group-item-info km">{{klub.klubMaster}}
+            <button class="modifyLink btn btn-default pull-right" data-toggle="modal" data-target="#modalKlubMaster">
+              <span class="glyphicon glyphicon-pencil" alt="Ajouter un compte-rendu"></span>
+            </button>
+            {{> formKM}}
+            </li>
+            {{#each klub.attendees}}
+              <li class="list-group-item">{{this}}</li>
+            {{/each}}
+          </ul>
+          <div class="avis">{{#if klub.voteer}}Le vote pour ce klub : <a target="_blank" href="{{klub.voteer}}">sur Voteer</a>{{/if}}</div>
+          <div class="avis col-md-6">
+            {{#if klub.pic}}Le souvenir visuel<a class="thumbnail" href="{{klub.pic}}" data-lightbox="image1">
+              <img src="{{klub.pic}}"/></a>
+            {{/if}}
+          </div>
+        </div>
+        <div class="col-md-8">
+          {{> bookDetails id=klub.book_id}}
+        </div>
+      </div>
+    </div>
+  </article>
+</template>

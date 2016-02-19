@@ -1,13 +1,14 @@
 Template.pastKlubList.helpers({
-  klubAll: () => {
-    var pastKlubList = [],
-      pastKlubCollection = PastKlub.find({},
-        {fields: {i: 1, book_id: 1}, sort: {i: -1}});
+  pastKlubs: () => {
+    const pastKlubs = []
+    const pastKlubCollection = PastKlub.find({},
+        {fields: {i: 1, date: 1, book_id: 1}, sort: {i: -1}})
 
-    pastKlubCollection.forEach( (elt) => {
-      pastKlubList.push({i: elt.i, book: getBookTitleById(elt.book_id)});
-    });
+    pastKlubCollection.map(elt => {
+      const title = new Library().bookTitleById(elt.book_id)
+      pastKlubs.push({i: elt.i, date: elt.date, book: title})
+    })
 
-    return pastKlubList;
+    return pastKlubs
   }
-});
+})

@@ -1,3 +1,1 @@
-Meteor.startup( () => {
-  Meteor.publish("all_books", () => Books.find());
-});
+Meteor.publish('all_books', () => Books.find())

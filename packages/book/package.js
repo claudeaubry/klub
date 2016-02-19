@@ -1,12 +1,12 @@
 Package.describe({
-  summary: "A book"
-});
+  summary: 'A book'
+})
 
-Package.on_use(function (api, where) {
-  api.use('ecmascript');
-  api.use(['templating'], 'client');
+Package.on_use(function (api) {
+  api.use('ecmascript')
+  api.use(['templating'], 'client')
   api.add_files([
-    'lib/client/main.js',
+    'lib/client/Library.js',
     'lib/client/book_create.html',
     'lib/client/book_create.js',
     'lib/client/books_proposed.html',
@@ -22,16 +22,19 @@ Package.on_use(function (api, where) {
     'lib/client/book_edit.html',
     'lib/client/book_edit.js'
   ],
-    'client');
-  api.add_files(['lib/server/server.js'], ['server']);
-  api.add_files(['lib/collections/books.js'], ['client', 'server']);
+    'client')
+  api.add_files('lib/server/server.js', 'server')
+  api.add_files('lib/collections/books.js', ['client', 'server'])
 
-  if (api.export) {
-    api.export(['getAllBooks', 'getBooksForNextKlubChoice', 'getBookTitleById', 'associateBookToNextKlub', 'discussedBookWhenPastKlub']);
-  }
-});
+  api.export([
+    'Library',
+    'associateBookToNextKlub',
+    'discussedBookWhenPastKlub'
+  ], 'client')
+  api.export('Books', 'server')
+})
 
 Package.on_test(function (api) {
-  api.use(['tinytest', 'test-helpers'], 'client');
-  api.add_files('book_test.js', 'client');
-});
+  api.use(['tinytest', 'test-helpers'], 'client')
+  api.add_files('book_test.js', 'client')
+})

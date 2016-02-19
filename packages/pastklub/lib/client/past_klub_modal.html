@@ -1,7 +1,8 @@
 <template name="formKM">
   <div class="modal fade" id="modalKlubMaster"  role="dialog">
     <div class="modal-content modal-dialog">
-      <form role="form" id="{{klub._id}}">
+      <form role="form">
+      <input type="hidden" class="form-control id small" value={{klub._id}}>
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">
             <span>&times;</span>
@@ -10,6 +11,10 @@
           <h4 class="modal-title">En tant que KlubMaster, racontez ce Klub</h4>
         </div>
         <div class="modal-body">
+          <div class="form-group">
+            <label for="list">Qui est klubMaster ?</label>
+            <input type="text" class="form-control" id="klubMasterSubmit" placeholder="Nom du klubMaster" value="{{klub.klubMaster}}">
+          </div>
           <div class="form-group">
             <label for="list">Qui était présent ?</label>
             <input type="text" class="form-control" id="attendeesSubmit" placeholder="Noms des participants séparés par une virgule" value="{{klub.attendees}}">
@@ -20,15 +25,15 @@
           </div>
           <div class="form-group">
             <label for="link">Lien vers un compte-rendu</label>
-            <input type="text" class="form-control" id="linkSubmit" placeholder="Un article de blog par exemple" value="{{klub.url}}">
+            <input type="url" class="form-control" id="linkSubmit" placeholder="Un article de blog par exemple" value="{{klub.url}}">
           </div>
           <div class="form-group">
             <label for="pic">Lien vers une photo</label>
-            <input type="text" class="form-control" id="picSubmit" placeholder="Une photo, un dessin…" value="{{klub.pic}}">
+            <input type="url" class="form-control" id="picSubmit" placeholder="Une photo, un dessin…" value="{{klub.pic}}">
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn btn-primary">Enregistrer</button>
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
         </div>
       </form>
     </div>

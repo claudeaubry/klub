@@ -1,7 +1,7 @@
 <template name="bookView">
   <article class="book">
-    <img src="{{#if oneBook.img}}{{oneBook.img}}{{else}}_book.jpg{{/if}}" alt="Première de couverture" class="img-thumbnail col-md-4">
-    <aside class="col-md-8">
+    <img src="{{#if oneBook.img}}{{oneBook.img}}{{else}}_book.jpg{{/if}}" alt="Première de couverture" class="img-thumbnail col-sm-3 col-md-4">
+    <aside class="col-sm-9 col-md-8">
       <h1 class="book-title">{{oneBook.title}}</h1>
       <h2>{{oneBook.author}}</h2>
       <div>{{oneBook.teaser}}</div>

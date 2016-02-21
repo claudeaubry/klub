@@ -16,7 +16,7 @@ Template.bookEdit.events({
     book.img = $('input.img').val()
     book.site = $('input.site').val()
     book.origin = $('input.origin').val()
-    book.teaser = $('input.teaser').val()
+    book.teaser = $('textarea#teaser').val()
     book.statut = $('input.statut').val()
     Books.update(_id, book)
     Router.go('adminBookList')

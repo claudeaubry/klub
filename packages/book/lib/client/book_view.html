@@ -19,10 +19,12 @@
     <aside class="col-md-8">
       <h1 class="book-title">{{oneBook.title}}</h1>
       <h2>{{oneBook.author}}</h2>
-      <div>{{#if oneBook.teaser}}Le teaser : {{oneBook.teaser}}{{/if}}</div>
+      <div>{{#if oneBook.teaser}}Le teaser :
+        <p>{{oneBook.teaser}}</p>
+        {{/if}}</div>
       <div>{{#if oneBook.origin}}Ce livre avait été proposé par : {{oneBook.origin}}{{/if}}</div>
       <div>{{#if oneBook.proposedAt}}La première proposition date de {{oneBook.proposedAt}}{{/if}}</div>
-      <div class="book-site">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Plus d'informations sur ce livre</a>{{/if}}</div>
+      <div class="book-site">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Lien vers le site "officiel" de ce livre</a>{{/if}}</div>
     </aside>
   </article>
 </template>

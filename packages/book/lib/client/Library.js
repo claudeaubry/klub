@@ -3,7 +3,7 @@ Library = class Library {
     this.books = Books.find({}, {sort: {statut: -1}})
   }
   nominees() {
-    return Books.find({statut: 'proposed'})
+    return Books.find({statut: 'proposed'}, {statut: 'selected'})
   }
   selected() {
     return Books.findOne({statut: 'selected'})

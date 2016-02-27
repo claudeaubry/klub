@@ -1,10 +1,11 @@
 Template.nextKlubEdit.helpers({
   nextKlub: () => getNextKlub(),
+  nextSkrub: () => getNextSkrub(),
   nomineesBooks: () => new Library().nominees()
 })
 
 Template.nextKlubEdit.events({
-  'submit form': elt => {
+  'click .modifyklub': elt => {
     const nextKlub = NextKlub.findOne()
 
     elt.preventDefault()
@@ -17,10 +18,10 @@ Template.nextKlubEdit.events({
     if (nextKlub.book_id)
       associateBookToNextKlub(nextKlub.book_id)
     NextKlub.update(nextKlub._id, nextKlub)
-    Router.go('adminPastKlubList')
+    Router.go('adminBookList')
   },
 
-  'click .archive': elt => {
+  'click .archiveklub': elt => {
     const nextKlub = NextKlub.findOne()
     const pastKlub = {}
 
@@ -33,7 +34,12 @@ Template.nextKlubEdit.events({
     discussedBookWhenPastKlub(pastKlub.book_id)
     createPastKlub(pastKlub)
     NextKlub.update(nextKlub._id, {})
-    Router.go('adminPastKlubList')
+    Router.go('nextKlubEdit')
+  },
+
+  'click .launchskrub': elt => {
+    elt.preventDefault()
+    NextKlub.insert({type: 'skrub'})
   }
 })
 

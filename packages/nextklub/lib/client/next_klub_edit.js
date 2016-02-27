@@ -1,6 +1,6 @@
 Template.nextKlubEdit.helpers({
   nextKlub: () => getNextKlub(),
-  nextSkrub: () => getNextSkrub(),
+  nextKjeub: () => getNextKjeub(),
   nomineesBooks: () => new Library().nominees()
 })
 
@@ -37,9 +37,24 @@ Template.nextKlubEdit.events({
     Router.go('nextKlubEdit')
   },
 
-  'click .launchskrub': elt => {
+  'click .launchkjeub': elt => {
     elt.preventDefault()
-    NextKlub.insert({type: 'skrub'})
+    NextKlub.insert({type: 'kjeub'})
+  },
+  'click .modifykjeub': elt => {
+    const nextKjeub = NextKlub.findOne({type: 'kjeub'})
+
+    elt.preventDefault()
+    nextKjeub.date = $('input.jdate').val()
+    nextKjeub.dateprop = $('input.jdateprop').val()
+    nextKjeub.voteer = $('input.jvote').val()
+    nextKjeub.datevote = $('input.jdatevote').val()
+    nextKjeub.meetup = $('input.jmeetup').val()
+    nextKjeub.book_id = $('select[name=selBook]').val()
+    if (nextKjeub.book_id)
+      associateBookToNextKlub(nextKjeub.book_id)
+    NextKlub.update(nextKjeub._id, nextKjeub)
+    Router.go('adminBookList')
   }
 })
 

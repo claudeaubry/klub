@@ -1,4 +1,5 @@
 Template.nextKlubView.helpers({
-  next: () => NextKlub.findOne(),
+  knext: () => NextKlub.findOne(),
+  jnext: () => NextKlub.findOne({type: 'kjeub'}),
   local: () => klubLocalDatas
 })

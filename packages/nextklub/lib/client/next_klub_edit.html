@@ -29,23 +29,23 @@
     <button class="archiveklub btn btn-default">Ce Klub a eu lieu</button>
   </form>
   <h4 class="well">Jeu</h4>
-  {{#unless nextSkrub._id}}
-    <button class="launchskrub btn btn-primary">Lancer le klub de jeu</button>
+  {{#unless nextKjeub._id}}
+    <button class="launchkjeub btn btn-primary">Lancer le klub de jeu</button>
   {{/unless}}
   <form class="nextKlubEdit">
-    <input type="hidden" class="form-control book-id small" value={{nextSkrub.book_id}}>
+    <!-- <input type="hidden" class="form-control book-id small" value={{nextKjeub.book_id}}> -->
     <label for="date">Date Skrub de jeu</label>
-    <input type="text" class="form-control date small" value={{nextSkrub.date}}>
+    <input type="text" class="form-control jdate small" value={{nextKjeub.date}}>
     <label for="dateprop">Date limite pour proposer</label>
-    <input type="text" class="form-control dateprop small" value={{nextSkrub.dateprop}}>
+    <input type="text" class="form-control jdateprop small" value={{nextKjeub.dateprop}}>
     <label for="vote">Voteer</label>
-    <input type="text" class="form-control vote small" value={{nextSkrub.voteer}}>
+    <input type="text" class="form-control jvote small" value={{nextKjeub.voteer}}>
     <label for="datevote">Date limite pour voter</label>
-    <input type="text" class="form-control datevote small" value={{nextSkrub.datevote}}>
+    <input type="text" class="form-control jdatevote small" value={{nextKjeub.datevote}}>
     <label for="meetup">Meetup</label>
-    <input type="text" class="form-control meetup small" value={{nextSkrub.meetup}}>
+    <input type="text" class="form-control jmeetup small" value={{nextKjeub.meetup}}>
     <label for="book">Jeu</label>
-    <p>{{> bookTitle id=nextSkrub.book_id}}</p>
+    <p>{{> bookTitle id=nextKjeub.book_id}}</p>
     <p>Associer un livre : </p>
     <select name="selBook" class="selectpicker small">
       {{#each nomineesBooks}}
@@ -53,8 +53,7 @@
       {{/each}}
     </select>
     <hr>
-    <button type="submit" class="modifyskrub btn btn-default">Modifier</button>
-    <button class="archiveskrub btn btn-default">Ce Skrub a eu lieu</button>
+    <button type="submit" class="modifykjeub btn btn-default">Modifier</button>
+    <button class="archivekjeub btn btn-default">Ce Kjeub a eu lieu</button>
   </form>
-  <!-- <button class="skrub btn btn-primary">Lancer un klub de jeu</button> -->
 </template>

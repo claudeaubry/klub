@@ -1,11 +1,4 @@
 Template.bookCreate.events({
-  'click .suggestItem': () => {
-    $('input#titleSubmit').val('')
-    $('input#authorSubmit').val('')
-    $('textarea#teaserSubmit').val('')
-    $('input#siteSubmit').val('')
-    $('input#originSubmit').val('')
-  },
 
   'submit form': (event) => {
     type = $('input[name="optionsItem"]:checked').val()

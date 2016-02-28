@@ -24,23 +24,26 @@ Template.nextKlubEdit.events({
     if (nextKlub.book_id)
       associateBookToNextKlub(nextKlub.book_id)
     NextKlub.update(nextKlub._id, nextKlub)
-    Router.go('adminBookList')
+    Router.go('adminNextKlub')
   },
 
   'click .archiveklub': elt => {
     const nextKlub = NextKlub.findOne({type: 'klub'})
     const pastKlub = {}
+    const nextnextKlub = {}
 
     elt.preventDefault()
     pastKlub.date = nextKlub.date
     pastKlub.voteer = nextKlub.voteer
     pastKlub.meetup = nextKlub.meetup
+    pastKlub.type = nextKlub.type
     pastKlub.book_id = nextKlub.book_id
     pastKlub.klubMaster = 'anonymous'
     discussedBookWhenPastKlub(pastKlub.book_id)
     createPastKlub(pastKlub)
-    NextKlub.update(nextKlub._id, {})
-    Router.go('adminBookList')
+    nextnextKlub.type = nextKlub.type
+    NextKlub.update(nextKlub._id, nextnextKlub)
+    Router.go('adminNextKlub')
   },
 
   'click .launchkjeub': elt => {
@@ -60,7 +63,26 @@ Template.nextKlubEdit.events({
     if (nextKjeub.book_id)
       associateBookToNextKlub(nextKjeub.book_id)
     NextKlub.update(nextKjeub._id, nextKjeub)
-    Router.go('adminBookList')
+    Router.go('adminNextKlub')
+  },
+
+  'click .archivekjeub': elt => {
+    const nextKlub = NextKlub.findOne({type: 'kjeub'})
+    const pastKlub = {}
+    const nextnextKlub = {}
+
+    elt.preventDefault()
+    pastKlub.date = nextKlub.date
+    pastKlub.voteer = nextKlub.voteer
+    pastKlub.meetup = nextKlub.meetup
+    pastKlub.type = nextKlub.type
+    pastKlub.book_id = nextKlub.book_id
+    pastKlub.klubMaster = 'anonymous'
+    discussedBookWhenPastKlub(pastKlub.book_id)
+    createPastKlub(pastKlub)
+    nextnextKlub.type = nextKlub.type
+    NextKlub.update(nextKlub._id, nextnextKlub)
+    Router.go('adminNextKlub')
   }
 })
 
@@ -70,4 +92,5 @@ Template.nextKlubEdit.rendered = function () {
   but won't by clicking on previous list page.
   */
   this.$('select[name="selBook"]').val(this.$('input.book-id').val())
+  this.$('select[name="jselBook"]').val(this.$('input.book-id').val())
 }

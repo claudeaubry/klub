@@ -11,13 +11,23 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="optionsItem" id="book" value="book" checked>
+              Livre
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optionsItem" id="game" value="game">
+              Jeu
+            </label>
+          </div>
+          <div class="form-group">
             <input type="hidden" id="_idSubmit">
             <label for="title">Titre</label>
             <input type="text" class="form-control" id="titleSubmit" placeholder="Le titre (obligatoire)">
           </div>
           <div class="form-group">
             <label for="author">Auteur</label>
-            <input type="text" class="form-control" id="authorSubmit" placeholder="L'auteur (obligatoire)">
+            <input type="text" class="form-control" id="authorSubmit" placeholder="L'auteur">
           </div>
           <div class="form-group">
             <label for="teaser">Pourquoi c'est bien ?</label>
@@ -28,18 +38,6 @@
             <input type="url" class="form-control" id="siteSubmit" placeholder="Donnez un lien qui permet d'en savoir plus (optionnel)">
             <!-- <label for="cover">Lien vers la couverture</label>
             <input type="url" class="form-control" id="coverSubmit" placeholder="Donnez un lien vers la 1e de couverture (optionnel)"> -->
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="french" value="option1" checked>
-              Livre en français
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="english" value="option2">
-              Livre en anglais
-            </label>
           </div>
           <div class="form-group">
             <label for="origin">Qui êtes-vous ?</label>

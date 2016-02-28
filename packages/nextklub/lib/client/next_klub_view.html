@@ -43,7 +43,7 @@
       <div class="panel-body">
         {{#if jnext.book_id}}
           <h4>Etape 3 - Jeu choisi</h4>
-          <p>Vous avez jusqu'au {{jnext.date}} pour le proposer.</p>
+          <p>La date : {{jnext.date}}.</p>
         {{else}}
           {{#if jnext.voteer}}
             <h4>Etape 2 - Vote en cours</h4>
@@ -65,9 +65,9 @@
             {{else}}pas encore ouverte{{/if}}</li>
           <li class="list-group-item list-group-item-info">{{#if jnext.voteer}} <a target="_blank" href="{{jnext.voteer}}">Résultat du vote</a>{{/if}}</li>
         </ul>
-        <!-- <div class="col-md-8">
+        <div class="col-md-8">
           {{> bookDetails id=jnext.book_id}}
-        </div> -->
+        </div>
       </div>
     </div>
   </article>

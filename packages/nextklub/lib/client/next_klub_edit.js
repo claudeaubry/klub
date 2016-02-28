@@ -50,7 +50,7 @@ Template.nextKlubEdit.events({
     nextKjeub.voteer = $('input.jvote').val()
     nextKjeub.datevote = $('input.jdatevote').val()
     nextKjeub.meetup = $('input.jmeetup').val()
-    nextKjeub.book_id = $('select[name=selBook]').val()
+    nextKjeub.book_id = $('select[name=jselBook]').val()
     if (nextKjeub.book_id)
       associateBookToNextKlub(nextKjeub.book_id)
     NextKlub.update(nextKjeub._id, nextKjeub)

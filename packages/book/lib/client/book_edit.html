@@ -2,6 +2,8 @@
   <h3 class="well">Modification d'un livre</h3>
   <form class="pastKlubEdit col-xs-6">
     <input type="hidden" class="form-control id small" value={{book._id}}>
+    <label for="typeItem">Type</label>
+    <input type="text" class="form-control typeItem small" value={{book.type}} disabled>
     <label for="author">Auteur</label>
     <input type="text" class="form-control author small" value={{book.author}}>
     <label for="title">Titre</label>
@@ -15,8 +17,6 @@
     <label for="teaser">Teaser</label>
     <!-- <input type="text" class="form-control teaser small" value={{book.teaser}}> -->
     <textarea rows="5" class="form-control origin small" id="teaser">{{book.teaser}}</textarea>
-    <!-- <label for="statut">Type</label>
-    <input type="text" class="form-control type small" value={{book.type}}> -->
     <label for="statut">Statut</label>
     <input type="text" class="form-control statut small" value={{book.statut}}>
     <label for="statut">Date de proposition</label>

@@ -12,6 +12,7 @@ Template.bookEdit.events({
 
     elt.preventDefault()
     book.author = $('input.author').val()
+    book.type = $('input.typeItem').val()
     book.title = $('input.title').val()
     book.img = $('input.img').val()
     book.site = $('input.site').val()

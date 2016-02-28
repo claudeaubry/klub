@@ -1,7 +1,8 @@
 Template.nextKlubEdit.helpers({
   nextKlub: () => getNextKlub(),
   nextKjeub: () => getNextKjeub(),
-  nomineesBooks: () => new Library().nominees()
+  nomineesBooks: () => new Library().nominees(),
+  nomineesGames: () => new Library().jnominees()
 })
 
 Template.nextKlubEdit.events({

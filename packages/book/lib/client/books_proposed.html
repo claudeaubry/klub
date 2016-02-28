@@ -1,12 +1,5 @@
 <template name="booksProposed">
-  <ul>
-    <li>Tout le monde peut proposer un livre.</li>
-    <li>La sélection est réalisée avec l'application Voteer, selon <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet_avec_rangement_des_paires_par_ordre_d%C3%A9croissant" target="_blank">le vote Condorcet avec rangement des paires par ordre décroissant.</a>
-    </li>
-    <li>Les livres non sélectionnés sont archivés dans <a href="#arch">l'historique des livres.</a></li>
-  </ul>
-  <h5 class="well col-xs-12">Liste des livres proposés pour la prochaine sélection</h5>
-  <ul class="proposedBook col-xs-12 col-md-10 col-md-offset-1 list-group">
+  <ul class="proposedBook col-xs-12 col-md-12 list-group">
     {{#each titles}}
     <li class="list-group-item text-center">
       <strong>{{this.title}}</strong>
@@ -23,7 +16,36 @@
     </li>
     {{/each}}
   </ul>
+  </template>
+
+<template name="gamesProposed">
+  <ul class="proposedBook col-xs-12 col-md-12 list-group">
+    {{#each games}}
+    <li class="list-group-item text-center">
+      <strong>{{this.title}}</strong>
+      de {{this.author}}
+      {{#if this.origin}}
+        - proposé par {{this.origin}}
+      {{/if}}
+      {{#if this.teaser}}
+        car {{this.teaser}}
+      {{/if}}
+      {{#if this.site}}
+        - <a target="_blank" href="{{this.site}}">en savoir plus</a>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  </template>
+
+<template name="itemsProposal">
   <button class="suggestItem btn btn-primary btn-lg col-md-offset-5 " data-toggle="modal" data-target="#modalBook">
     Proposer un nouveau sujet
   </button>
+  <ul>
+    <li>Tout le monde peut proposer un sujet.</li>
+    <li>La sélection est réalisée avec l'application Voteer, selon <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet_avec_rangement_des_paires_par_ordre_d%C3%A9croissant" target="_blank">le vote Condorcet avec rangement des paires par ordre décroissant.</a>
+    </li>
+    <li>Les sujets non sélectionnés sont archivés dans <a href="#arch">l'historique.</a></li>
+  </ul>
 </template>

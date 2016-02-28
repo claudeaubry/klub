@@ -3,7 +3,7 @@
   <form class="pastKlubEdit col-xs-6">
     <input type="hidden" class="form-control id small" value={{book._id}}>
     <label for="typeItem">Type</label>
-    <input type="text" class="form-control typeItem small" value={{book.type}} disabled>
+    <input type="text" class="form-control typeItem small" value={{book.type}}>
     <label for="author">Auteur</label>
     <input type="text" class="form-control author small" value={{book.author}}>
     <label for="title">Titre</label>
@@ -20,7 +20,7 @@
     <label for="statut">Statut</label>
     <input type="text" class="form-control statut small" value={{book.statut}}>
     <label for="statut">Date de proposition</label>
-    <input type="text" class="form-control statut small" value={{book.proposedAt}}>
+    <input type="text" class="form-control statut small" value={{book.proposedAt}} disabled>
     <hr>
     <button type="submit" class="btn btn-default">Modifier</button>
     <button class="freeze btn btn-default">Archiver</button>

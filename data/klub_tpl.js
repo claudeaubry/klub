@@ -11,7 +11,9 @@ klubLocalDatas = {
   title: "Klubs Agile Toulouse",
   place: "Maison des Associations",
   map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
-  hour: "18h30-20h"
+  hour: "18h30-20h",
+  day: "le lundi",
+  frequency: "environ une fois par mois"
 }
 klubAppDatas = {
   uvp: "Une application qui s'adresse aux participants d'un klub, pour préparer et prolonger le karma des séances de partage.",

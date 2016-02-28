@@ -1,13 +1,15 @@
 <template name="bookList">
-  <h3 class="well">Liste de tous les livres</h3>
+  <h3 class="well">Liste de tous les sujets</h3>
   <table class="bookList table table-striped table-bordered">
     <tr>
+      <th>Type</th>
       <th>Titre</th>
       <th>Auteur</th>
       <th>Statut</th>
     </tr>
     {{#each books}}
     <tr>
+      <td>{{type}}</td>
       <td>{{title}}</td>
       <td>{{author}}</td>
       <td>{{statut}}</td>

@@ -5,10 +5,16 @@ Template.nextKlubEdit.helpers({
 })
 
 Template.nextKlubEdit.events({
+  'click .launchklub': elt => {
+    elt.preventDefault()
+    NextKlub.insert({type: 'klub'})
+  },
+
   'click .modifyklub': elt => {
-    const nextKlub = NextKlub.findOne()
+    const nextKlub = NextKlub.findOne({type: 'klub'})
 
     elt.preventDefault()
+    nextKlub.type = 'klub'
     nextKlub.date = $('input.date').val()
     nextKlub.dateprop = $('input.dateprop').val()
     nextKlub.voteer = $('input.vote').val()
@@ -22,7 +28,7 @@ Template.nextKlubEdit.events({
   },
 
   'click .archiveklub': elt => {
-    const nextKlub = NextKlub.findOne()
+    const nextKlub = NextKlub.findOne({type: 'klub'})
     const pastKlub = {}
 
     elt.preventDefault()
@@ -34,7 +40,7 @@ Template.nextKlubEdit.events({
     discussedBookWhenPastKlub(pastKlub.book_id)
     createPastKlub(pastKlub)
     NextKlub.update(nextKlub._id, {})
-    Router.go('nextKlubEdit')
+    Router.go('adminBookList')
   },
 
   'click .launchkjeub': elt => {

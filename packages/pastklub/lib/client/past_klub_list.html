@@ -1,13 +1,15 @@
 <template name="pastKlubList">
-  <h3 class="well">Liste des Klubs avec les livres choisis</h3>
+  <h3 class="well">Liste des klubs avec les sujets choisis</h3>
   <table class="pastKlubList table table-bordered table-stripped table-condensed">
     <tr>
+      <th>Type</th>
       <th>Numéro</th>
-      <th>Titre du livre</th>
+      <th>Titre</th>
       <th>Date</th>
     </tr>
     {{#each pastKlubs}}
     <tr>
+      <td>{{type}}</td>
       <td>{{i}}</td>
       <td>{{book}}</td>
       <td>{{date}}</td>

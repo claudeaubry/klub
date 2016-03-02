@@ -3,7 +3,7 @@
   <h4 class="well">Lecture</h4>
   {{#unless nextKlub._id}}
     <button class="launchklub btn btn-primary">Lancer le klub de lecture</button>
-  {{/unless}}
+  {{else}}
   <form class="nextKlubEdit">
     <input type="hidden" class="form-control book-id small" value={{nextKlub.book_id}}>
     <label for="date">Date Klub de lecture</label>
@@ -29,10 +29,11 @@
     <button type="submit" class="modifyklub btn btn-default">Modifier</button>
     <button class="archiveklub btn btn-default">Ce Klub a eu lieu</button>
   </form>
+  {{/unless}}
   <h4 class="well">Jeu</h4>
   {{#unless nextKjeub._id}}
     <button class="launchkjeub btn btn-primary">Lancer le klub de jeu</button>
-  {{/unless}}
+  {{else}}
   <form class="nextKjeubEdit">
     <input type="hidden" class="form-control book-id small" value={{nextKjeub.book_id}}>
     <label for="date">Date klub de jeu</label>
@@ -58,4 +59,5 @@
     <button type="submit" class="modifykjeub btn btn-default">Modifier</button>
     <button class="archivekjeub btn btn-default">Ce Kjeub a eu lieu</button>
   </form>
+  {{/unless}}
 </template>

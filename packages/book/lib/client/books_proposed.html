@@ -1,19 +1,7 @@
 <template name="booksProposed">
   <ul class="proposedBook col-xs-12 col-md-12 list-group">
     {{#each titles}}
-    <li class="list-group-item text-center">
-      <strong>{{this.title}}</strong>
-      de {{this.author}}
-      {{#if this.origin}}
-        - proposé par {{this.origin}}
-      {{/if}}
-      {{#if this.teaser}}
-        car {{this.teaser}}
-      {{/if}}
-      {{#if this.site}}
-        - <a target="_blank" href="{{this.site}}">en savoir plus</a>
-      {{/if}}
-    </li>
+      {{> itemli}}
     {{/each}}
   </ul>
   </template>
@@ -21,22 +9,10 @@
 <template name="gamesProposed">
   <ul class="proposedBook col-xs-12 col-md-12 list-group">
     {{#each games}}
-    <li class="list-group-item text-center">
-      <strong>{{this.title}}</strong>
-      de {{this.author}}
-      {{#if this.origin}}
-        - proposé par {{this.origin}}
-      {{/if}}
-      {{#if this.teaser}}
-        car {{this.teaser}}
-      {{/if}}
-      {{#if this.site}}
-        - <a target="_blank" href="{{this.site}}">en savoir plus</a>
-      {{/if}}
-    </li>
+      {{> itemli}}
     {{/each}}
   </ul>
-  </template>
+</template>
 
 <template name="itemsProposal">
   <button class="suggestItem btn btn-primary btn-lg col-md-offset-5 " data-toggle="modal" data-target="#modalBook">
@@ -44,8 +20,19 @@
   </button>
   <ul>
     <li>Tout le monde peut proposer un sujet.</li>
-    <li>La sélection est réalisée avec l'application Voteer, selon <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet_avec_rangement_des_paires_par_ordre_d%C3%A9croissant" target="_blank">le vote Condorcet avec rangement des paires par ordre décroissant.</a>
+    <li>La sélection est réalisée avec l'application Voteer,
+      selon <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet_avec_rangement_des_paires_par_ordre_d%C3%A9croissant" target="_blank">le vote Condorcet avec rangement des paires par ordre décroissant.</a>
     </li>
     <li>Les sujets non sélectionnés sont archivés dans <a href="#arch">l'historique.</a></li>
   </ul>
+</template>
+
+<template name="itemli">
+  <li class="list-group-item text-center">
+    <strong>{{this.title}}</strong>
+    {{#if this.author}}de {{this.author}}  {{/if}}
+    {{#if this.origin}}  - proposé par {{this.origin}}{{/if}}
+    {{#if this.teaser}}car {{this.teaser}}{{/if}}
+    {{#if this.site}}- <a target="_blank" href="{{this.site}}">en savoir plus</a>{{/if}}
+  </li>
 </template>

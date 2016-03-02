@@ -6,6 +6,7 @@ Template.bookCreate.events({
     author = $('input#authorSubmit').val()
     teaser = $('textarea#teaserSubmit').val()
     site = $('input#siteSubmit').val()
+    img = $('input#imgSubmit').val()
     origin = $('input#originSubmit').val()
 
     event.preventDefault()
@@ -18,6 +19,7 @@ Template.bookCreate.events({
       author: author,
       teaser: teaser,
       site: site,
+      img: img,
       origin: origin,
       proposedAt: new Date(),
       statut: 'proposed'

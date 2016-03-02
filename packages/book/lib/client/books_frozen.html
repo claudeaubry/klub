@@ -6,19 +6,29 @@
       <span class="glyphicon glyphicon-repeat" ></span>
     </li>
   </ul>
-  <h5 class="well col-xs-12">Liste des sujets anciennement proposés et non retenus pour un Klub</h5>
+  <h5 class="well col-xs-12">Liste des livres anciennement proposés et non retenus pour un klub</h5>
   <ul class="frozenBook col-xs-12 col-md-10 col-md-offset-1 list-group">
-    {{#each titles}}
-    <li class="list-group-item text-center">
-      <strong>{{this.title}}</strong>
-      de {{this.author}}
-      {{#if this.teaser}}
-      - {{this.teaser}}
-      {{/if}}
-      <button class="repeat btn btn-default pull-right">
-        <span class="glyphicon glyphicon-repeat" alt="Proposer à nouveau"></span>
-      </button>
-    </li>
+    {{#each books}}
+    {{> itemFrozen}}
     {{/each}}
   </ul>
+  <h5 class="well col-xs-12">Liste des jeux anciennement proposés et non retenus pour un kjeub</h5>
+  <ul class="frozenBook col-xs-12 col-md-10 col-md-offset-1 list-group">
+    {{#each games}}
+    {{> itemFrozen}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="itemFrozen">
+  <li class="list-group-item text-center">
+    <strong>{{this.title}}</strong>
+    de {{this.author}}
+    {{#if this.teaser}}
+    - {{this.teaser}}
+    {{/if}}
+    <button class="repeat btn btn-default pull-right">
+      <span class="glyphicon glyphicon-repeat" alt="Proposer à nouveau"></span>
+    </button>
+  </li>
 </template>

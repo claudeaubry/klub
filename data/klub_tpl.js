@@ -8,7 +8,7 @@ klubDatas = {
 }
 klubLocalDatas = {
   region: "Toulouse",
-  title: "Klubs Agile Toulouse",
+  title: "Klub Agile Toulouse",
   place: "Maison des Associations",
   map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
   hour: "18h30-20h",

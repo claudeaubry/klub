@@ -21,7 +21,7 @@ Template.bookCreate.events({
       site: site,
       img: img,
       origin: origin,
-      proposedAt: moment(new Date()),
+      proposedAt: moment(),
       statut: 'proposed'
     })
 

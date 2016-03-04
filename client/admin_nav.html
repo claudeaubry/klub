@@ -1,10 +1,11 @@
 <template name="adminNav">
   <nav class="navbar navbar-default navbar-fixed-top">
-    <a class="navbar-brand" href="{{pathFor 'home'}}">{{titleClub}}</a>
+    <a class="navbar-brand" href="{{pathFor 'home'}}">{{nomClub}}</a>
     <ul class="nav nav-pills">
       <li><a href="{{pathFor 'adminNextKlub'}}">Prochain klub</a></li>
       <li><a href="{{pathFor 'adminBookList'}}">Tous les sujets</a></li>
       <li><a href="{{pathFor 'adminPastKlubList'}}">Tous les klubs</a></li>
+      <li><a href="{{pathFor 'adminLocalData'}}">Données locales</a></li>
     </ul>
   </nav>
 </template>

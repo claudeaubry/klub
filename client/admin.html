@@ -4,3 +4,25 @@
     {{> yield}}
   </section>
 </template>
+
+<template name="localDataEdit">
+  <h3 class="well">Modification des données locales</h3>
+  <form class="localEdit col-xs-6 col-md-12">
+    <label for="name">Nom du klub</label>
+    <input type="text" class="form-control name small" value={{local.title}} placeholder="Nom du klub">
+    <label for="region">Région</label>
+    <input type="text" class="form-control region small" value={{local.region}} placeholder="Ville ou région">
+    <label for="place">Lieu du klub</label>
+    <input type="text" class="form-control place small" value={{local.place}}>
+    <label for="map">Carte</label>
+    <input type="text" class="form-control map small" value={{local.map}}>
+    <label for="hour">Heure</label>
+    <input type="text" class="form-control hour small" value={{local.hour}}>
+    <label for="day">Jour du klub</label>
+    <input type="text" class="form-control day small" value={{local.day}}>
+    <label for="frequency">Fréquence du klub</label>
+    <input type="text" class="form-control frequency small" value={{local.frequency}}>
+    <hr>
+    <button type="submit" class="btn btn-default">Modifier</button>
+  </form>
+</template>

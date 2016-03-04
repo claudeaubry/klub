@@ -6,15 +6,15 @@ klubDatas = {
   types: "Klub pour la lecture, Skrub pour le scribing, Kjeub pour le jeu.",
   valueProposition: "klub, le bon karma du partage : discuter d'un livre, dessiner, jouer ensemble."
 }
-klubLocalDatas = {
-  region: "Toulouse",
-  title: "Klub Agile Toulouse",
-  place: "Maison des Associations",
-  map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
-  hour: "18h30-20h",
-  day: "le lundi",
-  frequency: "environ une fois par mois"
-}
+// klubLocalDatas = {
+//   region: "Toulouse",
+//   title: "Klub Agile Toulouse",
+//   place: "Maison des Associations",
+//   map: "http://www.openstreetmap.org/way/63969787#map=16/43.5775/1.4442",
+//   hour: "18h30-20h",
+//   day: "le lundi",
+//   frequency: "environ une fois par mois"
+// }
 klubAppDatas = {
   uvp: "Une application qui s'adresse aux participants d'un klub, pour préparer et prolonger le karma des séances de partage.",
   actors: "Le klubOwner prépare un Klub en s'occupant de la sélection du livre, le klubMaster en fait le compte-rendu, et tout le monde peut proposer des livres.",

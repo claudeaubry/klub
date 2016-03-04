@@ -1,3 +1,3 @@
 Template.nav.helpers({
-  titleClub: () => klubLocalDatas.title
+  nomClub: () => LocalData.findOne().title
 })

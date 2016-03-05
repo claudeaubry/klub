@@ -9,7 +9,6 @@ Template.nextKlubEdit.events({
   'click .launchklub': elt => {
     elt.preventDefault()
     NextKlub.insert({type: 'klub'})
-    LocalData.insert({})
   },
 
   'click .modifyklub': elt => {

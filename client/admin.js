@@ -4,6 +4,11 @@ Template.localDataEdit.helpers({
 
 Template.localDataEdit.events({
 
+  'click .launchlocal': elt => {
+    elt.preventDefault()
+    LocalData.insert({title: 'Klub Agile'})
+  },
+
   'submit form': (elt) => {
     const localD = LocalData.findOne()
     elt.preventDefault()

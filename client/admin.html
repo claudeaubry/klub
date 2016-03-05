@@ -7,6 +7,9 @@
 
 <template name="localDataEdit">
   <h3 class="well">Modification des données locales</h3>
+  {{#unless local._id}}
+    <button class="launchlocal btn btn-primary">Configurer</button>
+  {{else}}
   <form class="localEdit col-xs-6 col-md-12">
     <label for="name">Nom du klub</label>
     <input type="text" class="form-control name small" value={{local.title}} placeholder="Nom du klub">
@@ -25,4 +28,5 @@
     <hr>
     <button type="submit" class="btn btn-default">Modifier</button>
   </form>
+  {{/unless}}
 </template>

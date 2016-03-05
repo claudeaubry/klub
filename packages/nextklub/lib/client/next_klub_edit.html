@@ -1,6 +1,5 @@
 <template name="nextKlubEdit">
-  <h3 class="well">Prochains Klubs</h3>
-  <h4 class="well">Lecture</h4>
+  <h3 class="well">Lecture</h3>
   {{#unless nextKlub._id}}
     <button class="launchklub btn btn-primary">Lancer le klub de lecture</button>
   {{else}}
@@ -30,7 +29,7 @@
     <button class="archiveklub btn btn-default">Ce Klub a eu lieu</button>
   </form>
   {{/unless}}
-  <h4 class="well">Jeu</h4>
+  <h3 class="well">Jeu</h3>
   {{#unless nextKjeub._id}}
     <button class="launchkjeub btn btn-primary">Lancer le klub de jeu</button>
   {{else}}

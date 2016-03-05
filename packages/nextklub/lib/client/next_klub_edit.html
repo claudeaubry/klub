@@ -1,39 +1,48 @@
 <template name="nextKlubEdit">
-  <h3 class="well">Lecture</h3>
+  <h3 class="well col-xs-6 col-md-8">Lecture</h3>
   {{#unless nextKlub._id}}
     <button class="launchklub btn btn-primary">Lancer le klub de lecture</button>
   {{else}}
-  <form class="nextKlubEdit">
+  <form class="nextKlubEdit col-xs-6 col-md-8">
     <input type="hidden" class="form-control book-id small" value={{nextKlub.book_id}}>
-    <label for="date">Date Klub de lecture</label>
-    <input type="text" class="form-control date small" value={{nextKlub.date}}>
-    <label for="dateprop">Date limite pour proposer</label>
-    <input type="text" class="form-control dateprop small" value={{nextKlub.dateprop}}>
-    <label for="vote">Voteer</label>
-    <input type="text" class="form-control vote small" value={{nextKlub.voteer}}>
-    <label for="datevote">Date limite pour voter</label>
-    <input type="text" class="form-control datevote small" value={{nextKlub.datevote}}>
-    <label for="meetup">Meetup</label>
-    <input type="text" class="form-control meetup small" value={{nextKlub.meetup}}>
-    <label for="book">Livre</label>
-    <p>{{> bookTitle id=nextKlub.book_id}}</p>
-    <p>Associer un livre : </p>
-    <select name="selBook" class="form-control small">
-      <option value="{{nextKlub.book_id}}">{{title}}</option>
-      {{#each nomineesBooks}}
-      <option value="{{_id}}">{{title}}</option>
-      {{/each}}
-    </select>
-    <hr>
-    <button type="submit" class="modifyklub btn btn-default">Modifier</button>
-    <button class="archiveklub btn btn-default">Ce Klub a eu lieu</button>
+    <div class="col-md-8 col-md-offset-2">
+      <label for="state">Etat actuel</label>
+      <input type="text" class="form-control state small" value={{nextKlub.state}} disabled>
+      <button class="startChoice btn btn-primary">Passer à la sélection</button>
+      <button class="choiceDone btn btn-primary">Association effectuée</button>
+      <button class="archiveklub btn btn-primary">Ce Klub a eu lieu</button>
+      <button type="submit" class="modifyklub btn btn-default">Enregistrer les données ci-dessous</button>
+    </div>
+    <div class="col-md-6">
+      <label for="date">Date prévue</label>
+      <input type="text" class="form-control date small" value={{nextKlub.date}}>
+      <label for="dateprop">Date limite pour proposer</label>
+      <input type="text" class="form-control dateprop small" value={{nextKlub.dateprop}}>
+      <label for="vote">Voteer</label>
+      <input type="text" class="form-control vote small" value={{nextKlub.voteer}}>
+      <label for="datevote">Date limite pour voter</label>
+      <input type="text" class="form-control datevote small" value={{nextKlub.datevote}}>
+    </div>
+    <div class="col-md-6">
+      <label for="meetup">Meetup</label>
+      <input type="text" class="form-control meetup small" value={{nextKlub.meetup}}>
+      <label for="book">Livre</label>
+      <p>{{> bookTitle id=nextKlub.book_id}}</p>
+      <p>Associer un livre : </p>
+      <select name="selBook" class="form-control small">
+        <option value="{{nextKlub.book_id}}">{{title}}</option>
+        {{#each nomineesBooks}}
+        <option value="{{_id}}">{{title}}</option>
+        {{/each}}
+      </select>
+      </div>
   </form>
   {{/unless}}
-  <h3 class="well">Jeu</h3>
+  <h3 class="well col-xs-6 col-md-8">Jeu</h3>
   {{#unless nextKjeub._id}}
     <button class="launchkjeub btn btn-primary">Lancer le klub de jeu</button>
   {{else}}
-  <form class="nextKjeubEdit">
+  <form class="nextKjeubEdit col-xs-6 col-md-8">
     <input type="hidden" class="form-control book-id small" value={{nextKjeub.book_id}}>
     <label for="date">Date klub de jeu</label>
     <input type="text" class="form-control jdate small" value={{nextKjeub.date}}>

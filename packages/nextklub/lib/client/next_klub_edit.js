@@ -8,24 +8,36 @@ Template.nextKlubEdit.helpers({
 Template.nextKlubEdit.events({
   'click .launchklub': elt => {
     elt.preventDefault()
-    NextKlub.insert({type: 'klub'})
+    NextKlub.insert({state: 'propositions', type: 'klub'})
+  },
+
+  'click .startChoice': elt => {
+    const nextKlub = NextKlub.findOne({type: 'klub'})
+    elt.preventDefault()
+    nextKlub.state = 'choixEnCours'
+    NextKlub.update(nextKlub._id, nextKlub)
+  },
+
+  'click .choiceDone': elt => {
+    const nextKlub = NextKlub.findOne({type: 'klub'})
+    elt.preventDefault()
+    if (nextKlub.book_id)
+      associateBookToNextKlub(nextKlub.book_id)
+    nextKlub.state = 'choixAssocié'
+    NextKlub.update(nextKlub._id, nextKlub)
   },
 
   'click .modifyklub': elt => {
     const nextKlub = NextKlub.findOne({type: 'klub'})
 
     elt.preventDefault()
-    nextKlub.type = 'klub'
     nextKlub.date = $('input.date').val()
     nextKlub.dateprop = $('input.dateprop').val()
     nextKlub.voteer = $('input.vote').val()
     nextKlub.datevote = $('input.datevote').val()
     nextKlub.meetup = $('input.meetup').val()
     nextKlub.book_id = $('select[name=selBook]').val()
-    if (nextKlub.book_id)
-      associateBookToNextKlub(nextKlub.book_id)
     NextKlub.update(nextKlub._id, nextKlub)
-    Router.go('adminNextKlub')
   },
 
   'click .archiveklub': elt => {
@@ -43,6 +55,7 @@ Template.nextKlubEdit.events({
     discussedBookWhenPastKlub(pastKlub.book_id)
     createPastKlub(pastKlub)
     nextnextKlub.type = nextKlub.type
+    nextnextKlub.state = 'propositions'
     NextKlub.update(nextKlub._id, nextnextKlub)
     Router.go('adminNextKlub')
   },

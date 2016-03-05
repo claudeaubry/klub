@@ -8,26 +8,26 @@
         <ul class="list-group col-md-4">
           <li class="list-group-item list-group-item-danger">Infos pratiques</li>
           <li class="list-group-item list-group-item-warning">Date : {{knext.date}}</li>
+          <li class="list-group-item list-group-item-warning">Heure : {{knext.hour}}</li>
           <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-warning">Heure : {{local.hour}}</li>
-          <li class="list-group-item list-group-item-warning">Fréquence : {{local.frequency}}</li>
           <li class="list-group-item list-group-item-success">Inscription : {{#if knext.meetup}} <a target="_blank" href="{{knext.meetup}}">sur Meetup</a>
             {{else}}pas encore ouverte{{/if}}</li>
           <li class="list-group-item list-group-item-info">{{#if knext.voteer}}<a target="_blank" href="{{knext.voteer}}">Résultat du vote</a>{{/if}}</li>
         </ul>
-        {{#if knext.book_id}}
+        {{#if assoc}}
           <h4>Etape 3 - Livre choisi</h4>
           <p>Vous avez jusqu'au {{knext.date}} pour le lire.</p>
           <div class="col-md-8">
             {{> bookDetails id=knext.book_id}}
           </div>
         {{else}}
-          {{#if knext.voteer}}
+          {{#if choix}}
             <h4>Etape 2 - Vote en cours</h4>
             <p>Vous pouvez participer au vote <a target="_blank" href="{{knext.voteer}}">sur Voteer</a>.</p>
             <p>{{#if knext.datevote}} Vous avez jusqu'au {{knext.datevote}} pour voter.{{/if}}</p>
-          {{else}}
+          {{/if}}
+          {{#if prop}}
             <h4>Etape 1 - Propositions</h4>
             <p>{{#if knext.dateprop}}Vous avez jusqu'au {{knext.dateprop}} pour proposer.{{/if}}</p>
           {{/if}}

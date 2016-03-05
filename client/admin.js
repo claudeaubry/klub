@@ -16,10 +16,8 @@ Template.localDataEdit.events({
     localD.title = $('input.name').val()
     localD.place = $('input.place').val()
     localD.map = $('input.map').val()
-    localD.hour = $('input.hour').val()
-    localD.day = $('input.day').val()
-    localD.frequency = $('input.frequency').val()
+    localD.site = $('input.site').val()
     LocalData.update(localD._id, localD)
-    Router.go('adminBookList')
+    Router.go('admin')
   }
 })

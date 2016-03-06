@@ -1,0 +1,32 @@
+<template name="configKlubs">
+  <h4 class="well col-xs-6 col-md-8">Klubs actifs</h4>
+  <table class="klubsList table table-bordered table-condensed">
+    <tr>
+      <th>Type</th>
+      <th>Etat</th>
+    </tr>
+    {{#each klubs}}
+    <tr>
+      <td>{{type}}</td>
+      <td>{{state}}</td>
+      <td>
+        <button class="delete btn btn-default">
+          <span class="glyphicon glyphicon-remove" alt="Supprimer"></span>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  <h4 class="well col-xs-6 col-md-8">Klubs inactifs</h4>
+  <div class="col-md-8">
+  {{#unless nextKlub._id}}
+    <button class="launchklub btn btn-primary">Lancer le klub de lecture</button>
+  {{/unless}}
+  {{#unless nextKjeub._id}}
+    <button class="launchkjeub btn btn-primary">Lancer le klub de jeu</button>
+  {{/unless}}
+  {{#unless nextSkrib._id}}
+    <button class="launchskrib btn btn-primary">Lancer le klub de scribe</button>
+  {{/unless}}
+  </div>
+</template>

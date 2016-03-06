@@ -6,11 +6,11 @@
 </template>
 
 <template name="localDataEdit">
-  <h3 class="well">Configuration</h3>
+  <h3 class="well col-md-8">Infos sur l'organisation</h3>
   {{#unless local._id}}
     <button class="launchlocal btn btn-primary">Configurer</button>
   {{else}}
-  <form class="localEdit col-xs-6 col-md-6">
+  <form class="localEdit col-xs-6 col-md-8">
     <label for="name">Nom de l'organisation</label>
     <input type="text" class="form-control name small" value={{local.title}} placeholder="Par exemple Agile Toulouse">
     <label for="region">Région</label>
@@ -24,4 +24,6 @@
     <button type="submit" class="btn btn-primary">Enregistrer</button>
   </form>
   {{/unless}}
+  <h3 class="well col-md-8">Configuration des klubs</h3>
+  {{> configKlubs}}
 </template>

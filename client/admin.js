@@ -6,7 +6,7 @@ Template.localDataEdit.events({
 
   'click .launchlocal': elt => {
     elt.preventDefault()
-    LocalData.insert({title: 'Klub Agile'})
+    LocalData.insert({title: 'Agile Toulouse'})
   },
 
   'submit form': (elt) => {
@@ -18,6 +18,5 @@ Template.localDataEdit.events({
     localD.map = $('input.map').val()
     localD.site = $('input.site').val()
     LocalData.update(localD._id, localD)
-    Router.go('admin')
   }
 })

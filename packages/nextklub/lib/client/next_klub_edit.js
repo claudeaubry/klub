@@ -1,21 +1,34 @@
+Template.nextKlubs.helpers({
+  klubs: () => NextKlub.find()
+})
+
+// Template.nextKlubEdit.helpers({
+//   nextKlub: () => getNextKlub(),
+//   nextKjeub: () => getNextKjeub(),
+//   nomineesBooks: () => new Library().nominees(),
+//   nomineesGames: () => new Library().jnominees()
+// })
+
 Template.nextKlubEdit.helpers({
-  nextKlub: () => getNextKlub(),
-  nextKjeub: () => getNextKjeub(),
+  typeIs: function(type) {
+    return this.type === type
+  },
   nomineesBooks: () => new Library().nominees(),
   nomineesGames: () => new Library().jnominees()
 })
 
 Template.nextKlubEdit.events({
-  'click .launchklub': elt => {
-    elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'klub'})
-  },
 
-  'click .startChoice': elt => {
-    const nextKlub = NextKlub.findOne({type: 'klub'})
+  // 'click .startChoice': elt => {
+  //   const nextKlub = NextKlub.findOne({type: 'klub'})
+  //   elt.preventDefault()
+  //   nextKlub.state = 'voteEnCours'
+  //   NextKlub.update(nextKlub._id, nextKlub)
+  // },
+  'click .startChoice': function(elt) {
     elt.preventDefault()
-    nextKlub.state = 'choixEnCours'
-    NextKlub.update(nextKlub._id, nextKlub)
+    this.state = 'voteEnCours'
+    NextKlub.update(this._id, this)
   },
 
   'click .choiceDone': elt => {
@@ -57,7 +70,7 @@ Template.nextKlubEdit.events({
     nextnextKlub.type = nextKlub.type
     nextnextKlub.state = 'propositions'
     NextKlub.update(nextKlub._id, nextnextKlub)
-    Router.go('adminNextKlub')
+    Router.go('nextKlubs')
   },
 
   'click .launchkjeub': elt => {
@@ -77,7 +90,7 @@ Template.nextKlubEdit.events({
     if (nextKjeub.book_id)
       associateBookToNextKlub(nextKjeub.book_id)
     NextKlub.update(nextKjeub._id, nextKjeub)
-    Router.go('adminNextKlub')
+    Router.go('nextKlubs')
   },
 
   'click .archivekjeub': elt => {
@@ -96,7 +109,7 @@ Template.nextKlubEdit.events({
     createPastKlub(pastKlub)
     nextnextKlub.type = nextKlub.type
     NextKlub.update(nextKlub._id, nextnextKlub)
-    Router.go('adminNextKlub')
+    Router.go('nextKlubs')
   }
 })
 

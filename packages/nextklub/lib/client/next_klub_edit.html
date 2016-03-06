@@ -1,71 +1,61 @@
+<template name="nextKlubs">
+  {{#each klubs}}
+    {{> nextKlubEdit}}
+  {{/each}}
+</template>
+
 <template name="nextKlubEdit">
-  <h3 class="well col-xs-6 col-md-8">Lecture</h3>
-  {{#unless nextKlub._id}}
-    <button class="launchklub btn btn-primary">Lancer le klub de lecture</button>
-  {{else}}
+  {{#if typeIs 'klub'}}
+  <h3 class="well col-xs-6 col-md-8">Klub de lecture</h3>
+  {{/if}}
+  {{#if typeIs 'kjeub'}}
+  <h3 class="well col-xs-6 col-md-8">Klub de jeu</h3>
+  {{/if}}
   <form class="nextKlubEdit col-xs-6 col-md-8">
-    <input type="hidden" class="form-control book-id small" value={{nextKlub.book_id}}>
+    <input type="hidden" class="form-control book-id small" value={{book_id}}>
     <div class="col-md-8 col-md-offset-2">
       <label for="state">Etat actuel</label>
-      <input type="text" class="form-control state small" value={{nextKlub.state}} disabled>
-      <button class="startChoice btn btn-primary">Passer à la sélection</button>
+      <input type="text" class="form-control state small" value={{state}} disabled>
+      <button class="startChoice btn btn-primary">Passer au vote</button>
       <button class="choiceDone btn btn-primary">Association effectuée</button>
       <button class="archiveklub btn btn-primary">Ce Klub a eu lieu</button>
       <button type="submit" class="modifyklub btn btn-default">Enregistrer les données ci-dessous</button>
     </div>
     <div class="col-md-6">
       <label for="date">Date prévue</label>
-      <input type="text" class="form-control date small" value={{nextKlub.date}}>
+      <input type="text" class="form-control date small" value={{date}}>
       <label for="dateprop">Date limite pour proposer</label>
-      <input type="text" class="form-control dateprop small" value={{nextKlub.dateprop}}>
+      <input type="text" class="form-control dateprop small" value={{dateprop}}>
       <label for="vote">Voteer</label>
-      <input type="text" class="form-control vote small" value={{nextKlub.voteer}}>
+      <input type="text" class="form-control vote small" value={{voteer}}>
       <label for="datevote">Date limite pour voter</label>
-      <input type="text" class="form-control datevote small" value={{nextKlub.datevote}}>
+      <input type="text" class="form-control datevote small" value={{datevote}}>
     </div>
     <div class="col-md-6">
       <label for="meetup">Meetup</label>
-      <input type="text" class="form-control meetup small" value={{nextKlub.meetup}}>
+      <input type="text" class="form-control meetup small" value={{meetup}}>
+      {{#if typeIs 'klub'}}
       <label for="book">Livre</label>
-      <p>{{> bookTitle id=nextKlub.book_id}}</p>
+      <p>{{> bookTitle id=book_id}}</p>
       <p>Associer un livre : </p>
       <select name="selBook" class="form-control small">
-        <option value="{{nextKlub.book_id}}">{{title}}</option>
+        <option value="{{book_id}}">{{title}}</option>
         {{#each nomineesBooks}}
         <option value="{{_id}}">{{title}}</option>
         {{/each}}
       </select>
+      {{/if}}
+      {{#if typeIs 'kjeub'}}
+      <label for="book">Jeu</label>
+      <p>{{> bookTitle id=book_id}}</p>
+      <p>Associer un jeu : </p>
+      <select name="selBook" class="form-control small">
+        <option value="{{book_id}}">{{title}}</option>
+        {{#each nomineesGames}}
+        <option value="{{_id}}">{{title}}</option>
+        {{/each}}
+      </select>
+      {{/if}}
       </div>
   </form>
-  {{/unless}}
-  <h3 class="well col-xs-6 col-md-8">Jeu</h3>
-  {{#unless nextKjeub._id}}
-    <button class="launchkjeub btn btn-primary">Lancer le klub de jeu</button>
-  {{else}}
-  <form class="nextKjeubEdit col-xs-6 col-md-8">
-    <input type="hidden" class="form-control book-id small" value={{nextKjeub.book_id}}>
-    <label for="date">Date klub de jeu</label>
-    <input type="text" class="form-control jdate small" value={{nextKjeub.date}}>
-    <label for="dateprop">Date limite pour proposer</label>
-    <input type="text" class="form-control jdateprop small" value={{nextKjeub.dateprop}}>
-    <label for="vote">Voteer</label>
-    <input type="text" class="form-control jvote small" value={{nextKjeub.voteer}}>
-    <label for="datevote">Date limite pour voter</label>
-    <input type="text" class="form-control jdatevote small" value={{nextKjeub.datevote}}>
-    <label for="meetup">Meetup</label>
-    <input type="text" class="form-control jmeetup small" value={{nextKjeub.meetup}}>
-    <label for="book">Jeu</label>
-    <p>{{> bookTitle id=nextKjeub.book_id}}</p>
-    <p>Associer un jeu : </p>
-    <select name="jselBook" class="form-control small">
-      <option value="{{nextKjeub.book_id}}">{{title}}</option>
-      {{#each nomineesGames}}
-      <option value="{{_id}}">{{title}}</option>
-      {{/each}}
-    </select>
-    <hr>
-    <button type="submit" class="modifykjeub btn btn-default">Modifier</button>
-    <button class="archivekjeub btn btn-default">Ce Kjeub a eu lieu</button>
-  </form>
-  {{/unless}}
 </template>

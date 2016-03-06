@@ -6,6 +6,10 @@ Template.gamesFrozen.helpers({
   games: () => Books.find({type: 'game', statut: 'frozen'})
 })
 
+Template.videosFrozen.helpers({
+  videos: () => Books.find({type: 'video', statut: 'frozen'})
+})
+
 Template.itemFrozen.events({
   'click .repeat': function (elt) {
     const book = new Library().bookById(this._id)

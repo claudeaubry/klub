@@ -1,16 +1,17 @@
-Template.nextKlubs.helpers({
+Template.adminnextKLubs.helpers({
   klubs: () => NextKlub.find()
 })
 
-Template.nextKlubEdit.helpers({
+Template.nextKlubAdmin.helpers({
   typeIs: function(type) {
     return this.type === type
   },
   nomineesBooks: () => new Library().nominees(),
-  nomineesGames: () => new Library().jnominees()
+  nomineesGames: () => new Library().jnominees(),
+  nomineesVideos: () => new Library().vnominees()
 })
 
-Template.nextKlubEdit.events({
+Template.nextKlubAdmin.events({
   'click .startChoice': function(elt) {
     elt.preventDefault()
     this.state = 'voteEnCours'
@@ -36,6 +37,8 @@ Template.nextKlubEdit.events({
       this.book_id = $('select[name=selBook]').val()
     if (this.type === 'kjeub')
       this.book_id = $('select[name=selGame]').val()
+    if (this.type === 'skrib')
+      this.book_id = $('select[name=selVideo]').val()
     NextKlub.update(this._id, this)
   },
 
@@ -55,15 +58,16 @@ Template.nextKlubEdit.events({
     nextKlub.state = 'propositions'
     nextKlub.type = this.type
     NextKlub.update(this._id, nextKlub)
-    Router.go('nextKlubs')
+    Router.go('adminnextKLubs')
   }
 })
 
-Template.nextKlubEdit.rendered = function () {
+Template.nextKlubAdmin.rendered = function () {
   /*
   Add this method because it works on refresh
   but won't by clicking on previous list page.
   */
   this.$('select[name="selBook"]').val(this.$('input.book-id').val())
   this.$('select[name="selGame"]').val(this.$('input.book-id').val())
+  this.$('select[name="selVideo"]').val(this.$('input.book-id').val())
 }

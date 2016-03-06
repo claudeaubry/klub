@@ -4,6 +4,9 @@ Template.booksProposed.helpers({
 Template.gamesProposed.helpers({
   games: () => new Library().jnominees()
 })
+Template.videosProposed.helpers({
+  videos: () => new Library().vnominees()
+})
 
 Template.itemsProposal.events({
   'click .suggestItem': () => {

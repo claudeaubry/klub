@@ -1,15 +1,18 @@
-<template name="nextKlubs">
+<template name="adminnextKLubs">
   {{#each klubs}}
-    {{> nextKlubEdit}}
+    {{> nextKlubAdmin}}
   {{/each}}
 </template>
 
-<template name="nextKlubEdit">
+<template name="nextKlubAdmin">
   {{#if typeIs 'klub'}}
   <h3 class="well col-xs-6 col-md-8">Klub de lecture</h3>
   {{/if}}
   {{#if typeIs 'kjeub'}}
   <h3 class="well col-xs-6 col-md-8">Klub de jeu</h3>
+  {{/if}}
+  {{#if typeIs 'skrib'}}
+  <h3 class="well col-xs-6 col-md-8">Klub de scribe</h3>
   {{/if}}
   <form class="nextKlubEdit col-xs-6 col-md-8">
     <input type="hidden" class="form-control book-id small" value={{book_id}}>
@@ -19,7 +22,7 @@
       <button class="startChoice btn btn-primary">Passer au vote</button>
       <button class="choiceDone btn btn-primary">Association effectuée</button>
       <button class="archiveklub btn btn-primary">Ce Klub a eu lieu</button>
-      <button type="submit" class="modifyklub btn btn-default">Enregistrer les données ci-dessous</button>
+      <button class="modifyklub btn btn-default">Enregistrer les données ci-dessous</button>
     </div>
     <div class="col-md-6">
       <label for="date">Date prévue</label>
@@ -35,26 +38,37 @@
       <label for="meetup">Meetup</label>
       <input type="text" class="form-control meetup small" value={{meetup}}>
       {{#if typeIs 'klub'}}
-      <label for="book">Livre</label>
-      <p>{{> bookTitle id=book_id}}</p>
-      <p>Associer un livre : </p>
-      <select name="selBook" class="form-control small">
+        <label for="book">Livre</label>
+        <p>{{> bookTitle id=book_id}}</p>
+        <p>Associer un livre : </p>
+        <select name="selBook" class="form-control small">
         <option value="{{book_id}}">{{title}}</option>
         {{#each nomineesBooks}}
-        <option value="{{_id}}">{{title}}</option>
+          <option value="{{_id}}">{{title}}</option>
         {{/each}}
-      </select>
+        </select>
       {{/if}}
       {{#if typeIs 'kjeub'}}
-      <label for="book">Jeu</label>
-      <p>{{> bookTitle id=book_id}}</p>
-      <p>Associer un jeu : </p>
-      <select name="selGame" class="form-control small">
-        <option value="{{book_id}}">{{title}}</option>
-        {{#each nomineesGames}}
-        <option value="{{_id}}">{{title}}</option>
-        {{/each}}
-      </select>
+        <label for="book">Jeu</label>
+        <p>{{> bookTitle id=book_id}}</p>
+        <p>Associer un jeu : </p>
+        <select name="selGame" class="form-control small">
+          <option value="{{book_id}}">{{title}}</option>
+          {{#each nomineesGames}}
+            <option value="{{_id}}">{{title}}</option>
+          {{/each}}
+        </select>
+      {{/if}}
+      {{#if typeIs 'skrib'}}
+        <label for="book">Jeu</label>
+        <p>{{> bookTitle id=book_id}}</p>
+        <p>Associer une vidéo : </p>
+        <select name="selVideo" class="form-control small">
+          <option value="{{book_id}}">{{title}}</option>
+          {{#each nomineesVideos}}
+            <option value="{{_id}}">{{title}}</option>
+          {{/each}}
+        </select>
       {{/if}}
       </div>
   </form>

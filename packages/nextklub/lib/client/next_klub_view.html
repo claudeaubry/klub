@@ -1,81 +1,57 @@
+<template name="nextKlubsView">
+  {{#each klubs}}
+    {{> nextKlubView}}
+  {{/each}}
+</template>
+
 <template name="nextKlubView">
   <article class="knext-session col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading text-center">
+        {{#if typeIs 'klub'}}
         <span class="heading-title">Prochain Klub de lecture</span>
-      </div>
-      <div class="panel-body">
-        <ul class="list-group col-md-4">
-          <li class="list-group-item list-group-item-danger">Infos pratiques</li>
-          <li class="list-group-item list-group-item-warning">Date : {{knext.date}}</li>
-          <li class="list-group-item list-group-item-warning">Heure : {{knext.hour}}</li>
-          <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
-          <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-success">Inscription : {{#if knext.meetup}} <a target="_blank" href="{{knext.meetup}}">sur Meetup</a>
-            {{else}}pas encore ouverte{{/if}}</li>
-          <li class="list-group-item list-group-item-info">{{#if knext.voteer}}<a target="_blank" href="{{knext.voteer}}">Résultat du vote</a>{{/if}}</li>
-        </ul>
-        {{#if assoc}}
-          <h4>Etape 3 - Livre choisi</h4>
-          <p>Vous avez jusqu'au {{knext.date}} pour le lire.</p>
-          <div class="col-md-8">
-            {{> bookDetails id=knext.book_id}}
-          </div>
-        {{else}}
-          {{#if choix}}
-            <h4>Etape 2 - Vote en cours</h4>
-            <p>Vous pouvez participer au vote <a target="_blank" href="{{knext.voteer}}">sur Voteer</a>.</p>
-            <p>{{#if knext.datevote}} Vous avez jusqu'au {{knext.datevote}} pour voter.{{/if}}</p>
-          {{/if}}
-          {{#if prop}}
-            <h4>Etape 1 - Propositions</h4>
-            <p>{{#if knext.dateprop}}Vous avez jusqu'au {{knext.dateprop}} pour proposer.{{/if}}</p>
-          {{/if}}
-          <div class="col-md-8">
-            {{> booksProposed}}
-          </div>
         {{/if}}
-      </div>
-    </div>
-  </article>
-{{#if jnext._id}}
-  <article class="jnext-session col-xs-12 col-md-offset-3 col-md-6">
-    <div class="panel panel-primary">
-      <div class="panel-heading text-center">
+        {{#if typeIs 'kjeub'}}
         <span class="heading-title">Prochain Klub de jeu</span>
+        {{/if}}
+        {{#if typeIs 'skrib'}}
+        <span class="heading-title">Prochain Klub de scribe</span>
+        {{/if}}
       </div>
       <div class="panel-body">
         <ul class="list-group col-md-4">
           <li class="list-group-item list-group-item-danger">Infos pratiques</li>
-          <li class="list-group-item list-group-item-warning">Date : {{jnext.date}}</li>
+          <li class="list-group-item list-group-item-warning">Date : {{date}}</li>
+          <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
           <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-warning">Heure : {{local.hour}}</li>
-          <li class="list-group-item list-group-item-warning">Fréquence : {{local.frequency}}</li>
-          <li class="list-group-item list-group-item-success">Inscription : {{#if jnext.meetup}} <a target="_blank" href="{{jnext.meetup}}">sur Meetup</a>
+          <li class="list-group-item list-group-item-success">Inscription : {{#if meetup}} <a target="_blank" href="{{meetup}}">sur Meetup</a>
             {{else}}pas encore ouverte{{/if}}</li>
-          <li class="list-group-item list-group-item-info">{{#if jnext.voteer}}<a target="_blank" href="{{jnext.voteer}}">Résultat du vote</a>{{/if}}</li>
+          <li class="list-group-item list-group-item-info">{{#if voteer}}<a target="_blank" href="{{voteer}}">Résultat du vote</a>{{/if}}</li>
         </ul>
-        {{#if jnext.book_id}}
-          <h4>Etape 3 - Jeu choisi</h4>
+        {{#if stateIs 'choixAssocié'}}
+          <h4>Etape 3 - Sujet choisi</h4>
+          <p>Vous avez jusqu'au {{date}} pour le préparer.</p>
           <div class="col-md-8">
-            {{> bookDetails id=jnext.book_id}}
+            {{> bookDetails id=book_id}}
           </div>
         {{else}}
-          {{#if jnext.voteer}}
+          {{#if stateIs 'voteEnCours'}}
             <h4>Etape 2 - Vote en cours</h4>
-            <p>Vous pouvez participer au vote <a target="_blank" href="{{jnext.voteer}}">sur Voteer</a>.</p>
-            <p>{{#if jnext.datevote}} Vous avez jusqu'au {{jnext.datevote}} pour voter.{{/if}}</p>
-          {{else}}
+            <p>Vous pouvez participer au vote <a target="_blank" href="{{voteer}}">sur Voteer</a>.</p>
+            <p>{{#if datevote}} Vous avez jusqu'au {{datevote}} pour voter.{{/if}}</p>
+          {{/if}}
+          {{#if stateIs 'propositions'}}
             <h4>Etape 1 - Propositions</h4>
-            <p>{{#if jnext.dateprop}}Vous avez jusqu'au {{jnext.dateprop}} pour le faire.{{/if}}</p>
+            <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
           {{/if}}
           <div class="col-md-8">
-            {{> gamesProposed}}
+            {{#if typeIs 'klub'}}{{> booksProposed}}{{/if}}
+            {{#if typeIs 'kjeub'}}{{> gamesProposed}}{{/if}}
+            {{#if typeIs 'skrib'}}{{> videosProposed}}{{/if}}
           </div>
         {{/if}}
       </div>
     </div>
   </article>
-{{/if}}
 </template>

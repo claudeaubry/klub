@@ -8,6 +8,7 @@
   </ul>
     {{> booksFrozen}}
     {{> gamesFrozen}}
+    {{> videosFrozen}}
 </template>
 
 <template name="booksFrozen">
@@ -19,6 +20,12 @@
 <template name="gamesFrozen">
   {{#if games.count}}
     {{> itemFrozen items=games titleList="Liste des jeux"}}
+  {{/if}}
+</template>
+
+<template name="videosFrozen">
+  {{#if videos.count}}
+    {{> itemFrozen items=videos titleList="Liste des vidéos"}}
   {{/if}}
 </template>
 

@@ -8,8 +8,8 @@ Library = class Library {
   jnominees() {
     return Books.find({type: 'game', statut: 'proposed'})
   }
-  selected() {
-    return Books.findOne({statut: 'selected'})
+  selected(type) {
+    return Books.findOne({type: type, statut: 'selected'})
   }
   bookById(id) {
     return Books.findOne(id)
@@ -22,7 +22,7 @@ Library = class Library {
 
 associateBookToNextKlub = id => {
   const book = new Library().bookById(id)
-  const previousBook = new Library().selected()
+  const previousBook = new Library().selected(book.type)
 
   if (previousBook) {
     previousBook.statut = 'proposed'

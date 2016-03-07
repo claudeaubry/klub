@@ -14,16 +14,17 @@
   {{#if typeIs 'skrib'}}
   <h3 class="well col-xs-6 col-md-8">Klub de scribe</h3>
   {{/if}}
-  <form class="nextKlubEdit col-xs-6 col-md-8">
-    <input type="hidden" class="form-control book-id small" value={{book_id}}>
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8">
       <label for="state">Etat actuel</label>
       <input type="text" class="form-control state small" value={{state}} disabled>
       <button class="startChoice btn btn-primary">Passer au vote</button>
       <button class="choiceDone btn btn-primary">Association effectuée</button>
       <button class="archiveklub btn btn-primary">Ce Klub a eu lieu</button>
-      <button class="modifyklub btn btn-default">Enregistrer les données ci-dessous</button>
+      <button class="plusklub btn btn-default">Donner +/- d'infos</button>
     </div>
+    {{#if plus}}
+    <form class="nextKlubEdit col-xs-6 col-md-8">
+      <input type="hidden" class="form-control book-id small" value={{book_id}}>
     <div class="col-md-6">
       <label for="date">Date prévue</label>
       <input type="text" class="form-control date small" value={{date}}>
@@ -70,6 +71,9 @@
           {{/each}}
         </select>
       {{/if}}
-      </div>
+      <hr>
+      <button class="modifyklub btn btn-primary">Enregistrer</button>
+    </div>
   </form>
+  {{/if}}
 </template>

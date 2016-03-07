@@ -12,6 +12,11 @@ Template.nextKlubAdmin.helpers({
 })
 
 Template.nextKlubAdmin.events({
+  'click .plusklub': function() {
+    this.plus = ! this.plus
+    NextKlub.update(this._id, this)
+  },
+
   'click .startChoice': function(elt) {
     elt.preventDefault()
     this.state = 'voteEnCours'
@@ -28,6 +33,7 @@ Template.nextKlubAdmin.events({
 
   'click .modifyklub': function(elt) {
     elt.preventDefault()
+    this.plus = false
     this.date = $('input.date').val()
     this.dateprop = $('input.dateprop').val()
     this.voteer = $('input.vote').val()

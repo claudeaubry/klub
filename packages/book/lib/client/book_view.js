@@ -15,3 +15,9 @@ Template.bookDetails.helpers({
     return new Library().bookById(this.id)
   }
 })
+
+Template.imageItem.helpers({
+  typeIs: function(type) {
+    return this.type === type
+  }
+})

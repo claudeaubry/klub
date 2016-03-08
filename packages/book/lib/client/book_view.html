@@ -24,7 +24,12 @@
 </template>
 
 <template name="imageItem">
-  <img src="{{#if this.img}}{{this.img}}{{else}}_book.jpg{{/if}}"
+
+  <img src="{{#if this.img}}{{this.img}}{{else}}
+    {{#if typeIs 'book'}}_book.jpg{{/if}}
+    {{#if typeIs 'game'}}_game.jpg{{/if}}
+    {{#if typeIs 'video'}}_video.jpg{{/if}}
+  {{/if}}"
    alt="Première de couverture" class="img-thumbnail col-sm-3 col-md-4">
 </template>
 

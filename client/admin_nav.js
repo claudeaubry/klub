@@ -1,3 +1,3 @@
 Template.adminNav.helpers({
-  nomKlub: () => LocalData.findOne().title
+  data: () => LocalData.findOne()
 })

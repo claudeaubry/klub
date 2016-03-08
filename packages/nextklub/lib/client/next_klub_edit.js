@@ -3,6 +3,9 @@ Template.adminnextKLubs.helpers({
 })
 
 Template.nextKlubAdmin.helpers({
+  quoteinfo: function() {
+    return Session.get('quotedata')
+  },
   typeIs: function(type) {
     return this.type === type
   },
@@ -16,11 +19,14 @@ Template.nextKlubAdmin.helpers({
 
 Template.nextKlubAdmin.events({
   'click .plusklub': function() {
-    this.plus = ! this.plus
-    NextKlub.update(this._id, this)
+    Session.set('quotedata', this)
+    // elt.preventDefault()
+    // this.plus = ! this.plus
+    // NextKlub.update(this._id, this)
   },
-  'click .raz': function() {
+  'click .raz': function(elt) {
     const nextKlub = {}
+    elt.preventDefault()
     nextKlub.type = this.type
     nextKlub.state = 'propositions'
     NextKlub.update(this._id, nextKlub)
@@ -41,7 +47,6 @@ Template.nextKlubAdmin.events({
 
   'click .modifyklub': function(elt) {
     elt.preventDefault()
-    this.plus = false
     this.date = $('input.date').val()
     this.hour = $('input.hour').val()
     this.dateprop = $('input.dateprop').val()
@@ -57,6 +62,7 @@ Template.nextKlubAdmin.events({
     if (this.book_id)
       associateBookToNextKlub(this.book_id)
     NextKlub.update(this._id, this)
+    $('#modalNext').modal('hide')
   },
 
   'click .archiveklub': function(elt) {

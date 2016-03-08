@@ -19,7 +19,12 @@ Template.nextKlubAdmin.events({
     this.plus = ! this.plus
     NextKlub.update(this._id, this)
   },
-
+  'click .raz': function() {
+    const nextKlub = {}
+    nextKlub.type = this.type
+    nextKlub.state = 'propositions'
+    NextKlub.update(this._id, nextKlub)
+  },
   'click .startChoice': function(elt) {
     elt.preventDefault()
     this.state = 'voteEnCours'
@@ -28,8 +33,8 @@ Template.nextKlubAdmin.events({
 
   'click .choiceDone': function(elt) {
     elt.preventDefault()
-    if (this.book_id)
-      associateBookToNextKlub(this.book_id)
+    if (!this.book_id)
+      throw alert('Il faut associer un élément au préalable !')
     this.state = 'choixAssocié'
     NextKlub.update(this._id, this)
   },
@@ -49,6 +54,8 @@ Template.nextKlubAdmin.events({
       this.book_id = $('select[name=selGame]').val()
     if (this.type === 'skrib')
       this.book_id = $('select[name=selVideo]').val()
+    if (this.book_id)
+      associateBookToNextKlub(this.book_id)
     NextKlub.update(this._id, this)
   },
 

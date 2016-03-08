@@ -8,7 +8,9 @@
 <template name="localDataEdit">
   <h3 class="well col-md-8">Infos sur l'organisation</h3>
   {{#unless local._id}}
-    <button class="launchlocal btn btn-primary">Configurer</button>
+    <div>
+    <button class="launchlocal btn btn-primary">Cliquer !</button>
+    </div>
   {{else}}
   <form class="localEdit col-xs-6 col-md-8">
     <label for="name">Nom de l'organisation</label>

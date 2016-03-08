@@ -25,9 +25,7 @@
           <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
           <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-success">Inscription : {{#if meetup}} <a target="_blank" href="{{meetup}}">sur Meetup</a>
-            {{else}}pas encore ouverte{{/if}}</li>
-          <li class="list-group-item list-group-item-info">{{#if voteer}}<a target="_blank" href="{{voteer}}">Résultat du vote</a>{{/if}}</li>
+          <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Infos organisation</a></li>
         </ul>
         {{#if stateIs 'choixAssocié'}}
           <h4>Etape 3 - Sujet choisi</h4>

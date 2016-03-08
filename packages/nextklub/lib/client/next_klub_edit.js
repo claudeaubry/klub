@@ -6,6 +6,9 @@ Template.nextKlubAdmin.helpers({
   typeIs: function(type) {
     return this.type === type
   },
+  stateIs: function(state) {
+    return this.state === state
+  },
   nomineesBooks: () => new Library().nominees(),
   nomineesGames: () => new Library().jnominees(),
   nomineesVideos: () => new Library().vnominees()
@@ -35,6 +38,7 @@ Template.nextKlubAdmin.events({
     elt.preventDefault()
     this.plus = false
     this.date = $('input.date').val()
+    this.hour = $('input.hour').val()
     this.dateprop = $('input.dateprop').val()
     this.voteer = $('input.vote').val()
     this.datevote = $('input.datevote').val()

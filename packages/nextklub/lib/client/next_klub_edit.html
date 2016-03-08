@@ -28,48 +28,54 @@
     <div class="col-md-6">
       <label for="date">Date prévue</label>
       <input type="text" class="form-control date small" value={{date}}>
-      <label for="dateprop">Date limite pour proposer</label>
-      <input type="text" class="form-control dateprop small" value={{dateprop}}>
-      <label for="vote">Voteer</label>
-      <input type="text" class="form-control vote small" value={{voteer}}>
-      <label for="datevote">Date limite pour voter</label>
-      <input type="text" class="form-control datevote small" value={{datevote}}>
+      <label for="hour">Heure prévue</label>
+      <input type="text" class="form-control hour small" value={{hour}}>
+      {{#if stateIs 'propositions'}}
+        <label for="dateprop">Date limite pour proposer</label>
+        <input type="text" class="form-control dateprop small" value={{dateprop}}>
+      {{/if}}
     </div>
     <div class="col-md-6">
-      <label for="meetup">Meetup</label>
-      <input type="text" class="form-control meetup small" value={{meetup}}>
-      {{#if typeIs 'klub'}}
-        <label for="book">Livre</label>
+      {{#if stateIs 'voteEnCours'}}
+        <label for="vote">Lien vers le vote</label>
+        <input type="url" class="form-control vote small" value={{voteer}}>
+        <label for="datevote">Date limite pour voter</label>
+        <input type="text" class="form-control datevote small" value={{datevote}}>
+        <label for="book">Elément associé</label>
         <p>{{> bookTitle id=book_id}}</p>
-        <p>Associer un livre : </p>
-        <select name="selBook" class="form-control small">
-        <option value="{{book_id}}">{{title}}</option>
-        {{#each nomineesBooks}}
-          <option value="{{_id}}">{{title}}</option>
-        {{/each}}
-        </select>
-      {{/if}}
-      {{#if typeIs 'kjeub'}}
-        <label for="book">Jeu</label>
-        <p>{{> bookTitle id=book_id}}</p>
-        <p>Associer un jeu : </p>
-        <select name="selGame" class="form-control small">
+        {{#if typeIs 'klub'}}
+          <p>Associer un livre : </p>
+          <select name="selBook" class="form-control small">
           <option value="{{book_id}}">{{title}}</option>
-          {{#each nomineesGames}}
+          {{#each nomineesBooks}}
             <option value="{{_id}}">{{title}}</option>
           {{/each}}
-        </select>
+          </select>
+        {{/if}}
+        {{#if typeIs 'kjeub'}}
+          <p>Associer un jeu : </p>
+          <select name="selGame" class="form-control small">
+            <option value="{{book_id}}">{{title}}</option>
+            {{#each nomineesGames}}
+              <option value="{{_id}}">{{title}}</option>
+            {{/each}}
+          </select>
+        {{/if}}
+        {{#if typeIs 'skrib'}}
+          <p>Associer une vidéo : </p>
+          <select name="selVideo" class="form-control small">
+            <option value="{{book_id}}">{{title}}</option>
+            {{#each nomineesVideos}}
+              <option value="{{_id}}">{{title}}</option>
+            {{/each}}
+          </select>
+        {{/if}}
       {{/if}}
-      {{#if typeIs 'skrib'}}
-        <label for="book">Jeu</label>
+      {{#if stateIs 'choixAssocié'}}
+        <label for="vote">Lien vers le résultat du vote</label>
+        <input type="url" class="form-control vote small" value={{voteer}}>
+        <label for="book">Elément associé</label>
         <p>{{> bookTitle id=book_id}}</p>
-        <p>Associer une vidéo : </p>
-        <select name="selVideo" class="form-control small">
-          <option value="{{book_id}}">{{title}}</option>
-          {{#each nomineesVideos}}
-            <option value="{{_id}}">{{title}}</option>
-          {{/each}}
-        </select>
       {{/if}}
       <hr>
       <button class="modifyklub btn btn-primary">Enregistrer</button>

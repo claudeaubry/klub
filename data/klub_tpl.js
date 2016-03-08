@@ -1,5 +1,5 @@
 klubDatas = {
-  workflow: "Etape 1 - Propositions de sujets -> Etape 2 - Vote -> Etape 3 - Le sujet est choisi -> klub ! archive de ce klub et lancement du suivant.",
+  workflow: "Etape 1 - Propositions de sujets -> Etape 2 - Vote -> Etape 3 - Le sujet est choisi -> klub !",
 //  objective : "Ils mettent en commun leurs impressions, leurs opinions, leurs connaissances et leurs expériences sur le sujet du livre. Un klubMaster, qui peut changer à chaque fois parmi les participants, facilite le déroulement du Klub.",
 //  rule : "Pour participer à un Klub, il faut avoir lu le livre au préalable.",
   theme: "Des sujets en rapport, directement ou indirectement, avec l'Agilité.",

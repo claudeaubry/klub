@@ -13,14 +13,14 @@
   <form class="localEdit col-xs-6 col-md-8">
     <label for="name">Nom de l'organisation</label>
     <input type="text" class="form-control name small" value={{local.title}} placeholder="Par exemple Agile Toulouse">
-    <label for="region">Région</label>
-    <input type="text" class="form-control region small" value={{local.region}} placeholder="Ville ou région">
-    <label for="place">Lieu du klub</label>
-    <input type="text" class="form-control place small" value={{local.place}}>
-    <label for="map">Carte (localisation)</label>
-    <input type="url" class="form-control map small" value={{local.map}}>
+    <label for="region">Ville</label>
+    <input type="text" class="form-control region small" value={{local.region}} placeholder="Ville du klub, par exemple Toulouse">
+    <label for="place">Lieu</label>
+    <input type="text" class="form-control place small" value={{local.place}} placeholder="L'endroit où se passe généralement un klub">
+    <label for="map">Carte</label>
+    <input type="url" class="form-control map small" value={{local.map}} placeholder="Une carte pour le trouver (url)">
     <label for="map">Site de l'organisation</label>
-    <input type="url" class="form-control site small" value={{local.site}}>
+    <input type="url" class="form-control site small" value={{local.site}} placeholder="Site qui donne des infos complémentaires, par exemple un meetup">
     <button type="submit" class="btn btn-primary">Enregistrer</button>
   </form>
   {{/unless}}

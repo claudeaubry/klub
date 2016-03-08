@@ -20,9 +20,6 @@ Template.nextKlubAdmin.helpers({
 Template.nextKlubAdmin.events({
   'click .plusklub': function() {
     Session.set('quotedata', this)
-    // elt.preventDefault()
-    // this.plus = ! this.plus
-    // NextKlub.update(this._id, this)
   },
   'click .raz': function(elt) {
     const nextKlub = {}

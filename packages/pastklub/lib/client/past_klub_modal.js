@@ -13,6 +13,7 @@ Template.formKM.events({
     event.preventDefault()
     klubTarget.url = $('input#linkSubmit').val()
     klubTarget.pic = $('input#picSubmit').val()
+    klubTarget.news = $('textarea#newsSubmit').val()
     klubTarget.summary = $('textarea#summarySubmit').val()
     klubTarget.klubMaster = $('input#klubMasterSubmit').val()
     klubTarget.attendees = $('input#attendeesSubmit').val().split(',')

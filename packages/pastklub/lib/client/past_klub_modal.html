@@ -14,20 +14,18 @@
           <div class="form-group">
             <label for="list">Qui est klubMaster ?</label>
             <input type="text" class="form-control" id="klubMasterSubmit" placeholder="Nom du klubMaster" value="{{klub.klubMaster}}">
-          </div>
-          <div class="form-group">
             <label for="list">Qui était présent ?</label>
             <input type="text" class="form-control" id="attendeesSubmit" placeholder="Noms des participants séparés par une virgule" value="{{klub.attendees}}">
           </div>
           <div class="form-group">
-            <label for="summary">Que faut-il retenir ?</label>
+            <label for="summary">Quelles sont les news ?</label>
+            <textarea rows="5" class="form-control" id="newsSubmit" placeholder="Quelques mots qui résument l'avis des participants">{{klub.news}}</textarea>
+            <label for="summary">Que faut-il retenir du klub ?</label>
             <textarea rows="5" class="form-control" id="summarySubmit" placeholder="Quelques mots qui résument l'avis des participants">{{klub.summary}}</textarea>
           </div>
           <div class="form-group">
             <label for="link">Lien vers un compte-rendu</label>
             <input type="url" class="form-control" id="linkSubmit" placeholder="Un article de blog par exemple" value="{{klub.url}}">
-          </div>
-          <div class="form-group">
             <label for="pic">Lien vers une photo</label>
             <input type="url" class="form-control" id="picSubmit" placeholder="Une photo, un dessin…" value="{{klub.pic}}">
           </div>

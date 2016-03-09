@@ -21,11 +21,11 @@
       <button class="choiceDone btn btn-primary">Choix effectué</button>
       <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button>
       <button class="raz btn btn-default">J'annule tout</button>
-      <button class="plusklub btn btn-default" data-toggle="modal" data-target="#modalNext">Donner + d'infos</button>
+      <button class="plusklub btn btn-default" data-toggle="modal" data-target="#modalNext">Je donne plus d'infos sur l'état courant</button>
     </div>
  {{#with quoteinfo}}
   <div class="modal fade" id="modalNext" role="dialog">
-    <div class="modal-content modal-dialog">
+    <div class="modal-content modal-dialog modal-sm">
     <form role="form" class="well">
       <input type="hidden" class="form-control book-id small" value={{book_id}}>
       <div class="modal-header">

@@ -33,6 +33,7 @@ Template.bookEdit.events({
   },
   'click .delete': elt => {
     const _id = $('input.id').val()
+
     elt.preventDefault()
     Books.remove(_id)
     Router.go('adminBookList')

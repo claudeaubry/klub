@@ -12,6 +12,7 @@ klubAppDatas = {
   actors: "Le klubOwner prépare un Klub en s'occupant de la sélection du livre, le klubMaster en fait le compte-rendu, et tout le monde peut proposer des livres.",
   license: "Klub est un logiciel libre, sous licence MIT. Les contributeurs sont les bienvenus",
   framework: "Meteor, un framework open-source de développement web en Javascript basé sur Node.js",
+  hosting: "Scalingo en Meteor JS",
   feedback: "Vous pouvez poser une question, proposer une évolution ou laisser un petit message d'encouragement au développeur principal",
   mail: "claude.aubry@gmail.com",
   github: "https://github.com/claudeaubry/klub"

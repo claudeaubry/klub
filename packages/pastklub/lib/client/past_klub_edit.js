@@ -11,6 +11,7 @@ Template.pastKlubEdit.events({
     const klub = PastKlub.findOne(_id)
 
     elt.preventDefault()
+    klub.type = $('input.type').val()
     klub.i = +$('input.i').val()
     klub.date = $('input.date').val()
     klub.voteer = $('input.vote').val()

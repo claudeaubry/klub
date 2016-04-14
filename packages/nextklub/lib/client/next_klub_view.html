@@ -8,15 +8,7 @@
   <article class="knext-session col-xs-12 col-md-offset-3 col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading text-center">
-        {{#if typeIs 'klub'}}
-        <span class="heading-title">Prochain Klub de lecture</span>
-        {{/if}}
-        {{#if typeIs 'kjeub'}}
-        <span class="heading-title">Prochain Klub de jeu</span>
-        {{/if}}
-        {{#if typeIs 'skrib'}}
-        <span class="heading-title">Prochain Klub de scribe</span>
-        {{/if}}
+        <span class="heading-title">Prochain {{type}}</span>
       </div>
       <div class="panel-body">
         <ul class="list-group col-md-4">

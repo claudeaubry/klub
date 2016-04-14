@@ -1,5 +1,5 @@
-mete### Backup
-Comment récupérer les données déployées sur un environnement situé à <urlàsauvegarder> ?
+meteor Backup
+Comment récupérer les données déployées sur un environnement situé à urlàsauvegarder ?
 - **Given** le script backup.sh a été placé à la racine de dbtools on a ouvert un terminal et on a fait :
 $ cd dbtools
 - **When** on lance :

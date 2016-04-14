@@ -4,16 +4,18 @@
   {{/each}}
 </template>
 
+<template name="associate">
+  <p>Associer un élément : </p>
+  <select name="{{selectName}}" class="form-control small">
+    <option value="{{book_id}}">{{title}}</option>
+    {{#each nominees}}
+      <option value="{{_id}}">{{title}}</option>
+    {{/each}}
+  </select>
+</template>
+
 <template name="nextKlubAdmin">
-  {{#if typeIs 'klub'}}
-  <h3 class="well col-xs-6 col-md-8">Klub de lecture</h3>
-  {{/if}}
-  {{#if typeIs 'kjeub'}}
-  <h3 class="well col-xs-6 col-md-8">Klub de jeu</h3>
-  {{/if}}
-  {{#if typeIs 'skrib'}}
-  <h3 class="well col-xs-6 col-md-8">Klub de scribe</h3>
-  {{/if}}
+  <h3 class="well col-xs-6 col-md-8">{{type}}</h3>
     <div class="col-md-8">
       <label for="state">Etat actuel</label>
       <input type="text" class="form-control state small" value={{state}} disabled>
@@ -55,31 +57,13 @@
         <label for="book">Elément associé</label>
         <p>{{> bookTitle id=book_id}}</p>
         {{#if typeIs 'klub'}}
-          <p>Associer un livre : </p>
-          <select name="selBook" class="form-control small">
-          <option value="{{book_id}}">{{title}}</option>
-          {{#each nomineesBooks}}
-            <option value="{{_id}}">{{title}}</option>
-          {{/each}}
-          </select>
+          {{> associate selectName='selBook' nominees=nomineesBooks}}
         {{/if}}
         {{#if typeIs 'kjeub'}}
-          <p>Associer un jeu : </p>
-          <select name="selGame" class="form-control small">
-            <option value="{{book_id}}">{{title}}</option>
-            {{#each nomineesGames}}
-              <option value="{{_id}}">{{title}}</option>
-            {{/each}}
-          </select>
+          {{> associate selectName='selGame' nominees=nomineesGames}}
         {{/if}}
         {{#if typeIs 'skrib'}}
-          <p>Associer une vidéo : </p>
-          <select name="selVideo" class="form-control small">
-            <option value="{{book_id}}">{{title}}</option>
-            {{#each nomineesVideos}}
-              <option value="{{_id}}">{{title}}</option>
-            {{/each}}
-          </select>
+          {{> associate selectName='selVideo' nominees=nomineesVideos}}
         {{/if}}
       {{/if}}
       {{#if stateIs 'choixAssocié'}}

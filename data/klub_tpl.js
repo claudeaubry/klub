@@ -4,7 +4,7 @@ klubDatas = {
 //  rule : "Pour participer à un Klub, il faut avoir lu le livre au préalable.",
   theme: "Des sujets en rapport, directement ou indirectement, avec l'Agilité.",
   types: "Klub pour la lecture, Skrib pour le scribing, Kjeub pour le jeu.",
-  valueProposition: "klub, le bon karma du partage : discuter d'un livre, dessiner, jouer ensemble."
+  valueProposition: "klub, le bon karma du partage : discuter d'un livre, dessiner façon scribe, jouer ensemble."
 }
 
 klubAppDatas = {
@@ -13,6 +13,7 @@ klubAppDatas = {
   license: "Klub est un logiciel libre, sous licence MIT. Les contributeurs sont les bienvenus",
   framework: "Meteor, un framework open-source de développement web en Javascript basé sur Node.js",
   hosting: "Scalingo en Meteor JS",
+  host: "https://scalingo.com/",
   feedback: "Vous pouvez poser une question, proposer une évolution ou laisser un petit message d'encouragement au développeur principal",
   mail: "claude.aubry@gmail.com",
   github: "https://github.com/claudeaubry/klub"

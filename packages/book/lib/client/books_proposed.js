@@ -17,3 +17,6 @@ Template.itemsProposal.events({
     $('input#originSubmit').val('')
   }
 })
+Template.itemsProposal.helpers({
+  app: () =>  klubAppDatas
+})

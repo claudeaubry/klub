@@ -23,7 +23,7 @@
           <h4>Etape 3 - Sujet choisi</h4>
           <p>Vous avez jusqu'au {{date}} pour le préparer.</p>
           <div class="col-md-8">
-            {{> bookDetails id=book_id}}
+            {{> bookNextView id=book_id}}
           </div>
         {{else}}
           {{#if stateIs 'voteEnCours'}}

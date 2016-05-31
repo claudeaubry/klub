@@ -14,10 +14,6 @@ article.book h2 {
   padding: .5em 0;
 }
 
-.book-site {
-  padding: 0.8em 0em;
-  margin: 0em;
-}
 
 article.book .book-cover {
   min-height: 50px;

@@ -1,9 +1,9 @@
 <template name="bookView">
   <article class="book">
     {{> imageItem oneBook}}
-    <aside class="col-sm-9 col-md-8">
+    <div class="col-sm-9 col-md-8">
       {{> att oneBook}}
-    </aside>
+    </div>
   </article>
 </template>
 
@@ -11,15 +11,14 @@
   {{title}}
 </template>
 
+<template name="bookNextView">
+  {{> bookView}}
+  <div class="col-md-8">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Lien vers le site "officiel"</a>{{/if}}</div>
+</template>
+
 <template name="bookDetails">
-  <article class="book">
-    {{> imageItem oneBook}}
-    <aside class="col-md-8">
-      {{> att oneBook}}
-      <div>{{#if oneBook.origin}}Ce sujet avait été proposé par : {{oneBook.origin}}{{#if oneBook.proposedAt}} le {{oneBook.proposedAt}}{{/if}}{{/if}}</div>
-      <div class="book-site">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Lien vers le site "officiel"</a>{{/if}}</div>
-    </aside>
-  </article>
+  {{> bookNextView}}
+  <div class="col-md-8">{{#if oneBook.origin}}Ce sujet avait été proposé par : {{oneBook.origin}}{{#if oneBook.proposedAt}} le {{oneBook.proposedAt}}{{/if}}{{/if}}</div>
 </template>
 
 <template name="imageItem">

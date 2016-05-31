@@ -7,6 +7,7 @@ Template.bookView.helpers({
 Template.bookTitle.helpers({
   title: function () {
     return new Library().bookTitleById(this.id)
+    // return new Library().bookById(this.id).title
   }
 })
 

@@ -4,3 +4,5 @@ Meteor.startup(function () {
   //   LocalData.insert({})
   // document.title = LocalData.findOne().title
 })
+
+import 'bootstrap-sass'

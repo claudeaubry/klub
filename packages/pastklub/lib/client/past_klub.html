@@ -7,9 +7,13 @@
       <div class="panel-body">
         {{> bookView id=klub.book_id}}
       </div>
-      <a href="{{pathFor 'detailedPastKlub' klubId=i}}">
-        <button class="btn btn-primary col-xs-offset-2 col-md-offset-4">Plus d'infos sur ce klub</button>
-      </a>
+      <div class="panel-footer clearfix">
+        <div class="pull-right">
+          <a href="{{pathFor 'detailedPastKlub' klubId=i}}">
+            <button class="btn btn-primary col-xs-offset-2 col-md-offset-4">Plus d'infos sur ce klub</button>
+          </a>
+        </div>
+      </div>
     </div>
   </article>
 </template>

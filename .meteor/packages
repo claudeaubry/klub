@@ -15,3 +15,4 @@ ecmascript@0.5.7
 standard-minifier-css
 standard-minifier-js
 fourseven:scss
+momentjs:moment

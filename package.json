@@ -4,10 +4,8 @@
   "description": "l'appli des klubs agile toulouse",
   "main": "index.js",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.1.0",
-    "meteor-node-stubs": "^0.2.3",
-    "moment": "^2.14.1"
+    "bootstrap": "^3.3.7",
+    "meteor-node-stubs": "^0.2.3"
   },
   "devDependencies": {},
   "scripts": {

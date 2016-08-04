@@ -14,5 +14,5 @@ czbaker:lightbox2
 ecmascript@0.5.7
 standard-minifier-css
 standard-minifier-js
-fourseven:scss
 momentjs:moment
+twbs:bootstrap

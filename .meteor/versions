@@ -23,7 +23,6 @@ ecmascript@0.5.7
 ecmascript-runtime@0.3.12
 ejson@1.0.12
 fastclick@1.0.12
-fourseven:scss@3.8.0_1
 geojson-utils@1.0.9
 html-tools@1.0.10
 htmljs@1.0.10
@@ -74,6 +73,7 @@ standard-minifier-js@1.1.8
 templating@1.2.13
 templating-tools@1.0.4
 tracker@1.1.0
+twbs:bootstrap@3.3.6
 ui@1.0.11
 underscore@1.0.9
 url@1.0.10

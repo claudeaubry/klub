@@ -16,3 +16,4 @@ standard-minifier-css
 standard-minifier-js
 momentjs:moment
 twbs:bootstrap
+tsega:bootstrap3-datetimepicker

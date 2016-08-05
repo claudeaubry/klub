@@ -1,3 +1,10 @@
+Template.addKlubDate.onRendered( () => {
+  $( '.datetimepicker' ).datetimepicker({
+    timeZone: 'France/Paris',
+    useCurrent: true
+  })
+})
+
 Template.adminnextKLubs.helpers({
   klubs: () => NextKlub.find()
 })
@@ -43,8 +50,11 @@ Template.nextKlubAdmin.events({
   },
 
   'click .modifyklub': function(elt) {
+    let picker   = $( '.datetimepicker' )
+    let dateK = picker.data( 'DateTimePicker' ).date()
+
     elt.preventDefault()
-    this.date = $('input.date').val()
+    this.date = dateK.format()
     this.hour = $('input.hour').val()
     this.dateprop = $('input.dateprop').val()
     this.voteer = $('input.vote').val()

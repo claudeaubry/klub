@@ -1,3 +1,11 @@
+<template name="addKlubDate">
+  <form id="add-klubdate">
+    <div class="form-group">
+      <input type="text" class="form-control datetimepicker" data-DateTimePicker name="appointment" placeholder="Pick a Date">
+    </div>
+  </form>
+</template>
+
 <template name="adminnextKLubs">
   {{#each klubs}}
     {{> nextKlubAdmin}}
@@ -41,6 +49,7 @@
       <div class="form-group">
       <label for="date">Date prévue</label>
       <input type="text" class="form-control date small" value={{date}}>
+        {{> addKlubDate}}
       <label for="hour">Heure prévue</label>
       <input type="text" class="form-control hour small" value={{hour}}>
       {{#if stateIs 'propositions'}}

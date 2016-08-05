@@ -1,7 +1,7 @@
 Template.addKlubDate.onRendered( () => {
   $( '.datetimepicker' ).datetimepicker({
-    timeZone: 'France/Paris',
-    useCurrent: true
+    // timeZone: 'France/Paris',
+    // useCurrent: true
   })
 })
 
@@ -54,7 +54,7 @@ Template.nextKlubAdmin.events({
     let dateK = picker.data( 'DateTimePicker' ).date()
 
     elt.preventDefault()
-    this.date = dateK.format()
+    this.date = dateK.format('D/M/YYYY')
     this.hour = $('input.hour').val()
     this.dateprop = $('input.dateprop').val()
     this.voteer = $('input.vote').val()

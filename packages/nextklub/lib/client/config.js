@@ -4,9 +4,9 @@ Meteor.startup(function () {
 
 Template.configKlubs.helpers({
   klubs: () => NextKlub.find(),
-  nextKlub: () => NextKlub.findOne({type: 'klub'}),
-  nextKjeub: () => NextKlub.findOne({type: 'kjeub'}),
-  nextSkrib: () => NextKlub.findOne({type: 'skrib'})
+  nextKlub: () => NextKlub.findOne({type: 'lecture'}),
+  nextKjeub: () => NextKlub.findOne({type: 'jeu'}),
+  nextSkrib: () => NextKlub.findOne({type: 'scribing'})
 })
 
 Template.configKlubs.events({
@@ -16,14 +16,14 @@ Template.configKlubs.events({
   },
   'click .launchklub': elt => {
     elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'klub'})
+    NextKlub.insert({state: 'propositions', type: 'lecture'})
   },
   'click .launchkjeub': elt => {
     elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'kjeub'})
+    NextKlub.insert({state: 'propositions', type: 'jeu'})
   },
   'click .launchskrib': elt => {
     elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'skrib'})
+    NextKlub.insert({state: 'propositions', type: 'scribing'})
   }
 })

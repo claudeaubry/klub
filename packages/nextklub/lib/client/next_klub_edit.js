@@ -1,7 +1,8 @@
 Template.addKlubDate.onRendered( () => {
-  $( '.datetimepicker' ).datetimepicker({
-    // timeZone: 'France/Paris',
-    // useCurrent: true
+  this.$( '.datetimepicker' ).datetimepicker({
+    format: 'D/M/YYYY',
+    inline: true,
+    sideBySide: true
   })
 })
 

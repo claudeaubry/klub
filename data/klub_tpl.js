@@ -3,7 +3,7 @@ klubDatas = {
 //  objective : "Ils mettent en commun leurs impressions, leurs opinions, leurs connaissances et leurs expériences sur le sujet du livre. Un klubMaster, qui peut changer à chaque fois parmi les participants, facilite le déroulement du Klub.",
 //  rule : "Pour participer à un Klub, il faut avoir lu le livre au préalable.",
   theme: "Des sujets en rapport, directement ou indirectement, avec l'Agilité.",
-  types: "Klub pour la lecture, Skrib pour le scribing, Kjeub pour le jeu.",
+  types: "klub de lecture, klub de scribing, klub de jeu.",
   valueProposition: "klub, le bon karma du partage : discuter d'un livre, dessiner façon scribe, jouer ensemble."
 }
 

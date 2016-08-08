@@ -16,14 +16,17 @@ Template.configKlubs.events({
   },
   'click .launchklub': elt => {
     elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'lecture'})
+    NextKlub.insert({state: 'propositions', type: 'lecture',
+      glyph: 'glyphicon-book'})
   },
   'click .launchkjeub': elt => {
     elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'jeu'})
+    NextKlub.insert({state: 'propositions', type: 'jeu',
+      glyph: 'glyphicon-knight'})
   },
   'click .launchskrib': elt => {
     elt.preventDefault()
-    NextKlub.insert({state: 'propositions', type: 'scribing'})
+    NextKlub.insert({state: 'propositions', type: 'scribing',
+      glyph: 'glyphicon-pencil'})
   }
 })

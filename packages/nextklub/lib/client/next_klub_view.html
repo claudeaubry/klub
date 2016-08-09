@@ -26,14 +26,13 @@
         {{/if}}
         {{#if stateIs 'voteEnCours'}}
           <h4>Etape 2 - Vote en cours</h4>
-          <p>Vous pouvez participer au vote <a target="_blank" href="{{voteer}}">sur Voteer</a>.</p>
           <h5>Le vote porte sur les sujets suivants : </h5>
             {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
             {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
-            <button class=" btn btn-primary col-md-offset-3" >
-              Je vote {{#if datevote}}avant le {{datevote}} {{/if}}
-            </button>
+            <div class=" btn btn-info col-md-offset-3">
+              <a target="_blank" href="{{voteer}}">Je vote {{#if datevote}}avant le {{datevote}} {{/if}}</a>
+            </div>
         {{/if}}
         {{#if stateIs 'propositions'}}
           <h4>Etape 1 - Propositions en cours</h4>

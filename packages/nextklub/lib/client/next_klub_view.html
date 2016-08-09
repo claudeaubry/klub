@@ -23,7 +23,6 @@
         </ul> -->
         {{#if stateIs 'choixAssocié'}}
           <h4>Etape 3 - Sujet choisi</h4>
-          <p>Vous avez jusqu'au {{date}} pour le préparer.</p>
             {{> bookNextView id=book_id}}
         {{else}}
           {{#if stateIs 'voteEnCours'}}
@@ -34,10 +33,16 @@
           {{#if stateIs 'propositions'}}
             <h4>Etape 1 - Propositions en cours</h4>
             <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
+
           {{/if}}
+          <h5>Voici les propositions</h5>
             {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
             {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
+            <button class="suggestItem btn btn-primary col-md-offset-3" data-toggle="modal" data-target="#modalBook">
+              Proposer un nouveau sujet
+            </button>
+            {{> bookCreate}}
         {{/if}}
       </div>
     </div>

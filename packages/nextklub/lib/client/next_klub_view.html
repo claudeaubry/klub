@@ -9,25 +9,22 @@
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h1 class="panel-title text-left">
-          <span class="glyphicon {{glyph}} " aria-hidden="true" style="color:white"></span>
+          <span class="glyphicon {{glyph}}" style="color:white"></span>
           <span class="heading-title">Prochain klub de {{type}} le {{date}}</span>
         </h1>
       </div>
       <div class="panel-body">
-        <ul class="list-group col-md-4">
+        <!-- <ul class="list-group col-md-4">
           <li class="list-group-item list-group-item-danger">Infos pratiques</li>
-          <!-- <li class="list-group-item list-group-item-warning">Date : {{date}}</li> -->
           <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
           <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
           <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Infos organisation</a></li>
-        </ul>
+        </ul> -->
         {{#if stateIs 'choixAssocié'}}
           <h4>Etape 3 - Sujet choisi</h4>
           <p>Vous avez jusqu'au {{date}} pour le préparer.</p>
-          <div class="col-md-8">
             {{> bookNextView id=book_id}}
-          </div>
         {{else}}
           {{#if stateIs 'voteEnCours'}}
             <h4>Etape 2 - Vote en cours</h4>
@@ -35,14 +32,12 @@
             <p>{{#if datevote}} Vous avez jusqu'au {{datevote}} pour voter.{{/if}}</p>
           {{/if}}
           {{#if stateIs 'propositions'}}
-            <h4>Etape 1 - Propositions</h4>
+            <h4>Etape 1 - Propositions en cours</h4>
             <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
           {{/if}}
-          <div class="col-md-8">
-            {{#if typeIs 'klub'}}{{> booksProposed}}{{/if}}
-            {{#if typeIs 'kjeub'}}{{> gamesProposed}}{{/if}}
-            {{#if typeIs 'skrib'}}{{> videosProposed}}{{/if}}
-          </div>
+            {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
+            {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
+            {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
         {{/if}}
       </div>
     </div>

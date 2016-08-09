@@ -2,18 +2,6 @@
   padding: 0.5em;
 }
 
-/*.panel-primary > .heading-klub {
-  background-color: #337ab7;
-}*/
-
-.panel-primary > .heading-kjeub {
-  background-color: green;
-}
-
-.panel-primary > .heading-skrib {
-  background-color: indigo;
-}
-
 .pastKlub .panel {
   min-height: 365px;
 }

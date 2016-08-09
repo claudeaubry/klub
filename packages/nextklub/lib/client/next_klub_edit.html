@@ -66,13 +66,13 @@
           <label for="book">Elément associé</label>
           <p>{{> bookTitle id=book_id}}</p>
         {{/if}}
-        {{#if typeIs 'klub'}}
+        {{#if typeIs 'lecture'}}
           {{> associate selectName='selBook' nominees=nomineesBooks}}
         {{/if}}
-        {{#if typeIs 'kjeub'}}
+        {{#if typeIs 'jeu'}}
           {{> associate selectName='selGame' nominees=nomineesGames}}
         {{/if}}
-        {{#if typeIs 'skrib'}}
+        {{#if typeIs 'scribing'}}
           {{> associate selectName='selVideo' nominees=nomineesVideos}}
         {{/if}}
       {{/if}}

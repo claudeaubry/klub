@@ -1,6 +1,6 @@
 Template.addKlubDate.onRendered( () => {
   this.$( '.datetimepicker' ).datetimepicker({
-    format: 'D/M/YYYY',
+    format: 'DD/MM/YYYY',
     inline: true,
     sideBySide: true
   })
@@ -55,18 +55,18 @@ Template.nextKlubAdmin.events({
     let dateK = picker.data( 'DateTimePicker' ).date()
 
     elt.preventDefault()
-    this.date = dateK.format('D/M/YYYY')
+    this.date = dateK.format('DD/MM/YYYY')
     this.hour = $('input.hour').val()
     this.dateprop = $('input.dateprop').val()
     this.voteer = $('input.vote').val()
     this.datevote = $('input.datevote').val()
     this.meetup = $('input.meetup').val()
     if (this.state === 'voteEnCours') {
-      if (this.type === 'klub')
+      if (this.type === 'lecture')
         this.book_id = $('select[name=selBook]').val()
-      if (this.type === 'kjeub')
+      if (this.type === 'jeu')
         this.book_id = $('select[name=selGame]').val()
-      if (this.type === 'skrib')
+      if (this.type === 'scribing')
         this.book_id = $('select[name=selVideo]').val()
       if (this.book_id)
         associateBookToNextKlub(this.book_id)

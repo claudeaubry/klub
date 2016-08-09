@@ -17,3 +17,4 @@ standard-minifier-js
 momentjs:moment
 twbs:bootstrap
 tsega:bootstrap3-datetimepicker
+rzymek:moment-locale-fr

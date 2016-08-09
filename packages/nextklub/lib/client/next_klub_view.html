@@ -10,20 +10,20 @@
       <div class="panel-heading">
         <h1 class="panel-title text-left">
           <span class="glyphicon {{glyph}}" style="color:white"></span>
-          <span class="heading-title">Prochain klub de {{type}} le {{date}}</span>
+          <span class="heading-title">Prochain klub de {{type}} le {{ISOToFr date}}</span>
         </h1>
       </div>
       <div class="panel-body">
-        <!-- <ul class="list-group col-md-4">
-          <li class="list-group-item list-group-item-danger">Infos pratiques</li>
-          <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
-          <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
-          <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-          <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Infos organisation</a></li>
-        </ul> -->
         {{#if stateIs 'choixAssocié'}}
           <h4>Etape 3 - Sujet choisi</h4>
             {{> bookNextView id=book_id}}
+            <ul class="list-group col-md-12">
+              <li class="list-group-item list-group-item-danger">Infos pratiques</li>
+              <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
+              <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
+              <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
+              <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Infos organisation</a></li>
+            </ul>
         {{else}}
           {{#if stateIs 'voteEnCours'}}
             <h4>Etape 2 - Vote en cours</h4>

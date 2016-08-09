@@ -1,7 +1,7 @@
 <template name="addKlubDate">
   <form id="add-klubdate">
     <div class="form-group">
-      <input type="text" class="form-control datetimepicker" data-DateTimePicker value={{date}} placeholder="Choisir une date">
+      <input type="text" class="form-control datetimepicker" data-DateTimePicker placeholder="Choisir une date">
     </div>
   </form>
 </template>
@@ -25,8 +25,8 @@
 <template name="nextKlubAdmin">
   <h3 class="well col-xs-6 col-md-8">{{type}}</h3>
     <div class="col-md-8">
-      <label for="state">Etat actuel</label>
       <input type="text" class="form-control state small" value={{state}} disabled>
+      <input type="text" class="form-control date small" value={{ISOToFr date}} disabled>
       <button class="startChoice btn btn-primary">Passer au vote</button>
       <button class="choiceDone btn btn-primary">Choix effectué</button>
       <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button>

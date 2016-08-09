@@ -4,3 +4,8 @@ Meteor.startup(function () {
   //   LocalData.insert({})
   // document.title = LocalData.findOne().title
 })
+
+Template.registerHelper('ISOToFr', ( isoString ) => {
+  if ( isoString )
+    return moment( isoString ).locale('fr').format( 'D MMMM YYYY' )
+})

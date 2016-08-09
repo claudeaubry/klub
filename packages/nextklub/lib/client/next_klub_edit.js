@@ -2,8 +2,7 @@ Template.addKlubDate.onRendered( () => {
   this.$( '.datetimepicker' ).datetimepicker({
     format: 'DD/MM/YYYY',
     inline: true,
-    sideBySide: true
-  })
+    locale: 'fr'  })
 })
 
 Template.adminnextKLubs.helpers({
@@ -55,7 +54,7 @@ Template.nextKlubAdmin.events({
     let dateK = picker.data( 'DateTimePicker' ).date()
 
     elt.preventDefault()
-    this.date = dateK.format('DD/MM/YYYY')
+    this.date = dateK.format()
     this.hour = $('input.hour').val()
     this.dateprop = $('input.dateprop').val()
     this.voteer = $('input.vote').val()

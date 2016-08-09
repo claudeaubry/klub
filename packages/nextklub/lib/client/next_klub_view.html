@@ -20,27 +20,30 @@
             <ul class="list-group col-md-12">
               <li class="list-group-item list-group-item-danger">Infos pratiques</li>
               <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
-              <li class="list-group-item list-group-item-info">Ville : {{local.region}}</li>
               <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-              <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Infos organisation</a></li>
+              <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Meetup</a></li>
             </ul>
-        {{else}}
-          {{#if stateIs 'voteEnCours'}}
-            <h4>Etape 2 - Vote en cours</h4>
-            <p>Vous pouvez participer au vote <a target="_blank" href="{{voteer}}">sur Voteer</a>.</p>
-            <p>{{#if datevote}} Vous avez jusqu'au {{datevote}} pour voter.{{/if}}</p>
-          {{/if}}
-          {{#if stateIs 'propositions'}}
-            <h4>Etape 1 - Propositions en cours</h4>
-            <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
-
-          {{/if}}
+        {{/if}}
+        {{#if stateIs 'voteEnCours'}}
+          <h4>Etape 2 - Vote en cours</h4>
+          <p>Vous pouvez participer au vote <a target="_blank" href="{{voteer}}">sur Voteer</a>.</p>
+          <h5>Le vote porte sur les sujets suivants : </h5>
+            {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
+            {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
+            {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
+            <button class=" btn btn-primary col-md-offset-3" >
+              Je vote {{#if datevote}}avant le {{datevote}} {{/if}}
+            </button>
+        {{/if}}
+        {{#if stateIs 'propositions'}}
+          <h4>Etape 1 - Propositions en cours</h4>
+          <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
           <h5>Voici les propositions</h5>
             {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
             {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
             <button class="suggestItem btn btn-primary col-md-offset-3" data-toggle="modal" data-target="#modalBook">
-              Proposer un nouveau sujet
+              Je propose un sujet {{#if dateprop}}avant le {{dateprop}} {{/if}}
             </button>
             {{> bookCreate}}
         {{/if}}

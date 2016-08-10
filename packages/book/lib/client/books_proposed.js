@@ -8,15 +8,6 @@ Template.videosProposed.helpers({
   videos: () => new Library().vnominees()
 })
 
-Template.itemsProposal.events({
-  'click .suggestItem': () => {
-    $('input#titleSubmit').val('')
-    $('input#authorSubmit').val('')
-    $('textarea#teaserSubmit').val('')
-    $('input#siteSubmit').val('')
-    $('input#originSubmit').val('')
-  }
-})
 Template.itemsProposal.helpers({
   app: () =>  klubAppDatas
 })

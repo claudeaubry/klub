@@ -1,3 +1,8 @@
+
+Template.nextKlubsView.helpers({
+  klubs: () => NextKlub.find({}, {sort: {date: +1}})
+})
+
 Template.nextKlubView.helpers({
   local: () => LocalData.findOne(),
   typeIs: function(type) {
@@ -11,6 +16,13 @@ Template.nextKlubView.helpers({
   nomineesVideos: () => new Library().vnominees()
 })
 
-Template.nextKlubsView.helpers({
-  klubs: () => NextKlub.find({}, {sort: {date: +1}})
+Template.nextKlubView.events({
+  'click .suggestItem': () => {
+    $('input#titleSubmit').val('')
+    $('input#authorSubmit').val('')
+    $('textarea#teaserSubmit').val('')
+    $('input#siteSubmit').val('')
+    $('input#imgSubmit').val('')
+    $('input#originSubmit').val('')
+  }
 })

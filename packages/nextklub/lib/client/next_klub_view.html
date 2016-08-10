@@ -42,7 +42,7 @@
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
             {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
             <button class="suggestItem btn btn-primary col-md-offset-3" data-toggle="modal" data-target="#modalBook">
-              Je propose un sujet {{#if dateprop}}avant le {{dateprop}} {{/if}}
+              Je propose {{#if dateprop}}avant le {{dateprop}} {{/if}}
             </button>
             {{> bookCreate}}
         {{/if}}

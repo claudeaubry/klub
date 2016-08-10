@@ -32,6 +32,7 @@ Template.nextKlubAdmin.events({
     const nextKlub = {}
     elt.preventDefault()
     nextKlub.type = this.type
+    nextKlub.glyph = this.glyph
     nextKlub.state = 'propositions'
     NextKlub.update(this._id, nextKlub)
   },
@@ -89,6 +90,7 @@ Template.nextKlubAdmin.events({
     createPastKlub(pastKlub)
     nextKlub.state = 'propositions'
     nextKlub.type = this.type
+    nextKlub.glyph = this.glyph
     NextKlub.update(this._id, nextKlub)
     Router.go('adminnextKLubs')
   }

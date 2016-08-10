@@ -12,5 +12,5 @@ Template.nextKlubView.helpers({
 })
 
 Template.nextKlubsView.helpers({
-  klubs: () => NextKlub.find({}, {sort: {date: 1}})
+  klubs: () => NextKlub.find({}, {sort: {date: +1}})
 })

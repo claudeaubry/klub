@@ -18,11 +18,12 @@ Template.nextKlubView.helpers({
 
 Template.nextKlubView.events({
   'click .suggestItem': () => {
-    $('input#titleSubmit').val('')
-    $('input#authorSubmit').val('')
-    $('textarea#teaserSubmit').val('')
-    $('input#siteSubmit').val('')
-    $('input#imgSubmit').val('')
-    $('input#originSubmit').val('')
+    // $('input#titleSubmit').val('')
+    // $('input#authorSubmit').val('')
+    // $('textarea#teaserSubmit').val('')
+    // $('input#siteSubmit').val('')
+    // $('input#imgSubmit').val('')
+    // $('input#originSubmit').val('')
+    Modal.show('modalBook', this)
   }
 })

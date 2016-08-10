@@ -1,4 +1,4 @@
-Template.bookCreate.events({
+Template.modalBook.events({
 
   'submit form': (event) => {
     type = $('input[name="optionsItem"]:checked').val()
@@ -25,6 +25,6 @@ Template.bookCreate.events({
       statut: 'proposed'
     })
 
-    $('#modalBook').modal('hide')
+    Modal.hide('modalBook')
   }
 })

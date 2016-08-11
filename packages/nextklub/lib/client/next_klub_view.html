@@ -30,9 +30,9 @@
             {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
             {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
-            <div class=" btn btn-info col-md-offset-3">
+            <!-- <div class=" btn btn-info col-md-offset-3">
               <a target="_blank" href="{{voteer}}">Je vote {{#if datevote}}avant le {{datevote}} {{/if}}</a>
-            </div>
+            </div> -->
         {{/if}}
         {{#if stateIs 'propositions'}}
           <h4>Etape 1 - Propositions en cours</h4>
@@ -41,9 +41,6 @@
             {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
             {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
-            <!-- <button class="suggestItem btn btn-primary col-md-offset-3" data-toggle="modal" >
-              Je propose {{#if dateprop}}avant le {{dateprop}} {{/if}}
-            </button> -->
         {{/if}}
       </div>
       <div class="panel-footer clearfix">

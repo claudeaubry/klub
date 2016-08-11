@@ -1,10 +1,3 @@
-Template.addKlubDate.onRendered( () => {
-  this.$( '.datetimepicker' ).datetimepicker({
-    format: 'DD/MM/YYYY',
-    inline: true,
-    locale: 'fr'  })
-})
-
 Template.adminnextKLubs.helpers({
   klubs: () => NextKlub.find()
 })

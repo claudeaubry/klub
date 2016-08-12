@@ -18,7 +18,7 @@
       </button>
       <div>
       La date prévue est le {{ISOToFr klub.date}}
-        {{> addKlubDate}}
+        {{> addKlubDate d=klub.date}}
       </div>
       <button class="startChoice btn btn-primary">Passer au vote</button>
       <button class="choiceDone btn btn-primary">Choix effectué</button>
@@ -27,7 +27,7 @@
       <button class="plusklub btn btn-default" data-toggle="modal" data-target="#modalNext">Je donne plus d'infos sur l'état courant</button>
     </div>
     </div>
-{{> selonState}}
+{{> selonState s=klub.state}}
 
   </div>
 </article>
@@ -37,12 +37,12 @@
   <form id="add-klubdate">
     <div class="input-group date datetimepicker">
     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-    <input class="set-due-date form-control" type="text"/>
+    <input class="set-due-date form-control" type="text" value={{ISOToFr d}} />
   </div>
 
   </form>
 </template>
 
 <template name="selonState">
-    <div class="rsvp btn btn-success pull-right">{{klub.state}} I'm Attending</div>
+    <div class="rsvp btn btn-success pull-right">{{s}} I'm Attending</div>
 </template>

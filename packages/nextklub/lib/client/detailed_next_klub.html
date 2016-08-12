@@ -13,9 +13,13 @@
     <div class="col-md-8">
       <h5>Voici les propositions actuelles</h5>
       {{> booksProposed}}
-      <button class="suggestItem btn btn-primary col-md-offset-3" data-toggle="modal">
-        Je propose {{#if dateprop}}avant le {{dateprop}} {{/if}}
+      <button class="suggestItem btn btn-primary" data-toggle="modal">
+        Je fais une nouvelle proposition
       </button>
+
+<a href="{{pathFor 'frozen'}}">
+  <button class="btn btn-primary ">Je revois les anciennes propositions</button>
+</a>
       <div>
       La date prévue est le {{ISOToFr klub.date}}
         {{> addKlubDate d=klub.date}}

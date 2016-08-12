@@ -12,7 +12,15 @@ Template.detailedNextKlub.events({
     // $('input#siteSubmit').val('')
     // $('input#imgSubmit').val('')
     // $('input#originSubmit').val('')
-    Modal.show('modalBook', this)
+    // let self = {}
+    // self.modalMode = 'C'
+    Modal.show('modalBook')
+  },
+  'click .plusklub': function () {
+    // let a = this
+    // a.modalMode = 'C'
+    // Session.set('moddata', this)
+    Modal.show('modalProposition', this)
   }
 })
 
@@ -21,15 +29,33 @@ Template.addKlubDate.onRendered( () => {
     format: 'dddd D MMMM YYYY',
     locale: 'fr'})
 })
+Template.modalProposition.helpers({
+  // modinfo: function() {
+  //   return Session.get('moddata')
+  // },
+  // klub: function () {
+  //   return this
+  // }
+})
+  // typeIs: function(type) {
+  //   return this.type === type
+  // },
+  // stateIs: function(state) {
+  //   return this.state === state
+  // },
+  // nomineesBooks: () => new Library().nominees(),
+  // nomineesGames: () => new Library().jnominees(),
+  // nomineesVideos: () => new Library().vnominees()
 
-Template.addKlubDate.events
-$('#datetimepicker').on('dp.hide', function(elt) {
-  let picker = $( '.datetimepicker' )
-  let dateK = picker.data( 'DateTimePicker' ).date()
-
-  elt.preventDefault()
-  console.log(dateK)
-  this === parent.this
-  this.date = dateK.format()
-  NextKlub.update(this._id, this)
+Template.modalProposition.events({
+  'click .submitProp': function(elt) {
+    let picker   = $( '.datetimepicker' )
+    let dateK = picker.data( 'DateTimePicker' ).date()
+    elt.preventDefault()
+    this.date = dateK.format()
+    this.hour = $('input.hour').val()
+    this.dateprop = $('input.dateprop').val()
+    NextKlub.update(this._id, this)
+    $('#modalProposition').modal('hide')
+  }
 })

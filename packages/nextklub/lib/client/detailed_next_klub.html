@@ -1,7 +1,5 @@
 <template name="detailedNextKlub">
-    {{> nav}}
-<article class="pastKlub col-xs-12 col-md-offset-1 col-md-10">
-  <div class="panel panel-primary">
+  <div class="panel panel-primary pastKlub col-xs-12 col-md-offset-1 col-md-10">
     <div class="panel-heading">
       <h1 class="panel-title text-left">
         <span class="glyphicon {{klub.glyph}}" style="color:white"></span>
@@ -16,25 +14,22 @@
       <button class="suggestItem btn btn-primary" data-toggle="modal">
         Je fais une nouvelle proposition
       </button>
-
-<a href="{{pathFor 'frozen'}}">
-  <button class="btn btn-primary ">Je revois les anciennes propositions</button>
-</a>
-      <div>
+      <a href="{{pathFor 'frozen'}}">
+        <button class="btn btn-primary ">Je revois les anciennes propositions</button>
+      </a>
+    </div>
+    <div class>
       La date prévue est le {{ISOToFr klub.date}}
-        {{> addKlubDate d=klub.date}}
-      </div>
-      <button class="startChoice btn btn-primary">Passer au vote</button>
-      <button class="choiceDone btn btn-primary">Choix effectué</button>
-      <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button>
+      <button class="plusklub btn btn-default" data-toggle="modal" data-target="#modalProposition">Je donne plus d'infos sur l'état courant</button>
       <button class="raz btn btn-default">J'annule tout</button>
-      <button class="plusklub btn btn-default" data-toggle="modal" data-target="#modalNext">Je donne plus d'infos sur l'état courant</button>
+      <button class="startChoice btn btn-primary">Passer au vote</button>
+      <!-- <button class="choiceDone btn btn-primary">Choix effectué</button>
+      <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button> -->
+{{> modalProposition}}
     </div>
-    </div>
-{{> selonState s=klub.state}}
-
   </div>
-</article>
+{{> selonState s=klub.state}}
+  </div>
 </template>
 
 <template name="addKlubDate">
@@ -49,4 +44,36 @@
 
 <template name="selonState">
     <div class="rsvp btn btn-success pull-right">{{s}} I'm Attending</div>
+</template>
+
+<template name="modalProposition">
+ <!-- {{#with modinfo}} -->
+  <div class="modal fade" role="dialog">
+    <div class="modal-content modal-dialog">
+      <form role="form" class="well">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Data proposition</h4>
+        </div>
+        <div class="modal-body">
+      <label for="date">Changer la date</label>
+      {{> addKlubDate d=date}}
+      <label for="hour">Heure prévue</label>
+      <input type="text" class="form-control hour small" value={{hour}} >
+
+      <label for="dateprop">Date limite pour proposer</label>
+      <input type="text" class="form-control dateprop small" value={{dateprop}}>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="submitProp" class="btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+  <!-- {{/with}} -->
 </template>

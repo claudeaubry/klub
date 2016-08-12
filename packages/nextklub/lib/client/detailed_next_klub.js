@@ -18,8 +18,6 @@ Template.detailedNextKlub.events({
 
 Template.addKlubDate.onRendered( () => {
   this.$( '.datetimepicker' ).datetimepicker({
-    // format: 'Do MMMM YYYY hh:mm',
-    sideBySide: true,
-    useCurrent: true,
-    locale: 'fr' })
+    format: 'dddd DD MMMM YYYY',
+    locale: 'fr'})
 })

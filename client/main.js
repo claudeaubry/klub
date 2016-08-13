@@ -4,7 +4,6 @@ Meteor.startup(function () {
   //   LocalData.insert({})
   // document.title = LocalData.findOne().title
 })
-Modal.allowMultiple = true
 
 Template.registerHelper('ISOToFr', ( isoString ) => {
   if ( isoString )

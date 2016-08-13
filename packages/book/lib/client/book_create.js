@@ -24,7 +24,6 @@ Template.modalBook.events({
       proposedAt: moment().format(),
       statut: 'proposed'
     })
-
-    Modal.hide('modalBook')
+    $('#modalBook').modal('hide')
   }
 })

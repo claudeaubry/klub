@@ -11,24 +11,24 @@
     <div class="col-md-8">
       <h5>Voici les propositions actuelles</h5>
       {{> booksProposed}}
-      <button class="suggestItem btn btn-primary" data-toggle="modal">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
         Je fais une nouvelle proposition
       </button>
+      {{> modalBook}}
       <a href="{{pathFor 'frozen'}}">
         <button class="btn btn-primary ">Je revois les anciennes propositions</button>
       </a>
     </div>
     <div class>
       La date prévue est le {{ISOToFr klub.date}}
-      <button class="plusProp btn btn-default" data-toggle="modal" data-target="#modalProposition">Je donne plus d'infos sur l'état courant</button>
-{{> modalProposition}}
+      <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Je donne plus d'infos sur l'état courant</button>
+    {{> modalProposition}}
       <button class="raz btn btn-default">J'annule tout</button>
       <button class="startChoice btn btn-primary">Passer au vote</button>
       <!-- <button class="choiceDone btn btn-primary">Choix effectué</button>
       <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button> -->
     </div>
   </div>
-{{> selonState s=klub.state}}
   </div>
 </template>
 
@@ -38,10 +38,5 @@
     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
     <input class="set-due-date form-control" type="text" value={{ISOToFr d}} />
   </div>
-
   </form>
-</template>
-
-<template name="selonState">
-    <div class="rsvp btn btn-success pull-right">{{s}} I'm Attending</div>
 </template>

@@ -19,7 +19,9 @@ Package.on_use(function (api) {
     'lib/client/next_klub_view.html',
     'lib/client/next_klub_view.js',
     'lib/client/detailed_next_klub.html',
-    'lib/client/detailed_next_klub.js'
+    'lib/client/detailed_next_klub.js',
+    'lib/client/modal_next.html',
+    'lib/client/modal_next.js'
   ],
     'client')
 })

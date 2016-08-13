@@ -1,0 +1,30 @@
+<template name="modalProposition">
+  <div class="modal fade" id="modalProposition" tabindex="-1" role="dialog">
+    <div class="modal-content modal-dialog">
+      <form role="form" class="well">
+        <input type="hidden" class="form-control kid small" value={{k._id}}>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Data proposition</h4>
+        </div>
+        <div class="modal-body">
+        <label for="date">Date actuelle</label>
+        <input type="text" class="form-control state small" value={{k.state}} disabled>
+        <input type="text" class="form-control date small" value={{ISOToFr k.date}} disabled>
+      <label for="date">Changer la date</label>
+      {{> addKlubDate d=k.date}}
+      <label for="hour">Heure prévue</label>
+      <input type="text" class="form-control hour small" value={{k.hour}} >
+      <label for="dateprop">Date limite pour proposer</label>
+      <input type="text" class="form-control dateprop small" value={{k.dateprop}}>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="submitProp btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</template>

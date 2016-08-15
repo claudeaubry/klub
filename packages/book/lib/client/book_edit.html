@@ -1,25 +1,25 @@
 <template name="bookEdit">
   <h3 class="well">Modification d'un sujet</h3>
   <form class="pastKlubEdit col-xs-6">
-    <input type="hidden" class="form-control id small" value={{book._id}}>
+    <input type="hidden" class="form-control id small" value={{_id}}>
     <label for="typeItem">Type</label>
-    <input type="text" class="form-control typeItem small" value={{book.type}}>
+    <input type="text" class="form-control typeItem small" value={{type}}>
     <label for="author">Auteur</label>
-    <input type="text" class="form-control author small" value={{book.author}}>
+    <input type="text" class="form-control author small" value={{author}}>
     <label for="title">Titre</label>
-    <input type="text" class="form-control title small" value={{book.title}}>
+    <input type="text" class="form-control title small" value={{title}}>
     <label for="img">Image</label>
-    <input type="text" class="form-control img small" value={{book.img}}>
+    <input type="text" class="form-control img small" value={{img}}>
     <label for="site">Site</label>
-    <input type="text" class="form-control site small" value={{book.site}}>
+    <input type="text" class="form-control site small" value={{site}}>
     <label for="origin">Conseillé par</label>
-    <input type="text" class="form-control origin small" value={{book.origin}}>
+    <input type="text" class="form-control origin small" value={{origin}}>
     <label for="teaser">Teaser</label>
-    <textarea rows="3" class="form-control teaser small" id="teaser">{{book.teaser}}</textarea>
+    <textarea rows="3" class="form-control teaser small" id="teaser">{{teaser}}</textarea>
     <label for="statut">Statut</label>
-    <input type="text" class="form-control statut small" value={{book.statut}}>
+    <input type="text" class="form-control statut small" value={{statut}}>
     <label for="proposedAt">Date de proposition</label>
-    <input type="date" class="form-control small" value={{book.proposedAt}} disabled>
+    <input type="date" class="form-control small" value={{proposedAt}} disabled>
     <hr>
     <button type="submit" class="btn btn-default">Modifier</button>
     <button class="freeze btn btn-default">Archiver</button>

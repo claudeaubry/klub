@@ -1,9 +1,9 @@
-Template.bookEdit.helpers({
-  book: function () {
-    // this provided from url parameter
-    return new Library().bookById(this.toString())
-  }
-})
+// Template.bookEdit.helpers({
+//   book: function () {
+//     // this provided from url parameter
+//     return new Library().bookById(this.toString())
+//   }
+// })
 
 Template.bookEdit.events({
   'submit form': elt => {

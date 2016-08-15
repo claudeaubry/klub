@@ -1,5 +1,11 @@
+Template.modalProposition.helpers({
+  k: function () {
+    // this provides from url parameter
+    return NextKlub.findOne({_id: this.toString()})
+  }
+})
 Template.modalProposition.events({
-  'click .submitProp': event => {
+  'submit form': event => {
     const picker   = $( '.datetimepicker' )
     const dateK = picker.data( 'DateTimePicker' ).date()
     const _id = $('input.kid').val()
@@ -11,12 +17,5 @@ Template.modalProposition.events({
     ktarget.dateprop = $('input.dateprop').val()
     NextKlub.update(_id, ktarget)
     $('#modalProposition').modal('hide')
-  }
-})
-
-Template.modalProposition.helpers({
-  k: function () {
-    // this provides from url parameter
-    return NextKlub.findOne({_id: this.toString()})
   }
 })

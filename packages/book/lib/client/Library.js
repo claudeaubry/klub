@@ -23,7 +23,6 @@ Library = class Library {
   }
 }
 
-
 associateBookToNextKlub = id => {
   const book = new Library().bookById(id)
   const previousBook = new Library().selected(book.type)

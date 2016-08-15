@@ -1,0 +1,21 @@
+<template name="itemEdit">
+  <h3 class="well">Modification d'un élément</h3>
+  <form class="pastKlubEdit col-xs-6">
+    <input type="hidden" class="form-control bid small" value={{_id}}>
+    <div class="form-group">
+      <label class="control-label" for="title">Titre</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value={{title}} disabled class="form-control" />
+      </div>
+      <label class="control-label" for="author">Auteur</label>
+      <div class="controls">
+          <input name="author" id="author" type="text" value={{author}} class="form-control" />
+      </div>
+      <label class="control-label" for="teaser">Teaser</label>
+      <div class="controls">
+          <textarea rows="3" name="teaser" id="teaser" type="text" class="form-control">{{teaser}} </textarea>
+      </div>
+    </div>
+    <input type="submit" class="btn btn-primary"/>
+  </form>
+</template>

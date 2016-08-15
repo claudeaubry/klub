@@ -36,9 +36,10 @@
 <template name="itemli">
   <li class="list-group-item text-center">
     <strong>{{this.title}}</strong>
-    {{#if this.author}}de {{this.author}}  {{/if}}
+    {{#if this.author}}de {{this.author}}{{/if}}
     {{#if this.origin}}  - proposé par {{this.origin}}{{/if}}
     {{#if this.teaser}}car {{this.teaser}}{{/if}}
     {{#if this.site}}- <a target="_blank" href="{{this.site}}">en savoir plus</a>{{/if}}
+    <a href="{{pathFor 'itemEdit'}}">Edit</a>
   </li>
 </template>

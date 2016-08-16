@@ -3,7 +3,7 @@ Template.nextKlubsView.helpers({
 })
 
 Template.nextKlubView.helpers({
-  proposedBooksCount: () => new Library().proposedCount()
+  proposedBooksCount: () => new Library().proposedCount('book')
 })
 
 Template.nextKlubView.helpers({

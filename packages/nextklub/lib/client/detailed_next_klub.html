@@ -13,8 +13,10 @@
       <h5>Voici les propositions actuelles</h5>
       {{> booksProposed}}
       <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
-        Je fais une nouvelle proposition
-      </button>
+        Je fais une nouvelle proposition</button>
+    <!-- <div class=" btn btn-info col-md-offset-3">
+      <a target="_blank" href="{{voteer}}">Je vote {{#if datevote}}avant le {{datevote}} {{/if}}</a>
+    </div> -->
       {{> modalBook}}
       <a href="{{pathFor 'frozen'}}">
         <button class="btn btn-primary ">Je revois les anciennes propositions</button>
@@ -41,4 +43,13 @@
     <input class="set-due-date form-control" type="text" value={{ISOToFr d}} />
   </div>
   </form>
+</template>
+
+<template name="infosKlub">
+  <ul class="list-group col-md-12">
+    <li class="list-group-item list-group-item-danger">Infos pratiques</li>
+    <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
+    <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
+    <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Meetup</a></li>
+  </ul>
 </template>

@@ -21,8 +21,8 @@ Library = class Library {
   bookTitleById(id) {
     return Books.findOne(id, {fields: {title: 1}}).title
   }
-  proposedCount() {
-    return Books.find({type: 'book', statut: 'proposed'}).count()
+  proposedCount(type) {
+    return Books.find({type: type, statut: 'proposed'}).count()
   }
 }
 

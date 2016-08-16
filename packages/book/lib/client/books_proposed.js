@@ -1,6 +1,6 @@
 Template.booksProposed.helpers({
-  titles: () => new Library().nominees()
-})
+  titles: () => new Library().nominees()})
+
 Template.gamesProposed.helpers({
   games: () => new Library().jnominees()
 })

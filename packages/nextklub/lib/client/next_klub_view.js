@@ -3,6 +3,10 @@ Template.nextKlubsView.helpers({
 })
 
 Template.nextKlubView.helpers({
+  proposedBooksCount: () => new Library().proposedCount()
+})
+
+Template.nextKlubView.helpers({
   local: () => LocalData.findOne(),
   typeIs: function(type) {
     return this.type === type

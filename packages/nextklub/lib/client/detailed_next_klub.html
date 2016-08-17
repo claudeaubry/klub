@@ -33,6 +33,9 @@
         </div>
         {{/if}}
       {{/if}}
+      {{#if stateChoisi klub.state}}
+      {{> bookNextView id=klub.book_id}}
+      {{/if}}
     </div>
     <div class>
       La date prévue est le {{ISOToFr klub.date}}
@@ -45,6 +48,9 @@
       {{#if stateVote klub.state}}
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalChoix">Vote fini, je donne le résultat</button>
     {{> modalChoix}}
+      {{/if}}
+      {{#if stateChoisi klub.state}}
+        <button class="klubFini btn btn-primary">Ce klub a eu lieu</button>
       {{/if}}
     </div>
   </div>

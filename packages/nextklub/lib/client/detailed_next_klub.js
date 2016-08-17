@@ -31,5 +31,24 @@ Template.detailedNextKlub.events({
     k.state = 'voteEnCours'
     k.dateprop = ''
     NextKlub.update(k._id, k)
+  },
+  'click .klubFini': function(elt) {
+    const pastKlub = {}
+    const nextKlub = {}
+    const k = NextKlub.findOne({_id: this.toString()})
+
+    elt.preventDefault()
+    pastKlub.date = k.date
+    pastKlub.voteer = k.voteer
+    pastKlub.meetup = k.meetup
+    pastKlub.type = k.type
+    pastKlub.book_id = k.book_id
+    discussedBookWhenPastKlub(pastKlub.book_id)
+    createPastKlub(pastKlub)
+    nextKlub.state = 'propositions'
+    nextKlub.type = k.type
+    nextKlub.glyph = k.glyph
+    NextKlub.update(k._id, nextKlub)
+    Router.go('home')
   }
 })

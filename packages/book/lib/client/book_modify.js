@@ -6,6 +6,6 @@ Template.itemEdit.events({
     book.author = $('input#author').val()
     book.teaser = $('textarea#teaser').val()
     Books.update(_id, book)
-    Router.go('detailedNextKlub', {_id: _id})
+    Router.go('home')
   }
 })

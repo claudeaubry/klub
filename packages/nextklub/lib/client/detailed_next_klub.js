@@ -13,7 +13,22 @@ Template.detailedNextKlub.helpers({
   typeScribing: function(name) {
     return name === 'scribing'
   },
-  stateIs: function(state) {
-    return klub.state === state
+  stateProp: function(name) {
+    return name === 'propositions'
+  },
+  stateVote: function(name) {
+    return name === 'voteEnCours'
+  },
+  stateChoisiProp: function(name) {
+    return name === 'choixAssocié'
+  }
+})
+
+Template.detailedNextKlub.events({
+  'click .debutVote': function(elt) {
+    const k = NextKlub.findOne({_id: this.toString()})
+    elt.preventDefault()
+    k.state = 'voteEnCours'
+    NextKlub.update(k._id, k)
   }
 })

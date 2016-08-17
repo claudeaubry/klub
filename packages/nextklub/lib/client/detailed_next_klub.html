@@ -10,28 +10,30 @@
     <div class="panel-body">
       <h4>Ce klub est dans l'état : {{klub.state}}</h4>
     <div class="col-md-8">
-      <!-- {{#if stateIs proposition'}} -->
-      <h5>Voici les propositions actuelles de {{klubItem klub.type}}</h5>
-        {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
-        {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
-        {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
-      <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
-        Je fais une nouvelle proposition</button>
-    <!-- <div class=" btn btn-info col-md-offset-3">
-      <a target="_blank" href="{{voteer}}">Je vote {{#if datevote}}avant le {{datevote}} {{/if}}</a>
-    </div> -->
-      {{> modalBook}}
-      <a href="{{pathFor 'frozen'}}">
-        <button class="btn btn-primary ">Je revois les anciennes propositions</button>
-      </a>
-      <!-- {{/if}} -->
+      {{#if stateProp klub.state}}
+          <h5>Voici les propositions actuelles de {{klubItem klub.type}}</h5>
+            {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
+            {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
+            {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
+            Je fais une nouvelle proposition</button>
+        <!-- <div class=" btn btn-info col-md-offset-3">
+          <a target="_blank" href="{{voteer}}">Je vote {{#if datevote}}avant le {{datevote}} {{/if}}</a>
+        </div> -->
+          {{> modalBook}}
+          <a href="{{pathFor 'frozen'}}">
+            <button class="btn btn-primary ">Je revois les anciennes propositions</button>
+          </a>
+      {{/if}}
     </div>
     <div class>
       La date prévue est le {{ISOToFr klub.date}}
       <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Je donne plus d'infos sur l'état courant</button>
     {{> modalProposition}}
       <button class="raz btn btn-default">J'annule tout</button>
-      <button class="startChoice btn btn-primary">Passer au vote</button>
+      {{#if stateProp klub.state}}
+        <button class="debutVote btn btn-primary">Passer au vote</button>
+      {{/if}}
       <!-- <button class="choiceDone btn btn-primary">Choix effectué</button>
       <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button> -->
     </div>

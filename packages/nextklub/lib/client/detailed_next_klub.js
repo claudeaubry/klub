@@ -29,6 +29,7 @@ Template.detailedNextKlub.events({
     const k = NextKlub.findOne({_id: this.toString()})
     elt.preventDefault()
     k.state = 'voteEnCours'
+    k.dateprop = ''
     NextKlub.update(k._id, k)
   }
 })

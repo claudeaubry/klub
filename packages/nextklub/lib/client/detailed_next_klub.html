@@ -17,13 +17,21 @@
             {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
           <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
             Je fais une nouvelle proposition</button>
-        <!-- <div class=" btn btn-info col-md-offset-3">
-          <a target="_blank" href="{{voteer}}">Je vote {{#if datevote}}avant le {{datevote}} {{/if}}</a>
-        </div> -->
           {{> modalBook}}
           <a href="{{pathFor 'frozen'}}">
             <button class="btn btn-primary ">Je revois les anciennes propositions</button>
           </a>
+      {{/if}}
+      {{#if stateVote klub.state}}
+      <h5>Voici les propositions pour le vote</h5>
+        {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
+        {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
+        {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
+        {{#if klub.voteer}}
+        <div class=" btn btn-info col-md-offset-3">
+          <a target="_blank" href="{{klub.voteer}}">Je vote sur Voteer {{#if klub.dateprop}}avant le {{klub.dateprop}} {{/if}}</a>
+        </div>
+        {{/if}}
       {{/if}}
     </div>
     <div class>
@@ -34,8 +42,11 @@
       {{#if stateProp klub.state}}
         <button class="debutVote btn btn-primary">Passer au vote</button>
       {{/if}}
+      {{#if stateVote klub.state}}
+        <button class="choisi btn btn-primary">Vote fini, je donne le résultat</button>
       <!-- <button class="choiceDone btn btn-primary">Choix effectué</button>
       <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button> -->
+      {{/if}}
     </div>
   </div>
   </div>

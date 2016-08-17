@@ -19,12 +19,10 @@
             {{> bookNextView id=book_id}}
         {{/if}}
         {{#if stateIs 'voteEnCours'}}
-          <h4>Etape 2 - Vote en cours</h4>
-          <p>{{#if datevote}}Vous avez jusqu'au {{datevote}} pour voter.{{/if}}</p>
+          <h4>Etape 2 - Vote en cours {{#if dateprop}}jusqu'au {{dateprop}}{{/if}}</h4>
         {{/if}}
         {{#if stateIs 'propositions'}}
-          <h4>Etape 1 - Propositions en cours</h4>
-          <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
+          <h4>Etape 1 - Propositions en cours {{#if dateprop}}jusqu'au {{dateprop}}{{/if}}</h4>
           {{#if typeIs 'lecture'}}
           <h5>Il y a actuellement {{proposedBooksCount}} propositions de {{klubItem type}}</h5>{{/if}}
           {{#if typeIs 'jeu'}}

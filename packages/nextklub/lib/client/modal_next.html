@@ -29,6 +29,32 @@
   </div><!-- /.modal -->
 </template>
 
+<template name="modalChoix">
+  <div class="modal fade" id="modalChoix" tabindex="-1" role="dialog">
+    <div class="modal-content modal-dialog">
+      <form role="form" class="well">
+        <input type="hidden" class="form-control cid small" value={{k._id}}>
+        <div class="modal-header">
+          <h4 class="modal-title">Donner le choix</h4>
+        </div>
+        <div class="modal-body">
+          {{#if k.book_id}}
+            <label for="book">Elément associé</label>
+            <p>{{> bookTitle id=k.book_id}}</p>
+          {{else}}pas encore d'élément associé
+          {{/if}}
+          {{#if typeLecture k.type}}{{> associate selectName='selBook' nominees=nomineesBooks}}{{/if}}
+          {{#if typeJeu k.type}}{{> associate selectName='selGame' nominees=nomineesGames}}{{/if}}
+          {{#if typeScribing k.type}}  {{> associate selectName='selVideo' nominees=nomineesVideos}}{{/if}}
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class=" btn btn-primary">Confirmer</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</template>
+
 <template name="addKlubDate">
   <form id="add-klubdate">
     <div class="input-group date datetimepicker">

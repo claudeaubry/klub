@@ -19,7 +19,7 @@ Template.detailedNextKlub.helpers({
   stateVote: function(name) {
     return name === 'voteEnCours'
   },
-  stateChoisiProp: function(name) {
+  stateChoisi: function(name) {
     return name === 'choixAssocié'
   }
 })

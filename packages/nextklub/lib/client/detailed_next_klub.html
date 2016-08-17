@@ -43,9 +43,8 @@
         <button class="debutVote btn btn-primary">Passer au vote</button>
       {{/if}}
       {{#if stateVote klub.state}}
-        <button class="choisi btn btn-primary">Vote fini, je donne le résultat</button>
-      <!-- <button class="choiceDone btn btn-primary">Choix effectué</button>
-      <button class="archiveklub btn btn-primary">Ce klub a eu lieu</button> -->
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalChoix">Vote fini, je donne le résultat</button>
+    {{> modalChoix}}
       {{/if}}
     </div>
   </div>

@@ -15,22 +15,24 @@
       </div>
       <div class="panel-body">
         {{#if stateIs 'choixAssocié'}}
-          <h4>Etape 3 - Sujet choisi</h4>
+          <h4>Etape 3 - {{klubItem type}} choisi</h4>
             {{> bookNextView id=book_id}}
         {{/if}}
         {{#if stateIs 'voteEnCours'}}
           <h4>Etape 2 - Vote en cours</h4>
           <p>{{#if datevote}}Vous avez jusqu'au {{datevote}} pour voter.{{/if}}</p>
-          <h5>Il porte sur {{proposedBooksCount}} propositions</h5>
-          <!-- <h5>Le vote porte sur les sujets suivants : </h5>
+          <h5>Il porte sur {{proposedBooksCount}} propositions de {{klubItem type}}</h5>
             {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
             {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
-            {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}} -->
+            {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
         {{/if}}
         {{#if stateIs 'propositions'}}
           <h4>Etape 1 - Propositions en cours</h4>
           <p>{{#if dateprop}}Vous avez jusqu'au {{dateprop}} pour proposer.{{/if}}</p>
-          <h5>Il y a actuellement {{proposedBooksCount}} propositions</h5>
+          <h5>Il y a actuellement {{proposedBooksCount}} propositions de {{klubItem type}}</h5>
+          {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
+          {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
+          {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}}
         {{/if}}
       </div>
       <div class="panel-footer clearfix">

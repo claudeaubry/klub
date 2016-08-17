@@ -28,3 +28,12 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal -->
 </template>
+
+<template name="addKlubDate">
+  <form id="add-klubdate">
+    <div class="input-group date datetimepicker">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input class="set-due-date form-control" type="text" value={{ISOToFr k.d}} />
+  </div>
+  </form>
+</template>

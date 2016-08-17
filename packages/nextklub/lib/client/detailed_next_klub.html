@@ -10,8 +10,12 @@
     <div class="panel-body">
       <h4>Ce klub est dans l'état : {{klub.state}}</h4>
     <div class="col-md-8">
-      <h5>Voici les propositions actuelles</h5>
-      {{> booksProposed}}
+      <h5>Voici les propositions actuelles de {{klubItem klub.type}}</h5>
+      <!-- <h5>Le vote porte sur les sujets suivants : </h5>
+        {{#if typeIs 'lecture'}}{{> booksProposed}}{{/if}}
+        {{#if typeIs 'jeu'}}{{> gamesProposed}}{{/if}}
+        {{#if typeIs 'scribing'}}{{> videosProposed}}{{/if}} -->
+      {{> booksProposed t=klub.type}}
       <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
         Je fais une nouvelle proposition</button>
     <!-- <div class=" btn btn-info col-md-offset-3">
@@ -34,15 +38,6 @@
   </div>
   </div>
 </article>
-</template>
-
-<template name="addKlubDate">
-  <form id="add-klubdate">
-    <div class="input-group date datetimepicker">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-    <input class="set-due-date form-control" type="text" value={{ISOToFr d}} />
-  </div>
-  </form>
 </template>
 
 <template name="infosKlub">

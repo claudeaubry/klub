@@ -7,7 +7,6 @@ Template.nextKlubView.helpers({
 })
 
 Template.nextKlubView.helpers({
-  local: () => LocalData.findOne(),
   typeIs: function(type) {
     return this.type === type
   },

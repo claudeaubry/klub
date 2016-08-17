@@ -12,7 +12,7 @@ Template.nextKlubAdmin.helpers({
   stateIs: function(state) {
     return this.state === state
   },
-  nomineesBooks: () => new Library().nominees(),
+  nomineesBooks: () => new Library().bnominees(),
   nomineesGames: () => new Library().jnominees(),
   nomineesVideos: () => new Library().vnominees()
 })

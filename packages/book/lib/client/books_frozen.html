@@ -1,7 +1,5 @@
 <template name="frozen">
-
   <h3 class="well"><i class="glyphicon glyphicon-inbox"></i>Sujets de {{typeKlub}} proposés mais pas retenus</h3>
-
   <ul>
     <li>A chaque Klub, nous discutons d'un seul sujet, choisi préalablement.</li>
     <li>Les sujets proposés et non sélectionnés sont listés ci-dessous.</li>
@@ -9,37 +7,23 @@
       <span class="glyphicon glyphicon-repeat" ></span>
     </li>
   </ul>
-    {{#if lecture}}{{> booksFrozen}}{{/if}}
-    {{#if jeu}}{{> gamesFrozen}}{{/if}}
-    {{#if scribing}}{{> videosFrozen}}{{/if}}
-
+    {{#if lecture}}{{> itemsFrozen items=books}}{{/if}}
+    {{#if jeu}}{{> itemsFrozen items=games}}{{/if}}
+    {{#if scribing}}{{> itemsFrozen items=videos}}{{/if}}
     <a href="{{pathFor 'home' }}">
       <button class="btn btn-primary col-xs-offset-2 col-md-offset-4">Retour</button>
     </a>
 </template>
 
-<template name="booksFrozen">
-  {{#if books.count}}
-    {{> itemFrozen items=books titleList="Liste des livres déjà proposés"}}
-  {{/if}}
-</template>
-
-<template name="gamesFrozen">
-  {{#if games.count}}
-    {{> itemFrozen items=games titleList="Liste des jeux déjà proposés"}}
-  {{/if}}
-</template>
-
-<template name="videosFrozen">
-  {{#if videos.count}}
-    {{> itemFrozen items=videos titleList="Liste des sujets déjà proposés pour un scribing"}}
-  {{/if}}
+<template name="itemsFrozen">
+  <ul class="frozenBook col-xs-12 col-md-10 col-md-offset-1 list-group">
+    {{#each items}}
+      {{> itemFrozen}}
+    {{/each}}
+  </ul>
 </template>
 
 <template name="itemFrozen">
-  <h5 class="well col-xs-12">{{titleList}}</h5>
-  <ul class="frozenBook col-xs-12 col-md-10 col-md-offset-1 list-group">
-    {{#each items}}
   <li class="list-group-item text-center">
     <strong>{{this.title}}</strong>
     de {{this.author}}
@@ -50,6 +34,4 @@
       <span class="glyphicon glyphicon-repeat" alt="Proposer à nouveau"></span>
     </button>
   </li>
-  {{/each}}
-  </ul>
 </template>

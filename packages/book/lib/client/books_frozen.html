@@ -1,5 +1,5 @@
 <template name="frozen">
-  <h3 class="well"><i class="glyphicon glyphicon-inbox"></i>Sujets de {{typeKlub}} proposés mais pas retenus</h3>
+  <h3 class="well"><i class="glyphicon glyphicon-inbox"></i>Sujets proposés mais pas retenus</h3>
   <ul>
     <li>A chaque Klub, nous discutons d'un seul sujet, choisi préalablement.</li>
     <li>Les sujets proposés et non sélectionnés sont listés ci-dessous.</li>
@@ -10,9 +10,7 @@
     {{#if lecture}}{{> itemsFrozen items=books}}{{/if}}
     {{#if jeu}}{{> itemsFrozen items=games}}{{/if}}
     {{#if scribing}}{{> itemsFrozen items=videos}}{{/if}}
-    <a href="{{pathFor 'home' }}">
-      <button class="btn btn-primary col-xs-offset-2 col-md-offset-4">Retour</button>
-    </a>
+      <button onclick="history.back();" class="btn btn-primary col-md-offset-5">Retour au klub de {{typeKlub}}</button>
 </template>
 
 <template name="itemsFrozen">

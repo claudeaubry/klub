@@ -1,3 +1,10 @@
+Template.frozen.helpers({
+  typeKlub: function() { return Session.get('typeKlub')},
+  lecture: function() { return Session.get('typeKlub') === 'lecture' },
+  jeu: function() { return Session.get('typeKlub') === 'jeu' },
+  scribing: function() { return Session.get('typeKlub') === 'scribing' }
+})
+
 Template.booksFrozen.helpers({
   books: () => Books.find({type: 'book', statut: 'frozen'})
 })

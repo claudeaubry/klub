@@ -8,18 +8,18 @@
             <span>&times;</span>
             <span class="sr-only">Close</span>
           </button>
-          <h4 class="modal-title">Data proposition</h4>
+          <h4 class="modal-title">Informations à propos de ce klub</h4>
         </div>
         <div class="modal-body">
-        <label for="date">Date actuelle</label>
-        <input type="text" class="form-control state small" value={{k.state}} disabled>
-        <input type="text" class="form-control date small" value={{ISOToFr k.date}} disabled>
-      <label for="date">Changer la date</label>
-      {{> addKlubDate d=k.date}}
-      <label for="hour">Heure prévue</label>
-      <input type="text" class="form-control hour small" value={{k.hour}} >
-      <label for="dateprop">Date limite de l'étape en cours</label>
-      <input type="text" class="form-control dateprop small" value={{k.dateprop}}>
+          <label for="date">Date actuelle</label>
+          <input type="text" class="form-control state small" value={{k.state}} disabled>
+          <input type="text" class="form-control date small" value={{ISOToFr k.date}} disabled>
+          <label for="date">Changer la date</label>
+          {{> addKlubDate d=k.date}}
+          <label for="hour">Heure prévue</label>
+          <input type="text" class="form-control hour small" value={{k.hour}} >
+          <label for="dateprop">Date limite de l'étape en cours</label>
+          <input type="text" class="form-control dateprop small" value={{k.dateprop}}>
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Enregistrer</button>

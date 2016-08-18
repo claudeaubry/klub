@@ -22,7 +22,6 @@ Template.modalProposition.events({
 
 Template.modalChoix.helpers({
   k: function () {
-    // this provides from url parameter
     return NextKlub.findOne({_id: this.toString()})
   },
   typeLecture: function(name) {

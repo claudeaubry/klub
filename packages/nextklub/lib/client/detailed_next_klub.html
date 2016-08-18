@@ -11,7 +11,7 @@
       <h4>Ce klub est dans l'état : {{klub.state}}</h4>
     <div class="col-md-8">
       {{#if stateProp klub.state}}
-          <h5>Voici les propositions actuelles de {{klubItem klub.type}}</h5>
+          <h5>Voici les propositions actuelles</h5>
             {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
             {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
             {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
@@ -38,10 +38,6 @@
       {{/if}}
     </div>
     <div class>
-      La date prévue est le {{ISOToFr klub.date}}
-      <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Je donne plus d'infos sur l'état courant</button>
-    {{> modalProposition}}
-      <button class="raz btn btn-default">J'annule tout</button>
       {{#if stateProp klub.state}}
         <button class="debutVote btn btn-primary">Passer au vote</button>
       {{/if}}
@@ -52,17 +48,20 @@
       {{#if stateChoisi klub.state}}
         <button class="klubFini btn btn-primary">Ce klub a eu lieu</button>
       {{/if}}
+      <button class="raz btn btn-default">Revenir au début</button>
+      <div class="col-md-4">
+        <h5>Infos pratiques</h5>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-danger">Date prévue : {{ISOToFr klub.date}}</li>
+          <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
+          <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
+          <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Meetup</a></li>
+        </ul>
+        <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Modifier ces infos</button>
+       {{> modalProposition}}
+     </div>
     </div>
   </div>
   </div>
 </article>
-</template>
-
-<template name="infosKlub">
-  <ul class="list-group col-md-12">
-    <li class="list-group-item list-group-item-danger">Infos pratiques</li>
-    <li class="list-group-item list-group-item-warning">Heure : {{hour}}</li>
-    <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
-    <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Meetup</a></li>
-  </ul>
 </template>

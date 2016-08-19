@@ -11,6 +11,7 @@ Template.modalBook.events({
     b.type = new Library().itemOfKlub(Session.get('typeKlub'))
     b.title = $('input#titleSubmit').val()
     b.author = $('input#authorSubmit').val()
+    b.desc = $('textarea#descSubmit').val()
     b.teaser = $('textarea#teaserSubmit').val()
     b.site = $('input#siteSubmit').val()
     b.img = $('input#imgSubmit').val()

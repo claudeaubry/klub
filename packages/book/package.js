@@ -20,9 +20,7 @@ Package.on_use(function (api) {
     'lib/client/book_list.html',
     'lib/client/book_list.js',
     'lib/client/book_edit.html',
-    'lib/client/book_edit.js',
-    'lib/client/book_modify.html',
-    'lib/client/book_modify.js'
+    'lib/client/book_edit.js'
   ],
     'client')
   api.add_files('lib/server/server.js', 'server')

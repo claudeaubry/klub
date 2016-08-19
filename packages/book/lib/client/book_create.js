@@ -1,29 +1,28 @@
+Template.modalBook.helpers({
+  book: () =>  new Library().bookById(Session.get('selectedBookId'))
+})
+
 Template.modalBook.events({
-
   'submit form': (event) => {
-    type = $('input[name="optionsItem"]:checked').val()
-    title = $('input#titleSubmit').val()
-    author = $('input#authorSubmit').val()
-    teaser = $('textarea#teaserSubmit').val()
-    site = $('input#siteSubmit').val()
-    img = $('input#imgSubmit').val()
-    origin = $('input#originSubmit').val()
-
+    const b = {}
+    bid = Session.get('selectedBookId')
     event.preventDefault()
-    if (!title)
-      throw alert('Il faut un titre !')
 
-    Books.insert({
-      type: type,
-      title: title,
-      author: author,
-      teaser: teaser,
-      site: site,
-      img: img,
-      origin: origin,
-      proposedAt: moment().format(),
-      statut: 'proposed'
-    })
+    b.type = new Library().itemOfKlub(Session.get('typeKlub'))
+    b.title = $('input#titleSubmit').val()
+    b.author = $('input#authorSubmit').val()
+    b.teaser = $('textarea#teaserSubmit').val()
+    b.site = $('input#siteSubmit').val()
+    b.img = $('input#imgSubmit').val()
+    b.origin = $('input#originSubmit').val()
+    b.statut = 'proposed'
+    if (!b.title)
+      throw alert('Il faut un titre !')
+    if (bid === null) {
+      b.proposedAt = moment().format()
+      Books.insert(b)
+    } else
+      Books.update(bid, b)
     $('#modalBook').modal('hide')
   }
 })

@@ -11,29 +11,18 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label class="radio-inline">
-              <input type="radio" name="optionsItem" id="book" value="book" checked>Livre
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="optionsItem" id="game" value="game">Jeu
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="optionsItem" id="vidéo" value="video">Sujet pour scribe
-            </label>
-          </div>
-          <div class="form-group">
           <label for="author">Titre</label>
-            <input type="text" class="form-control" id="titleSubmit" placeholder="Le titre (obligatoire)">
+            <input type="text" class="form-control" id="titleSubmit" value={{book.title}} placeholder="Le titre (obligatoire)">
             <label for="author">Auteur</label>
-            <input type="text" class="form-control" id="authorSubmit" placeholder="L'auteur">
+            <input type="text" class="form-control" id="authorSubmit" value={{book.author}} placeholder="L'auteur">
             <label for="teaser">Pourquoi c'est bien ?</label>
-            <textarea class="form-control" id="teaserSubmit" placeholder="Dites pourquoi ce serait bien de choisir votre proposition"></textarea>
+            <textarea class="form-control" id="teaserSubmit" value={{book.teaser}} placeholder="Dites pourquoi ce serait bien de choisir votre proposition"></textarea>
             <label for="site">Lien vers un site</label>
-            <input type="url" class="form-control" id="siteSubmit" placeholder="Donnez un lien qui permet d'en savoir plus">
+            <input type="url" class="form-control" id="siteSubmit" value={{book.site}} placeholder="Donnez un lien qui permet d'en savoir plus">
             <label for="img">Lien vers une image</label>
-            <input type="url" class="form-control" id="imgSubmit" placeholder="Donnez un lien vers une image représentative">
+            <input type="url" class="form-control" id="imgSubmit" value={{book.img}} placeholder="Donnez un lien vers une image représentative">
             <label for="origin">Qui êtes-vous ?</label>
-            <input type="text" class="form-control" id="originSubmit" placeholder="Dites qui vous êtes">
+            <input type="text" class="form-control" id="originSubmit" value={{book.origin}} placeholder="Dites qui vous êtes">
           </div>
         </div>
         <div class="modal-footer">

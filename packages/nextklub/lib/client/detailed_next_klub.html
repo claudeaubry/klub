@@ -15,7 +15,7 @@
             {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
             {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
             {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
-          <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook">
+          <button class="addBook btn btn-primary" data-toggle="modal" data-target="#modalBook">
             Je fais une nouvelle proposition</button>
           {{> modalBook}}
           <a href="{{pathFor 'frozen'}}">

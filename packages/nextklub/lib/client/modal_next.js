@@ -53,6 +53,7 @@ Template.modalChoix.events({
     else
       throw alert('Il faut associer un élément au préalable !')
     ktarget.state = 'choixAssocié'
+    ktarget.voteer = $('input.vote').val()
     NextKlub.update(_id, ktarget)
     $('#modalChoix').modal('hide')
   }

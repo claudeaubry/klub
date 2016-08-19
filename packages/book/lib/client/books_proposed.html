@@ -37,9 +37,12 @@
   <li class="list-group-item">
     <strong>{{this.title}}</strong>
     {{#if this.author}}de {{this.author}}{{/if}}<br/>
-    <a href="{{pathFor 'itemEdit'}}"><button class="glyphicon glyphicon-pencil pull-right" alt="Proposer à nouveau"></button></a>
+    <!-- <a href="{{pathFor 'itemEdit'}}"> -->
+    <button class="editBook glyphicon glyphicon-pencil pull-right" data-toggle="modal" data-target="#modalBook" alt="Modifier"></button>
+    <button class="frozeBook glyphicon glyphicon-star pull-right" alt="Geler"></button>
     {{#if this.origin}}  Proposé par {{this.origin}}{{/if}}
     {{#if this.teaser}}car {{this.teaser}}{{/if}}<br/>
     {{#if this.site}}- <a target="_blank" href="{{this.site}}">en savoir plus</a>{{/if}}
   </li>
+    {{> modalBook}}
 </template>

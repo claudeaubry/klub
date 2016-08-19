@@ -25,6 +25,10 @@ Template.detailedNextKlub.helpers({
 })
 
 Template.detailedNextKlub.events({
+  'click .addBook': function(elt) {
+    elt.preventDefault()
+    Session.set('selectedBookId', null)
+  },
   'click .debutVote': function(elt) {
     const k = NextKlub.findOne({_id: this.toString()})
     elt.preventDefault()

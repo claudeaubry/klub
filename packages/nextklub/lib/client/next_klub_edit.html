@@ -41,7 +41,7 @@
       <div class="modal-body">
       <div class="form-group">
       <label for="date">Date prévue</label>
-        {{> addKlubDate}}
+        {{> addKlubDate d=date}}
       <label for="hour">Heure prévue</label>
       <input type="text" class="form-control hour small" value={{hour}}>
       {{#if stateIs 'propositions'}}

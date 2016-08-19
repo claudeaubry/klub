@@ -24,6 +24,13 @@ Library = class Library {
   proposedCount(type) {
     return Books.find({type: type, statut: 'proposed'}).count()
   }
+  itemOfKlub (typeKlub) {
+    let typeItem
+    if ( typeKlub === 'lecture' ) typeItem = 'book'
+    if ( typeKlub === 'jeu' ) typeItem = 'game'
+    if ( typeKlub === 'scribing' ) typeItem = 'video'
+    return typeItem
+  }
 }
 
 associateBookToNextKlub = id => {

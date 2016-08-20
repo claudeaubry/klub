@@ -9,8 +9,8 @@
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h1 class="panel-title text-left">
-          <span class="glyphicon {{glyph}}" style="color:white"></span>
-          <span class="heading-title">Prochain klub de {{type}} {{#if date}} le {{ISOToFr date}} {{else}} : pas encore de date {{/if}}</span>
+          <span class="glyphicon {{klubGlyph type}}" style="color:white"></span>
+          <span class="heading-title">Klub de {{type}} {{#if date}} le {{ISOToFr date}} {{else}} : pas encore de date {{/if}}</span>
         </h1>
       </div>
       <div class="panel-body">
@@ -19,10 +19,11 @@
             {{> bookNextView id=book_id}}
         {{/if}}
         {{#if stateIs 'voteEnCours'}}
-          <h4>Etape 2 - Vote en cours {{#if dateprop}}jusqu'au {{dateprop}}{{/if}}</h4>
+          <h4>Etape 2 - Vote en cours</h4>
+          <h5>{{#if dateprop}}Date limite pour le vote : jusqu'au {{dateprop}}{{/if}}</h5>
         {{/if}}
         {{#if stateIs 'propositions'}}
-          <h4>Etape 1 - Propositions en cours {{#if dateprop}}jusqu'au {{dateprop}}{{/if}}</h4>
+          <h4>Etape 1 - Propositions en cours</h4>
           <h5>Actuellement, le nombre de propositions est de :
             {{#if typeIs 'lecture'}} {{proposedBooksCount}}{{/if}}
             {{#if typeIs 'jeu'}} {{proposedGamesCount}}{{/if}}

@@ -3,7 +3,6 @@
       <dt>Proposition de valeur</dt><dd>{{club.valueProposition}}</dd>
       <dt>Thème des sujets</dt><dd>{{club.theme}}</dd>
       <dt>Types de klub</dt><dd>{{club.types}}</dd>
-      <dt>Déroulement</dt><dd>{{club.workflow}}</dd>
     </dl>
 </template>
 
@@ -15,4 +14,16 @@
       <dt>Licence</dt> <dd>{{app.license}} : <a target="_blank" href={{app.github}}>pull request et issue sur GitHub</a></dd>
       <dt>Feedback</dt><dd>{{app.feedback}} : <a href="mailto:{{app.mail}}?subject=Klub">envoi par mail</a></dd>
     </dl>
+</template>
+
+<template name="itemsProposal">
+  <h5 class="well"><i class="glyphicon glyphicon-play-circle"></i>Déroulement d'un klub, les étapes</h5>
+  <ul>
+    <li>Etape 1 - Propositions en cours : tout le monde peut proposer un sujet (livre, jeu, vidéo ou autre).</li>
+    <li>Etape 2 - Vote en cours : la sélection est en général réalisée avec l'application Voteer,
+      selon <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet_avec_rangement_des_paires_par_ordre_d%C3%A9croissant" target="_blank">le vote Condorcet avec rangement des paires par ordre décroissant.</a>
+    </li>
+    <li>Etape 3 - Le sujet est choisi, on peut le préparer jusqu'à la tenue du klub.</li>
+    <li>Le klub a eu lieu, il est complété et conservé et on revient à l'étape 1 pour le klub suivant.</li>
+  </ul>
 </template>

@@ -9,10 +9,6 @@ Template.videosProposed.helpers({
   videos: () => new Library().vnominees()
 })
 
-Template.itemsProposal.helpers({
-  app: () =>  klubAppDatas
-})
-
 Template.itemli.events({
   'click .editBook': function(elt) {
     // const book = new Library().bookById(this._id)

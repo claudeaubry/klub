@@ -12,7 +12,6 @@ Template.pastKlubEdit.events({
 
     elt.preventDefault()
     klub.type = $('input.type').val()
-    klub.glyph = $('input.glyph').val()
     klub.i = +$('input.i').val()
     klub.date = $('input.date').val()
     klub.voteer = $('input.vote').val()

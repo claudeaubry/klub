@@ -17,3 +17,10 @@ Template.registerHelper('klubItem', ( typeKlub ) => {
   if ( typeKlub === 'scribing' ) typeItem = 'video'
   return typeItem
 })
+Template.registerHelper('klubGlyph', ( typeKlub ) => {
+  let glyph
+  if ( typeKlub === 'lecture' ) glyph = 'glyphicon-book'
+  if ( typeKlub === 'jeu' ) glyph = 'glyphicon-knight'
+  if ( typeKlub === 'scribing' ) glyph = 'glyphicon-pencil'
+  return glyph
+})

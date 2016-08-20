@@ -4,3 +4,7 @@ Template.klub.helpers({
 Template.appliKlub.helpers({
   app: () =>  klubAppDatas
 })
+
+Template.itemsProposal.helpers({
+  app: () =>  klubAppDatas
+})

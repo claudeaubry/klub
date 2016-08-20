@@ -2,8 +2,11 @@
   <article class="panelKlub col-xs-12 col-md-offset-1 col-md-10">
     <div class="panel panel-primary">
       <div class="panel-heading">
+        <h1 class="panel-title text-left">
+        <span class="glyphicon {{klubGlyph klub.type}}" style="color:white"></span>
         <span class="heading-title">Klub numéro {{klub.i}} - {{klub.type}}</span>
-        <span class="heading-date pull-right">{{klub.date}}</span>
+        <span class="heading-date pull-right">{{ISOToFr klub.date}}</span>
+        </h1>
       </div>
       <div class="panel-body">
         <div class="col-md-4">

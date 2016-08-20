@@ -16,7 +16,7 @@
             {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
             {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
           <button class="addBook btn btn-primary" data-toggle="modal" data-target="#modalBook">
-            Je fais une nouvelle proposition</button>
+            Je fais une nouvelle proposition {{#if klub.dateprop}}avant le {{klub.dateprop}}{{/if}}</button>
           {{> modalBook}}
           <a href="{{pathFor 'frozen'}}">
             <button class="btn btn-primary ">Je revois les anciennes propositions</button>
@@ -29,7 +29,7 @@
         {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
         {{#if klub.voteer}}
         <div class=" btn btn-info col-md-offset-3">
-          <a target="_blank" href="{{klub.voteer}}">Je vote sur Voteer {{#if klub.dateprop}}avant le {{klub.dateprop}} {{/if}}</a>
+          <a target="_blank" href="{{klub.voteer}}">Je vote sur Voteer {{#if klub.dateprop}}avant le {{klub.dateprop}}{{/if}}</a>
         </div>
         {{/if}}
       {{/if}}
@@ -46,15 +46,14 @@
     {{> modalChoix}}
       {{/if}}
       {{#if stateChoisi klub.state}}
-        <button class="klubFini btn btn-primary">Ce klub a eu lieu</button>
+        <button class="klubFini btn btn-primary">Dire que ce klub a eu lieu</button>
       {{/if}}
-      <button class="raz btn btn-default">Revenir au début</button>
       <div class="col-md-4">
         <h5>Infos pratiques</h5>
         <ul class="list-group">
           <li class="list-group-item list-group-item-danger">Date prévue : {{ISOToFr klub.date}}</li>
           <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
-          <li class="list-group-item list-group-item-info">Lieu : {{local.place}} <a target="_blank" href="{{local.map}}">(plan)</a></li>
+          <li class="list-group-item list-group-item-info">Lieu : {{klub.place}} </li>
           <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Meetup</a></li>
         </ul>
         <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Modifier ces infos</button>

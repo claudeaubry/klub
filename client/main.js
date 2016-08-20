@@ -7,7 +7,7 @@ Meteor.startup(function () {
 
 Template.registerHelper('ISOToFr', ( isoString ) => {
   if ( isoString )
-    return moment( isoString ).locale('fr').format( 'D MMMM YYYY' )
+    return moment( isoString ).locale('fr').format( 'dddd D MMMM YYYY' )
 })
 
 Template.registerHelper('klubItem', ( typeKlub ) => {

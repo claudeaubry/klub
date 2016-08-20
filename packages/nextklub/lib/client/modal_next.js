@@ -6,7 +6,7 @@ Template.modalProposition.helpers({
 })
 Template.modalProposition.events({
   'submit form': event => {
-    const picker   = $( '.datetimepicker' )
+    let picker   = $( '.datetimepicker' )
     const dateK = picker.data( 'DateTimePicker' ).date()
     const _id = $('input.kid').val()
     const ktarget = NextKlub.findOne(_id)
@@ -14,6 +14,7 @@ Template.modalProposition.events({
     event.preventDefault()
     ktarget.date = dateK.format()
     ktarget.hour = $('input.hour').val()
+    ktarget.place = $('input.place').val()
     ktarget.dateprop = $('input.dateprop').val()
     NextKlub.update(_id, ktarget)
     $('#modalProposition').modal('hide')

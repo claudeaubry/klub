@@ -15,7 +15,9 @@
     <label for="origin">Conseillé par</label>
     <input type="text" class="form-control origin small" value={{origin}}>
     <label for="teaser">Teaser</label>
-    <textarea rows="3" class="form-control teaser small" id="teaser">{{teaser}}</textarea>
+    <textarea maxlength="100" class="form-control teaser small" id="teaser">{{teaser}}</textarea>
+    <label for="desc">Description</label>
+    <textarea class="form-control desc small" id="desc">{{desc}}</textarea>
     <label for="statut">Statut</label>
     <input type="text" class="form-control statut small" value={{statut}}>
     <label for="proposedAt">Date de proposition</label>

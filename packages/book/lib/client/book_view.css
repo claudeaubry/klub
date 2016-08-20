@@ -5,16 +5,11 @@ article.book .book-title {
 article.book h1,
 article.book h2 {
   margin: 0;
-  padding: 0;
-  font-size: 1.2em;
-}
-
-article.book h2 {
-  font-size: 1em;
   padding: .5em 0;
+  font-size: 1.0em;
 }
-
 
 article.book .book-cover {
-  min-height: 50px;
+  min-height: 80px;
+  max-height: 180px;
 }

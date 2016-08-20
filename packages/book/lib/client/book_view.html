@@ -18,7 +18,10 @@
 
 <template name="bookDetails">
   {{> bookNextView}}
-  <div class="col-md-8">{{#if oneBook.origin}}Ce sujet avait été proposé par : {{oneBook.origin}}{{#if oneBook.proposedAt}} le {{oneBook.proposedAt}}{{/if}}{{/if}}</div>
+  <div class="col-md-8">{{#if oneBook.desc}}La description :
+    <p>{{oneBook.desc}}</p>
+    {{/if}}<br/>
+    {{#if oneBook.origin}}Ce sujet avait été proposé par : {{oneBook.origin}}{{#if oneBook.proposedAt}} le {{oneBook.proposedAt}}{{/if}}{{/if}}</div>
 </template>
 
 <template name="imageItem">
@@ -27,7 +30,7 @@
     {{#if typeIs 'game'}}_game.jpg{{/if}}
     {{#if typeIs 'video'}}_video.jpg{{/if}}
   {{/if}}"
-   alt="Première de couverture" class="img-thumbnail col-sm-3 col-md-4">
+   class="img-thumbnail col-sm-3 col-md-4">
 </template>
 
 <template name="att">

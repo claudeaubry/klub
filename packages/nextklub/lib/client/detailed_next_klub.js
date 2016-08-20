@@ -51,7 +51,7 @@ Template.detailedNextKlub.events({
     createPastKlub(pastKlub)
     nextKlub.state = 'propositions'
     nextKlub.type = k.type
-    nextKlub.glyph = k.glyph
+    nextKlub.place = LocalData.findOne().place
     NextKlub.update(k._id, nextKlub)
     Router.go('home')
   }

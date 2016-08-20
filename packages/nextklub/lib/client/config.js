@@ -15,18 +15,21 @@ Template.configKlubs.events({
     NextKlub.remove(this._id)
   },
   'click .launchklub': elt => {
+    let defaultPlace = LocalData.findOne().place
     elt.preventDefault()
     NextKlub.insert({state: 'propositions', type: 'lecture',
-      glyph: 'glyphicon-book'})
+      place: defaultPlace})
   },
   'click .launchkjeub': elt => {
+    let defaultPlace = LocalData.findOne().place
     elt.preventDefault()
     NextKlub.insert({state: 'propositions', type: 'jeu',
-      glyph: 'glyphicon-knight'})
+      place: defaultPlace})
   },
   'click .launchskrib': elt => {
+    let defaultPlace = LocalData.findOne().place
     elt.preventDefault()
     NextKlub.insert({state: 'propositions', type: 'scribing',
-      glyph: 'glyphicon-pencil'})
+      place: defaultPlace})
   }
 })

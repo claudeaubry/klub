@@ -11,12 +11,13 @@ nextklub
 pastklub
 
 czbaker:lightbox2
-ecmascript@0.5.7
-standard-minifier-css
-standard-minifier-js
+ecmascript@0.5.8
+standard-minifier-css@1.2.0
+standard-minifier-js@1.2.0
 momentjs:moment
 twbs:bootstrap
 tsega:bootstrap3-datetimepicker
 rzymek:moment-locale-fr
 peppelg:bootstrap-3-modal
 manuel:viewmodel
+shell-server

@@ -10,7 +10,7 @@ avec Scalingo
 - tunnel
 $ scalingo -a klubat db-tunnel SCALINGO_MONGO_URL
 
-- sauver données de scalingo dump (ouvrir une autre fenêtre)
+- sauver données de scalingo dump (ouvrir une autre fenêtre, se placer dans dbtools)
 $ mongodump -u klubat-2526 -p KNgGqZYEFEnQaaFj604o -h 127.0.0.1:10000 -d klubat-2526
 
 ### Restore en distant

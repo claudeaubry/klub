@@ -1,6 +1,6 @@
 Library = class Library {
   constructor() {
-    this.books = Books.find({}, {sort: {statut: -1}})
+    this.books = Books.find({}, {sort: {type: 1, statut: 1, date: -1}})
   }
   bnominees() {
     return Books.find({type: 'book', statut: 'proposed'},
@@ -36,6 +36,7 @@ Library = class Library {
 associateBookToNextKlub = id => {
   const book = new Library().bookById(id)
   const previousBook = new Library().selected(book.type)
+
   if (previousBook) {
     previousBook.statut = 'proposed'
     Books.update(previousBook._id, previousBook)
@@ -46,6 +47,7 @@ associateBookToNextKlub = id => {
 
 discussedBookWhenPastKlub = id => {
   const book = new Library().bookById(id)
+
   book.statut = 'discussed'
   Books.update(id, book)
 }

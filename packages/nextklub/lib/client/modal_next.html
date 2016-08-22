@@ -47,7 +47,7 @@
           {{#if typeJeu k.type}}{{> associate selectName='selGame' nominees=nomineesGames}}{{/if}}
           {{#if typeScribing k.type}}  {{> associate selectName='selVideo' nominees=nomineesVideos}}{{/if}}
           <label for="vote">Lien vers le résultat du vote</label>
-          <input type="url" class="form-control vote small" placeholder="url de voteer (optionnel)">
+          <input type="url" class="form-control vote small" value={{k.voteer}}>
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Confirmer le choix</button>

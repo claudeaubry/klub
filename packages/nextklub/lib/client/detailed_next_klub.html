@@ -8,7 +8,7 @@
       </h1>
     </div>
     <div class="panel-body">
-      <h4>Ce klub est dans l'état : {{klub.state}}</h4>
+      <h4>Ce klub est à l'étape : {{klub.state}}</h4>
     <div class="col-md-8">
       {{#if stateProp klub.state}}
           <h5>Voici les propositions actuelles</h5>
@@ -37,29 +37,24 @@
       {{> bookNextView id=klub.book_id}}
       {{/if}}
     </div>
-    <div class>
-      {{#if stateProp klub.state}}
-        <button class="debutVote btn btn-primary">Passer au vote</button>
-      {{/if}}
-      {{#if stateVote klub.state}}
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalChoix">Vote fini, je donne le résultat</button>
-    {{> modalChoix}}
-      {{/if}}
-      {{#if stateChoisi klub.state}}
-        <button class="klubFini btn btn-primary">Dire que ce klub a eu lieu</button>
-      {{/if}}
+    <div class="col-md-4">
+      <h5>Action sur le déroulement du klub</h5>
+      {{#if stateProp klub.state}}<button class="debutVote btn btn-primary">Passer au vote</button>{{/if}}
+      {{#if stateVote klub.state}}<button class="btn btn-primary" data-toggle="modal" data-target="#modalChoix">Vote fini, donner le résultat</button>
+    {{> modalChoix}}{{/if}}
+      {{#if stateChoisi klub.state}}<button class="klubFini btn btn-primary">Dire que ce klub a eu lieu</button>{{/if}}
+</div>
       <div class="col-md-4">
         <h5>Infos pratiques</h5>
         <ul class="list-group">
           <li class="list-group-item list-group-item-danger">Date prévue : {{ISOToFr klub.date}}</li>
           <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{klub.place}} </li>
-          <li class="list-group-item list-group-item-success"><a target="_blank" href="{{local.site}}">Meetup</a></li>
+          <li class="list-group-item list-group-item-success"><a target="_blank" href="{{klub.site}}">Site pour s'inscrire</a></li>
         </ul>
-        <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Modifier ces infos</button>
+        <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Compléter ou modifier ces infos</button>
        {{> modalProposition}}
      </div>
-    </div>
   </div>
   </div>
 </article>

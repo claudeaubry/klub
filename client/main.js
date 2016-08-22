@@ -24,3 +24,10 @@ Template.registerHelper('klubGlyph', ( typeKlub ) => {
   if ( typeKlub === 'scribing' ) glyph = 'glyphicon-pencil'
   return glyph
 })
+Template.registerHelper('defaultImg', ( typeItem ) => {
+  let img
+  if ( typeItem === 'book' ) img = '_book.jpg'
+  if ( typeItem === 'game' ) img = '_jeu.jpg'
+  if ( typeItem === 'video' ) img = '_crayon.jpg'
+  return img
+})

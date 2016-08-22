@@ -26,9 +26,7 @@
 
 <template name="imageItem">
   <img src="{{#if this.img}}{{this.img}}{{else}}
-    {{#if typeIs 'book'}}_book.jpg{{/if}}
-    {{#if typeIs 'game'}}_game.jpg{{/if}}
-    {{#if typeIs 'video'}}_video.jpg{{/if}}
+    {{defaultImg this.type}}
   {{/if}}"
    class="img-thumbnail book-cover col-sm-3 col-md-4">
 </template>

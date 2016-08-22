@@ -52,6 +52,7 @@ Template.detailedNextKlub.events({
     nextKlub.state = 'propositions'
     nextKlub.type = k.type
     nextKlub.place = LocalData.findOne().place
+    nextKlub.site = LocalData.findOne().site
     NextKlub.update(k._id, nextKlub)
     Router.go('home')
   }

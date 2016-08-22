@@ -29,6 +29,12 @@ Template.detailedNextKlub.events({
     elt.preventDefault()
     Session.set('selectedBookId', null)
   },
+  'click .editChoosenBook': function(elt) {
+    const k = NextKlub.findOne({_id: this.toString()})
+
+    elt.preventDefault()
+    Session.set('selectedBookId', k.book_id)
+  },
   'click .debutVote': function(elt) {
     const k = NextKlub.findOne({_id: this.toString()})
     elt.preventDefault()

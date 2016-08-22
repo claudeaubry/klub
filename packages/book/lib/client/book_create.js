@@ -16,11 +16,11 @@ Template.modalBook.events({
     b.site = $('input#siteSubmit').val()
     b.img = $('input#imgSubmit').val()
     b.origin = $('input#originSubmit').val()
-    b.statut = 'proposed'
     if (!b.title)
       throw alert('Il faut un titre !')
     if (bid === null) {
       b.proposedAt = moment().format()
+      b.statut = 'proposed'
       Books.insert(b)
     } else
       Books.update(bid, b)

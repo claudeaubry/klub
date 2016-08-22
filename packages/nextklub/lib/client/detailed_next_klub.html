@@ -34,7 +34,10 @@
         {{/if}}
       {{/if}}
       {{#if stateChoisi klub.state}}
-      {{> bookNextView id=klub.book_id}}
+      {{> bookDetails id=klub.book_id}}
+      <br/>
+      <button class="editChoosenBook btn btn-primary" data-toggle="modal" data-target="#modalBook" alt="Modifier l'élément choisi">Modifier</button>
+      {{> modalBook}}
       {{/if}}
     </div>
     <div class="col-md-4">

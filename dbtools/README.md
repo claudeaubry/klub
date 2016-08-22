@@ -30,6 +30,8 @@ $ mongorestore -u klubat-2526 -p KNgGqZYEFEnQaaFj604o -h 127.0.0.1:10000 -d klub
 Comment injecter dans local les données sauvegardées par un backup ?
 - Meteor doit fonctionner. On lance dans un terminal la commande :
 $ mongorestore -h localhost:3001 -d meteor dump/urlsauvegardéeavecdestirets --objcheck --drop
+Exemple : 
+mongorestore -h localhost:3001 -d meteor dump/klubat-2526 --objcheck --drop
 
 ### Déployer avec scalingo
 $ git push scalingo master

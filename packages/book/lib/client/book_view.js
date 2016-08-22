@@ -11,12 +11,6 @@ Template.bookTitle.helpers({
   }
 })
 
-Template.bookNextView.helpers({
-  oneBook: function () {
-    return new Library().bookById(this.id)
-  }
-})
-
 Template.bookDetails.helpers({
   oneBook: function () {
     return new Library().bookById(this.id)

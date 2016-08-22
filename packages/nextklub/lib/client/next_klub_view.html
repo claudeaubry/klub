@@ -16,7 +16,7 @@
       <div class="panel-body">
         {{#if stateIs 'choixAssocié'}}
           <h4>Etape 3 - Sujet choisi</h4>
-            {{> bookNextView id=book_id}}
+            {{> bookView id=book_id}}
         {{/if}}
         {{#if stateIs 'voteEnCours'}}
           <h4>Etape 2 - Vote en cours</h4>
@@ -33,7 +33,7 @@
       </div>
       <div class="panel-footer clearfix">
           <a href="{{pathFor 'detailedNextKlub'}}">
-            <button class="detailNext btn btn-primary col-xs-offset-2 col-md-offset-4">En savoir plus sur ce klub</button>
+            <button class="detailNext btn btn-primary col-xs-offset-2 col-md-offset-4">En savoir plus</button>
           </a>
       </div>
     </div>

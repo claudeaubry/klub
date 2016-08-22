@@ -11,16 +11,11 @@
   {{title}}
 </template>
 
-<template name="bookNextView">
-  {{> bookView}}
-  <div class="col-md-8">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Lien vers le site "officiel"</a>{{/if}}</div>
-</template>
 
 <template name="bookDetails">
-  {{> bookNextView}}
-  <div class="col-md-8">{{#if oneBook.desc}}La description :
-    <p>{{oneBook.desc}}</p>
-    {{/if}}<br/>
+  {{> bookView}}
+  <div class="col-md-8">{{#if oneBook.site}}<a target="_blank" href="{{oneBook.site}}">Lien vers le site "officiel"</a>{{/if}}</div>
+  <div class="col-md-8">{{#if oneBook.desc}}La description : {{oneBook.desc}}{{/if}}<br/>
     {{#if oneBook.origin}}Ce sujet avait été proposé par : {{oneBook.origin}}{{#if oneBook.proposedAt}} le {{oneBook.proposedAt}}{{/if}}{{/if}}</div>
 </template>
 

@@ -15,6 +15,7 @@ Template.modalProposition.events({
     ktarget.date = dateK.format()
     ktarget.hour = $('input.hour').val()
     ktarget.place = $('input.place').val()
+    ktarget.site = $('input.site').val()
     ktarget.dateprop = $('input.dateprop').val()
     NextKlub.update(_id, ktarget)
     $('#modalProposition').modal('hide')

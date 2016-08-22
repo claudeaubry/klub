@@ -16,14 +16,16 @@ Template.modalBook.events({
     b.site = $('input#siteSubmit').val()
     b.img = $('input#imgSubmit').val()
     b.origin = $('input#originSubmit').val()
+    b.proposedAt = moment().format()
     if (!b.title)
       throw alert('Il faut un titre !')
     if (bid === null) {
-      b.proposedAt = moment().format()
       b.statut = 'proposed'
       Books.insert(b)
-    } else
+    } else {
+      b.statut = new Library().bookById(bid).statut
       Books.update(bid, b)
+    }
     $('#modalBook').modal('hide')
   }
 })

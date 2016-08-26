@@ -42,7 +42,7 @@
     </div>
     <div class="col-md-4">
       <h5>Action sur le déroulement du klub</h5>
-      {{#if stateProp klub.state}}<button class="debutVote btn btn-primary" data-toggle="modal" data-target="#modalVote">Passer au vote</button>{{> modalVote}}{{/if}}
+      {{#if stateProp klub.state}}<button class="btn btn-primary" data-toggle="modal" data-target="#modalVote">Passer au vote</button>{{> modalVote}}{{/if}}
       {{#if stateVote klub.state}}<button class="btn btn-primary" data-toggle="modal" data-target="#modalChoix">Vote fini, donner le résultat</button>{{> modalChoix}}{{/if}}
       {{#if stateChoisi klub.state}}<button class="klubFini btn btn-primary">Dire que ce klub a eu lieu</button>{{/if}}
 </div>

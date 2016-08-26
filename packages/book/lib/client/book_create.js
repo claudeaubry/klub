@@ -26,6 +26,8 @@ Template.modalBook.events({
       b.statut = new Library().bookById(bid).statut
       Books.update(bid, b)
     }
+    $('.modal-backdrop').hide() // for black background
+    $('body').removeClass('modal-open') // For scroll run
     $('#modalBook').modal('hide')
   }
 })

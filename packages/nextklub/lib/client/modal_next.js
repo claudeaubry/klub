@@ -66,6 +66,8 @@ Template.modalChoix.events({
     ktarget.state = 'choixAssocié'
     ktarget.voteer = $('input.vote').val()
     NextKlub.update(_id, ktarget)
+    $('.modal-backdrop').hide() // for black background
+    $('body').removeClass('modal-open') // For scroll run
     $('#modalChoix').modal('hide')
   }
 })
@@ -83,6 +85,8 @@ Template.modalVote.events({
     ktarget.state = 'voteEnCours'
     ktarget.voteer = $('input.vote').val()
     NextKlub.update(_id, ktarget)
+    $('.modal-backdrop').hide() // for black background
+    $('body').removeClass('modal-open') // For scroll run
     $('#modalVote').modal('hide')
   }
 })

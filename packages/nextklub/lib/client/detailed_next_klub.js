@@ -35,13 +35,7 @@ Template.detailedNextKlub.events({
     elt.preventDefault()
     Session.set('selectedBookId', k.book_id)
   },
-  'click .debutVote': function(elt) {
-    const k = NextKlub.findOne({_id: this.toString()})
-    elt.preventDefault()
-    k.state = 'voteEnCours'
-    k.dateprop = ''
-    NextKlub.update(k._id, k)
-  },
+
   'click .klubFini': function(elt) {
     const pastKlub = {}
     const nextKlub = {}

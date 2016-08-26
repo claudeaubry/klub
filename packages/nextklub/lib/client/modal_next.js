@@ -4,6 +4,15 @@ Template.modalProposition.helpers({
     return NextKlub.findOne({_id: this.toString()})
   }
 })
+// var bookId = Session.get('selectedBookId');
+//
+// if (typeof bookId !== "undefined") {
+//   var k = Books.findOne(bookId);
+//   return k;
+// } else {
+//   return {title:'', author:''}
+// }
+
 Template.modalProposition.events({
   'submit form': event => {
     let picker   = $( '.datetimepicker' )
@@ -58,6 +67,23 @@ Template.modalChoix.events({
     ktarget.voteer = $('input.vote').val()
     NextKlub.update(_id, ktarget)
     $('#modalChoix').modal('hide')
+  }
+})
+Template.modalVote.helpers({
+  k: function () {
+    return NextKlub.findOne({_id: this.toString()})
+  }
+})
+
+Template.modalVote.events({
+  'submit form': function(elt) {
+    const _id = $('input.vid').val()
+    const ktarget = NextKlub.findOne(_id)
+    elt.preventDefault()
+    ktarget.state = 'voteEnCours'
+    ktarget.voteer = $('input.vote').val()
+    NextKlub.update(_id, ktarget)
+    $('#modalVote').modal('hide')
   }
 })
 

@@ -1,5 +1,12 @@
 Template.modalBook.helpers({
-  book: () =>  new Library().bookById(Session.get('selectedBookId'))
+  // book: () =>  new Library().bookById(Session.get('selectedBookId'))
+  book: () => {
+    const bookId = Session.get('selectedBookId')
+    if (bookId !== null) {
+      return new Library().bookById(bookId)
+    } else
+      return {title:'', author:'', desc:'',site:'',teaser:'', img:'', origin:''}
+  }
 })
 
 Template.modalBook.events({

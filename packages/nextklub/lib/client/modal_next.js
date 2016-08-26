@@ -4,14 +4,6 @@ Template.modalProposition.helpers({
     return NextKlub.findOne({_id: this.toString()})
   }
 })
-// var bookId = Session.get('selectedBookId');
-//
-// if (typeof bookId !== "undefined") {
-//   var k = Books.findOne(bookId);
-//   return k;
-// } else {
-//   return {title:'', author:''}
-// }
 
 Template.modalProposition.events({
   'submit form': event => {
@@ -19,7 +11,6 @@ Template.modalProposition.events({
     const dateK = picker.data( 'DateTimePicker' ).date()
     const _id = $('input.kid').val()
     const ktarget = NextKlub.findOne(_id)
-
     event.preventDefault()
     ktarget.date = dateK.format()
     ktarget.hour = $('input.hour').val()
@@ -27,6 +18,8 @@ Template.modalProposition.events({
     ktarget.site = $('input.site').val()
     ktarget.dateprop = $('input.dateprop').val()
     NextKlub.update(_id, ktarget)
+    $('.modal-backdrop').hide() // for black background
+    $('body').removeClass('modal-open') // For scroll run
     $('#modalProposition').modal('hide')
   }
 })
@@ -35,15 +28,9 @@ Template.modalChoix.helpers({
   k: function () {
     return NextKlub.findOne({_id: this.toString()})
   },
-  typeLecture: function(name) {
-    return name === 'lecture'
-  },
-  typeJeu: function(name) {
-    return name === 'jeu'
-  },
-  typeScribing: function(name) {
-    return name === 'scribing'
-  },
+  typeLecture: function(name) {return name === 'lecture'},
+  typeJeu: function(name) {return name === 'jeu'},
+  typeScribing: function(name) {return name === 'scribing'},
   nomineesBooks: () => new Library().bnominees(),
   nomineesGames: () => new Library().jnominees(),
   nomineesVideos: () => new Library().vnominees()

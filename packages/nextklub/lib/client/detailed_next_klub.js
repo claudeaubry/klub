@@ -1,27 +1,13 @@
 Template.detailedNextKlub.helpers({
-  klub: function () {
-    return NextKlub.findOne({_id: this.toString()})
-  }
+  klub: function () {return NextKlub.findOne({_id: this.toString()})}
 })
 Template.detailedNextKlub.helpers({
-  typeLecture: function(name) {
-    return name === 'lecture'
-  },
-  typeJeu: function(name) {
-    return name === 'jeu'
-  },
-  typeScribing: function(name) {
-    return name === 'scribing'
-  },
-  stateProp: function(name) {
-    return name === 'propositions'
-  },
-  stateVote: function(name) {
-    return name === 'voteEnCours'
-  },
-  stateChoisi: function(name) {
-    return name === 'choixAssocié'
-  }
+  typeLecture: function(name) {return name === 'lecture'},
+  typeJeu: function(name) {return name === 'jeu'},
+  typeScribing: function(name) { return name === 'scribing'},
+  stateProp: function(name) {return name === 'propositions'},
+  stateVote: function(name) {return name === 'voteEnCours'},
+  stateChoisi: function(name) {return name === 'choixAssocié'}
 })
 
 Template.detailedNextKlub.events({
@@ -31,7 +17,6 @@ Template.detailedNextKlub.events({
   },
   'click .editChoosenBook': function(elt) {
     const k = NextKlub.findOne({_id: this.toString()})
-
     elt.preventDefault()
     Session.set('selectedBookId', k.book_id)
   },
@@ -40,7 +25,6 @@ Template.detailedNextKlub.events({
     const pastKlub = {}
     const nextKlub = {}
     const k = NextKlub.findOne({_id: this.toString()})
-
     elt.preventDefault()
     pastKlub.date = k.date
     pastKlub.voteer = k.voteer

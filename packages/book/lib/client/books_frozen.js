@@ -3,9 +3,9 @@ Template.frozen.helpers({
   lecture: function() { return Session.get('typeKlub') === 'lecture' },
   jeu: function() { return Session.get('typeKlub') === 'jeu' },
   scribing: function() { return Session.get('typeKlub') === 'scribing' },
-  books: () => Books.find({type: 'book', statut: 'frozen'}),
-  games: () => Books.find({type: 'game', statut: 'frozen'}),
-  videos: () => Books.find({type: 'video', statut: 'frozen'})
+  books: () => Books.find({type: 'book', statut: 'frozen'}, {sort: {title: 1}}),
+  games: () => Books.find({type: 'game', statut: 'frozen'}, {sort: {title: 1}}),
+  videos: () => Books.find({type: 'video', statut: 'frozen'}, {sort: {title: 1}})
 })
 
 Template.itemFrozen.events({

@@ -20,4 +20,4 @@ tsega:bootstrap3-datetimepicker
 rzymek:moment-locale-fr
 peppelg:bootstrap-3-modal
 manuel:viewmodel
-shell-server
+shell-server@0.2.1

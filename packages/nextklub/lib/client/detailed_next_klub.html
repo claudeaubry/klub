@@ -8,9 +8,9 @@
       </h1>
     </div>
     <div class="panel-body">
-      <h4>Ce klub est à l'étape : {{klub.state}}</h4>
     <div class="col-md-8">
       {{#if stateProp klub.state}}
+      <h4>Ce klub est à l'étape : Propositions en cours</h4>
           <h5>Voici les propositions actuelles</h5>
             {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
             {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
@@ -23,6 +23,7 @@
           </a>
       {{/if}}
       {{#if stateVote klub.state}}
+      <h4>Ce klub est à l'étape : Vote en cours</h4>
       <h5>Voici les propositions pour le vote</h5>
         {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
         {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
@@ -34,6 +35,7 @@
         {{/if}}
       {{/if}}
       {{#if stateChoisi klub.state}}
+      <h4>Ce klub est à l'étape : Sujet choisi</h4>
       {{> bookDetails id=klub.book_id}}
       <br/>
       <button class="editChoosenBook btn btn-primary" data-toggle="modal" data-target="#modalBook" alt="Modifier l'élément choisi">Modifier</button>

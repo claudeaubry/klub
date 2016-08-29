@@ -23,8 +23,8 @@ Template.modalBook.events({
     b.site = $('input#siteSubmit').val()
     b.img = $('input#imgSubmit').val()
     b.origin = $('input#originSubmit').val()
-    b.proposedAt = new Date()
-    // b.proposedAt = moment().format('dddd D MMMM YYYY')
+    // b.proposedAt = new Date()
+    b.proposedAt = moment().format('dddd D MMMM YYYY')
     if (!b.title)
       throw alert('Il faut un titre !')
     if (bid === null) {

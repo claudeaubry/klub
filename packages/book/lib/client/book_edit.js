@@ -20,6 +20,7 @@ Template.bookEdit.events({
     book.teaser = $('textarea#teaser').val()
     book.desc = $('textarea#desc').val()
     book.statut = $('input.statut').val()
+    book.proposedAt = $('input.date').val()
     Books.update(_id, book)
     Router.go('adminBookList')
   },

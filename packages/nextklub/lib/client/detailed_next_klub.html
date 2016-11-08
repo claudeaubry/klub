@@ -16,7 +16,7 @@
             {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
             {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
           <button class="addBook btn btn-primary" data-toggle="modal" data-target="#modalBook">
-            Je fais une proposition {{#if klub.dateprop}}avant le {{ISOToFr klub.dateprop}}{{/if}}</button>
+            Je fais une proposition {{#if klub.dateprop}}avant le {{klub.dateprop}}{{/if}}</button>
           {{> modalBook}}
           <a href="{{pathFor 'frozen'}}">
             <button class="btn btn-primary ">Je revois les anciennes propositions</button>

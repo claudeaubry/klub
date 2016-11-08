@@ -10,10 +10,10 @@ removeAll = function () {
  Test futureI
 */
 
+removeAll()
+
 Tinytest.add('futureI with no klub', function (test) {
   test.equal(futureI(), 1)
-
-  removeAll()
 })
 
 Tinytest.add('futureI with klubs with a max i equal to 13', function (test) {

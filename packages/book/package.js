@@ -34,7 +34,10 @@ Package.on_use(function (api) {
   api.export('Books', 'server')
 })
 
-Package.on_test(function (api) {
-  api.use(['tinytest', 'test-helpers'], 'client')
-  api.add_files('book_test.js', 'client')
-})
+Package.onTest(function(api) {
+  api.use('ecmascript');
+  api.use('tinytest');
+  api.use('book');
+  api.add_files('lib/client/Library.js', 'client')
+  api.mainModule('book_test.js', 'client');
+});

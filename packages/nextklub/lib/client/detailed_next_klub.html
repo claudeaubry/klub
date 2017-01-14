@@ -10,7 +10,7 @@
     <div class="panel-body">
     <div class="col-md-8">
       {{#if stateProp klub.state}}
-      <h4>Ce klub est à l'étape : Propositions en cours</h4>
+      <h4>Propositions en cours</h4>
           <h5>Voici les propositions actuelles</h5>
             {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
             {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
@@ -23,7 +23,7 @@
           </a>
       {{/if}}
       {{#if stateVote klub.state}}
-      <h4>Ce klub est à l'étape : Vote en cours</h4>
+      <h4>Vote en cours</h4>
       <h5>Voici les propositions pour le vote</h5>
         {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
         {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
@@ -35,28 +35,28 @@
         {{/if}}
       {{/if}}
       {{#if stateChoisi klub.state}}
-      <h4>Ce klub est à l'étape : Sujet choisi</h4>
+      <h4>Sujet choisi</h4>
       {{> bookDetails id=klub.book_id}}
       <br/>
       <button class="editChoosenBook btn btn-primary" data-toggle="modal" data-target="#modalBook" alt="Modifier l'élément choisi">Modifier</button>
       {{> modalBook}}
       {{/if}}
     </div>
-    <div class="col-md-4">
-      <h5>Action sur le déroulement du klub</h5>
-      {{#if stateProp klub.state}}<button class="btn btn-primary" data-toggle="modal" data-target="#modalVote">Passer au vote</button>{{> modalVote}}{{/if}}
-      {{#if stateVote klub.state}}<button class="btn btn-primary" data-toggle="modal" data-target="#modalChoix">Vote fini, donner le résultat</button>{{> modalChoix}}{{/if}}
-      {{#if stateChoisi klub.state}}<button class="klubFini btn btn-primary">Dire que ce klub a eu lieu</button>{{/if}}
-</div>
+
       <div class="col-md-4">
-        <h5>Infos pratiques</h5>
+        <h4>Infos pratiques</h4>
         <ul class="list-group">
           <li class="list-group-item list-group-item-danger">Date prévue : {{ISOToFr klub.date}}</li>
           <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{klub.place}} </li>
           <li class="list-group-item list-group-item-success"><a target="_blank" href="{{klub.site}}">Site pour s'inscrire</a></li>
         </ul>
-        <button class="btn btn-default" data-toggle="modal" data-target="#modalProposition">Compléter ou modifier ces infos</button>
+      <hr>
+       <h4>En tant que klubOwner</h4>
+       <button class="btn btn-info" data-toggle="modal" data-target="#modalProposition">je complète ou modifie ces infos</button><br/>
+       {{#if stateProp klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalVote">je décide de passer au vote</button>{{> modalVote}}{{/if}}
+       {{#if stateVote klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalChoix">je donne le résultat du vote</button>{{> modalChoix}}{{/if}}
+       {{#if stateChoisi klub.state}}<button class="klubFini btn btn-warning">je dis que ce klub a eu lieu</button>{{/if}}
        {{> modalProposition}}
      </div>
   </div>

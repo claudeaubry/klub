@@ -20,7 +20,12 @@
         {{/if}}
         {{#if stateIs 'voteEnCours'}}
           <h4>Etape 2 - Vote en cours</h4>
-          <h5>{{#if dateprop}}On peut voter jusqu'au {{ISOToFr dateprop}}{{/if}}</h5>
+          <h5>Il y a eu
+            {{#if typeIs 'lecture'}} {{proposedBooksCount}}{{/if}}
+            {{#if typeIs 'jeu'}} {{proposedGamesCount}}{{/if}}
+            {{#if typeIs 'scribing'}} {{proposedVideosCount}}{{/if}} propositions
+          </h5>
+          <h5>{{#if dateprop}}On peut voter jusqu'au {{dateprop}}{{/if}}</h5>
         {{/if}}
         {{#if stateIs 'propositions'}}
           <h4>Etape 1 - Propositions en cours</h4>
@@ -29,6 +34,7 @@
             {{#if typeIs 'jeu'}} {{proposedGamesCount}}{{/if}}
             {{#if typeIs 'scribing'}} {{proposedVideosCount}}{{/if}}
           </h5>
+          <h5>{{#if dateprop}}On peut encore proposer jusqu'au {{dateprop}}{{/if}}</h5>
         {{/if}}
       </div>
       <div class="panel-footer clearfix">

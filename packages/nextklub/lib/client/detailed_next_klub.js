@@ -1,7 +1,3 @@
-
-
-
-
 Template.detailedNextKlub.helpers({
   klub: function () {return NextKlub.findOne({_id: this.toString()})}
 })
@@ -32,6 +28,7 @@ Template.detailedNextKlub.events({
     discussedBookWhenPastKlub(pastKlub.book_id)
     createPastKlub(pastKlub)
     nextKlub.state = 'propositions'
+    nextKlub.date = null
     nextKlub.type = pastKlub.type
     nextKlub.place = LocalData.findOne().place
     nextKlub.site = LocalData.findOne().site

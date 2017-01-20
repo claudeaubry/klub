@@ -11,18 +11,17 @@
           <h4 class="modal-title">Informations à propos de ce klub</h4>
         </div>
         <div class="modal-body">
-          <label for="date">Date actuelle</label>
-          <input type="text" class="form-control date small" value={{ISOToFr k.date}} disabled>
-          <label for="date">Changer la date</label>
-          {{> addKlubDate d=k.date}}
+          <label class="date">Date prévue : {{ISOToFr k.date}}
+            <!-- <input type="text" class="form-control date" value={{ISOToFr k.date}} disabled> -->
+            <br/>Modifier la date {{> addKlubDate d=k.date}}</label>
           <label for="hour">Heure prévue</label>
-          <input type="text" class="form-control hour small" value={{k.hour}}>
+            <input type="text" class="form-control hour small" value={{k.hour}}>
           <label for="place">Lieu</label>
-          <input type="text" class="form-control place small" value={{k.place}}>
+            <input type="text" class="form-control place small" value={{k.place}}>
           <label for="site">Site compagnon</label>
-          <input type="url" class="form-control site small" value={{k.site}}>
+            <input type="url" class="form-control site small" value={{k.site}}>
           <label for="dateprop">Fin de l'étape : {{k.state}}</label>
-          <input type="text" class="form-control dateprop small" value={{k.dateprop}}>
+            <input type="text" class="form-control dateprop small" value={{k.dateprop}}>
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Enregistrer</button>
@@ -85,7 +84,7 @@
 
 <template name="addKlubDate">
   <form id="add-klubdate">
-    <div class="input-group date datetimepicker">
+    <div class="input-group datetimepicker">
     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
     <input class="set-due-date form-control" type="text" value={{ISOToFr d}} />
   </div>

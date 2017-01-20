@@ -1,5 +1,10 @@
-Utilisation de Meteor
+Klub
 ====
+## La vie de klub
+- application de notions lues dans le tuto Meteor 1.4, première moitié
+
+
+## Utilisation de Meteor
 
 Installer meteor:
 

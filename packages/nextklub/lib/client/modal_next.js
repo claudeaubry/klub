@@ -1,26 +1,29 @@
-Template.modalProposition.helpers({
+Template.modalInfoKlub.helpers({
   k: function () {
     // this provides from url parameter
     return NextKlub.findOne({_id: this.toString()})
   }
 })
 
-Template.modalProposition.events({
+Template.modalInfoKlub.events({
   'submit form': event => {
-    let picker   = $( '.datetimepicker' )
-    const dateK = picker.data( 'DateTimePicker' ).date()
+    // let picker   = $( '.datetimepicker' )
+    // const dateK = picker.data( 'DateTimePicker' ).date()
     const _id = $('input.kid').val()
     const ktarget = NextKlub.findOne(_id)
+    const target = event.target
+
     event.preventDefault()
-    ktarget.date = dateK.format()
-    ktarget.hour = $('input.hour').val()
-    ktarget.place = $('input.place').val()
-    ktarget.site = $('input.site').val()
-    ktarget.dateprop = $('input.dateprop').val()
+    // ktarget.date = dateK.format()
+    ktarget.date = target.date.value
+    ktarget.hour = target.hour.value
+    ktarget.place = target.place.value
+    ktarget.site = target.site.value
+    ktarget.dateprop = target.dateprop.value
     NextKlub.update(_id, ktarget)
     $('.modal-backdrop').hide() // for black background
     $('body').removeClass('modal-open') // For scroll run
-    $('#modalProposition').modal('hide')
+    $('#modalInfos').modal('hide')
   }
 })
 

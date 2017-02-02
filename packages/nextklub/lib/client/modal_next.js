@@ -34,9 +34,9 @@ Template.modalChoix.helpers({
   typeLecture: function(name) {return name === 'lecture'},
   typeJeu: function(name) {return name === 'jeu'},
   typeScribing: function(name) {return name === 'scribing'},
-  nomineesBooks: () => new Library().bnominees(),
-  nomineesGames: () => new Library().jnominees(),
-  nomineesVideos: () => new Library().vnominees()
+  nomineesBooks: () => new Library().nominees('book'),
+  nomineesGames: () => new Library().nominees('game'),
+  nomineesVideos: () => new Library().nominees('video')
 })
 Template.modalChoix.events({
   'submit form': event => {

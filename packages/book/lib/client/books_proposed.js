@@ -1,12 +1,12 @@
 Template.booksProposed.helpers({
-  titles: () => new Library().bnominees()
+  books: () => new Library().nominees('book')
 })
 
 Template.gamesProposed.helpers({
-  games: () => new Library().jnominees()
+  games: () => new Library().nominees('game')
 })
 Template.videosProposed.helpers({
-  videos: () => new Library().vnominees()
+  videos: () => new Library().nominees('video')
 })
 
 Template.itemli.events({

@@ -2,14 +2,8 @@ Library = class Library {
   constructor() {
     this.books = Books.find({}, {sort: {type: 1, statut: -1}})
   }
-  bnominees() {
-    return Books.find({type: 'book', statut: 'proposed'}, {sort: {title: 1}})
-  }
-  jnominees() {
-    return Books.find({type: 'game', statut: 'proposed'}, {sort: {title: 1}})
-  }
-  vnominees() {
-    return Books.find({type: 'video', statut: 'proposed'}, {sort: {title: 1}})
+  nominees(type) {
+    return Books.find({type: type, statut: 'proposed'}, {sort: {title: 1}})
   }
   selected(type) {
     return Books.findOne({type: type, statut: 'selected'})

@@ -4,16 +4,6 @@
   {{/each}}
 </template>
 
-<template name="associate">
-  <p>Associer un élément : </p>
-  <select name="{{selectName}}" class="form-control small">
-    <option value="{{book_id}}">{{title}}</option>
-    {{#each nominees}}
-      <option value="{{_id}}">{{title}}</option>
-    {{/each}}
-  </select>
-</template>
-
 <template name="nextKlubAdmin">
   <h3 class="well col-xs-6 col-md-8">{{type}}</h3>
     <div class="col-md-8">

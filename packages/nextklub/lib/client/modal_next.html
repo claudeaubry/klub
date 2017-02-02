@@ -31,6 +31,16 @@
   </div><!-- /.modal -->
 </template>
 
+<template name="associate">
+  <p>Associer un élément : </p>
+  <select name="{{selectName}}" class="form-control small">
+    <option value="{{book_id}}">{{title}}</option>
+    {{#each nominees}}
+      <option value="{{_id}}">{{title}}</option>
+    {{/each}}
+  </select>
+</template>
+
 <template name="modalChoix">
   <div class="modal fade" id="modalChoix" tabindex="-1" role="dialog">
     <div class="modal-content modal-dialog">

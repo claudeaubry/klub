@@ -2,6 +2,7 @@ Klub
 ====
 ## La vie de klub
 - application de notions lues dans le tuto Meteor 1.4, première moitié
+- saisie d'un nouvel élément
 
 
 ## Utilisation de Meteor

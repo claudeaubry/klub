@@ -81,9 +81,3 @@ Template.modalVote.events({
     $('#modalVote').modal('hide')
   }
 })
-
-Template.addKlubDate.onRendered( () => {
-  this.$( '.datetimepicker' ).datetimepicker({
-    format: 'dddd D MMMM YYYY',
-    locale: 'fr'})
-})

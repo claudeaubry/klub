@@ -83,3 +83,12 @@
 </div>
 {{/with}}
 </template>
+
+<template name="addKlubDate">
+  <form id="add-klubdate">
+    <div class="input-group datetimepicker">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input class="set-due-date form-control" type="text" value={{ISOToFr d}} />
+  </div>
+  </form>
+</template>

@@ -98,3 +98,9 @@ Template.nextKlubAdmin.rendered = function () {
   this.$('select[name="selGame"]').val(this.$('input.book-id').val())
   this.$('select[name="selVideo"]').val(this.$('input.book-id').val())
 }
+
+Template.addKlubDate.onRendered( () => {
+  this.$( '.datetimepicker' ).datetimepicker({
+    format: 'dddd D MMMM YYYY',
+    locale: 'fr'})
+})

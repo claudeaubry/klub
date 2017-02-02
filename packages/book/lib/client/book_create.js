@@ -12,16 +12,17 @@ Template.modalBook.events({
   'submit form': (event) => {
     const b = {}
     bid = Session.get('selectedBookId')
-    event.preventDefault()
+    const target = event.target
 
+    event.preventDefault()
     b.type = new Library().itemOfKlub(Session.get('typeKlub'))
-    b.title = $('input#titleSubmit').val()
-    b.author = $('input#authorSubmit').val()
-    b.desc = $('textarea#descSubmit').val()
-    b.teaser = $('textarea#teaserSubmit').val()
-    b.site = $('input#siteSubmit').val()
-    b.img = $('input#imgSubmit').val()
-    b.origin = $('input#originSubmit').val()
+    b.title = target.title.value
+    b.author = target.author.value
+    b.desc = target.desc.value
+    b.teaser = target.teaser.value
+    b.site = target.site.value
+    b.img = target.img.value
+    b.origin = target.origin.value
     b.proposedAt = moment().format('dddd D MMMM YYYY')
     if (!b.title)
       throw alert('Il faut un titre !')
@@ -32,6 +33,13 @@ Template.modalBook.events({
       b.statut = new Library().bookById(bid).statut
       Books.update(bid, b)
     }
+    target.title.value = ''
+    target.author.value = ''
+    target.desc.value = ''
+    target.teaser.value = ''
+    target.site.value =''
+    target.img.value =''
+    target.origin.value = ''
     $('.modal-backdrop').hide() // for black background
     $('body').removeClass('modal-open') // For scroll run
     $('#modalBook').modal('hide')

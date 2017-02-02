@@ -1,5 +1,5 @@
-<template name="modalProposition">
-  <div class="modal fade" id="modalProposition" tabindex="-1" role="dialog">
+<template name="modalInfoKlub">
+  <div class="modal fade" id="modalInfos" tabindex="-1" role="dialog">
     <div class="modal-content modal-dialog">
       <form role="form" class="well">
         <input type="hidden" class="form-control kid small" value={{k._id}}>
@@ -12,16 +12,16 @@
         </div>
         <div class="modal-body">
           <label class="date">Date prévue : {{ISOToFr k.date}}
-            <!-- <input type="text" class="form-control date" value={{ISOToFr k.date}} disabled> -->
-            <br/>Modifier la date {{> addKlubDate d=k.date}}</label>
+            <br/>Modifier la date</label>
+            <input type="date" name="date" class="form-control small" value={{k.date}} placeholder="MM/DD/YYYY">
           <label for="hour">Heure prévue</label>
-            <input type="text" class="form-control hour small" value={{k.hour}}>
+            <input type="text" name="hour" class="form-control small" value={{k.hour}}>
           <label for="place">Lieu</label>
-            <input type="text" class="form-control place small" value={{k.place}}>
+            <input type="text" name="place" class="form-control small" value={{k.place}}>
           <label for="site">Site compagnon</label>
-            <input type="url" class="form-control site small" value={{k.site}}>
+            <input type="url" name="site" class="form-control small" value={{k.site}}>
           <label for="dateprop">Fin de l'étape : {{k.state}}</label>
-            <input type="text" class="form-control dateprop small" value={{k.dateprop}}>
+            <input type="text" name="dateprop" class="form-control small" value={{k.dateprop}}>
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Enregistrer</button>
@@ -72,7 +72,7 @@
         </div>
         <div class="modal-body">
           <label for="vote">Lien vers le vote (si vote en ligne)</label>
-          <input type="url" class="form-control vote small">
+          <input type="url" name="voteer" class="form-control small">
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Confirmer le passage au vote</button>

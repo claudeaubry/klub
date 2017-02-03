@@ -12,9 +12,9 @@
       {{#if stateProp klub.state}}
       <h4>Propositions en cours</h4>
           <h5>Voici les propositions actuelles</h5>
-            {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
-            {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
-            {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
+            {{#if typeLecture klub.type}}{{> itemsProposed nominees=nomineesBooks}}{{/if}}
+            {{#if typeJeu klub.type}}{{> itemsProposed nominees=nomineesGames}}{{/if}}
+            {{#if typeScribing klub.type}}{{> itemsProposed nominees=nomineesVideos}}{{/if}}
        <h4>En tant que participant potentiel</h4>
           <button class="addBook btn btn-primary" data-toggle="modal" data-target="#modalBook">
             Je fais une proposition {{#if klub.dateprop}}avant {{klub.dateprop}}{{/if}}</button>
@@ -26,9 +26,9 @@
       {{#if stateVote klub.state}}
       <h4>Vote en cours</h4>
       <h5>Voici les propositions pour le vote</h5>
-        {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
-        {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
-        {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
+        {{#if typeLecture klub.type}}{{> itemsProposed nominees=nomineesBooks}}{{/if}}
+        {{#if typeJeu klub.type}}{{> itemsProposed nominees=nomineesGames}}{{/if}}
+        {{#if typeScribing klub.type}}{{> itemsProposed nominees=nomineesVideos}}{{/if}}
         {{#if klub.voteer}}
         <div class=" btn btn-info col-md-offset-3">
           <a target="_blank" href="{{klub.voteer}}">Je vote sur Voteer {{#if klub.dateprop}}avant le {{klub.dateprop}}{{/if}}</a>

@@ -74,7 +74,7 @@ Template.modalVote.events({
     const target = event.target
     event.preventDefault()
     ktarget.state = 'voteEnCours'
-    ktarget.voteer = event.target.voteer
+    ktarget.voteer = target.voteer.value
     NextKlub.update(_id, ktarget)
     $('.modal-backdrop').hide() // for black background
     $('body').removeClass('modal-open') // For scroll run

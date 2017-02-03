@@ -7,7 +7,10 @@ Template.detailedNextKlub.helpers({
   typeScribing: function(name) { return name === 'scribing'},
   stateProp: function(name) {return name === 'propositions'},
   stateVote: function(name) {return name === 'voteEnCours'},
-  stateChoisi: function(name) {return name === 'choixAssocié'}
+  stateChoisi: function(name) {return name === 'choixAssocié'},
+  nomineesBooks: () => new Library().nominees('book'),
+  nomineesGames: () => new Library().nominees('game'),
+  nomineesVideos: () => new Library().nominees('video')
 })
 
 Template.detailedNextKlub.events({

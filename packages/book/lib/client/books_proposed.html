@@ -1,4 +1,12 @@
-<template name="booksProposed">
+<template name="itemsProposed">
+  <ul class="proposedBook col-xs-12 col-md-12 list-group">
+    {{#each nominees}}
+      {{> itemli}}
+    {{/each}}
+  </ul>
+  </template>
+
+<!-- <template name="booksProposed">
   <ul class="proposedBook col-xs-12 col-md-12 list-group">
     {{#each books}}
       {{> itemli}}
@@ -20,7 +28,7 @@
       {{> itemli}}
     {{/each}}
   </ul>
-</template>
+</template> -->
 
 <template name="itemli">
   <li class="list-group-item">

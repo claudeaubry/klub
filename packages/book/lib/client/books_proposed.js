@@ -1,13 +1,15 @@
-Template.booksProposed.helpers({
-  books: () => new Library().nominees('book')
-})
-
-Template.gamesProposed.helpers({
-  games: () => new Library().nominees('game')
-})
-Template.videosProposed.helpers({
-  videos: () => new Library().nominees('video')
-})
+// Template.booksProposed.helpers({
+//   books: (ptype) => new Library().nominees(type : ptype),
+//   nomineesGames: () => new Library().nominees('game'),
+//   nomineesVideos: () => new Library().nominees('video')
+// })
+//
+// Template.gamesProposed.helpers({
+//   games: () => new Library().nominees('game')
+// })
+// Template.videosProposed.helpers({
+//   videos: () => new Library().nominees('video')
+// })
 
 Template.itemli.events({
   'click .editBook': function(elt) {

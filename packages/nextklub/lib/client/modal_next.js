@@ -7,14 +7,11 @@ Template.modalInfoKlub.helpers({
 
 Template.modalInfoKlub.events({
   'submit form': event => {
-    // let picker   = $( '.datetimepicker' )
-    // const dateK = picker.data( 'DateTimePicker' ).date()
     const _id = $('input.kid').val()
     const ktarget = NextKlub.findOne(_id)
     const target = event.target
 
     event.preventDefault()
-    // ktarget.date = dateK.format()
     ktarget.date = target.date.value
     ktarget.hour = target.hour.value
     ktarget.place = target.place.value

@@ -18,13 +18,13 @@ Template.pastKlubEdit.events({
     klub.meetup = $('input.meetup').val()
     PastKlub.update(_id, klub)
     Router.go('adminPastKlubList')
-  // },
-  // 'click .delete': elt => {
-  //   const _id = $('input.id').val()
-  //
-  //   elt.preventDefault()
-  //   PastKlub.remove(_id)
-  //   Router.go('adminPastKlubList')
+  },
+  'click .delete': elt => {
+    const _id = $('input.id').val()
+
+    elt.preventDefault()
+    PastKlub.remove(_id)
+    Router.go('adminPastKlubList')
   }
 })
 

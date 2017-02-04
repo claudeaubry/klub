@@ -57,7 +57,7 @@
        <button class="btn btn-info" data-toggle="modal" data-target="#modalInfos">je complète ou modifie ces infos</button><br/>
        {{#if stateProp klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalVote">je décide de passer au vote</button>{{> modalVote}}{{/if}}
        {{#if stateVote klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalChoix">je donne le résultat du vote</button>{{> modalChoix}}{{/if}}
-       {{#if stateChoisi klub.state}}<button class="klubFini btn btn-warning">je dis que ce klub a eu lieu</button>{{/if}}
+       {{#if stateChoisi klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalFini">je dis que ce klub a eu lieu</button>{{> modalFini}}{{/if}}
        {{> modalInfoKlub}}
      </div>
   </div>

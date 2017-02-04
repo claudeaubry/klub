@@ -78,3 +78,38 @@ Template.modalVote.events({
     $('#modalVote').modal('hide')
   }
 })
+
+Template.modalFini.helpers({
+  k: function () {
+    return NextKlub.findOne({_id: this.toString()})
+  }
+})
+
+Template.modalFini.events({
+  'submit form': event =>  {
+    const pastKlub = {}
+    const _id = $('input.fid').val()
+    const nextKlub = NextKlub.findOne(_id)
+    const target = event.target
+
+    event.preventDefault()
+    pastKlub.date = nextKlub.date
+    pastKlub.voteer = nextKlub.voteer
+    pastKlub.meetup = nextKlub.meetup
+    pastKlub.type = nextKlub.type
+    pastKlub.book_id = nextKlub.book_id
+    pastKlub.klubMaster = target.klubMaster.value
+    pastKlub.attendees = target.attendees.value.split(',')
+    discussedBookWhenPastKlub(pastKlub.book_id)
+    createPastKlub(pastKlub)
+    nextKlub.state = 'propositions'
+    nextKlub.date = null
+    nextKlub.place = LocalData.findOne().place
+    nextKlub.site = LocalData.findOne().site
+    NextKlub.update(nextKlub._id, nextKlub)
+    $('.modal-backdrop').hide() // for black background
+    $('body').removeClass('modal-open') // For scroll run
+    $('#modalFini').modal('hide')
+    Router.go('home')
+  }
+})

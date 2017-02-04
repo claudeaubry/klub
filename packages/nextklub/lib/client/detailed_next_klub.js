@@ -25,17 +25,23 @@ Template.detailedNextKlub.events({
   },
 
   'click .klubFini': function(elt) {
+    const pastKlub = {}
+    const nextKlub = NextKlub.findOne({_id: this.toString()})
+
     elt.preventDefault()
-    const nextKlub = {}
-    const pastKlub = NextKlub.findOne({_id: this.toString()})
+    pastKlub.date = nextKlub.date
+    pastKlub.voteer = nextKlub.voteer
+    pastKlub.meetup = nextKlub.meetup
+    pastKlub.type = nextKlub.type
+    pastKlub.book_id = nextKlub.book_id
+    pastKlub.klubMaster = 'anonymous'
     discussedBookWhenPastKlub(pastKlub.book_id)
     createPastKlub(pastKlub)
     nextKlub.state = 'propositions'
     nextKlub.date = null
-    nextKlub.type = pastKlub.type
     nextKlub.place = LocalData.findOne().place
     nextKlub.site = LocalData.findOne().site
-    NextKlub.update(pastKlub._id, nextKlub)
+    NextKlub.update(nextKlub._id, nextKlub)
     Router.go('home')
   }
 })

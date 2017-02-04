@@ -84,7 +84,7 @@ Template.nextKlubAdmin.events({
     nextKlub.state = 'propositions'
     nextKlub.type = this.type
     NextKlub.update(this._id, nextKlub)
-    Router.go('adminnextKLubs')
+    Router.go('adminNextKlub')
   }
 })
 

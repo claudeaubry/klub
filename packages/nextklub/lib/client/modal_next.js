@@ -18,6 +18,7 @@ Template.modalInfoKlub.events({
     ktarget.site = target.site.value
     ktarget.dateprop = target.dateprop.value
     ktarget.anim = target.anim.value
+    ktarget.msg = target.msg.value
     NextKlub.update(_id, ktarget)
     $('.modal-backdrop').hide() // for black background
     $('body').removeClass('modal-open') // For scroll run

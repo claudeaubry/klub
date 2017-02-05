@@ -17,7 +17,7 @@ Template.modalInfoKlub.events({
     ktarget.place = target.place.value
     ktarget.site = target.site.value
     ktarget.dateprop = target.dateprop.value
-    ktarget.anims = target.anims.value.split(',')
+    ktarget.anim = target.anim.value
     NextKlub.update(_id, ktarget)
     $('.modal-backdrop').hide() // for black background
     $('body').removeClass('modal-open') // For scroll run
@@ -105,6 +105,7 @@ Template.modalFini.events({
     createPastKlub(pastKlub)
     nextKlub.state = 'propositions'
     nextKlub.date = null
+    nextKlub.anim = null
     nextKlub.place = LocalData.findOne().place
     nextKlub.site = LocalData.findOne().site
     NextKlub.update(nextKlub._id, nextKlub)

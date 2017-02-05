@@ -23,7 +23,7 @@
           <label for="dateprop">Fin de l'étape : {{k.state}}</label>
             <input type="text" name="dateprop" class="form-control small" value={{k.dateprop}}>
           <label for="list">Animateurs potentiels</label>
-            <input type="text" name="anims" class="form-control" placeholder="Noms des animateurs séparés par une virgule" value="{{k.anims}}">
+            <input type="text" name="anim" class="form-control" placeholder="Animateur potentiel" value="{{k.anim}}">
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Enregistrer</button>
@@ -108,7 +108,7 @@
         </div>
         <div class="modal-body">
           <label for="list">Qui est klubMaster ?</label>
-          <input type="text" class="form-control" name="klubMaster" placeholder="Nom du klubMaster">
+          <input type="text" class="form-control" name="klubMaster" placeholder="Nom du klubMaster" value={{k.anim}}>
           <label for="list">Qui est présent ?</label>
           <input type="text" class="form-control" name="attendees" placeholder="Noms des participants séparés par une virgule">
         </div>

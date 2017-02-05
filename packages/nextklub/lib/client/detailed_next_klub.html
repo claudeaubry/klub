@@ -51,13 +51,10 @@
           <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
           <li class="list-group-item list-group-item-info">Lieu : {{klub.place}}</li>
           <li class="list-group-item list-group-item-success"><a target="_blank" href="{{klub.site}}">Site pour s'inscrire</a></li>
-          <li class="list-group-item list-group-item-warning">Animateur(s)</li>
-          {{#each klub.anims}}
-            <li class="list-group-item">{{this}}</li>
-          {{/each}}
+          <li class="list-group-item list-group-item-warning">Animateur : {{klub.anim}}</li>
         </ul>
       <hr>
-       <h4>En tant que klubOwner</h4>
+       <h4>En tant que klubMaster</h4>
        <button class="btn btn-info" data-toggle="modal" data-target="#modalInfos">je complète ou modifie ces infos</button><br/>
        {{#if stateProp klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalVote">je décide de passer au choix</button>{{> modalVote}}{{/if}}
        {{#if stateVote klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalChoix">je donne le résultat du choix</button>{{> modalChoix}}{{/if}}

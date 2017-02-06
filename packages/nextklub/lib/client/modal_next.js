@@ -107,6 +107,7 @@ Template.modalFini.events({
     nextKlub.state = 'propositions'
     nextKlub.date = null
     nextKlub.anim = null
+    nextKlub.msg = null
     nextKlub.place = LocalData.findOne().place
     nextKlub.site = LocalData.findOne().site
     NextKlub.update(nextKlub._id, nextKlub)

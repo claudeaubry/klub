@@ -4,13 +4,13 @@
     <tr>
       <th>Type</th>
       <th>Numéro</th>
-      <th>Titre</th>
+      <th>Sujet</th>
       <th>Date</th>
     </tr>
     {{#each pastKlubs}}
     <tr>
-      <td>{{type}}</td>
       <td>{{i}}</td>
+      <td>{{type}}</td>
       <td>{{book}}</td>
       <td>{{date}}</td>
       <td><a href="{{pathFor 'adminKlubPastEdit' klubI=i}}"><span class="glyphicon glyphicon-pencil"></span></a></td>

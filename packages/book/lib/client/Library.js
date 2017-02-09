@@ -5,6 +5,9 @@ Library = class Library {
   nominees(type) {
     return Books.find({type: type, statut: 'proposed'}, {sort: {title: 1}})
   }
+  propsel() {
+    return Books.find({$or :[{statut : 'selected'}, {statut : 'proposed'}]}, {sort: {title: 1}})
+  }
   selected(type) {
     return Books.findOne({type: type, statut: 'selected'})
   }

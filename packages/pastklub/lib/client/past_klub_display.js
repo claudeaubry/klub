@@ -1,14 +1,21 @@
-Template.pastKlubDisplay.helpers({
-  pastKlubAll: () => {
-    // let ilocj = 0
-    const klubs = PastKlub.find({}, {sort: {i: -1}})
+import { ReactiveDict } from 'meteor/reactive-dict';
 
-    // klubs.fetch().map(klub => {
-    //   if (klub.type === 'kjeub') {
-    //     ilocj + 1
-    //     klub.i = ilocj
-    //   }
-    // })
-    return klubs
+Template.pastKlubDisplay.onCreated(function bodyOnCreated() {
+  this.stateLecture = new ReactiveDict();
+});
+
+Template.pastKlubDisplay.helpers({
+  pastKlubAll() {
+  const instance = Template.instance()
+  if (instance.stateLecture.get('onlyLecture')) {
+    return PastKlub.find({type : 'lecture'}, {sort: {i: -1}})
   }
+  return PastKlub.find({}, {sort: {i: -1}})
+  }
+})
+
+Template.pastKlubDisplay.events({
+  'change .lecture input'(event, instance) {
+    instance.stateLecture.set('onlyLecture', event.target.checked);
+}
 })

@@ -1,6 +1,12 @@
 <template name="pastKlubDisplay">
-  <label class="lecture">
+  <!-- <label class="lecture">
     <input type="checkbox" />Ne montrer que les klubs de lecture
+  </label> -->
+  <label class="klubs">
+  <input type= "radio" name="pastVisible" value="tout" checked>Tous les klubs
+  <input type= "radio" name="pastVisible" value="lecture">Klubs de lecture
+  <input type= "radio" name="pastVisible" value="jeu">Klubs de jeu
+  <input type= "radio" name="pastVisible" value="scribing">Klubs de scribing
   </label>
   <br/>
   {{#each pastKlubAll}}

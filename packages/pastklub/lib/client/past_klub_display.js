@@ -22,7 +22,6 @@ Template.pastKlubDisplay.helpers({
 
 Template.pastKlubDisplay.events({
   'change .klubs input'(event, instance) {
-     const radioValue = $('input[name="pastVisible"]:checked').val()
-    instance.klubVisible.set('kvisible', radioValue);
+    instance.klubVisible.set('kvisible', event.target.value);
 }
 })

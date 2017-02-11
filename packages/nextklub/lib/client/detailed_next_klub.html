@@ -12,9 +12,9 @@
       {{#if stateProp klub.state}}
       <h4>Propositions en cours</h4>
           <h5>Voici les propositions actuelles</h5>
-            {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
-            {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
-            {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
+            {{#if typeLecture klub.type}}{{> itemsProposed nominees=nomineesBooks}}{{/if}}
+            {{#if typeJeu klub.type}}{{> itemsProposed nominees=nomineesGames}}{{/if}}
+            {{#if typeScribing klub.type}}{{> itemsProposed nominees=nomineesVideos}}{{/if}}
        <h4>En tant que participant potentiel</h4>
           <button class="addBook btn btn-primary" data-toggle="modal" data-target="#modalBook">
             Je fais une proposition {{#if klub.dateprop}}avant {{klub.dateprop}}{{/if}}</button>
@@ -24,11 +24,11 @@
           </a>
       {{/if}}
       {{#if stateVote klub.state}}
-      <h4>Vote en cours</h4>
-      <h5>Voici les propositions pour le vote</h5>
-        {{#if typeLecture klub.type}}{{> booksProposed}}{{/if}}
-        {{#if typeJeu klub.type}}{{> gamesProposed}}{{/if}}
-        {{#if typeScribing klub.type}}{{> videosProposed}}{{/if}}
+      <h4>Choix du sujet en cours</h4>
+      <h5>Voici les propositions pour le choix</h5>
+        {{#if typeLecture klub.type}}{{> itemsProposed nominees=nomineesBooks}}{{/if}}
+        {{#if typeJeu klub.type}}{{> itemsProposed nominees=nomineesGames}}{{/if}}
+        {{#if typeScribing klub.type}}{{> itemsProposed nominees=nomineesVideos}}{{/if}}
         {{#if klub.voteer}}
         <div class=" btn btn-info col-md-offset-3">
           <a target="_blank" href="{{klub.voteer}}">Je vote sur Voteer {{#if klub.dateprop}}avant le {{klub.dateprop}}{{/if}}</a>
@@ -49,15 +49,17 @@
         <ul class="list-group">
           <li class="list-group-item list-group-item-danger">Date prévue : {{ISOToFr klub.date}}</li>
           <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
-          <li class="list-group-item list-group-item-info">Lieu : {{klub.place}} </li>
+          <li class="list-group-item list-group-item-info">Lieu : {{klub.place}}</li>
           <li class="list-group-item list-group-item-success"><a target="_blank" href="{{klub.site}}">Site pour s'inscrire</a></li>
+          <li class="list-group-item list-group-item-warning">Animateur : {{klub.anim}}</li>
+          <li class="list-group-item list-group-item-danger">Message : {{klub.msg}}</li>
         </ul>
       <hr>
        <h4>En tant que klubOwner</h4>
        <button class="btn btn-info" data-toggle="modal" data-target="#modalInfos">je complète ou modifie ces infos</button><br/>
-       {{#if stateProp klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalVote">je décide de passer au vote</button>{{> modalVote}}{{/if}}
-       {{#if stateVote klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalChoix">je donne le résultat du vote</button>{{> modalChoix}}{{/if}}
-       {{#if stateChoisi klub.state}}<button class="klubFini btn btn-warning">je dis que ce klub a eu lieu</button>{{/if}}
+       {{#if stateProp klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalVote">je décide de passer au choix</button>{{> modalVote}}{{/if}}
+       {{#if stateVote klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalChoix">je donne le résultat du choix</button>{{> modalChoix}}{{/if}}
+       {{#if stateChoisi klub.state}}<button class="btn btn-warning" data-toggle="modal" data-target="#modalFini">je dis que ce klub a eu lieu</button>{{> modalFini}}{{/if}}
        {{> modalInfoKlub}}
      </div>
   </div>

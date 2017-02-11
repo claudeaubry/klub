@@ -1,4 +1,10 @@
 <template name="pastKlubDisplay">
+  <label class="klubs input-group">
+  <span class="input-group-addon"><input type= "radio" name="pastVisible" value="tout" checked> Voir tous les klubs</span>
+  <span class="input-group-addon"><input type= "radio" name="pastVisible" value="lecture"> Voir seulement les klubs de lecture</span>
+  <span class="input-group-addon"><input type= "radio" name="pastVisible" value="jeu"> Voir seulement les klubs de jeu</span>
+  <span class="input-group-addon"> <input type= "radio" name="pastVisible" value="scribing"> Voir seulement les klubs de scribing</span>
+  </label>
   {{#each pastKlubAll}}
     {{> pastKlub}}
   {{/each}}

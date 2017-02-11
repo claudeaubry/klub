@@ -22,6 +22,10 @@
             <input type="url" name="site" class="form-control small" value={{k.site}}>
           <label for="dateprop">Fin de l'étape : {{k.state}}</label>
             <input type="text" name="dateprop" class="form-control small" value={{k.dateprop}}>
+          <label for="list">Animateurs potentiels</label>
+            <input type="text" name="anim" class="form-control" placeholder="Animateur potentiel" value="{{k.anim}}">
+          <label for="msg">Message à faire passer</label>
+            <input type="text" name="msg" class="form-control" placeholder="Message de service" value="{{k.msg}}">
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Enregistrer</button>
@@ -29,6 +33,16 @@
       </form>
     </div><!-- /.modal-content -->
   </div><!-- /.modal -->
+</template>
+
+<template name="associate">
+  <p>Associer un élément : </p>
+  <select name="{{selectName}}" class="form-control small">
+    <option value="{{book_id}}">{{title}}</option>
+    {{#each nominees}}
+      <option value="{{_id}}">{{title}}</option>
+    {{/each}}
+  </select>
 </template>
 
 <template name="modalChoix">
@@ -76,6 +90,32 @@
         </div>
         <div class="modal-footer">
           <button type="submit" class=" btn btn-primary">Confirmer le passage au vote</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</template>
+
+<template name="modalFini">
+  <div class="modal fade" id="modalFini" tabindex="-1" role="dialog">
+    <div class="modal-content modal-dialog">
+      <form role="form" class="well">
+        <input type="hidden" class="form-control fid small" value={{k._id}}>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Klub fini</h4>
+        </div>
+        <div class="modal-body">
+          <label for="list">Qui est klubMaster ?</label>
+          <input type="text" class="form-control" name="klubMaster" placeholder="Nom du klubMaster" value={{k.anim}}>
+          <label for="list">Qui est présent ?</label>
+          <input type="text" class="form-control" name="attendees" placeholder="Noms des participants séparés par une virgule">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class=" btn btn-primary">Confirmer</button>
         </div>
       </form>
     </div><!-- /.modal-content -->

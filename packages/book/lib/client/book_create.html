@@ -11,20 +11,20 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-          <label for="author">Titre</label>
-            <input type="text" class="form-control" id="titleSubmit" value={{book.title}} placeholder="Le titre (obligatoire)">
+          <label for="title">Titre</label>
+            <input type="text" class="form-control" name="title" value={{book.title}} placeholder="Le titre (obligatoire)">
             <label for="author">Auteur</label>
-            <input type="text" class="form-control" id="authorSubmit" value={{book.author}} placeholder="L'auteur">
+            <input type="text" class="form-control" name="author" value={{book.author}} placeholder="L'auteur">
             <label for="desc">Résumé</label>
-            <textarea class="form-control" id="descSubmit" value={{book.desc}} placeholder="Une description en quelques lignes"></textarea>
+            <textarea class="form-control" name="desc" value={{book.desc}} placeholder="Une description en quelques lignes"></textarea>
             <label for="site">Lien vers un site</label>
-            <input type="url" class="form-control" id="siteSubmit" value={{book.site}}>
+            <input type="url" class="form-control" name="site" value={{book.site}}>
             <label for="img">Lien vers une image</label>
-            <input type="url" class="form-control" id="imgSubmit" value={{book.img}}>
+            <input type="url" class="form-control" name="img" value={{book.img}}>
             <label for="teaser">Teaser (150 caractères max)</label>
-            <textarea maxlength="100" class="form-control" id="teaserSubmit" value={{book.teaser}} placeholder="Dites pourquoi ce serait bien de choisir votre proposition"></textarea>
+            <textarea maxlength="150" class="form-control" name="teaser" value={{book.teaser}} placeholder="Dites pourquoi ce serait bien de choisir votre proposition"></textarea>
             <label for="origin">Qui êtes-vous ?</label>
-            <input type="text" class="form-control" id="originSubmit" value={{book.origin}} placeholder="Dites qui vous êtes">
+            <input type="text" class="form-control" name="origin" value={{book.origin}} placeholder="Dites qui vous êtes">
           </div>
         </div>
         <div class="modal-footer">

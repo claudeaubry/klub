@@ -1,5 +1,7 @@
 Template.pastKlubList.helpers({
   pastKlubs: () => {
+    // const pastKlubs = PastKlub.find({}, {sort: {i: -1}})
+    // return pastKlubs
     const pastKlubs = []
     const pastKlubCollection = PastKlub.find({},
         {fields: {i: 1, type: 1, date: 1, book_id: 1}, sort: {i: -1}})

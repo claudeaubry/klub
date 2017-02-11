@@ -1,26 +1,10 @@
-<template name="booksProposed">
+<template name="itemsProposed">
   <ul class="proposedBook col-xs-12 col-md-12 list-group">
-    {{#each titles}}
+    {{#each nominees}}
       {{> itemli}}
     {{/each}}
   </ul>
   </template>
-
-<template name="gamesProposed">
-  <ul class="proposedBook col-xs-12 col-md-12 list-group">
-    {{#each games}}
-      {{> itemli}}
-    {{/each}}
-  </ul>
-</template>
-
-<template name="videosProposed">
-  <ul class="proposedBook col-xs-12 col-md-12 list-group">
-    {{#each videos}}
-      {{> itemli}}
-    {{/each}}
-  </ul>
-</template>
 
 <template name="itemli">
   <li class="list-group-item">
@@ -32,7 +16,6 @@
     {{#if this.origin}}Un sujet proposé par {{this.origin}}<br/>{{/if}}
     {{#if this.site}}<a target="_blank" href="{{this.site}}">En savoir plus</a><br/>{{/if}}
     <i>{{#if this.teaser}}Le teaser : {{this.teaser}}{{/if}}</i>
-
   </li>
     {{> modalBook}}
 </template>

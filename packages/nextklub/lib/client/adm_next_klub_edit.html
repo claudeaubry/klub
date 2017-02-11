@@ -1,0 +1,14 @@
+<template name="adminnextKLubs">
+  {{#each klubs}}
+    {{> nextKlubAdmin}}
+  {{/each}}
+</template>
+
+<template name="nextKlubAdmin">
+  <h3 class="well col-xs-6 col-md-8">{{type}}</h3>
+    <div class="col-md-8">
+      <input type="text" class="form-control state small" value={{state}} disabled>
+      <input type="text" class="form-control date small" value={{ISOToFr date}} disabled>
+      <button class="raz btn btn-primary">J'annule tout</button>
+    </div>
+</template>

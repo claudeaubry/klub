@@ -11,11 +11,11 @@ Package.on_use(function (api) {
   api.add_files(['lib/server/server.js'], ['server'])
 
   api.add_files([
-    'lib/client/config.html',
-    'lib/client/config.js',
-    'lib/client/next_klub_edit.html',
-    'lib/client/next_klub_edit.js',
-    'lib/client/next_klub_edit.css',
+    'lib/client/adm_config.html',
+    'lib/client/adm_config.js',
+    'lib/client/adm_next_klub_edit.html',
+    'lib/client/adm_next_klub_edit.js',
+    'lib/client/adm_next_klub_edit.css',
     'lib/client/next_klub_view.html',
     'lib/client/next_klub_view.js',
     'lib/client/detailed_next_klub.html',

@@ -5,12 +5,14 @@ Template.detailedNextKlub.helpers({
   typeLecture: function(name) {return name === 'lecture'},
   typeJeu: function(name) {return name === 'jeu'},
   typeScribing: function(name) { return name === 'scribing'},
+  typeShuhari:function(name) { return name === 'shuhari'},
   stateProp: function(name) {return name === 'propositions'},
   stateVote: function(name) {return name === 'voteEnCours'},
   stateChoisi: function(name) {return name === 'choixAssocié'},
   nomineesBooks: () => new Library().nominees('book'),
   nomineesGames: () => new Library().nominees('game'),
-  nomineesVideos: () => new Library().nominees('video')
+  nomineesVideos: () => new Library().nominees('video'),
+  nomineesPractices: () => new Library().nominees('practice')
 })
 
 Template.detailedNextKlub.events({

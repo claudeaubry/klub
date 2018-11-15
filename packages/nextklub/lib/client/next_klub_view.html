@@ -23,7 +23,8 @@
           <h5>Il y a eu
             {{#if typeIs 'lecture'}} {{proposedBooksCount}}{{/if}}
             {{#if typeIs 'jeu'}} {{proposedGamesCount}}{{/if}}
-            {{#if typeIs 'scribing'}} {{proposedVideosCount}}{{/if}} propositions
+            {{#if typeIs 'scribing'}} {{proposedVideosCount}}{{/if}}
+            {{#if typeIs 'shuhari'}} {{proposedPracticesCount}}{{/if}} propositions
           </h5>
           <h5>{{#if dateprop}}On peut voter jusqu'au {{dateprop}}{{/if}}</h5>
         {{/if}}
@@ -33,6 +34,7 @@
             {{#if typeIs 'lecture'}} {{proposedBooksCount}}{{/if}}
             {{#if typeIs 'jeu'}} {{proposedGamesCount}}{{/if}}
             {{#if typeIs 'scribing'}} {{proposedVideosCount}}{{/if}}
+            {{#if typeIs 'shuhari'}} {{proposedPracticesCount}}{{/if}}
           </h5>
           <h5>{{#if dateprop}}On peut encore proposer jusqu'au {{dateprop}}{{/if}}</h5>
         {{/if}}

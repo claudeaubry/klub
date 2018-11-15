@@ -25,6 +25,7 @@ Library = class Library {
     if ( typeKlub === 'lecture' ) typeItem = 'book'
     if ( typeKlub === 'jeu' ) typeItem = 'game'
     if ( typeKlub === 'scribing' ) typeItem = 'video'
+    if ( typeKlub === 'shuhari' ) typeItem = 'practice'
     return typeItem
   }
 }

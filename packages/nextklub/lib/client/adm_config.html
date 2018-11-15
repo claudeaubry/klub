@@ -20,7 +20,7 @@
   </table>
   </div>
   <h4 class="well col-xs-6 col-md-8">Klubs inactifs</h4>
-  <div class="col-md-8">
+  <div class="col-xs-6 col-md-8">
   {{#unless nextKlub._id}}
     <button class="launchklub btn btn-primary">Lancer le klub de lecture</button>
   {{/unless}}
@@ -29,6 +29,9 @@
   {{/unless}}
   {{#unless nextSkrib._id}}
     <button class="launchskrib btn btn-primary">Lancer le klub de scribing</button>
+  {{/unless}}
+  {{#unless nextShuK._id}}
+    <button class="launchshu btn btn-primary">Lancer le klub shuhari</button>
   {{/unless}}
   </div>
 </template>

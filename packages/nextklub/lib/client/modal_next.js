@@ -33,9 +33,11 @@ Template.modalChoix.helpers({
   typeLecture: function(name) {return name === 'lecture'},
   typeJeu: function(name) {return name === 'jeu'},
   typeScribing: function(name) {return name === 'scribing'},
+  typeShuhari: function(name) {return name === 'shuhari'},
   nomineesBooks: () => new Library().nominees('book'),
   nomineesGames: () => new Library().nominees('game'),
-  nomineesVideos: () => new Library().nominees('video')
+  nomineesVideos: () => new Library().nominees('video'),
+  nomineesPractices: () => new Library().nominees('practice')
 })
 Template.modalChoix.events({
   'submit form': event => {
@@ -48,6 +50,8 @@ Template.modalChoix.events({
       ktarget.book_id = $('select[name=selGame]').val()
     if (ktarget.type === 'scribing')
       ktarget.book_id = $('select[name=selVideo]').val()
+    if (ktarget.type === 'shuhari')
+        ktarget.book_id = $('select[name=selPractice]').val()
     if (ktarget.book_id)
       associateBookToNextKlub(ktarget.book_id)
     else

@@ -61,6 +61,7 @@
           {{#if typeLecture k.type}}{{> associate selectName='selBook' nominees=nomineesBooks}}{{/if}}
           {{#if typeJeu k.type}}{{> associate selectName='selGame' nominees=nomineesGames}}{{/if}}
           {{#if typeScribing k.type}}  {{> associate selectName='selVideo' nominees=nomineesVideos}}{{/if}}
+          {{#if typeShuhari k.type}}  {{> associate selectName='selPractice' nominees=nomineesPractices}}{{/if}}
           <label for="vote">Lien vers le résultat du vote</label>
           <input type="url" class="form-control vote small">
         </div>

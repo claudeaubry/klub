@@ -6,7 +6,8 @@ Template.configKlubs.helpers({
   klubs: () => NextKlub.find(),
   nextKlub: () => NextKlub.findOne({type: 'lecture'}),
   nextKjeub: () => NextKlub.findOne({type: 'jeu'}),
-  nextSkrib: () => NextKlub.findOne({type: 'scribing'})
+  nextSkrib: () => NextKlub.findOne({type: 'scribing'}),
+  nextShuK: () => NextKlub.findOne({type: 'shuhari'})
 })
 
 Template.configKlubs.events({
@@ -30,6 +31,12 @@ Template.configKlubs.events({
     let defaultPlace = LocalData.findOne().place
     elt.preventDefault()
     NextKlub.insert({state: 'propositions', type: 'scribing',
+      place: defaultPlace})
+  },
+  'click .launchshu': elt => {
+    let defaultPlace = LocalData.findOne().place
+    elt.preventDefault()
+    NextKlub.insert({state: 'propositions', type: 'shuhari',
       place: defaultPlace})
   }
 })

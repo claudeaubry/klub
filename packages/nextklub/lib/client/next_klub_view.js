@@ -6,6 +6,7 @@ Template.nextKlubView.helpers({
   proposedBooksCount: () => new Library().proposedCount('book'),
   proposedGamesCount: () => new Library().proposedCount('game'),
   proposedVideosCount: () => new Library().proposedCount('video'),
+  proposedPracticesCount: () => new Library().proposedCount('practice'),
   typeIs: function(type) {
     return this.type === type
   },

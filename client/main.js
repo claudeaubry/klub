@@ -15,6 +15,7 @@ Template.registerHelper('klubItem', ( typeKlub ) => {
   if ( typeKlub === 'lecture' ) typeItem = 'book'
   if ( typeKlub === 'jeu' ) typeItem = 'game'
   if ( typeKlub === 'scribing' ) typeItem = 'video'
+  if ( typeKlub === 'shuhari' ) typeItem = 'practice'
   return typeItem
 })
 Template.registerHelper('klubGlyph', ( typeKlub ) => {
@@ -22,6 +23,7 @@ Template.registerHelper('klubGlyph', ( typeKlub ) => {
   if ( typeKlub === 'lecture' ) glyph = 'glyphicon-book'
   if ( typeKlub === 'jeu' ) glyph = 'glyphicon-knight'
   if ( typeKlub === 'scribing' ) glyph = 'glyphicon-pencil'
+  if ( typeKlub === 'shuhari' ) glyph = 'glyphicon-pencil'
   return glyph
 })
 Template.registerHelper('defaultImg', ( typeItem ) => {
@@ -29,5 +31,6 @@ Template.registerHelper('defaultImg', ( typeItem ) => {
   if ( typeItem === 'book' ) img = '_book.jpg'
   if ( typeItem === 'game' ) img = '_jeu.jpg'
   if ( typeItem === 'video' ) img = '_crayon.jpg'
+  if ( typeItem === 'practice' ) img = '_crayon.jpg'
   return img
 })

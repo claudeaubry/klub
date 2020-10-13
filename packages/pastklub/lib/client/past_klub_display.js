@@ -16,6 +16,9 @@ Template.pastKlubDisplay.helpers({
   if (instance.klubVisible.get('kvisible') === 'scribing') {
     return PastKlub.find({type : 'scribing'}, {sort: {i: -1}})
   }
+  if (instance.klubVisible.get('kvisible') === 'shuhari') {
+    return PastKlub.find({type : 'shuhari'}, {sort: {i: -1}})
+  }
   return PastKlub.find({}, {sort: {i: -1}})
   }
 })

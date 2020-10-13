@@ -1,3 +1,5 @@
+
+
 Template.localDataEdit.helpers({
   local: () => LocalData.findOne()
 })

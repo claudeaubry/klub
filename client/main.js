@@ -10,6 +10,20 @@ Template.registerHelper('ISOToFr', ( isoString ) => {
     return moment( isoString ).locale('fr').format( 'dddd D MMMM YYYY' )
 })
 
+
+Template.registerHelper('lieuNumerique', ( lieuString ) => {
+  let url;
+
+  try {
+    url = new URL(lieuString);
+  } catch (_) {
+    return false;
+  }
+
+  return (url.protocol === "http:" || url.protocol === "https:")
+})
+
+
 Template.registerHelper('klubItem', ( typeKlub ) => {
   let typeItem
   if ( typeKlub === 'lecture' ) typeItem = 'book'

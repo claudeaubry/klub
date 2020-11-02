@@ -51,7 +51,11 @@
         <ul class="list-group">
           <li class="list-group-item list-group-item-danger">Date prévue : {{ISOToFr klub.date}}</li>
           <li class="list-group-item list-group-item-warning">Heure : {{klub.hour}}</li>
-          <li class="list-group-item list-group-item-info">Lieu : {{klub.place}}</li>
+          {{#if lieuNumerique klub.place}}
+          <li class="list-group-item list-group-item-info"><a target="_blank" href="{{klub.place}}">Lieu numérique</a></li>
+          {{else}}
+          <li class="list-group-item list-group-item-info">Lieu: {{klub.place}}</li>
+          {{/if}}
           <li class="list-group-item list-group-item-success"><a target="_blank" href="{{klub.site}}">Site pour s'inscrire</a></li>
           <li class="list-group-item list-group-item-warning">Animateur : {{klub.anim}}</li>
           <li class="list-group-item list-group-item-danger">Message : {{klub.msg}}</li>

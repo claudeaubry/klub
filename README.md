@@ -26,3 +26,7 @@ Le lancer en local :
 Pour déployer :
 
 `$> meteor deploy monapp.meteor.com`
+
+Pour déployer en production sur scalingo
+
+`$> git push scalingo master

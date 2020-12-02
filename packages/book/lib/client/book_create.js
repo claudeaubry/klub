@@ -1,10 +1,12 @@
+
 Template.modalBook.helpers({
   book: () => {
     const bookId = Session.get('selectedBookId')
+    const bookType = new Library().itemOfKlub(Session.get('typeKlub'))
     if (bookId !== null) {
       return new Library().bookById(bookId)
     } else
-      return {title:'', author:'', desc:'',site:'',teaser:'', img:'', origin:''}
+      return { type: bookType, title:'', author:'', desc:'',site:'',teaser:'', img:'', origin:''}
   }
 })
 
@@ -26,6 +28,8 @@ Template.modalBook.events({
     b.proposedAt = moment().format('dddd D MMMM YYYY')
     if (!b.title)
       throw alert('Il faut un titre !')
+    if (!b.type)
+      b.type = "book"
     if (bid === null) {
       b.statut = 'proposed'
       Books.insert(b)

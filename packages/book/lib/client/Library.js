@@ -5,9 +5,16 @@ Library = class Library {
   nominees(type) {
     return Books.find({type: type, statut: 'proposed'}, {sort: {title: 1}})
   }
-  propsel() {
-    return Books.find({$or :[{statut : 'selected'}, {statut : 'proposed'}]}, {sort: {title: 1}})
+  propsel(prop, froz) {
+    var wrapper = { $or : [] };
+    if (prop) 
+      wrapper.$or.push( {statut : {$regex : 'selected', $options: 'i'}}, {statut : {$regex : 'proposed', $options: 'i'}});
+    if (froz)
+      wrapper.$or.push( {statut : {$regex : 'frozen', $options: 'i'}});
+
+    return Books.find( wrapper, {sort: {title: 1}})
   }
+
   selected(type) {
     return Books.findOne({type: type, statut: 'selected'})
   }
@@ -18,7 +25,7 @@ Library = class Library {
     return Books.findOne(id, {fields: {title: 1}}).title
   }
   proposedCount(type) {
-    return Books.find({type: type, statut: 'proposed'}).count()
+     return (Books.find({type: type, statut: 'proposed'})).count();
   }
   itemOfKlub (typeKlub) {
     let typeItem

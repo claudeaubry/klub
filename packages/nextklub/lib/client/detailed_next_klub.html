@@ -20,7 +20,7 @@
           <button class="addBook btn btn-primary" data-toggle="modal" data-target="#modalBook">
             Je fais une proposition {{#if klub.dateprop}}avant {{klub.dateprop}}{{/if}}</button>
           {{> modalBook}}
-          <a href="{{pathFor 'frozen'}}">
+          <a href="{{pathFor 'frozen' typeKlub=klub.type}}">
             <button class="btn btn-primary ">Je revois les anciennes propositions</button>
           </a>
       {{/if}}

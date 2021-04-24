@@ -1,9 +1,9 @@
 Klub
 ====
+
 ## La vie de klub
 - application de notions lues dans le tuto Meteor 1.4, première moitié
 - saisie d'un nouvel élément
-
 
 ## Utilisation de Meteor
 
@@ -27,6 +27,15 @@ Pour déployer :
 
 `$> meteor deploy monapp.meteor.com`
 
-Pour déployer en production sur scalingo
+## DEPLOIEMENT EN PROD SUR SCALINGO
+
+Pour déployer en production sur scalingo, 
+il faut enregistrer d'abord sa clé SSH sur le compte scalingo 
+
+Page: https://my.osc-fr1.scalingo.com/apps
+Username: agiletoulouse
+Password: S'adresser au bureau de l'association Agile Toulouse
+
+Ensuite:
 
 `$> git push scalingo master

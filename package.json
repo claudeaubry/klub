@@ -7,7 +7,8 @@
     "@babel/runtime": "^7.11.2",
     "babel-runtime": "^6.26.0",
     "bootstrap": "^3.4.1",
-    "meteor-node-stubs": "^0.2.3"
+    "meteor-node-stubs": "^0.2.3",
+    "npm": "^6.14.12"
   },
   "devDependencies": {},
   "scripts": {

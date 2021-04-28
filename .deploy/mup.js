@@ -4,7 +4,7 @@ module.exports = {
       // TODO: set host address, username, and authentication method
       host: '46.226.107.168',
       username: 'ubuntu',
-      pem: '~/.ssh/id_jpboignard_gandi'
+      pem: '~/.ssh/id_rsa'
       // password: ''
       // or neither for authenticate from ssh-agent
     }
@@ -73,10 +73,14 @@ module.exports = {
      // Use sticky sessions when load balancing (optional, default is true)
 //     stickySessions: true
   
-  //   ssl: {
-  //     // Enable Let's Encrypt
-  //     letsEncryptEmail: 'email@domain.com'
-  //   }
-//   }
+//proxy: {
+//  domains: 'klubat.agileradical.org,www.klubat.agileradical.org',
+
+//  ssl: {
+    // Enable Let's Encrypt
+//    letsEncryptEmail: 'admin@agileradical.org',
+//    forceSSL: true
+//  }
+// }
  
 };
